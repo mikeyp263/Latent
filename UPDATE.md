@@ -1,6 +1,6 @@
 # Latent: how to publish an edition
 
-Latent's goal: make Mikey the most knowledgeable person in the room about AI. Every edition should tell him what happened, why it matters, and teach him any new concept behind it. He wants to know first, so cover what's genuinely new since the last edition, not evergreen filler.
+Latent's goal: make Mikey the most knowledgeable person in the room about AI. Every edition should give him the full story with the data, explain any jargon, and say honestly what it means. He wants to know first, so cover what's genuinely new since the last edition, not evergreen filler.
 
 Run this twice a day (morning and afternoon, US Eastern). Steps:
 
@@ -20,24 +20,42 @@ Cover at minimum:
 Prefer primary sources (company blogs, docs, filings, government sites) and major outlets (Reuters, Bloomberg, The Verge, TechCrunch, Axios, The Information, CNBC). Use roundup newsletters only to find leads, then confirm with a primary or major source. Never state a number you couldn't confirm. If something is rumor or a report, say so ("reportedly", "according to X").
 
 ## 3. Write the edition
+Mikey wants to actually understand each story, not skim a two-line summary. Each story is a real short article: what happened in full, the data, what the jargon means, and what it means. Look at the existing edition in `briefs.json` for the bar.
+
 Prepend a new object to `editions` in `briefs.json`:
 ```json
 {
   "id": "2026-11-02-pm", "date": "2026-11-02", "edition": "Afternoon",
-  "bigPicture": "2 to 3 sentences: the shape of the news since last edition.",
-  "stories": [ { "kicker": "Models", "headline": "...", "dek": "...", "why": "...", "stats": [["$16.3B", "H1 revenue"]], "learn": ["lessonId"], "sources": [["Outlet", "https://..."]] } ],
-  "ahead": [ { "when": "Tue Nov 3", "what": "..." } ],
-  "sources": [["Extra reading", "https://..."]]
+  "stories": [ {
+    "kicker": "Models",
+    "headline": "...",
+    "summary": "One sentence shown under the headline.",
+    "stats": [["$16.3B", "Revenue, H1 2026"]],
+    "sections": [
+      { "h": "What happened", "p": ["paragraph", "paragraph"] },
+      { "h": "By the numbers", "table": [["Label", "Value"]], "note": "Where the numbers come from." },
+      { "h": "What the jargon means", "p": ["**Term:** plain-English meaning."] },
+      { "h": "What it means", "p": ["..."] },
+      { "h": "What to watch", "p": ["..."] }
+    ],
+    "sources": [ { "name": "TechCrunch", "title": "Article title", "url": "https://..." } ]
+  } ],
+  "ahead": [ { "when": "Tue Nov 3", "what": "..." } ]
 }
 ```
-- 4 to 10 stories, most important first. The first story is the lead. Quiet window? Fewer stories is fine; don't pad.
-- `kicker` is one of: Models, Business, Policy, Security, Research, Standards, Tools, Chips.
+- 4 to 10 stories, most important first. The first is the lead. Quiet window? Fewer stories is fine; don't pad.
+- `kicker`: one of Models, Business, Policy, Security, Research, Standards, Tools, Chips.
 - `headline`: specific and plain, like a good newspaper. No hype words.
-- `dek`: what happened, with the concrete facts (who, what, when, numbers).
-- `why`: why it matters, what it signals, what to watch, and if useful how it applies to someone building AI automations and agents. Be critical: call out when a claim is marketing, a benchmark gap is noise, or access is limited.
-- `stats`: 0 to 3 key numbers shown big at the top of the story, as [value, short label]. Only confirmed figures. Keep values short ("$16.3B", "59", "$1 / $5").
-- `learn`: 0 to 2 lesson ids (from `public/content.js` or `lessons.json`) for the concepts behind the story. Pick ones that genuinely help understand it.
-- `ahead`: upcoming dated events worth knowing (launches, earnings, deadlines, votes). Carry forward still-upcoming items from the last edition and drop past ones.
+- `summary`: one sentence. It's a subtitle, not the story.
+- `stats`: 0 to 3 headline figures, [value, short label]. Only confirmed numbers. Keep values short.
+- `sections`: build the article from these. Each section has `h` plus any of `p` (paragraphs, **bold** allowed), `table` ([label, value] rows), `list` (bullets), `note` (small source line under a table).
+  - Always: "What happened" (full facts: who, what, when, how, with names and dates; 1 to 3 paragraphs) and "What it means" (the honest analysis; call out marketing claims, benchmark noise, limited access, and how it affects people building with AI).
+  - When there's data, put it in a table ("By the numbers", "Benchmarks", "Price and specs", "Where each X stands"). If the source has numbers, use them. Say whose numbers they are in `note`.
+  - When the story uses terms a smart non-specialist might not know, add "What the jargon means" and define them plainly in the context of this story.
+  - Add "What to watch" when there's a clear next step or date.
+  - Don't link to lessons from articles. Articles are news; lessons live in Learn.
+- `sources`: every outlet you used, each with `name`, the article `title`, and `url`. Primary sources first.
+- `ahead`: upcoming dated events worth knowing. Carry forward still-upcoming items from the last edition and drop past ones.
 - Keep only the 60 most recent editions in the file.
 
 ## 4. Update the models tracker
@@ -46,7 +64,7 @@ In `models.json`, add any newly released model (name, lab, released YYYY-MM-DD, 
 ## 5. Add lessons when the news needs one
 If a story depends on a concept that no existing lesson covers (check `content.js` and `lessons.json` titles and terms), add a lesson to `lessons.json` with the same shape as the existing ones:
 `id` ("nw" + next number), `added` (YYYY-MM-DD), `t`, `cards` (3 short teaching paragraphs, **bold** key terms), `terms` ([term, definition] pairs), `qs` (3 scenario questions: [question, correct, wrong, wrong, (wrong), why]; correct answer first), `ex` ([explain-it-back prompt, expert answer]).
-Teach the durable concept, not just the news item. 0 to 2 lessons per edition. Link the story's `learn` to it.
+Teach the durable concept, not just the news item. 0 to 2 lessons per edition. They show up in Learn under "From the news".
 
 ## 6. Style rules
 - Follow DESIGN.md. Don't change the app's look in a brief run; only data files and the cache version change.

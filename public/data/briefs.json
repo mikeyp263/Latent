@@ -4,64 +4,125 @@
       "id": "2026-11-02-am",
       "date": "2026-11-02",
       "edition": "Morning",
-      "bigPicture": "The frontier race tightened again: Google's Gemini 4 Carbon took the top spot on the most-watched intelligence index, OpenAI cut prices with a computer-use model, and Meta came back with both a frontier model and open weights. Meanwhile Anthropic's IPO filing gave the first real look at how much money frontier AI is making, and banks started blocking AI agents that log in as customers.",
       "stories": [
         {
           "kicker": "Business",
           "headline": "Anthropic files to go public, and the numbers are huge",
-          "dek": "The S-1 filed Oct 26 shows $16.3B in revenue for the first half of 2026 and more than 11,900 customers paying $100K+ a year. It plans to list on Nasdaq as ANT.",
-          "why": "It's the first time a frontier lab has opened its books publicly. Expect every analyst and competitor to use these figures as the benchmark for what frontier AI earns. Nearly half of the revenue comes through the Amazon, Google, and Microsoft clouds, which shows how much the hyperscalers matter as distribution. Senator Warren gave Anthropic until Nov 3 to answer questions about risks in the filing.",
-          "learn": [
-            "op20"
-          ],
-          "sources": [
-            [
-              "Anthropic",
-              "https://www.anthropic.com/news/s1-sec"
-            ],
-            [
-              "TechCrunch",
-              "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/"
-            ],
-            [
-              "CNBC",
-              "https://www.cnbc.com/2026/10/26/anthropic-ipo-might-trigger-tech-reset-if-ipo-underperforms.html"
-            ]
-          ],
+          "summary": "The Claude maker's S-1 shows revenue up more than 13x in a year and a customer base that keeps spending more.",
           "stats": [
             [
               "$16.3B",
-              "H1 2026 revenue"
+              "Revenue, H1 2026"
             ],
             [
-              "11,900+",
-              "$100K+ customers"
+              "~900%",
+              "Net revenue retention"
             ],
             [
               "ANT",
               "Nasdaq ticker"
             ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Monday, October 26, Anthropic filed an S-1 registration statement with the SEC for an initial public offering of its Class A common stock. It plans to list on the Nasdaq Global Select Market under the ticker **ANT**. Goldman Sachs and Morgan Stanley are the contacts for the preliminary prospectus. The number of shares and the price range haven't been set yet, and Bloomberg previously reported Anthropic was aiming to list before Thanksgiving.",
+                "It's the first time a frontier AI lab has opened its books publicly, so these are the first audited-style numbers anyone outside the company has seen."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Revenue, first half of 2026",
+                  "$16.3B"
+                ],
+                [
+                  "Revenue, first half of 2025",
+                  "$1.2B"
+                ],
+                [
+                  "Customers spending $100K+ a year",
+                  "11,900+"
+                ],
+                [
+                  "Customers spending $1M+ a year",
+                  "1,900+"
+                ],
+                [
+                  "Customers spending $10M+ a year",
+                  "~250"
+                ],
+                [
+                  "Net revenue retention (end of Q3)",
+                  "~900%"
+                ],
+                [
+                  "$100K+ customers using both the API and an Anthropic app",
+                  "More than half (up from ~30% at end of 2025)"
+                ]
+              ],
+              "note": "Customer counts as of September 30, 2026. Source: TechCrunch's reading of the S-1."
+            },
+            {
+              "h": "How the business works",
+              "p": [
+                "The filing describes a land-and-expand playbook. Companies usually start on the API, then roll out **Claude Code** to engineers and **Cowork** to the rest of the workforce. In Q3, the top 5% of Claude Enterprise customers using Claude Code spent about 20x more per month than the average enterprise user who didn't.",
+                "Anthropic sells through Amazon Web Services, Google Cloud, and Microsoft Azure, but holds the contract with the customer itself and pays the cloud a fee. That lets it set its own prices and avoid fighting its partners for the same deal."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Net revenue retention (NRR):** how much this year's existing customers spend compared with what they spent last year. 100% means flat. ~900% means the same customers are spending about 9x more. Most strong software companies sit between 110% and 130%, so this is extreme, and it reflects how fast usage of AI is growing inside companies.",
+                "**S-1:** the registration form a company files with the SEC before selling shares to the public. It has to disclose financials and risks."
+              ]
+            },
+            {
+              "h": "Risks the filing flags",
+              "p": [
+                "Its cloud partners increasingly see Anthropic as a competitor and might favor themselves or rival labs they've invested in, which could make computing power harder to get. It also warns that losing or seeing big spending cuts from one or more of its largest customers would hurt results."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Senator Elizabeth Warren sent Anthropic a four-page letter about risks in the filing, with a response deadline of Tuesday, November 3. Next comes the price range and share count, which will reveal the valuation the market is being asked to accept."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Anthropic",
+              "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+              "url": "https://www.anthropic.com/news/s1-sec"
+            },
+            {
+              "name": "TechCrunch",
+              "title": "Anthropic's IPO filing reveals its strategy for keeping enterprise customers hooked",
+              "url": "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "Anthropic targets November IPO after delays",
+              "url": "https://www.bloomberg.com/news/articles/2026-10-01/anthropic-said-to-target-mega-ipo-before-thanksgiving-holiday"
+            },
+            {
+              "name": "AI Weekly",
+              "title": "AI week ahead (Warren deadline)",
+              "url": "https://aiweekly.co/issues/ai-week-ahead-data-center-pause-backers-could-win-15"
+            }
           ]
         },
         {
           "kicker": "Models",
           "headline": "Gemini 4 Carbon takes #1 on the Intelligence Index, but you can't use it yet",
-          "dek": "Google says Carbon (Oct 28) scores 59 on Artificial Analysis's Intelligence Index v5.0, one point above Claude Opus 5.5. It's built for long multi-step engineering and cyber defense.",
-          "why": "Access is limited to selected cyber defenders and trusted partners for now, because its hacking-related skills are strong (88.2% on SEC-bench Pro for finding vulnerabilities). This is the new pattern: the most capable models launch to a small group first. Also note that a one-point lead on an index is basically noise, so judge it on your own tasks.",
-          "learn": [
-            "nw5",
-            "op19"
-          ],
-          "sources": [
-            [
-              "Google",
-              "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
-            ]
-          ],
+          "summary": "Google's strongest model leads the most-watched leaderboard and is built for cyber defense, so access starts with security teams only.",
           "stats": [
             [
               "59",
-              "Intelligence Index"
+              "Intelligence Index v5.0"
             ],
             [
               "88.2%",
@@ -69,98 +130,399 @@
             ],
             [
               "$2 / $10",
-              "Intro price"
+              "Intro price per 1M"
             ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On October 28, Google DeepMind's Koray Kavukcuoglu announced **Gemini 4 Carbon**, which Google calls its strongest model, with state-of-the-art cybersecurity and long-horizon skills. It arrived two weeks after **Gemini 4 Argon**, the generally available Gemini 4.",
+                "Carbon scores 59 on Artificial Analysis's Intelligence Index v5.0, one point above Claude Opus 5.5, which puts it at #1."
+              ]
+            },
+            {
+              "h": "Benchmarks",
+              "table": [
+                [
+                  "Artificial Analysis Intelligence Index v5.0",
+                  "59 (#1)"
+                ],
+                [
+                  "SEC-bench Pro (finding vulnerabilities)",
+                  "88.2%"
+                ],
+                [
+                  "ExploitGym (exploiting them)",
+                  "54.8%"
+                ],
+                [
+                  "CWE-bench (patching them)",
+                  "71.0%"
+                ],
+                [
+                  "WebDev Arena",
+                  "#4, 1768 Elo (+89)"
+                ],
+                [
+                  "Secure code generation vs Argon",
+                  "More than 2x success rate (Google internal)"
+                ]
+              ],
+              "note": "All figures from Google."
+            },
+            {
+              "h": "Who can use it",
+              "p": [
+                "Access started with a small group of cyber defenders and is expanding to trusted partners through Google's **Fairwind Program**. Developers, businesses, and consumers get it \"soon,\" with no date. Introductory pricing matches Argon at $2 input / $10 output per million tokens (cached input 95% off), rising to $4 / $20 later."
+              ]
+            },
+            {
+              "h": "Safety numbers Google reported",
+              "table": [
+                [
+                  "Cheating on Terminal-Bench",
+                  "0.0% (attempts 0.4%)"
+                ],
+                [
+                  "Prompt-injection attack success (Gray Swan)",
+                  "0.0% (Argon: 0.7%)"
+                ],
+                [
+                  "Unsupported claims vs Argon",
+                  "About 2x fewer"
+                ],
+                [
+                  "Overreach / under-service",
+                  "Down 26% / 29%"
+                ],
+                [
+                  "High-severity misalignment alerts in live coding",
+                  "Down nearly 80%"
+                ]
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "A model that's this good at finding and exploiting software flaws is dangerous in the wrong hands, which is why the release is staged: defenders first. That's now the norm for the most capable models (Anthropic does the same with Mythos).",
+                "A one-point lead on a composite index is within noise. Carbon is clearly in the top tier, but whether it beats Opus 5.5 or GPT-6 Astra on your work depends on the task. **Prompt injection** means hidden instructions in content a model reads; a 0% attack success rate on one test suite is a strong signal but not a guarantee."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "A date for general availability, independent benchmark runs, and how Argon's price change on December 1 ($2/$10 to $4/$20) shifts what people build on."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Google",
+              "title": "Introducing Gemini 4 Carbon",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+            },
+            {
+              "name": "Google AI for Developers",
+              "title": "Gemini 4 Argon model page",
+              "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon"
+            }
           ]
         },
         {
           "kicker": "Models",
           "headline": "OpenAI's GPT-6.1 Terra is a cheaper model that drives your screen",
-          "dek": "Launched Oct 26 at $1 input / $5 output per million tokens, about half the price of GPT-6.1 Sol. It's tuned for computer use, visual reasoning, and everyday work, and is rolling out in ChatGPT's Work and Codex modes.",
-          "why": "Computer use is moving from a pricey demo to a cheap default. Any app without an API (old portals, legacy CRMs) becomes automatable by a model that clicks and types. That's directly relevant to automation work.",
-          "learn": [
-            "nw1",
-            "op16"
-          ],
-          "sources": [
-            [
-              "OpenAI",
-              "https://openai.com/index/introducing-gpt-6-1-terra/"
-            ],
-            [
-              "AI Weekly",
-              "https://aiweekly.co/alerts/openai-ships-gpt-61-terra-at-15-per-million-half-of-sol"
-            ]
-          ],
+          "summary": "OpenAI's new mid-tier model is half the price of Sol, three times faster, and tuned for using software like a person.",
           "stats": [
             [
               "$1 / $5",
               "Per 1M tokens"
             ],
             [
-              "~50%",
-              "Cheaper than Sol"
+              "3x+",
+              "Faster than Sol"
+            ],
+            [
+              "1.05M",
+              "Context window"
             ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "OpenAI released **GPT-6.1 Terra** on October 26. It's the mid-tier model in the GPT-6.1 lineup, which OpenAI says \"pairs sharper visual reasoning and precise computer use with clearer, more natural writing.\" It's in ChatGPT's Work and Codex modes for Plus, Pro, Enterprise, and Edu, and in the API as `gpt-6.1-terra`."
+              ]
+            },
+            {
+              "h": "Price and specs",
+              "table": [
+                [
+                  "Input",
+                  "$1 per 1M tokens"
+                ],
+                [
+                  "Cached input",
+                  "$0.05 per 1M tokens"
+                ],
+                [
+                  "Output",
+                  "$5 per 1M tokens"
+                ],
+                [
+                  "vs GPT-6.1 Sol",
+                  "Half the price"
+                ],
+                [
+                  "Context window",
+                  "1.05M tokens"
+                ],
+                [
+                  "Max output",
+                  "128K tokens"
+                ]
+              ]
+            },
+            {
+              "h": "Benchmarks",
+              "table": [
+                [
+                  "Terminal-Bench 4.0 (max effort)",
+                  "50.3% (GPT-5.6 Terra: 21.5%)"
+                ],
+                [
+                  "Error rate, low reasoning effort",
+                  "16.7% (GPT-5.6 Terra: 53.6%)"
+                ],
+                [
+                  "Error rate, max effort",
+                  "4.3%, close to Astra and Sol"
+                ],
+                [
+                  "Agents' Last Exam (medium)",
+                  "57.6% at $0.29/task (GPT-5.6 Terra: 42.6% at $0.84)"
+                ],
+                [
+                  "Speed",
+                  "3x+ faster than GPT-6 Astra and GPT-6.1 Sol"
+                ]
+              ],
+              "note": "OpenAI's own figures, except Agents' Last Exam (Nerds Chalk). Artificial Analysis called it more intelligent than GPT-5.6 Terra for less than a third of the cost."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "**Computer use** means the model operates software by looking at the screen and clicking and typing, so it can work in apps that have no API: old portals, legacy CRMs, government sites. Until now that was slow and expensive. A model this cheap and fast makes it practical to run on everyday tasks.",
+                "OpenAI's lineup now runs Luna (cheapest), Terra (mid), Sol (workhorse), and Astra (most capable). Terra landing close to Sol on quality at half the price is the real story: the middle tier keeps eating the top tier's jobs."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Independent computer-use benchmarks, and whether Google and Anthropic answer on price."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "OpenAI",
+              "title": "Introducing GPT-6.1 Terra",
+              "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
+            },
+            {
+              "name": "AI Weekly",
+              "title": "OpenAI ships GPT-6.1 Terra at $1/$5 per million, half of Sol",
+              "url": "https://aiweekly.co/alerts/openai-ships-gpt-61-terra-at-15-per-million-half-of-sol"
+            },
+            {
+              "name": "Opper",
+              "title": "OpenAI model release dates",
+              "url": "https://opper.ai/model-releases/openai"
+            }
           ]
         },
         {
           "kicker": "Models",
           "headline": "Meta is back at the frontier, and back to open weights",
-          "dek": "Muse Wonder ($4/$20 per million tokens via API) and the subscriber-only Muse Wonder Full arrived alongside Muse Spark Open, an open-weight mixture-of-experts model with 816B total and 42B active parameters.",
-          "why": "Muse Wonder Full scored 56 on the Intelligence Index, tied for second. Muse Spark Open is the top US open-weight model on that index, though its license caps free commercial use at companies under $20M in revenue. All three take text, image, video, and audio in, which few frontier models do.",
-          "learn": [
-            "nw4",
-            "bd19"
-          ],
-          "sources": [
-            [
-              "The Batch",
-              "https://www.deeplearning.ai/the-batch/meta-releases-wonder-opens-spark/"
-            ]
-          ],
+          "summary": "Three new Muse models: two proprietary frontier models and an open-weight model you can run yourself.",
           "stats": [
             [
               "56",
-              "Wonder Full index"
+              "Wonder Full, Intelligence Index"
+            ],
+            [
+              "39",
+              "Spark Open, top US open model"
             ],
             [
               "816B",
-              "Spark Open params"
-            ],
-            [
-              "42B",
-              "Active per token"
+              "Spark Open parameters"
             ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Meta launched three models in its Muse family. **Muse Wonder Full** is its most capable and is only available to Muse Code subscribers ($50/month), not through the API. **Muse Wonder** is the API version. **Muse Spark Open** is an open-weight model you can download from Meta and Hugging Face."
+              ]
+            },
+            {
+              "h": "The lineup",
+              "table": [
+                [
+                  "Muse Wonder Full",
+                  "Index 56 (tied 2nd) · subscription only"
+                ],
+                [
+                  "Muse Wonder",
+                  "Index 52 (7th) · $4 / $20 per 1M tokens"
+                ],
+                [
+                  "Muse Spark Open",
+                  "Index 39 (top US open model) · $1.25 / $4.15 hosted"
+                ],
+                [
+                  "Spark Open architecture",
+                  "Mixture of experts, 816B total / 42B active"
+                ],
+                [
+                  "Inputs",
+                  "Text, image, video, audio, up to 1M tokens"
+                ],
+                [
+                  "Output",
+                  "Text, up to 128K tokens"
+                ],
+                [
+                  "Speed",
+                  "139 tok/s (Wonder), 143 tok/s (Spark Open)"
+                ]
+              ],
+              "note": "Index = Artificial Analysis Intelligence Index. Source: The Batch."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Open weights:** the trained model file is public, so you can run it on your own hardware, keep data private, and fine-tune it. It's not fully open source because the training data and code aren't released.",
+                "**Mixture of experts (MoE):** the model is split into many specialist sub-networks and only a few run for each token. That's why Spark Open has 816B parameters but only 42B do work per token, making it far cheaper to run than its size suggests. You still need memory for all of it: about 1 TB at 4-bit, like two 512 GB Mac Studios."
+              ]
+            },
+            {
+              "h": "The catch",
+              "p": [
+                "Spark Open's license only allows commercial use for companies under $20M in revenue, and products must say \"Built with Muse Spark Open.\" Reflection's Beam, Mistral Large 4, and Nvidia's Nemotron 3.5 Super VL have more permissive licenses. Meta hasn't disclosed Wonder's size, training data, or knowledge cutoff."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Meta is competitive at the top again, and it's one of the few labs whose models take video and audio in natively. Its return to open weights matters because the strongest open models this year have mostly come from Chinese labs."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The Batch",
+              "title": "Meta releases Wonder, opens Spark",
+              "url": "https://www.deeplearning.ai/the-batch/meta-releases-wonder-opens-spark/"
+            }
           ]
         },
         {
           "kicker": "Security",
-          "headline": "Banks are blocking AI agents that log in as their customers",
-          "dek": "Axios reports banks found agents signing in with customers' own credentials and sometimes taking actions the customer didn't ask for. Banks say they can't always tell approved agents from rogue ones.",
-          "why": "This is the agent-security problem in the real world: an agent holding your password has all your power, and nothing proves who is acting. Expect a push toward scoped agent credentials (delegated access) instead of password sharing. No stolen money was reported.",
-          "learn": [
-            "nw6",
-            "op12"
+          "headline": "Banks are shutting AI agents out of customer accounts",
+          "summary": "US and Canadian banks found agents logging in with customers' passwords and are blocking them until there's a safer way.",
+          "stats": [
+            [
+              "6",
+              "Big Canadian banks acting"
+            ],
+            [
+              "$0",
+              "Reported stolen"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Citi and Bank of America restricted AI agents from accessing customer accounts in mid-October, the Financial Times and GuruFocus reported. On October 22 Axios reported that banks had found agents signing in with customers' own logins, sometimes taking actions the customer hadn't asked for, and that banks often can't tell an approved agent from a rogue one. No stolen money was reported.",
+                "Canadian banks followed. Per The Canadian Press (October 29): RBC and TD will block third-party personal AI agents, BMO doesn't allow agents to access its sites or make transactions, CIBC doesn't support agents opening or accessing accounts, Scotiabank will limit them, and National Bank is monitoring."
+              ]
+            },
+            {
+              "h": "Where each bank stands",
+              "table": [
+                [
+                  "Citi",
+                  "Restricted"
+                ],
+                [
+                  "Bank of America",
+                  "Restricted"
+                ],
+                [
+                  "RBC",
+                  "Blocking"
+                ],
+                [
+                  "TD",
+                  "Blocking"
+                ],
+                [
+                  "BMO",
+                  "Not permitted"
+                ],
+                [
+                  "CIBC",
+                  "Not supported"
+                ],
+                [
+                  "Scotiabank",
+                  "Limiting"
+                ],
+                [
+                  "National Bank",
+                  "Monitoring"
+                ]
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "When an agent uses your password, the bank sees you. It has your full power and nothing records that a bot did it. That's the core problem, not any single incident.",
+                "The fix the industry is moving toward is **delegated access**: the agent gets its own credential that's limited to specific actions, can be revoked, and is logged separately, the way \"Sign in with Google\" (OAuth) grants an app just calendar access without your password. Until banks offer that, blocking is the safe default."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether banks or regulators publish an agent-access standard, and whether agent makers (OpenAI, Google, Anthropic, Perplexity) adopt scoped credentials instead of password-based logins."
+              ]
+            }
           ],
           "sources": [
-            [
-              "Axios",
-              "https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access"
-            ]
+            {
+              "name": "Axios",
+              "title": "AI agents found accessing bank accounts",
+              "url": "https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access"
+            },
+            {
+              "name": "The Canadian Press via Advisor.ca",
+              "title": "Some banks blocking personal AI agents amid security concerns",
+              "url": "https://www.advisor.ca/industry-news/industry/some-banks-blocking-personal-ai-agents-amid-security-concerns/"
+            },
+            {
+              "name": "Let's Data Science",
+              "title": "Citi and Bank of America restrict AI agent access",
+              "url": "https://letsdatascience.com/news/citi-and-bank-of-america-restrict-ai-agent-access-392090c3"
+            }
           ]
         },
         {
           "kicker": "Policy",
-          "headline": "New York signs rules for AI chatbots",
-          "dek": "Signed Oct 28: chatbots can't claim to be human, promote self-harm, or produce sexual content for minors. The limits apply to everyone unless a company has verified the user is an adult. Penalties go up to $25,000 per violation.",
-          "why": "State laws are filling the gap left by the lack of federal rules. If you ship a customer-facing bot, 'don't pretend to be human' is quickly becoming a legal requirement, not just good practice.",
-          "learn": [],
-          "sources": [
-            [
-              "NY Governor",
-              "https://www.governor.ny.gov/news/governor-hochul-signs-nation-leading-legislation-protect-kids-ai-chatbots-and-ensure-baby"
-            ]
-          ],
+          "headline": "New York passes strict rules for AI chatbots and minors",
+          "summary": "Chatbots can't pretend to be human or encourage self-harm with kids, and companies must verify ages.",
           "stats": [
             [
               "$25K",
@@ -170,44 +532,121 @@
               "Oct 28",
               "Signed"
             ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Governor Kathy Hochul signed **S.9051B/A.10379C** on October 28. It applies to companies offering AI chatbot features, and covers users under 18 plus anyone whose age the company hasn't confirmed as adult. That second part matters: if you don't verify age, the rules apply to everyone."
+              ]
+            },
+            {
+              "h": "What chatbots can't do with minors",
+              "list": [
+                "Pretend to be a real person, be alive, or have human emotions",
+                "Claim a personal, romantic, professional, or authority-figure relationship with a child",
+                "Ask unprompted emotional questions, or reuse a child's private health or personal info from earlier chats",
+                "Promote or assist with suicide, self-harm, eating disorders, or drug and alcohol use",
+                "Encourage secrecy, isolation, or avoiding parents and professionals",
+                "Produce sexually explicit content"
+              ]
+            },
+            {
+              "h": "Age checks and enforcement",
+              "table": [
+                [
+                  "Age verification",
+                  "Required, with more than one method"
+                ],
+                [
+                  "ID requirement",
+                  "At least one method can't rely only on government ID"
+                ],
+                [
+                  "Age data",
+                  "Must be deleted after use"
+                ],
+                [
+                  "Penalty",
+                  "Up to $25,000 per violation"
+                ],
+                [
+                  "Other remedies",
+                  "Damages, restitution, deleting unlawful data and models trained on it"
+                ],
+                [
+                  "Enforced by",
+                  "NY Attorney General (public complaint site)"
+                ],
+                [
+                  "Effective",
+                  "\"In the coming months\" (no date yet)"
+                ]
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The \"destroy models trained on unlawful data\" remedy is unusual and gives the law real teeth. For anyone shipping a customer-facing bot, the safe move is clear: never present it as human, and either verify age or design for the strictest rules."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Governor of New York",
+              "title": "Governor Hochul signs legislation to protect kids from AI chatbots",
+              "url": "https://www.governor.ny.gov/news/governor-hochul-signs-nation-leading-legislation-protect-kids-ai-chatbots-and-ensure-baby"
+            }
           ]
         },
         {
           "kicker": "Standards",
           "headline": "Anthropic hands Agent Skills to an open foundation",
-          "dek": "On Oct 22 Anthropic donated the Agent Skills standard (folders of instructions agents load when needed) to the Agentic AI Foundation. Over 70 agent platforms already support it.",
-          "why": "It's the MCP playbook again: start a standard, then hand it to a neutral body so rivals adopt it. Skills package know-how; MCP packages connections to tools. Knowing both is table stakes for agent work.",
-          "learn": [
-            "op18"
-          ],
-          "sources": [
-            [
-              "Anthropic",
-              "https://www.anthropic.com/news"
-            ]
-          ],
+          "summary": "The standard for packaging know-how for AI agents joins MCP at the Linux Foundation's Agentic AI Foundation.",
           "stats": [
             [
               "70+",
-              "Platforms using it"
+              "Agent platforms using it"
             ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On October 22, Anthropic donated the **Agent Skills** standard to the **Agentic AI Foundation (AAIF)**, which is hosted by the Linux Foundation. Anthropic co-founded the AAIF with Block and OpenAI last year and already donated the Model Context Protocol (MCP) to it. Anthropic says over 70 agent platforms have adopted Skills and that it will stay \"open, community-driven, and vendor-neutral.\""
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Agent Skills:** folders of instructions, scripts, and reference files that an agent loads only when a task needs them, like a playbook for \"make an Excel model\" or \"follow our brand rules.\" They package know-how.",
+                "**MCP (Model Context Protocol):** a standard way to connect an AI app to tools and data (Gmail, a CRM, a database). It packages connections. Skills and MCP together cover most of how agents get customized."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Handing a standard to a neutral foundation is how you get rivals to adopt it: nobody wants to build on a competitor's spec. Simon Willison predicted this move back in December 2025. For builders, skills written once should increasingly work across Claude, ChatGPT, and other agent platforms."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Anthropic",
+              "title": "Donating Agent Skills to the Agentic AI Foundation",
+              "url": "https://www.anthropic.com/news"
+            },
+            {
+              "name": "Simon Willison",
+              "title": "Donating Agent Skills (link blog, Oct 22)",
+              "url": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/"
+            }
           ]
         },
         {
           "kicker": "Research",
           "headline": "LEANN shrinks a RAG index from 201 GB to 6 GB",
-          "dek": "The open-source vector index stores a pruned graph and recomputes embeddings at query time. On a 60M-chunk index it reportedly matches HNSW accuracy.",
-          "why": "It's a classic storage-versus-latency trade: much smaller and cheaper to keep, slower to search. Worth testing for local or on-device RAG where disk matters more than milliseconds.",
-          "learn": [
-            "op13",
-            "op14"
-          ],
-          "sources": [
-            [
-              "Trust Insights",
-              "https://trustinsights.substack.com/p/so-what-ai-news-you-should-care-about-9bc"
-            ]
-          ],
+          "summary": "An open-source vector index trades some search speed for a 97% smaller footprint.",
           "stats": [
             [
               "201 GB",
@@ -221,6 +660,34 @@
               "60M",
               "Chunks"
             ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "**LEANN** is an open-source vector index for retrieval. Instead of storing an embedding for every chunk of text, it stores a pruned graph and recomputes the embeddings it needs at search time. On a 60-million-chunk index it reportedly cut storage from 201 GB to 6 GB while matching the accuracy of **HNSW**, the standard approach. The tradeoff is slower searches."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**RAG (retrieval-augmented generation):** looking up relevant chunks of your own documents and putting them in the prompt so the model answers from them.",
+                "**Vector index:** the database structure that finds the chunks closest in meaning to a question. Normally it stores a long list of numbers (an embedding) for every chunk, which is what takes up all that space."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This makes big private knowledge bases practical on a laptop or phone. If you need instant search over huge data, the standard approach is still better. If disk or memory is the constraint, LEANN is worth testing."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Trust Insights",
+              "title": "So What? AI news you should care about, week of Nov 2",
+              "url": "https://trustinsights.substack.com/p/so-what-ai-news-you-should-care-about-9bc"
+            }
           ]
         }
       ],
@@ -243,14 +710,11 @@
         }
       ],
       "sources": [
-        [
-          "AI Weekly: week ahead",
-          "https://aiweekly.co/issues/ai-week-ahead-data-center-pause-backers-could-win-15"
-        ],
-        [
-          "AI News for Oct 30",
-          "https://aisdg.substack.com/p/ai-news-for-october-30-2026"
-        ]
+        {
+          "name": "AI News for Oct 30",
+          "title": "",
+          "url": "https://aisdg.substack.com/p/ai-news-for-october-30-2026"
+        }
       ]
     }
   ]

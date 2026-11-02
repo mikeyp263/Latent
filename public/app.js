@@ -67,6 +67,7 @@ const I = {
   learn: '<svg viewBox="0 0 24 24"><path d="M3 8.5 12 4l9 4.5-9 4.5z"/><path d="M7 10.5V15c3 2.2 7 2.2 10 0v-4.5"/></svg>',
   models: '<svg viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/></svg>',
   me: '<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 20c1.2-3.6 4-5.5 7.5-5.5s6.3 1.9 7.5 5.5"/></svg>',
+  ext: '<svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5H5V6h5"/></svg>',
   back: '<svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>',
   go: '<svg class="go" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>',
   arrow: '<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
@@ -77,6 +78,7 @@ const I = {
   cards: '<svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="14" rx="3"/><path d="M7 3h11a3 3 0 0 1 3 3v11"/></svg>',
   book: '<svg viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3zM5 17a3 3 0 0 1 3-3h11"/></svg>',
 };
+const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; } };
 const backBtn = (h) => `<a class="backbtn" href="#${h}" aria-label="Back">${I.back}</a>`;
 const R = ({ href, t, s, v, lead = "", cls = "" }) => `<a class="r ${cls}" ${href ? `href="${esc(href)}"` : ""}>${lead}<div class="main"><div class="t">${t}</div>${s ? `<div class="s">${s}</div>` : ""}</div>${v ? `<span class="v">${v}</span>` : ""}${href ? I.go : ""}</a>`;
 
@@ -98,50 +100,60 @@ function route() {
 
 /* ---------- Discover ---------- */
 let catF = "Top";
+const words = (s) => [s.summary, ...(s.sections || []).flatMap((x) => [...(x.p || []), ...(x.list || []), ...(x.table || []).flat()])].join(" ").split(/\s+/).length;
+const readMin = (s) => Math.max(1, Math.round(words(s) / 220));
+const srcNames = (s) => { const n = (s.sources || []).map((x) => x.name); return n.length > 2 ? `${n.slice(0, 2).join(", ")} +${n.length - 2}` : n.join(", "); };
+const kick = (k) => `<span class="kick" style="--k:${pal(k)[0]}">${esc(k)}</span>`;
 function Discover(e) {
   if (!e) { view.innerHTML = `<div class="page"><h1 class="h1">Discover</h1><p class="sub">No brief yet.</p></div>`; return; }
   const latest = e.id === BRIEFS[0]?.id;
   const cats = ["Top", ...new Set(e.stories.map((s) => s.kicker))];
-  const srcLine = (s) => `${dot(s.kicker)}${esc((s.sources || []).slice(0, 2).map((x) => x[0]).join(" · "))} · ${when(e.date)}`;
   const draw = () => {
     const list = e.stories.map((s, i) => ({ s, i })).filter(({ s }) => catF === "Top" || s.kicker === catF);
     const [lead, ...rest] = list;
-    const newModels = latest && catF === "Top" ? MODELS.models.map((m, i) => ({ m, i })).filter(({ m }) => daysAgo(m.released) <= 10) : [];
-    const fresh = latest && catF === "Top" ? LESSONS.filter((l) => l.added && daysAgo(l.added) <= 3) : [];
+    const top = catF === "Top";
+    const newModels = latest && top ? MODELS.models.map((m, i) => ({ m, i })).filter(({ m }) => daysAgo(m.released) <= 10) : [];
     view.innerHTML = `<div class="page">
       ${latest ? "" : `<a class="sub" href="#archive">‹ Past briefs</a>`}
       <h1 class="h1">${latest ? "Discover" : fmt(e.date, { month: "long", day: "numeric" })}</h1>
-      <p class="sub">${fmt(e.date, { weekday: "long", month: "long", day: "numeric" })} · ${esc(e.edition)} brief</p>
+      <p class="sub">${fmt(e.date, { weekday: "long", month: "long", day: "numeric" })} · ${esc(e.edition)} edition · ${e.stories.length} stories</p>
       <div class="chips">${cats.map((c) => `<button class="${c === catF ? "on" : ""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("")}</div>
-      ${lead ? `<a class="hero" href="#story/${e.id}/${lead.i}"><div class="art" style="${art(lead.s.headline, lead.s.kicker)}"></div><div class="in"><div class="src">${srcLine(lead.s)}</div><div class="t">${esc(lead.s.headline)}</div><div class="d">${md(lead.s.dek)}</div></div></a>` : ""}
-      <div>${rest.slice(0, 3).map(({ s, i }) => item(e, s, i, srcLine)).join("")}</div>
-      ${newModels.length ? `<div class="sec"><h2>New models</h2><a href="#models">See all</a></div><div class="hs">${newModels.map(({ m, i }) => `<a class="mc" href="#model/${i}"><div class="art" style="${art(m.name, m.lab)}">${esc(m.lab)}</div><div class="in"><b>${esc(m.name)}</b><span>${esc(priceShort(m.price) || m.access)}</span></div></a>`).join("")}</div>` : ""}
-      ${rest.length > 3 ? `<div class="sec"><h2>More stories</h2></div><div>${rest.slice(3).map(({ s, i }) => item(e, s, i, srcLine)).join("")}</div>` : ""}
-      ${fresh.length ? `<div class="sec"><h2>Learn from today</h2></div>${fresh.map((l) => `<a class="learn" href="#lesson/${l.id}"><span>${esc(l.t)}<small>${l.terms.length} new terms · ${l.qs.length} questions</small></span>${S.done[l.id] ? I.check : I.arrow}</a>`).join("")}` : ""}
-      ${e.ahead?.length && catF === "Top" ? `<div class="sec"><h2>Coming up</h2></div><div class="rows ahead">${e.ahead.map((a) => `<div class="r"><span class="when">${esc(a.when)}</span><span class="what">${md(a.what)}</span></div>`).join("")}</div>` : ""}
-      ${catF === "Top" ? `<div class="sec"><h2>Past briefs</h2><a href="#archive">See all</a></div>` : ""}
+      ${lead ? `<div class="sec"><h2>${top ? "Top story" : esc(catF)}</h2></div>
+        <a class="hero" href="#story/${e.id}/${lead.i}"><div class="art" style="${art(lead.s.headline, lead.s.kicker)}"></div><div class="in">${kick(lead.s.kicker)}<div class="t">${esc(lead.s.headline)}</div><div class="d">${md(lead.s.summary)}</div><div class="meta">${esc(srcNames(lead.s))} · ${readMin(lead.s)} min read</div></div></a>` : ""}
+      ${rest.length ? `<div class="sec"><h2>${top ? "Latest" : "More"}</h2></div><div class="feed">${rest.map(({ s, i }) => item(e, s, i)).join("")}</div>` : ""}
+      ${newModels.length ? `<div class="sec"><h2>New models</h2><a href="#models">All models</a></div><div class="hs">${newModels.map(({ m, i }) => `<a class="mc" href="#model/${i}"><div class="art" style="${art(m.name, m.lab)}">${esc(m.lab)}</div><div class="in"><b>${esc(m.name)}</b><span>${esc(priceShort(m.price) || m.access)}</span></div></a>`).join("")}</div>` : ""}
+      ${e.ahead?.length && top ? `<div class="sec"><h2>Coming up</h2></div><div class="rows ahead">${e.ahead.map((a) => `<div class="r"><span class="when">${esc(a.when)}</span><span class="what">${md(a.what)}</span></div>`).join("")}</div>` : ""}
+      ${top ? `<a class="pastlink" href="#archive">Past editions ${I.go}</a>` : ""}
     </div>`;
     view.onclick = (ev) => { const b = ev.target.closest("[data-cat]"); if (b) { catF = b.dataset.cat; draw(); } };
   };
   draw();
 }
-const item = (e, s, i, srcLine) => `<a class="item" href="#story/${e.id}/${i}"><div class="main"><div class="t">${esc(s.headline)}</div><div class="src">${srcLine(s)}</div></div><div class="thumb" style="${art(s.headline, s.kicker)}"></div></a>`;
+const item = (e, s, i) => `<a class="item" href="#story/${e.id}/${i}"><div class="main">${kick(s.kicker)}<div class="t">${esc(s.headline)}</div><div class="meta">${esc(srcNames(s))} · ${readMin(s)} min</div></div><div class="thumb" style="${art(s.headline, s.kicker)}"></div></a>`;
 const priceShort = (p) => ((p || "").match(/\$[\d.]+ \/ \$[\d.]+/) || [""])[0];
 
+function section(x) {
+  return `<section class="sect"><h2>${esc(x.h)}</h2>
+    ${(x.p || []).map((p) => `<p>${md(p)}</p>`).join("")}
+    ${x.list ? `<ul>${x.list.map((li) => `<li>${md(li)}</li>`).join("")}</ul>` : ""}
+    ${x.table ? `<div class="dt">${x.table.map(([k, v]) => `<div><span>${md(k)}</span><b>${md(v)}</b></div>`).join("")}</div>` : ""}
+    ${x.note ? `<p class="note">${md(x.note)}</p>` : ""}</section>`;
+}
 function Story(e, i) {
   const s = e?.stories?.[i]; if (!s) return go("today");
   const back = e.id === BRIEFS[0].id ? "today" : `edition/${e.id}`;
-  const learn = (s.learn || []).filter((id) => byId[id]);
   const nx = e.stories[i + 1];
   view.innerHTML = `<div class="page flush"><div class="cover art" style="${art(s.headline, s.kicker)}">${backBtn(back)}</div>
-    <div class="art-h"><div class="src">${dot(s.kicker)}${esc(s.kicker)} · ${when(e.date)}</div><h1>${esc(s.headline)}</h1></div>
+    <header class="art-h">${kick(s.kicker)}<h1>${esc(s.headline)}</h1>
+      <p class="deck">${md(s.summary)}</p>
+      <a class="byline" href="#srcs"><span>${fmt(e.date, { month: "long", day: "numeric" })} · ${readMin(s)} min read</span><span>Sources: ${esc(srcNames(s))} ${I.go}</span></a></header>
     ${s.stats?.length ? `<div class="nums">${s.stats.map(([v, l]) => `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("")}</div>` : ""}
-    <div class="prose"><p>${md(s.dek)}</p></div>
-    <div class="label">Why it matters</div><div class="prose"><p style="margin-top:8px">${md(s.why)}</p></div>
-    ${learn.length ? `<div class="label">Understand it</div>${learn.map((id) => `<a class="learn" href="#lesson/${id}"><span>${esc(byId[id].t)}<small>${esc(byId[id].track.name)} lesson</small></span>${S.done[id] ? I.check : I.arrow}</a>`).join("")}` : ""}
-    <div class="label">Sources</div><div class="srcs">${(s.sources || []).map(([n, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${dot(n)}${esc(n)}</a>`).join("")}</div>
-    ${nx ? `<a class="nextcard" href="#story/${e.id}/${i + 1}"><div class="art" style="${art(nx.headline, nx.kicker)}"></div><div class="in"><small>Next story</small><b>${esc(nx.headline)}</b></div></a>` : ""}
+    <div class="body">${(s.sections || []).map(section).join("")}</div>
+    <section class="sect" id="srcs"><h2>Sources</h2><p class="note" style="margin-top:0">Tap to open the original reporting.</p>
+      <div class="srclist">${(s.sources || []).map((x, k) => `<a href="${esc(x.url)}" target="_blank" rel="noopener"><span class="n">${k + 1}</span><span class="main"><small>${esc(x.name)}</small><b>${esc(x.title || x.name)}</b><em>${esc(host(x.url))}</em></span>${I.ext}</a>`).join("")}</div></section>
+    ${nx ? `<a class="nextcard" href="#story/${e.id}/${i + 1}"><div class="art" style="${art(nx.headline, nx.kicker)}"></div><div class="in"><small>Next story</small><b>${esc(nx.headline)}</b></div></a>` : `<a class="nextcard" href="#${back}"><div class="in"><small>That's everything</small><b>Back to Discover</b></div></a>`}
   </div>`;
+  const by = $(".byline"); by.onclick = (ev) => { ev.preventDefault(); $("#srcs").scrollIntoView({ behavior: "smooth" }); };
 }
 function Archive() {
   view.innerHTML = `<div class="page"><a class="sub" href="#today">‹ Discover</a><h1 class="h1">Past briefs</h1>
