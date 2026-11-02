@@ -1,32 +1,178 @@
 {
   "lessons": [
-    { "id": "nw5", "added": "2026-11-02", "t": "Reading AI Leaderboards",
+    {
+      "id": "nw5",
+      "added": "2026-11-02",
+      "t": "Reading AI Leaderboards",
       "cards": [
         "When a headline says a model is '#1', it usually means a **leaderboard**. The most-cited is the **Artificial Analysis Intelligence Index**, which combines many benchmarks (reasoning, coding, math, knowledge, agentic tasks) into one score. **LMArena** (formerly Chatbot Arena) ranks models by **Elo** from people voting blind on which answer is better.",
         "One combined number hides a lot. A model can lead the index and still be worse at *your* task, or cost 5x more, or be slower. Small gaps (a point or two) are within noise. Indexes also change versions (v4 to v5), so scores across versions don't compare.",
         "Pro move: read the index for *who is in the top tier*, then check the specific sub-benchmarks that match your job (coding, agentic tasks, long context), then check **price and speed**, then run your own evals."
       ],
-      "terms": [["Artificial Analysis Intelligence Index","A composite score combining many benchmarks to rank models' overall intelligence. Widely quoted in launch announcements."],["LMArena / Elo","A leaderboard where people vote blind between two models' answers; ratings use the Elo system from chess."],["Leaderboard","A ranking of models on one or more benchmarks."]],
-      "qs": [
-        ["Model A scores 59 on the Intelligence Index, Model B 58. What's the right takeaway?","They're effectively tied; test on your own task","A is clearly smarter at everything","B is useless","Always switch to A","One point on a composite is within noise."],
-        ["LMArena ranks models using:","Blind human votes turned into Elo ratings","Parameter count","Price","Training data size","Pairwise preference votes, like chess ratings."],
-        ["You build coding agents. Beyond the headline index, what should you check first?","Agentic coding sub-benchmarks, price, and speed","The model's logo","How many languages it speaks","Its knowledge cutoff only","Match the benchmark to the job."]
+      "terms": [
+        [
+          "Artificial Analysis Intelligence Index",
+          "A composite score combining many benchmarks to rank models' overall intelligence. Widely quoted in launch announcements."
+        ],
+        [
+          "LMArena / Elo",
+          "A leaderboard where people vote blind between two models' answers; ratings use the Elo system from chess."
+        ],
+        [
+          "Leaderboard",
+          "A ranking of models on one or more benchmarks."
+        ]
       ],
-      "ex": ["Explain how to read a 'this model is #1' headline without getting fooled.","It usually means a composite leaderboard like the Artificial Analysis Index or an Elo ranking like LMArena. Treat small gaps as ties, check the sub-benchmarks for your use case plus price and speed, and confirm with your own evals."]
+      "qs": [
+        [
+          "Model A scores 59 on the Intelligence Index, Model B 58. What's the right takeaway?",
+          "They're effectively tied; test on your own task",
+          "A is clearly smarter at everything",
+          "B is useless",
+          "Always switch to A",
+          "One point on a composite is within noise."
+        ],
+        [
+          "LMArena ranks models using:",
+          "Blind human votes turned into Elo ratings",
+          "Parameter count",
+          "Price",
+          "Training data size",
+          "Pairwise preference votes, like chess ratings."
+        ],
+        [
+          "You build coding agents. Beyond the headline index, what should you check first?",
+          "Agentic coding sub-benchmarks, price, and speed",
+          "The model's logo",
+          "How many languages it speaks",
+          "Its knowledge cutoff only",
+          "Match the benchmark to the job."
+        ]
+      ],
+      "ex": [
+        "Explain how to read a 'this model is #1' headline without getting fooled.",
+        "It usually means a composite leaderboard like the Artificial Analysis Index or an Elo ranking like LMArena. Treat small gaps as ties, check the sub-benchmarks for your use case plus price and speed, and confirm with your own evals."
+      ]
     },
-    { "id": "nw6", "added": "2026-11-02", "t": "Agents With Your Keys",
+    {
+      "id": "nw6",
+      "added": "2026-11-02",
+      "t": "Agents With Your Keys",
       "cards": [
         "The fastest way to make an agent useful is to give it your login. That's also the most dangerous. If an agent signs in with your **credentials**, the service can't tell you from it, and the agent has *all* your power.",
         "The fix is **delegated access**: give the agent its own scoped credential that says who it acts for and what it may do. **OAuth** already works this way. You approve 'read calendar' and the app gets a token for just that, which you can revoke. The industry is now pushing agent-specific versions of this, with identity and audit logs for agents.",
         "Design rules: **least privilege** (only the permissions needed), short-lived tokens, human approval for money or irreversible actions, and logs of everything the agent did. These rules plus prompt-injection defenses are the core of agent security."
       ],
-      "terms": [["Delegated access","Letting an agent act for you using its own limited, revocable permission instead of your full login."],["OAuth","Standard for granting an app scoped, revocable access to an account without sharing the password."],["Least privilege","Giving a system only the minimum permissions it needs."],["Agent identity","Credentials and logs that identify an AI agent separately from the human it acts for."]],
-      "qs": [
-        ["Why are banks wary of agents using customers' own logins?","The bank can't tell the agent from the person, and it has full account power","Agents type too slowly","Logins expire too fast","It uses too many tokens","No separate identity, no scoping."],
-        ["Safest way to let an agent pay invoices from your account?","Scoped delegated access plus human approval over a set amount","Give it your password","Give it admin access to everything","Let it only use your password at night","Least privilege plus approval for money."],
-        ["You approve 'Allow this app to read your calendar.' That's an example of:","OAuth scoped access","Prompt injection","Fine-tuning","A jailbreak","A revocable token limited to one permission."]
+      "terms": [
+        [
+          "Delegated access",
+          "Letting an agent act for you using its own limited, revocable permission instead of your full login."
+        ],
+        [
+          "OAuth",
+          "Standard for granting an app scoped, revocable access to an account without sharing the password."
+        ],
+        [
+          "Least privilege",
+          "Giving a system only the minimum permissions it needs."
+        ],
+        [
+          "Agent identity",
+          "Credentials and logs that identify an AI agent separately from the human it acts for."
+        ]
       ],
-      "ex": ["Why is giving an agent your password a bad idea, and what's the better pattern?","With your password the agent looks exactly like you and can do anything you can, with no limits or clear audit trail. The better pattern is delegated access: a scoped, revocable credential for the agent, least privilege, logging, and human approval for risky actions."]
+      "qs": [
+        [
+          "Why are banks wary of agents using customers' own logins?",
+          "The bank can't tell the agent from the person, and it has full account power",
+          "Agents type too slowly",
+          "Logins expire too fast",
+          "It uses too many tokens",
+          "No separate identity, no scoping."
+        ],
+        [
+          "Safest way to let an agent pay invoices from your account?",
+          "Scoped delegated access plus human approval over a set amount",
+          "Give it your password",
+          "Give it admin access to everything",
+          "Let it only use your password at night",
+          "Least privilege plus approval for money."
+        ],
+        [
+          "You approve 'Allow this app to read your calendar.' That's an example of:",
+          "OAuth scoped access",
+          "Prompt injection",
+          "Fine-tuning",
+          "A jailbreak",
+          "A revocable token limited to one permission."
+        ]
+      ],
+      "ex": [
+        "Why is giving an agent your password a bad idea, and what's the better pattern?",
+        "With your password the agent looks exactly like you and can do anything you can, with no limits or clear audit trail. The better pattern is delegated access: a scoped, revocable credential for the agent, least privilege, logging, and human approval for risky actions."
+      ]
+    },
+    {
+      "id": "nw7",
+      "added": "2026-11-02",
+      "t": "API Keys and LLMjacking",
+      "cards": [
+        "An **API key** is a password for a service. For AI providers, whoever holds your key can run models and you get the bill. That makes AI keys a direct line to expensive compute, so attackers now steal them on purpose. Using stolen keys to run models is called **LLMjacking**.",
+        "Keys usually leak from where they're stored: **environment variables** on a hosting platform, code pushed to a public repo, logs, or a breached developer tool. When a platform that holds thousands of customers' keys is breached, every one of those keys is exposed at once.",
+        "Defenses: keep keys out of code, give each app its own key with the narrowest **scope**, set **spending caps** and usage alerts at the provider, prefer short-lived credentials, and **rotate** (replace and revoke) keys right away after any suspected leak."
+      ],
+      "terms": [
+        [
+          "API key",
+          "A secret string that lets software call a service on your account."
+        ],
+        [
+          "LLMjacking",
+          "Using stolen AI provider credentials to run models on someone else's account and bill."
+        ],
+        [
+          "Environment variable",
+          "A setting passed to an app at runtime, often used to hold secrets."
+        ],
+        [
+          "Key rotation",
+          "Issuing a new key and revoking the old one so a stolen copy stops working."
+        ],
+        [
+          "Spending cap",
+          "A provider-side limit that stops usage once a set amount is spent."
+        ]
+      ],
+      "qs": [
+        [
+          "Your hosting platform says all environment variables may have been stolen. First move?",
+          "Rotate every key stored there and check provider billing for unusual use",
+          "Wait to see if any charges appear",
+          "Delete the app",
+          "Change your email password only",
+          "Assume the keys are compromised: replace and revoke them, then look for abuse."
+        ],
+        [
+          "Why do attackers want AI API keys specifically?",
+          "Each key gives free access to costly model usage they can use or resell",
+          "Keys reveal the model's weights",
+          "Keys let them retrain the model",
+          "Keys contain users' chat history",
+          "The value is compute on someone else's bill."
+        ],
+        [
+          "Which single control best limits damage if a key leaks?",
+          "A spending cap with usage alerts at the provider",
+          "A longer key",
+          "Storing the key in a code comment",
+          "Using the same key for every app",
+          "Caps bound the bill; alerts catch abuse fast."
+        ]
+      ],
+      "ex": [
+        "Explain LLMjacking and the three things you'd do to protect an app that uses an AI API.",
+        "LLMjacking is when attackers steal AI provider credentials and run models on the victim's account, leaving them the bill. To protect an app: keep the key out of code and give it its own narrowly scoped key, set spending caps and alerts at the provider, and rotate the key immediately after any suspected exposure (and regularly anyway)."
+      ]
     }
   ]
 }
