@@ -1,34 +1,40 @@
-# Latent design system
+# Latent design system: Dark feed
 
-Native iOS conventions. If it wouldn't look at home next to Apple's own apps, it's wrong.
+Dark, premium, image-led, like Perplexity Discover. Every screen has one obvious thing to look at first.
 
 ## Rules
-- One accent color (indigo), used only for interactive things and the current tab. No colored categories.
-- No decoration: no gradients, shadows (except the segmented control thumb), left-border callouts, pill buttons, uppercase eyebrows on everything, or emoji.
-- Lists over cards. Content lives in inset grouped lists with hairline separators.
-- Summary first, detail on tap. Lists show a headline and two lines max; the full text lives on its own page.
-- System font only (SF Pro on iPhone).
+- Dark only. Near-black background, slightly lighter cards. No borders except hairlines between list items.
+- Imagery is generated: every story, model, and lesson gets a gradient "art" made from its topic or lab colors (`art(seed, key)` in app.js). Same item, same art, every time.
+- Feed first: a big hero card for the lead story, then compact items (headline left, art thumbnail right).
+- Detail pages open with a full-bleed art cover, the headline overlapping its fade, then key numbers (`stats`), then text.
+- Color comes from the art. UI chrome stays grayscale; violet accent only for progress, lesson links, and the active quiz state.
+- System font (SF Pro on iPhone). Bold, tight headlines; calm gray body text.
 
 ## Tokens (styles.css `:root`)
 | Group | Tokens |
 |---|---|
-| Color | `--bg` `--surface` `--fill` `--label` `--label-2` `--label-3` `--sep` `--accent` `--good` `--bad` (light + dark) |
-| Type | `--t-large` 34/41 bold, `--t-title` 22/28 bold, `--t-headline` 17/22 semibold, `--t-body` 17/24, `--t-sub` 15/20, `--t-foot` 13/18, `--t-cap` 12/16 |
-| Space | `--s1` 4, `--s2` 8, `--s3` 12, `--s4` 16, `--s5` 20, `--s6` 24, `--s8` 32 |
-| Radius | `--r` 12 |
+| Surfaces | `--bg` #0B0B0D, `--card` #151518, `--card-2` #1C1C21, `--line`, `--line-2` |
+| Text | `--text` #F4F4F5, `--text-2` #C9C9CF (body), `--text-3` #8B8B94 (meta), `--text-4` (disabled) |
+| Accent | `--accent` #8B7CFF, `--good`, `--bad` |
+| Radius | `--r-lg` 24 (hero, feature), `--r-md` 16 (cards, buttons), `--r-sm` 12 |
+| Topic palettes | `PAL` in app.js: kickers (models, business, policy, security, research, standards, tools, chips), labs, tracks |
 
 ## Components
 | Component | Class | Use |
 |---|---|---|
-| Nav bar | `.nav` | Back link (accent) + streak. Sticky, blurred. |
-| Large title | `.large` + `.subtitle` | Top of every tab screen. |
-| Section header | `.sh` | Small gray caps label above a group. |
-| Grouped list | `.group` | Container for rows. |
-| Row | `.row` (`.main` `.t` `.st` `.val` `.chev`) | Any tappable list item. `lead` slot for a check or empty circle. `.next` highlights the next lesson. |
-| Story row | `.story` (`.top` for the lead) | Kicker + source, headline, 2-line dek. |
-| Article | `.article` `.kick` `h1` `.prose` `.h2` | Story, lesson, and model detail pages. |
-| Segmented control | `.seg` | Switching between 2 to 4 peers (tracks). |
-| Filters | `.filters` | Long horizontal lists of filters (labs). |
-| Button | `.btn` / `.plain` / `.danger` / `.alt` | Filled primary, text-only, destructive, neutral. |
-| Quiz | `.q` (`.opt` rows, `.why`) | Options as list rows; result icon + explanation below. |
-| Tab bar | `.tabs` | Today, Learn, Models, Me. |
+| Page title | `.h1` + `.sub` | Top of each tab. |
+| Chips | `.chips` | Filter a feed (categories, labs, tracks). Active chip is white. |
+| Hero card | `.hero` | Lead story: art, source line, headline, 2-line dek. |
+| Feed item | `.item` + `.thumb` | Headline + source line, art thumbnail. Also model rows. |
+| Horizontal cards | `.hs` + `.mc` | New models rail. |
+| Cover | `.cover` + `.art-h` + `.backbtn` | Detail page header. |
+| Key numbers | `.nums` | 2 to 3 big figures on a story or model. |
+| Learn link | `.learn` | Bordered row linking to a lesson. |
+| Source pills | `.srcs` | Story sources. |
+| Next card | `.nextcard` | Bottom of story or lesson. |
+| List rows | `.rows` + `.r` | Lessons, glossary, details. `.num` circle shows lesson number or a check. |
+| Feature card | `.feature` | Continue-learning card on Learn. |
+| Tiles | `.tiles` | Review, Vocab, Glossary shortcuts. |
+| Quiz | `.q` `.opt` `.why` | Options as dark cards; green/red outline on answer. |
+| Buttons | `.btn` (white), `.ghost`, `.danger` | |
+| Tab bar | `.tabs` | Discover, Learn, Models, Me. |

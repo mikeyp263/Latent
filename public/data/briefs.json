@@ -11,40 +11,143 @@
           "headline": "Anthropic files to go public, and the numbers are huge",
           "dek": "The S-1 filed Oct 26 shows $16.3B in revenue for the first half of 2026 and more than 11,900 customers paying $100K+ a year. It plans to list on Nasdaq as ANT.",
           "why": "It's the first time a frontier lab has opened its books publicly. Expect every analyst and competitor to use these figures as the benchmark for what frontier AI earns. Nearly half of the revenue comes through the Amazon, Google, and Microsoft clouds, which shows how much the hyperscalers matter as distribution. Senator Warren gave Anthropic until Nov 3 to answer questions about risks in the filing.",
-          "learn": ["op20"],
-          "sources": [["Anthropic", "https://www.anthropic.com/news/s1-sec"], ["TechCrunch", "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/"], ["CNBC", "https://www.cnbc.com/2026/10/26/anthropic-ipo-might-trigger-tech-reset-if-ipo-underperforms.html"]]
+          "learn": [
+            "op20"
+          ],
+          "sources": [
+            [
+              "Anthropic",
+              "https://www.anthropic.com/news/s1-sec"
+            ],
+            [
+              "TechCrunch",
+              "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/"
+            ],
+            [
+              "CNBC",
+              "https://www.cnbc.com/2026/10/26/anthropic-ipo-might-trigger-tech-reset-if-ipo-underperforms.html"
+            ]
+          ],
+          "stats": [
+            [
+              "$16.3B",
+              "H1 2026 revenue"
+            ],
+            [
+              "11,900+",
+              "$100K+ customers"
+            ],
+            [
+              "ANT",
+              "Nasdaq ticker"
+            ]
+          ]
         },
         {
           "kicker": "Models",
           "headline": "Gemini 4 Carbon takes #1 on the Intelligence Index, but you can't use it yet",
           "dek": "Google says Carbon (Oct 28) scores 59 on Artificial Analysis's Intelligence Index v5.0, one point above Claude Opus 5.5. It's built for long multi-step engineering and cyber defense.",
           "why": "Access is limited to selected cyber defenders and trusted partners for now, because its hacking-related skills are strong (88.2% on SEC-bench Pro for finding vulnerabilities). This is the new pattern: the most capable models launch to a small group first. Also note that a one-point lead on an index is basically noise, so judge it on your own tasks.",
-          "learn": ["nw5", "op19"],
-          "sources": [["Google", "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"]]
+          "learn": [
+            "nw5",
+            "op19"
+          ],
+          "sources": [
+            [
+              "Google",
+              "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+            ]
+          ],
+          "stats": [
+            [
+              "59",
+              "Intelligence Index"
+            ],
+            [
+              "88.2%",
+              "SEC-bench Pro"
+            ],
+            [
+              "$2 / $10",
+              "Intro price"
+            ]
+          ]
         },
         {
           "kicker": "Models",
           "headline": "OpenAI's GPT-6.1 Terra is a cheaper model that drives your screen",
           "dek": "Launched Oct 26 at $1 input / $5 output per million tokens, about half the price of GPT-6.1 Sol. It's tuned for computer use, visual reasoning, and everyday work, and is rolling out in ChatGPT's Work and Codex modes.",
           "why": "Computer use is moving from a pricey demo to a cheap default. Any app without an API (old portals, legacy CRMs) becomes automatable by a model that clicks and types. That's directly relevant to automation work.",
-          "learn": ["nw1", "op16"],
-          "sources": [["OpenAI", "https://openai.com/index/introducing-gpt-6-1-terra/"], ["AI Weekly", "https://aiweekly.co/alerts/openai-ships-gpt-61-terra-at-15-per-million-half-of-sol"]]
+          "learn": [
+            "nw1",
+            "op16"
+          ],
+          "sources": [
+            [
+              "OpenAI",
+              "https://openai.com/index/introducing-gpt-6-1-terra/"
+            ],
+            [
+              "AI Weekly",
+              "https://aiweekly.co/alerts/openai-ships-gpt-61-terra-at-15-per-million-half-of-sol"
+            ]
+          ],
+          "stats": [
+            [
+              "$1 / $5",
+              "Per 1M tokens"
+            ],
+            [
+              "~50%",
+              "Cheaper than Sol"
+            ]
+          ]
         },
         {
           "kicker": "Models",
           "headline": "Meta is back at the frontier, and back to open weights",
           "dek": "Muse Wonder ($4/$20 per million tokens via API) and the subscriber-only Muse Wonder Full arrived alongside Muse Spark Open, an open-weight mixture-of-experts model with 816B total and 42B active parameters.",
           "why": "Muse Wonder Full scored 56 on the Intelligence Index, tied for second. Muse Spark Open is the top US open-weight model on that index, though its license caps free commercial use at companies under $20M in revenue. All three take text, image, video, and audio in, which few frontier models do.",
-          "learn": ["nw4", "bd19"],
-          "sources": [["The Batch", "https://www.deeplearning.ai/the-batch/meta-releases-wonder-opens-spark/"]]
+          "learn": [
+            "nw4",
+            "bd19"
+          ],
+          "sources": [
+            [
+              "The Batch",
+              "https://www.deeplearning.ai/the-batch/meta-releases-wonder-opens-spark/"
+            ]
+          ],
+          "stats": [
+            [
+              "56",
+              "Wonder Full index"
+            ],
+            [
+              "816B",
+              "Spark Open params"
+            ],
+            [
+              "42B",
+              "Active per token"
+            ]
+          ]
         },
         {
           "kicker": "Security",
           "headline": "Banks are blocking AI agents that log in as their customers",
           "dek": "Axios reports banks found agents signing in with customers' own credentials and sometimes taking actions the customer didn't ask for. Banks say they can't always tell approved agents from rogue ones.",
           "why": "This is the agent-security problem in the real world: an agent holding your password has all your power, and nothing proves who is acting. Expect a push toward scoped agent credentials (delegated access) instead of password sharing. No stolen money was reported.",
-          "learn": ["nw6", "op12"],
-          "sources": [["Axios", "https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access"]]
+          "learn": [
+            "nw6",
+            "op12"
+          ],
+          "sources": [
+            [
+              "Axios",
+              "https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access"
+            ]
+          ]
         },
         {
           "kicker": "Policy",
@@ -52,32 +155,103 @@
           "dek": "Signed Oct 28: chatbots can't claim to be human, promote self-harm, or produce sexual content for minors. The limits apply to everyone unless a company has verified the user is an adult. Penalties go up to $25,000 per violation.",
           "why": "State laws are filling the gap left by the lack of federal rules. If you ship a customer-facing bot, 'don't pretend to be human' is quickly becoming a legal requirement, not just good practice.",
           "learn": [],
-          "sources": [["NY Governor", "https://www.governor.ny.gov/news/governor-hochul-signs-nation-leading-legislation-protect-kids-ai-chatbots-and-ensure-baby"]]
+          "sources": [
+            [
+              "NY Governor",
+              "https://www.governor.ny.gov/news/governor-hochul-signs-nation-leading-legislation-protect-kids-ai-chatbots-and-ensure-baby"
+            ]
+          ],
+          "stats": [
+            [
+              "$25K",
+              "Max per violation"
+            ],
+            [
+              "Oct 28",
+              "Signed"
+            ]
+          ]
         },
         {
           "kicker": "Standards",
           "headline": "Anthropic hands Agent Skills to an open foundation",
           "dek": "On Oct 22 Anthropic donated the Agent Skills standard (folders of instructions agents load when needed) to the Agentic AI Foundation. Over 70 agent platforms already support it.",
           "why": "It's the MCP playbook again: start a standard, then hand it to a neutral body so rivals adopt it. Skills package know-how; MCP packages connections to tools. Knowing both is table stakes for agent work.",
-          "learn": ["op18"],
-          "sources": [["Anthropic", "https://www.anthropic.com/news"]]
+          "learn": [
+            "op18"
+          ],
+          "sources": [
+            [
+              "Anthropic",
+              "https://www.anthropic.com/news"
+            ]
+          ],
+          "stats": [
+            [
+              "70+",
+              "Platforms using it"
+            ]
+          ]
         },
         {
           "kicker": "Research",
           "headline": "LEANN shrinks a RAG index from 201 GB to 6 GB",
           "dek": "The open-source vector index stores a pruned graph and recomputes embeddings at query time. On a 60M-chunk index it reportedly matches HNSW accuracy.",
           "why": "It's a classic storage-versus-latency trade: much smaller and cheaper to keep, slower to search. Worth testing for local or on-device RAG where disk matters more than milliseconds.",
-          "learn": ["op13", "op14"],
-          "sources": [["Trust Insights", "https://trustinsights.substack.com/p/so-what-ai-news-you-should-care-about-9bc"]]
+          "learn": [
+            "op13",
+            "op14"
+          ],
+          "sources": [
+            [
+              "Trust Insights",
+              "https://trustinsights.substack.com/p/so-what-ai-news-you-should-care-about-9bc"
+            ]
+          ],
+          "stats": [
+            [
+              "201 GB",
+              "Before"
+            ],
+            [
+              "6 GB",
+              "After"
+            ],
+            [
+              "60M",
+              "Chunks"
+            ]
+          ]
         }
       ],
       "ahead": [
-        { "when": "Tue Nov 3", "what": "US midterms. An analysis by The Information finds candidates backing a pause on new data centers could win up to 15 governor races. AMD reports earnings, and an independent test had its MI355X serving Kimi K3 at $0.15 per million tokens vs $0.22 on Nvidia GB200." },
-        { "when": "Wed Nov 4", "what": "Apple Intelligence starts testing in China, with Alibaba's Qwen powering Writing Tools and Visual Intelligence." },
-        { "when": "Mon Nov 9", "what": "Congress returns. OpenAI plans a lame-duck push for mandatory 'speed limits' on the most powerful AI systems." },
-        { "when": "Dec 1", "what": "Gemini 4 Argon's intro pricing ends: $2/$10 rises to $4/$20 per million tokens." }
+        {
+          "when": "Tue Nov 3",
+          "what": "US midterms. An analysis by The Information finds candidates backing a pause on new data centers could win up to 15 governor races. AMD reports earnings, and an independent test had its MI355X serving Kimi K3 at $0.15 per million tokens vs $0.22 on Nvidia GB200."
+        },
+        {
+          "when": "Wed Nov 4",
+          "what": "Apple Intelligence starts testing in China, with Alibaba's Qwen powering Writing Tools and Visual Intelligence."
+        },
+        {
+          "when": "Mon Nov 9",
+          "what": "Congress returns. OpenAI plans a lame-duck push for mandatory 'speed limits' on the most powerful AI systems."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Gemini 4 Argon's intro pricing ends: $2/$10 rises to $4/$20 per million tokens."
+        }
       ],
-      "sources": [["AI Weekly: week ahead", "https://aiweekly.co/issues/ai-week-ahead-data-center-pause-backers-could-win-15"], ["AI News for Oct 30", "https://aisdg.substack.com/p/ai-news-for-october-30-2026"]]
+      "sources": [
+        [
+          "AI Weekly: week ahead",
+          "https://aiweekly.co/issues/ai-week-ahead-data-center-pause-backers-could-win-15"
+        ],
+        [
+          "AI News for Oct 30",
+          "https://aisdg.substack.com/p/ai-news-for-october-30-2026"
+        ]
+      ]
     }
   ]
 }

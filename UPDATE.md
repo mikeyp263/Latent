@@ -25,7 +25,7 @@ Prepend a new object to `editions` in `briefs.json`:
 {
   "id": "2026-11-02-pm", "date": "2026-11-02", "edition": "Afternoon",
   "bigPicture": "2 to 3 sentences: the shape of the news since last edition.",
-  "stories": [ { "kicker": "Models", "headline": "...", "dek": "...", "why": "...", "learn": ["lessonId"], "sources": [["Outlet", "https://..."]] } ],
+  "stories": [ { "kicker": "Models", "headline": "...", "dek": "...", "why": "...", "stats": [["$16.3B", "H1 revenue"]], "learn": ["lessonId"], "sources": [["Outlet", "https://..."]] } ],
   "ahead": [ { "when": "Tue Nov 3", "what": "..." } ],
   "sources": [["Extra reading", "https://..."]]
 }
@@ -35,6 +35,7 @@ Prepend a new object to `editions` in `briefs.json`:
 - `headline`: specific and plain, like a good newspaper. No hype words.
 - `dek`: what happened, with the concrete facts (who, what, when, numbers).
 - `why`: why it matters, what it signals, what to watch, and if useful how it applies to someone building AI automations and agents. Be critical: call out when a claim is marketing, a benchmark gap is noise, or access is limited.
+- `stats`: 0 to 3 key numbers shown big at the top of the story, as [value, short label]. Only confirmed figures. Keep values short ("$16.3B", "59", "$1 / $5").
 - `learn`: 0 to 2 lesson ids (from `public/content.js` or `lessons.json`) for the concepts behind the story. Pick ones that genuinely help understand it.
 - `ahead`: upcoming dated events worth knowing (launches, earnings, deadlines, votes). Carry forward still-upcoming items from the last edition and drop past ones.
 - Keep only the 60 most recent editions in the file.
@@ -48,6 +49,7 @@ If a story depends on a concept that no existing lesson covers (check `content.j
 Teach the durable concept, not just the news item. 0 to 2 lessons per edition. Link the story's `learn` to it.
 
 ## 6. Style rules
+- Follow DESIGN.md. Don't change the app's look in a brief run; only data files and the cache version change.
 - Never use em dashes (the long dash). Use commas, colons, periods, or parentheses.
 - Plain, direct, concise. No hype.
 - Facts must come from your research this run, with sources.
