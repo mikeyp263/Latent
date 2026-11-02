@@ -1,6 +1,9 @@
 # Latent
 
-Learn AI and LLMs for real, a few minutes a day. Not flashcard fill-in-the-blanks: short explainer cards, real-world scenario questions, and explain-it-back prompts.
+The place to keep up with and learn AI: a twice-daily brief, a live model tracker, and lessons that make you fluent.
+
+## Daily updates
+A scheduled task publishes a Morning and an Afternoon edition: it researches what happened, writes the brief, updates the model tracker, adds lessons for new concepts, and pushes. The procedure is in [UPDATE.md](UPDATE.md). Data lives in `public/data/` (`briefs.json`, `models.json`, `lessons.json`); check it with `node scripts/validate.mjs`.
 
 ## Tracks
 - **Fluent**: talk shop and use AI like a pro (tokens, context, RAG, agents, MCP, evals, the landscape)
