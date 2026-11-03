@@ -235,6 +235,68 @@
         "Explain why an AI lab can post a $100B net loss while its operating loss is around $1B.",
         "Most of the net loss is noncash: accounting rules re-value convertible notes and derivatives as the company's valuation rises, and book the increase as a loss. Operating loss reflects the actual cost of running the business against revenue, so it's the better gauge of how the business itself is doing."
       ]
+    },
+    {
+      "id": "nw9",
+      "added": "2026-11-03",
+      "t": "Chip Export Controls and the Cloud Route",
+      "cards": [
+        "The US uses **export controls** to stop the most advanced AI chips (and the tools to make them) from being shipped to China. The theory: training frontier models takes huge amounts of top-end compute, so limiting chips limits capability.",
+        "Controls on shipping hardware leave a gap: **remote access**. A company can rent GPU time from a **cloud** in another country and train on the same chips without them ever crossing a border. Closing that gap means checking who the customers are, through **know-your-customer (KYC)** rules, approved-buyer lists, or conditions set by chipmakers themselves.",
+        "The other response is **substitution**: building domestic chips like Huawei's Ascend line. They're usually used first for **inference** (running models), which is easier, before **pretraining**, which needs thousands of chips tightly networked. When a lab says it will pretrain on domestic chips, that's the real test of whether controls are working."
+      ],
+      "terms": [
+        [
+          "Export controls",
+          "Government rules restricting the sale or shipment of sensitive technology to certain countries."
+        ],
+        [
+          "Remote access",
+          "Using chips over the internet, for example by renting cloud GPUs, instead of owning them."
+        ],
+        [
+          "KYC (know your customer)",
+          "Checks a provider does to verify who its customers are and what they're doing."
+        ],
+        [
+          "Substitution",
+          "Replacing a restricted product with a domestic alternative, such as Huawei Ascend chips for Nvidia GPUs."
+        ],
+        [
+          "Smuggling / gray market",
+          "Controlled chips reaching a banned country through intermediaries, usually at a big markup."
+        ]
+      ],
+      "qs": [
+        [
+          "A Chinese AI lab can't buy Nvidia B300s. What's the most common legal-gray way it still trains on them?",
+          "Renting cloud GPU time from a data center in another country",
+          "Downloading the chip design",
+          "Using a VPN on its own servers",
+          "Training only on CPUs",
+          "Export controls historically restricted shipping hardware, not renting compute abroad."
+        ],
+        [
+          "Why do domestic chips usually get used for inference before training?",
+          "Training needs thousands of chips tightly linked for weeks, which is much harder",
+          "Inference uses more data",
+          "Training doesn't need chips",
+          "Inference is illegal on Nvidia",
+          "Pretraining stresses chip-to-chip networking and software maturity far more than serving."
+        ],
+        [
+          "A rack sells for ~$600K internationally and ~$2.8M in China. What does that gap signal?",
+          "Controls are binding and demand inside China far exceeds legal supply",
+          "Chinese chips are better",
+          "Nvidia overcharges China on purpose",
+          "Shipping costs are high",
+          "A large premium means scarcity created by the restrictions."
+        ]
+      ],
+      "ex": [
+        "Explain why a rule saying 51% of a cloud's capacity must go to non-Chinese customers matters for export controls.",
+        "Export controls stop chips being shipped to China but not rented abroad, so Chinese labs have trained on foreign clouds. Requiring most capacity to go to non-Chinese customers limits that rental route without needing a new law, though how well it works depends on enforcement and verification."
+      ]
     }
   ]
 }

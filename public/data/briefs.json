@@ -1,6 +1,499 @@
 {
   "editions": [
     {
+      "id": "2026-11-03-pm",
+      "date": "2026-11-03",
+      "edition": "Afternoon",
+      "stories": [
+        {
+          "kicker": "Chips",
+          "headline": "Nvidia reportedly tells cloud customers to sell at least 51% of their capacity outside China",
+          "summary": "The FT says Nvidia is quietly closing the rental route Chinese AI companies use to reach chips they can't buy directly.",
+          "stats": [
+            [
+              "51%",
+              "Minimum share of capacity for non-Chinese customers"
+            ],
+            [
+              "~$600K",
+              "B300 rack, international price"
+            ],
+            [
+              "~$2.8M",
+              "Same rack in China last month"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The Financial Times reported on November 2 that Nvidia has told cloud and data center customers that at least 51% of the services they sell on its chips must go to companies that are not Chinese. According to people familiar with the matter cited by the FT, the instruction was given verbally by Nvidia's sales and regional teams over recent months, not in written contracts.",
+                "Two sources told the FT it applies to Nvidia customers worldwide, not only in Asia. It covers future deals, not existing leases. Until now Nvidia had placed no conditions on who its cloud customers rent to. A Singapore-based provider told the FT it is hard to find enough non-Chinese customers outside the US.",
+                "In a statement quoted by Seoul Economic Daily, Nvidia said clouds built on American chips are \"the foundation that allows U.S. model and application companies to compete worldwide\" and that long-standing US policy encourages clouds to build on American infrastructure. It did not dispute the report."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Required share of capacity sold to non-Chinese firms",
+                  "At least 51%"
+                ],
+                [
+                  "Applies to",
+                  "Future contracts, worldwide"
+                ],
+                [
+                  "B300 rack, international market",
+                  "~$600,000"
+                ],
+                [
+                  "B300 rack, sold in China last month",
+                  "~18.5M yuan (~$2.8M)"
+                ],
+                [
+                  "Approved Asian buyers cut earlier this year",
+                  "More than half"
+                ]
+              ],
+              "note": "From the FT's reporting as summarized by Techzine and Seoul Economic Daily. The rack prices come from one unnamed insider."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Export controls:** US rules that bar selling the most advanced AI chips (like Nvidia's B300) to China. They limit where chips can be shipped, but historically not who can rent time on them.",
+                "**The cloud route:** a Chinese company that can't buy chips can rent GPU time from a data center in Malaysia, Singapore, or elsewhere. Its model gets trained on the same hardware, without the hardware ever entering China.",
+                "**Approved-customer list:** a whitelist of buyers Nvidia has vetted. Nvidia reportedly cut the number of approved Asian buyers by more than half this year."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is a private company doing what Washington has struggled to write into law: limiting remote access to controlled chips. A verbal sales policy is easy to deny and hard to audit, so how strictly it gets enforced matters more than the number. Still, Southeast Asian operators that built capacity for Chinese demand now have a reason to slow down.",
+                "The price gap (roughly 4.7x for the same rack in China) shows how much demand is going unmet, which is the same pressure pushing Chinese labs toward Huawei chips (see the DeepSeek story below). For builders outside China, the near-term effect is probably neutral to slightly positive: more Asian capacity has to be sold to everyone else."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether the US Commerce Department turns this into a formal rule on remote access, and whether Southeast Asian data center operators report slower growth or contract changes in their next results."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Techzine Global",
+              "title": "Nvidia imposes strict requirements on cloud providers",
+              "url": "https://www.techzine.eu/news/infrastructure/145501/nvidia-imposes-strict-requirements-on-cloud-providers/"
+            },
+            {
+              "name": "Seoul Economic Daily",
+              "title": "Nvidia Tells Cloud Clients 51% of Capacity Must Go to Non-Chinese Buyers",
+              "url": "https://en.sedaily.com/international/2026/11/03/nvidia-tells-cloud-clients-51-percent-of-capacity-must-go"
+            },
+            {
+              "name": "Runtime Wire",
+              "title": "FT reports Nvidia told cloud clients to sell 51% to companies outside China",
+              "url": "https://runtimewire.com/article/nvidia-cloud-clients-china-51-percent-ft"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "CrowdStrike will buy Fiddler AI and Dreadnode for about $500 million to secure AI agents",
+          "summary": "One company watches what agents do in production, the other attacks AI systems before launch to find their flaws.",
+          "stats": [
+            [
+              "~$400M",
+              "Fiddler AI price (WSJ)"
+            ],
+            [
+              "~$95M",
+              "Dreadnode price (WSJ)"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "CrowdStrike announced on November 3 that it plans to acquire two AI security startups. The Wall Street Journal reported the prices: about $400 million for Fiddler AI and about $95 million for Dreadnode. CrowdStrike did not give a closing date in the coverage.",
+                "Fiddler, founded in 2018, makes observability software that monitors AI models and agents inside companies. It will become Falcon Observe, used to evaluate agents before deployment and track what they do afterward. Dreadnode, founded in 2023, automates offensive security testing of AI models, apps, and agents. Its results will feed into Falcon Guardian, CrowdStrike's existing agent security product, as policy recommendations."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Fiddler AI price",
+                  "~$400M"
+                ],
+                [
+                  "Fiddler AI raised to date",
+                  "~$99M"
+                ],
+                [
+                  "Dreadnode price",
+                  "~$95M"
+                ],
+                [
+                  "Dreadnode raised to date",
+                  "$14M"
+                ],
+                [
+                  "AI security market forecast, 2027",
+                  "Almost $5B (Gartner)"
+                ]
+              ],
+              "note": "Prices from the WSJ via TechCrunch. Funding totals from PitchBook and the companies, as reported by TechCrunch."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Observability:** tooling that records what a system is doing (inputs, outputs, tool calls, errors) so people can see why it behaved a certain way. For agents, that means logging every action they take.",
+                "**Red teaming / offensive testing:** attacking your own system on purpose, for example with prompt injection, to find weaknesses before real attackers do."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Security vendors are betting that agents will be treated like a new kind of employee or device that needs monitoring and access control. The prices are modest by CrowdStrike's standards, which suggests these are capability buys rather than revenue buys. Fiddler's price is about four times what it raised, a decent but not spectacular outcome.",
+                "If your company is rolling out agents, expect your security team to start asking for agent activity logs and pre-launch testing as a condition of approval. That's where these products plug in."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "title": "CrowdStrike to shell out nearly $500M for 2 AI security startups as the market for securing agents takes off",
+              "url": "https://techcrunch.com/2026/11/03/crowdstrike-to-shell-out-nearly-500m-for-2-ai-security-startups-as-the-market-for-securing-agents-takes-off/"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "OpenAI raises bug bounties more than fourfold and brings in outside hackers for a security sprint",
+          "summary": "Critical bugs in ChatGPT, Codex, and the API now pay up to $30,000, and up to about $172,000 with bonuses.",
+          "stats": [
+            [
+              "$30K",
+              "Critical finding, base"
+            ],
+            [
+              "~$172K",
+              "Maximum with bonuses"
+            ],
+            [
+              "4x+",
+              "Average rise in midpoints"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On November 2, OpenAI said it is raising payouts in its security bug bounty and planning its next internal security sprint with Cathedral Systems, a security firm whose researchers will use OpenAI's own models alongside its teams to attack its defenses and test fixes.",
+                "Midpoints of the medium, high, and critical reward ranges rise more than fourfold on average for its core products (ChatGPT, Codex, and the API Platform). A critical finding now pays up to $30,000. Exceptional findings can still reach $100,000 before bonuses, and about $172,000 once new quality bonuses, a five-tier loyalty program, and campaign bonus pools are added. New rates apply to pending reports, and researchers paid in the previous 30 days can get a top-up.",
+                "OpenAI said its previous sprint showed duplicate findings slowed review, severity ratings needed clearer guidance, and some merged patches weren't yet deployed everywhere, so it is keeping human review and independent verification."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Critical finding, core products",
+                  "Up to $30,000"
+                ],
+                [
+                  "Exceptional finding, base",
+                  "Up to $100,000"
+                ],
+                [
+                  "Exceptional finding, with bonuses",
+                  "~$172,000"
+                ],
+                [
+                  "Average increase in range midpoints",
+                  "More than 4x"
+                ],
+                [
+                  "Retroactive top-up window",
+                  "30 days"
+                ]
+              ],
+              "note": "From OpenAI's announcement as reported by DataStudios and OpenAI's post on X. OpenAI hasn't published the individual bonus multipliers."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Bug bounty:** a standing offer to pay outside researchers who report security flaws privately instead of exploiting or publishing them.",
+                "**Security sprint:** a focused stretch where a team (here, with outside researchers and AI models) tries to break its own systems, then fixes what it finds.",
+                "Jailbreaks and model safety bypasses are not covered. They go through OpenAI's separate Safety Bug Bounty."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The reasoning is that AI models are now good at finding vulnerabilities, so whoever points them at a system first wins. Paying more makes it more attractive to report to OpenAI than to sell elsewhere. The headline $172,000 is a ceiling that stacks every bonus; most payouts will be far lower, and OpenAI hasn't said how often it expects to pay the maximum.",
+                "It also follows the Northflank breach covered Monday afternoon, in which customer secrets including AI keys were exposed, a reminder that the platforms around models are a big part of the attack surface."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "OpenAI on X",
+              "title": "Announcement of the next security sprint with Cathedral Systems",
+              "url": "https://x.com/OpenAI/status/2117444048227123277"
+            },
+            {
+              "name": "DataStudios",
+              "title": "OpenAI bug bounty: $30,000 for critical ChatGPT, Codex and API flaws, up to $172,000",
+              "url": "https://www.datastudios.org/post/openai-bug-bounty-rewards-30000-critical-chatgpt-codex-cathedral-security-sprint"
+            }
+          ]
+        },
+        {
+          "kicker": "Chips",
+          "headline": "DeepSeek reportedly plans to pretrain its V5 model on Huawei chips, not Nvidia",
+          "summary": "If true, it would be the first frontier-scale Chinese model trained from scratch on domestic hardware.",
+          "stats": [
+            [
+              "160,000+",
+              "Huawei Ascend 950DT chips ordered (Bloomberg, Sept)"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "China's Star Market Daily reported on November 3, citing several people in the chip supply chain, that DeepSeek plans to pretrain its next major model, V5, on Huawei Ascend chips. DeepSeek has so far used Ascend mainly to run models, not to build them. TrendForce, citing the Chinese outlet Caiwen, said V5 would use mainly Ascend 950 chips and could arrive in 2027. Neither DeepSeek nor Huawei has commented, and V5 has not been announced.",
+                "This would be a change from what Bloomberg reported in September: that DeepSeek ordered at least 160,000 Ascend 950DT chips for a roughly 1 GW site in Ulanqab, Inner Mongolia, but planned to use them for inference rather than training."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Ascend 950DT chips ordered",
+                  "At least 160,000"
+                ],
+                [
+                  "Ulanqab site target",
+                  "~1 GW"
+                ],
+                [
+                  "Earliest capacity online",
+                  "End of 2027 or early 2028"
+                ],
+                [
+                  "DeepSeek V4 released",
+                  "April 2026"
+                ],
+                [
+                  "V5 possible timing",
+                  "2027 (TrendForce, citing Caiwen)"
+                ]
+              ],
+              "note": "Chip order and site from Bloomberg (Sept 4). Training plan from Star Market Daily via TechCity Authority. All unconfirmed by DeepSeek."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Pretraining:** the first and most expensive stage of building a model, where it learns from trillions of tokens. It needs thousands of chips working in tight sync for weeks, which is much harder than inference.",
+                "**Inference:** running a trained model to answer requests. Less demanding on chip-to-chip communication, so it's where non-Nvidia chips usually get used first."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Training at the frontier is where Nvidia's lead (chips plus networking plus software) matters most. If DeepSeek pulls off a competitive V5 on Ascend, it weakens the main argument for US export controls: that China can't train top models without US chips. Treat it as a plan, not a fact. Reports of Chinese labs switching to domestic training have stalled before, and DeepSeek's own API notes said V4 Pro capacity was limited by chip shortages."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "TechCity Authority",
+              "title": "DeepSeek reportedly plans to pretrain its V5 model on Huawei Ascend chips",
+              "url": "https://www.techcityauthority.com/2026/11/deepseek-v5-pretraining-huawei-ascend-chips-report.html"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "DeepSeek plans big Huawei AI chip order to power new data center",
+              "url": "https://www.bloomberg.com/news/articles/2026-09-04/deepseek-plans-big-huawei-ai-chip-order-to-power-new-data-center"
+            },
+            {
+              "name": "Wccftech",
+              "title": "DeepSeek will train its upcoming V5 model from scratch on Huawei's Ascend 950DT-based Atlas SuperPoDs",
+              "url": "https://wccftech.com/china-going-for-domestic-full-stack-ai-dominance-deepseek-will-train-its-upcoming-v5-model-from-scratch-on-huaweis-ascend-950dt-based-atlas-superpods/"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "Apple makes AI companion apps with romantic or sexual content 18+ only",
+          "summary": "New App Store rules also make developers disclose features like real-world location sharing, starting November 16.",
+          "stats": [
+            [
+              "18+",
+              "Required rating"
+            ],
+            [
+              "Nov 16",
+              "New content descriptors required"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Apple told developers on Monday, November 2, that any app with dating or romantic relationship features, including AI companions with \"sexual or romantic content,\" must carry an 18+ rating. TechCrunch reports the rule may also apply to general apps where romance is one feature among many. Character.AI and Replika are the obvious examples of companion apps.",
+                "From November 16, developers must add new content descriptors so ratings reflect features such as dating and relationships, and must disclose whether an app shares a user's real-world location with other people."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This follows state laws like the New York chatbot rules covered yesterday morning, and Apple's global rollout of age assurance. An App Store rating is a blunt tool: it relies on Apple's age signals and parental controls rather than verifying every user. But it moves the burden onto app makers, who now need to decide whether their AI chat features count as romantic. Expect general-purpose chatbots with persona or companion modes to face that question too."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "title": "Apple restricts dating apps and AI companions to users 18 and up",
+              "url": "https://techcrunch.com/2026/11/03/apple-restricts-dating-apps-and-ai-companions-to-users-18-and-up/"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "OpenAI hires former Army Secretary Dan Driscoll for national security work",
+          "summary": "He left the Pentagon in August after reported tension with Defense Secretary Hegseth, and now advises OpenAI on government deals.",
+          "stats": [],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "OpenAI announced on Monday, November 2, that Dan Driscoll, the 26th Secretary of the Army, is joining as its first senior counselor for national security modernization, a new role. Reuters reports he will advise OpenAI's leadership, work with outside partners on how AI can help national security and cybersecurity, and help internal teams understand what defense agencies need.",
+                "Driscoll resigned in late August after months of reported tension with Defense Secretary Pete Hegseth. He said he is joining to \"help the United States and our allies put this technology to work responsibly.\""
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "OpenAI is building the kind of government relationships that win defense contracts. The Pentagon moved classified integrations toward other providers, including OpenAI, after its dispute with Anthropic over unrestricted access to Claude, per Breaking Defense. Hiring a former service secretary who knows the procurement system is how you turn that opening into long-term business. It also comes days before OpenAI's planned lobbying push in Congress for mandatory limits on the most powerful AI systems."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "OpenAI",
+              "title": "OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization",
+              "url": "https://openai.com/index/dan-driscoll-joins-openai/"
+            },
+            {
+              "name": "Reuters (via Investing.com)",
+              "title": "OpenAI taps former US army secretary Dan Driscoll for national security role",
+              "url": "https://www.investing.com/news/stock-market-news/openai-taps-former-us-army-secretary-dan-driscoll-for-national-security-role-4993247"
+            },
+            {
+              "name": "Breaking Defense",
+              "title": "Former Army secretary Dan Driscoll heads to OpenAI",
+              "url": "https://breakingdefense.com/2026/11/former-army-secretary-heads-to-openai/"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Drax and Brookfield plan a 1 GW AI data center at a UK power station, if it gets approved",
+          "summary": "The £20 billion figure assumes the whole thing gets built; no investment decision has been made.",
+          "stats": [
+            [
+              "1 GW+",
+              "Planned capacity"
+            ],
+            [
+              "£2.5B",
+              "First phase"
+            ],
+            [
+              "~9%",
+              "Drax share jump"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Drax said on November 3 it has agreed to work with Brookfield and AI infrastructure firm Radiant on a data center of more than 1 GW at Drax Power Station in North Yorkshire. Drax brings the land, power, and a 4 GW grid connection; Brookfield funds it through its venture with Qatar's Qai. Brookfield estimates total investment could top £20 billion (about $26.8 billion) if built in full. The first phase, about £2.5 billion, targets operation in early 2028.",
+                "Nothing is approved. The timeline depends on planning consent, grid and regulatory sign-off, and final investment decisions. Drax shares rose about 9% in early trading."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The scarce thing in UK data centers is a grid connection, and Drax already has a huge one. That's the real asset here: the BBC reported the same day that some developers are being told to expect waits of up to 10 years. The £20 billion headline is a full-build estimate with no tenant named, so treat it as an option, not a commitment. The UK government earlier rejected an AI Growth Zone bid tied to the site, per DatacenterDynamics."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Resultsense (citing Reuters)",
+              "title": "Drax and Brookfield plan £20bn-plus UK AI data centre",
+              "url": "https://www.resultsense.com/news/2026-11-03-drax-brookfield-radiant-yorkshire-data-centre/"
+            },
+            {
+              "name": "Proactive Investors",
+              "title": "Drax shares jump over 8% on £20bn AI data centre partnership with Brookfield",
+              "url": "https://www.proactiveinvestors.com/companies/news/1101130/drax-shares-jump-over-8-on-20bn-ai-data-centre-partnership-with-brookfield-1101130.html"
+            },
+            {
+              "name": "DatacenterDynamics",
+              "title": "UK govt rejects AI Growth Zone bid to power data center with Drax biomass plant",
+              "url": "https://www.datacenterdynamics.com/en/news/uk-govt-rejects-ai-growth-zone-bid-to-power-data-center-with-drax-biomass-plant-in-selby-north-yorkshire"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Tue Nov 3",
+          "what": "US midterms tonight, with data center pauses an issue in several governor races. AMD reports earnings after the close. Anthropic's response to Senator Warren's letter on its S-1 is due."
+        },
+        {
+          "when": "Wed Nov 4",
+          "what": "Apple Intelligence starts testing in China, with Alibaba's Qwen powering Writing Tools and Visual Intelligence."
+        },
+        {
+          "when": "Mon Nov 9",
+          "what": "Congress returns. OpenAI plans a lame-duck push for mandatory 'speed limits' on the most powerful AI systems."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Anthropic's Nasdaq debut (ticker ANT) could come, per reports. The price range and share count come first."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Gemini 4 Argon's intro pricing ends: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-03-am",
       "date": "2026-11-03",
       "edition": "Morning",
