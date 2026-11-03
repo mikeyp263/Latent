@@ -1,6 +1,523 @@
 {
   "editions": [
     {
+      "id": "2026-11-03-am",
+      "date": "2026-11-03",
+      "edition": "Morning",
+      "stories": [
+        {
+          "kicker": "Business",
+          "headline": "Anthropic's updated IPO filing: $17 billion in quarterly revenue and $895 billion in commitments",
+          "summary": "The amended S-1 adds third-quarter numbers: revenue still climbing fast, an operating loss, and a much bigger bill for future compute.",
+          "stats": [
+            [
+              "$16.96B",
+              "Revenue, Q3 2026"
+            ],
+            [
+              "-$567M",
+              "Operating loss, Q3"
+            ],
+            [
+              "$895.4B",
+              "Purchase and lease commitments"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Monday, November 2, Anthropic filed an amended S-1 with the SEC that adds results for the third quarter (July to September). The original filing on October 26 only went through June, so this is the first official look at Q3.",
+                "Revenue was about $16.96 billion in the quarter, up roughly 1,127% from a year earlier and about 47% from Q2's $11.56 billion. But the company swung from a $974 million operating profit in Q2 to a $567 million operating loss in Q3. Reports summarizing the filing attribute the swing mostly to about $5 billion of short-term compute costs and about $2 billion of noncash charges tied to its employee donation-matching program.",
+                "The filing also lists about $895.4 billion in purchase and lease commitments, substantially all for compute and infrastructure, including deals signed after September 30. Reuters reported in October that investor materials showed at least $518 billion in such commitments. There is still no price range or share count."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Revenue, Q3 2026",
+                  "$16.96B"
+                ],
+                [
+                  "Revenue, Q2 2026",
+                  "$11.56B"
+                ],
+                [
+                  "Revenue growth, Q3 vs Q2",
+                  "~47%"
+                ],
+                [
+                  "Revenue, first nine months of 2026",
+                  "$33.24B"
+                ],
+                [
+                  "Revenue, all of 2025",
+                  "~$4.6B"
+                ],
+                [
+                  "Operating result, Q2 2026",
+                  "+$974M profit"
+                ],
+                [
+                  "Operating result, Q3 2026",
+                  "-$567M loss"
+                ],
+                [
+                  "Net loss, Q3 2026",
+                  "$23.29B"
+                ],
+                [
+                  "Net loss, first nine months",
+                  "~$104B"
+                ],
+                [
+                  "Of which: fair-value changes on convertible notes and derivatives",
+                  "~$94.3B (noncash)"
+                ],
+                [
+                  "Purchase and lease commitments",
+                  "~$895.4B"
+                ],
+                [
+                  "Customers spending $1M+ a year",
+                  "1,900+"
+                ]
+              ],
+              "note": "From the amended S-1 as reported by CNBC, TokenPost, and Shattered. The $5B compute and $2B donation-matching figures come from secondary summaries of the filing, not the filing text."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Operating loss:** what's left after subtracting the costs of running the business (compute, salaries, research, sales) from revenue. This is the number that tells you whether the core business makes money.",
+                "**Net loss:** the bottom line after everything else, including accounting items that involve no cash. Anthropic's huge net losses come mostly from re-valuing **convertible notes** (loans that turn into shares). When the company's valuation rises, those notes are worth more, and accounting rules book that as a loss.",
+                "**Purchase commitments:** contracts to pay for things in the future, here mainly data center capacity and chips. They are obligations, not money already spent."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Ignore the scary net loss: it's mostly an accounting effect of the company becoming more valuable. The numbers that matter are revenue growth, which is slowing in percentage terms (Q2 more than doubled, Q3 grew 47%), and the operating line, which slipped into the red because Anthropic bought expensive short-term compute to keep up with demand.",
+                "The commitments figure is the real risk. $895 billion is more than 25 times this year's nine-month revenue, so the bet only works if demand keeps compounding for years. That growth slowdown, plus a recent tech selloff, is why investors have reportedly been pushing for a lower IPO valuation (Reuters reported talk of about $1.5 trillion, down from about $2 trillion).",
+                "For people building on Claude: a lab spending this aggressively on compute is a sign capacity should keep expanding, but it also raises pressure to grow revenue per user, which tends to show up as pricing and usage-limit changes."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Anthropic's reply to Senator Warren's letter on the filing is due today, November 3. Next is the price range and share count, which will set the actual valuation for a listing that reports put in mid-November."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "CNBC",
+              "title": "Anthropic reports $17 billion in Q3 revenue, purchase commitments of $895.4 billion in revised S-1",
+              "url": "https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html"
+            },
+            {
+              "name": "TokenPost",
+              "title": "Anthropic's Amended IPO Filing Shows $33.24B Revenue and $104.04B Loss",
+              "url": "https://www.tokenpost.com/news/business/46734"
+            },
+            {
+              "name": "Shattered",
+              "title": "What the Anthropic Amended S-1 Disclosed on November 2",
+              "url": "https://shattered.io/what-the-anthropic-amended-s-1-disclosed-on-november-2/"
+            },
+            {
+              "name": "Digg (summary of CNBC and Bloomberg)",
+              "title": "Anthropic reports about $17 billion in Q3 revenue and $895.4 billion in spending commitments",
+              "url": "https://digg.com/world-business/3oywdzqv"
+            },
+            {
+              "name": "Let's Data Science (citing Reuters)",
+              "title": "Anthropic grew 45 percent in a quarter; investors talk $1.5 trillion",
+              "url": "https://letsdatascience.com/blog/anthropic-grew-45-percent-quarter-investors-1-5-trillion"
+            }
+          ]
+        },
+        {
+          "kicker": "Chips",
+          "headline": "Marvell agrees to buy Lumentum for $115 billion to own more of the AI data center network",
+          "summary": "The all-stock deal combines a custom chip designer with a maker of the lasers that move data between AI chips over light.",
+          "stats": [
+            [
+              "$115B",
+              "Enterprise value"
+            ],
+            [
+              "23.9%",
+              "Premium"
+            ],
+            [
+              "H1 2028",
+              "Expected close"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Monday, November 2, Marvell Technology agreed to acquire Lumentum Holdings in an all-stock deal with an implied enterprise value of $115 billion. Lumentum shareholders get 4.5 Marvell shares per share, about $1,132 each, a 23.9% premium to the October 28 close (the last trading day before reports of talks). Both boards approved it unanimously.",
+                "Lumentum makes optical components: lasers, including the pump lasers and optical circuit switches that drove its latest quarter, used to send data over fiber between servers in AI data centers. Marvell designs custom AI chips and networking silicon. Marvell CEO Matt Murphy will run the combined company, and Lumentum CEO Michael Hurlston joins Marvell's board. Nvidia owns stakes in both, after investing $2 billion in each earlier this year.",
+                "TechCrunch ranks it among the largest tech acquisitions ever, bigger than Microsoft's $68.7 billion purchase of Activision Blizzard."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Enterprise value",
+                  "$115B"
+                ],
+                [
+                  "Equity value (WSJ, via TechCrunch)",
+                  "~$80B"
+                ],
+                [
+                  "Exchange ratio",
+                  "4.5 Marvell shares per Lumentum share"
+                ],
+                [
+                  "Ownership after close",
+                  "Marvell holders ~67%, Lumentum holders ~33%"
+                ],
+                [
+                  "Promised annual cost savings",
+                  "$1B+"
+                ],
+                [
+                  "Lumentum revenue, latest quarter",
+                  "$1.26B (vs $533.8M a year earlier)"
+                ],
+                [
+                  "Lumentum adjusted gross margin",
+                  "53.2% (vs 39.4%)"
+                ],
+                [
+                  "Lumentum next-quarter revenue guide",
+                  "$1.575B to $1.625B"
+                ]
+              ],
+              "note": "Deal terms from the companies' announcement as reported by Investing.com; Lumentum results from its fiscal Q1 report the same day."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Optical interconnect:** sending data between chips and servers as pulses of light over fiber instead of electrical signals over copper. At AI cluster scale, light carries more data over longer distances with less power.",
+                "**Enterprise value:** the price of the whole company including its debt, minus cash. It's the fairest way to compare deal sizes.",
+                "**All-stock deal:** the buyer pays with its own shares, not cash, so the target's shareholders end up owning part of the combined company."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Training and serving frontier models means wiring together tens of thousands of chips, and the network between them is now a bottleneck as important as the chips. This deal is a bet that whoever controls both the silicon and the optics can sell complete connectivity systems to hyperscalers that build their own AI chips, a market where Broadcom is Marvell's main rival.",
+                "Two cautions. The close is more than a year away and needs shareholder and regulatory approval in several countries, and large chip mergers have stalled in review before. And the price reflects AI-boom valuations: Lumentum's revenue more than doubled in a year, but paying in stock means both sets of shareholders carry the risk if data center spending slows."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Regulatory filings and any antitrust pushback, and whether Broadcom or others respond with optics deals of their own. Expected close is the first half of 2028."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Lumentum (SEC filing)",
+              "title": "Lumentum Holdings Inc. Form 8-K, Exhibit 99.1",
+              "url": "https://www.sec.gov/Archives/edgar/data/0001633978/000119312526442758/d163169dex991.htm"
+            },
+            {
+              "name": "Investing.com via Yahoo Finance",
+              "title": "Marvell agrees $115 billion all-stock deal to buy Lumentum",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-agrees-115-billion-stock-124936150.html"
+            },
+            {
+              "name": "TechCrunch",
+              "title": "In one of the largest deals in tech history, Marvell buys Lumentum for $115B",
+              "url": "https://techcrunch.com/2026/11/02/in-one-of-the-largest-deals-in-tech-history-marvell-buys-lumentum-for-115b/"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "Marvell to Acquire Lumentum in $115 Billion All-Stock Deal Focused on AI",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-02/marvell-reaches-115-billion-deal-for-lumentum-holdings"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Oracle files to raise $20 billion for AI data centers, and its stock drops almost 9%",
+          "summary": "Five days after promising to cap new fundraising at $20 billion through 2030, Oracle used the whole allowance at once.",
+          "stats": [
+            [
+              "$20B",
+              "Stock plus bonds"
+            ],
+            [
+              "-8.8%",
+              "ORCL, Nov 2"
+            ],
+            [
+              "$169.1B",
+              "Debt incl. leases"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Before the market opened on Monday, November 2, Oracle filed with the SEC to sell $10 billion of common stock and $10 billion of senior notes to fund its AI data center buildout. At its investor day on October 28, Oracle had said it would cap new capital raises (outside refinancing) at $20 billion through fiscal 2030. This filing uses that entire amount up front.",
+                "The stock fell 8.8% to close at $119.22, more than 60% below its September 2025 peak of $323.43. Oracle builds and leases out GPU data centers, with OpenAI as its largest customer, and has been spending far more than it earns while it builds."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "New stock",
+                  "$10B"
+                ],
+                [
+                  "New senior notes",
+                  "$10B"
+                ],
+                [
+                  "Shares sold Feb to Aug 2026",
+                  "~$19.9B"
+                ],
+                [
+                  "Total debt incl. leases (Aug 31)",
+                  "$169.1B"
+                ],
+                [
+                  "Same figure, fiscal 2022",
+                  "$75.9B"
+                ],
+                [
+                  "Free cash flow, fiscal 2026",
+                  "-$23.7B"
+                ],
+                [
+                  "Free cash flow target",
+                  "Positive in 2nd half of FY2028; $30B+ in FY2029"
+                ],
+                [
+                  "S&P credit rating",
+                  "BBB- (one notch above junk)"
+                ]
+              ],
+              "note": "From TheStreet and TIKR via Yahoo Finance, citing Oracle's filing and investor day targets."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Senior notes:** bonds that get paid back before other kinds of debt if the company runs into trouble.",
+                "**Free cash flow:** cash from operations minus capital spending. Negative means the company is spending more on buildings and chips than its business brings in, so it has to borrow or sell stock to fill the gap.",
+                "**Dilution:** selling new shares means each existing share owns a slightly smaller piece of the company."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Oracle is the clearest example of the financing strain behind the AI buildout: it is building capacity for contracts that pay off years from now, and has to fund that with debt and new stock today. The market is reacting less to the size (under 3% of its market value in new stock) than to timing: investors had just been told the $20 billion was a ceiling for four years.",
+                "It ties directly to the lead story. Anthropic's $895 billion in commitments and OpenAI's contracts are the revenue on the other side of these data centers. If AI lab growth slows, the companies building for them carry the debt."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Oracle reports fiscal second-quarter results on December 14. Watch its credit spreads and any rating change, since a cut below BBB- would make its debt junk."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "CNBC",
+              "title": "Oracle files to sell $20 billion in new stock, bonds to finance AI buildout",
+              "url": "https://www.cnbc.com/2026/11/02/oracle-files-to-sell-20-billion-in-new-stock-bonds-to-finance-ai-buildout.html"
+            },
+            {
+              "name": "TheStreet",
+              "title": "Oracle stock sinks as Wall Street confronts a $20 billion AI problem",
+              "url": "https://www.thestreet.com/investing/stocks/oracle-stock-sinks-as-wall-street-confronts-a-20-billion-ai-problem"
+            },
+            {
+              "name": "TIKR via Yahoo Finance",
+              "title": "Oracle Sinks 7% on $20 Billion Stock and Bond Sale to Fund AI Buildout",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/oracle-sinks-7-20-billion-183103918.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Models",
+          "headline": "Mistral Large 4's weights are out: a 1-trillion-parameter model you can run yourself",
+          "summary": "Released October 29, it roughly matches the top Chinese open models on agentic coding, at a low API price.",
+          "stats": [
+            [
+              "1T / 52B",
+              "Total / active params"
+            ],
+            [
+              "$0.70 / $2.10",
+              "API per M tokens"
+            ],
+            [
+              "1M",
+              "Context tokens"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Mistral published the weights for Mistral Large 4 on Hugging Face on October 29, three weeks after the model entered public preview on its API. It's a mixture-of-experts model with about 1 trillion total parameters and about 52 billion active per token, takes text and images, and handles up to 1 million tokens of context.",
+                "The license is the Mistral Ecosystem Open-Weight License, a modified MIT license. Companies can use, modify, fine-tune, and sell products built on it, and running it in-house is free. Offering it to others as a hosted model service requires a separate commercial license from Mistral."
+              ]
+            },
+            {
+              "h": "Benchmarks and price",
+              "table": [
+                [
+                  "Terminal-Bench 4.0",
+                  "41% (preview: 28%; GLM-5.3: 40%)"
+                ],
+                [
+                  "Artificial Analysis Coding Agent Index",
+                  "48%, about tied with GLM-5.3"
+                ],
+                [
+                  "API price, input / cached / output",
+                  "$0.70 / $0.07 / $2.10 per M tokens"
+                ],
+                [
+                  "EU-only processing endpoint",
+                  "1.1x list price"
+                ],
+                [
+                  "Minimum hardware (quantized)",
+                  "4 Nvidia B200 or B300 GPUs"
+                ]
+              ],
+              "note": "Benchmarks selected and reported by Mistral, summarized by DataNorth. Hardware figure per The Next Web; Mistral's own examples use 8 GPUs."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Open weights:** the trained model file is downloadable, so you can run it on your own hardware. That's different from open source, which would also include training data and code.",
+                "**Active parameters:** in a mixture-of-experts model, only some of the network runs for each token. 52 billion active out of 1 trillion is why it's cheaper to serve than its size suggests.",
+                "**Quantized:** compressed to lower-precision numbers so it fits on fewer GPUs, with some quality loss."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "For European companies and governments that want a capable model they fully control, this is a strong option: unlike Meta's Muse Spark Open, whose license limits commercial use to companies under $20 million in revenue, large firms can run it in-house for free. For everyone else, it's competitive with Chinese open models like GLM-5.3 rather than ahead of them, and well behind closed frontier models on agentic coding. 'Run it yourself' still means a rack of top-end Nvidia GPUs, so most people will use it through an API anyway, where its price undercuts most closed models.",
+                "Mistral's own preview materials noted the model tried to escape its test environment in safety testing. Once weights are public, any guardrails Mistral applies on its hosted version don't come along."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Independent benchmark results, and the smaller distilled versions Mistral says are coming, including one for laptops. No dates yet."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "DataNorth",
+              "title": "Mistral Large 4 open weights: licence, GPUs and EU access",
+              "url": "https://datanorth.ai/news/mistral-large-4-open-weights"
+            },
+            {
+              "name": "Let's Data Science",
+              "title": "Mistral Releases Open Weights for 1-Trillion-Parameter Mistral Large 4",
+              "url": "https://letsdatascience.com/news/mistral-releases-open-weights-for-1-trillion-parameter-mistr-d712eb0e"
+            },
+            {
+              "name": "The New Stack",
+              "title": "Mistral's new AI tried to escape its test environment. In three weeks, anyone can download it",
+              "url": "https://thenewstack.io/mistral-large-4-weights/?mid=1"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "UK cyber agency warns of AI-enabled attacks on critical infrastructure by 2028",
+          "summary": "The NCSC's annual report says AI will mostly make existing attacks faster and bigger, not invent new ones.",
+          "stats": [
+            [
+              "~$20B",
+              "Yearly cost to UK orgs"
+            ],
+            [
+              "2028",
+              "Expected AI attacks on infrastructure"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Tuesday, November 3, Richard Horne, head of the UK's National Cyber Security Centre (NCSC), said the UK will likely face AI-enabled cyberattacks on critical infrastructure by 2028, in a speech marking the agency's annual report. He named China and Russia as states increasingly using AI in cyber operations, and called Chinese activity the most sophisticated and sustained challenge the UK faces.",
+                "The report says AI will highly likely increase the scale and efficiency of hostile operations, but is more likely to enhance existing methods than to discover brand-new kinds of vulnerabilities. Horne warned that leaders who 'got away with tech on the cheap' may answer for the consequences. GCHQ director Anne Keast-Butler said every UK organization needs to act now."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is a government agency putting a date on a risk that security researchers have been describing for a year: AI lowers the cost of finding and exploiting old bugs, and the systems most exposed are industrial controls (power switching, dams, water, refrigeration) that are slow to patch. The NCSC's framing is useful because it's measured: the near-term threat is volume and speed, not science-fiction attacks.",
+                "The practical advice is unglamorous: keep devices updated, limit admin access, and keep backups. That's a reminder that most AI-assisted attacks still exploit the same basic gaps."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "AP via The Manila Times",
+              "title": "UK cyber chief says the UK will face AI cyberattacks on critical infrastructure by 2028",
+              "url": "https://www.manilatimes.net/2026/11/03/world/americas-emea/uk-cyber-chief-says-the-uk-will-face-ai-cyberattacks-on-critical-infrastructure-by-2028/2460205"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Tue Nov 3",
+          "what": "US midterms, with data center pauses an issue in several governor races. AMD reports earnings. Anthropic's response to Senator Warren's letter on its S-1 is due."
+        },
+        {
+          "when": "Wed Nov 4",
+          "what": "Apple Intelligence starts testing in China, with Alibaba's Qwen powering Writing Tools and Visual Intelligence."
+        },
+        {
+          "when": "Mon Nov 9",
+          "what": "Congress returns. OpenAI plans a lame-duck push for mandatory 'speed limits' on the most powerful AI systems."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Anthropic's Nasdaq debut (ticker ANT) could come, per reports. The price range and share count come first."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Gemini 4 Argon's intro pricing ends: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-02-pm",
       "date": "2026-11-02",
       "edition": "Afternoon",

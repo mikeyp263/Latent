@@ -173,6 +173,68 @@
         "Explain LLMjacking and the three things you'd do to protect an app that uses an AI API.",
         "LLMjacking is when attackers steal AI provider credentials and run models on the victim's account, leaving them the bill. To protect an app: keep the key out of code and give it its own narrowly scoped key, set spending caps and alerts at the provider, and rotate the key immediately after any suspected exposure (and regularly anyway)."
       ]
+    },
+    {
+      "id": "nw8",
+      "added": "2026-11-03",
+      "t": "Reading an AI Company's Financials",
+      "cards": [
+        "AI labs are going public, so their numbers are now in the news. Start with **revenue** and how fast it's growing, then look at **operating income (or loss)**: revenue minus the cost of running the business, including compute, salaries, and research. Operating results tell you whether the core business makes money.",
+        "**Net income (or loss)** is the bottom line after everything, including **noncash** accounting items. Fast-rising startups often post giant net losses because **convertible notes** and other instruments are re-valued as the company's value climbs. That's a real accounting entry, but no cash leaves the building, so don't confuse it with burning money.",
+        "The other number to watch is **commitments**: contracts to pay for compute, data centers, and leases in future years. They don't show up as losses today, but they are obligations. Compare them with revenue to judge how big a bet the company is making on future demand."
+      ],
+      "terms": [
+        [
+          "Operating income / loss",
+          "Revenue minus the costs of running the business. The best single signal of whether the core business is profitable."
+        ],
+        [
+          "Net income / loss",
+          "The final bottom line, including taxes, interest, and noncash accounting items."
+        ],
+        [
+          "Noncash charge",
+          "An expense recorded under accounting rules that involves no cash payment, such as re-valuing convertible notes."
+        ],
+        [
+          "Convertible note",
+          "A loan to a company that can turn into shares later. Its accounting value rises as the company's valuation rises."
+        ],
+        [
+          "Purchase commitments",
+          "Contracts to pay for goods or services, such as compute capacity, in future periods."
+        ]
+      ],
+      "qs": [
+        [
+          "A lab reports $17B quarterly revenue, a $0.6B operating loss, and a $23B net loss mostly from re-valuing convertible notes. What's the fairest read?",
+          "The core business is near break-even; the big net loss is mostly an accounting effect",
+          "The company burned $23B in cash this quarter",
+          "The company is about to run out of money",
+          "Revenue must have fallen",
+          "Operating results show the business; the noncash charge inflates the net loss."
+        ],
+        [
+          "Which number best shows whether an AI lab's core business makes money?",
+          "Operating income or loss",
+          "Net loss",
+          "Total commitments",
+          "Valuation",
+          "Operating results exclude noncash financing effects."
+        ],
+        [
+          "A company has $895B in compute commitments and about $33B in nine-month revenue. What does that tell you?",
+          "It's betting heavily that demand keeps growing for years",
+          "It has already spent $895B",
+          "It is profitable",
+          "Commitments don't matter",
+          "Commitments are future obligations, large relative to current revenue."
+        ]
+      ],
+      "ex": [
+        "Explain why an AI lab can post a $100B net loss while its operating loss is around $1B.",
+        "Most of the net loss is noncash: accounting rules re-value convertible notes and derivatives as the company's valuation rises, and book the increase as a loss. Operating loss reflects the actual cost of running the business against revenue, so it's the better gauge of how the business itself is doing."
+      ]
     }
   ]
 }
