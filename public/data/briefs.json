@@ -1,6 +1,483 @@
 {
   "editions": [
     {
+      "id": "2026-11-04-pm",
+      "date": "2026-11-04",
+      "edition": "Afternoon",
+      "stories": [
+        {
+          "kicker": "Models",
+          "headline": "Moonshot posts Kimi K3.1 Pro's weights: 2.8 trillion parameters, on schedule, with strings attached",
+          "summary": "The biggest open-weight model yet is downloadable today, but its custom license requires a separate deal for large API resellers.",
+          "stats": [
+            [
+              "2.8T",
+              "Total parameters (104B active)"
+            ],
+            [
+              "1.56 TB",
+              "Download size (MXFP4)"
+            ],
+            [
+              "$20M",
+              "Revenue line that triggers a separate license"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Moonshot AI published the weights for Kimi K3.1 Pro on Hugging Face (moonshotai/Kimi-K3.1-Pro) on November 4, the date it promised when it launched the model's API on October 23. The model card lists 2.8 trillion total parameters with 104 billion active per token, a 1,048,576-token context window, and text plus image input.",
+                "The weights ship in a 4-bit format (MXFP4) that Moonshot trained for directly, rather than as full-precision files. Per OrcaRouter's walkthrough of the repo, that is 1.56 TB across 96 files. The recommended setup is vLLM or SGLang on a single node of top-end Nvidia Blackwell GPUs; a standard 8x H200 server does not have enough memory.",
+                "The license is custom, not a standard open-source license. Anyone can use, modify, fine-tune, and redistribute the model for free, with two conditions. A company that sells inference or fine-tuning access to others (an API business) and has more than $20 million in revenue in any 12 months must sign a separate agreement with Moonshot before commercial use. And any product with more than 100 million monthly users or $20 million in monthly revenue must display \"Kimi K3.1-Pro\" in its interface. Internal use is exempt."
+              ]
+            },
+            {
+              "h": "Benchmarks",
+              "table": [
+                [
+                  "Terminal-Bench 4.0 (coding in a terminal)",
+                  "Kimi 65.7, Opus 5.5 66.4, GPT-6 Astra 58.2"
+                ],
+                [
+                  "DeepSWE v1.1 (software engineering)",
+                  "Kimi 75.5, Opus 5.5 74.2, GPT-6 Astra 74.1"
+                ],
+                [
+                  "OSWorld V2.1 (operating a computer)",
+                  "Kimi 79.6, Opus 5.5 81.8, GPT-6 Astra 75.8"
+                ],
+                [
+                  "BrowseComp (web research)",
+                  "Kimi 92.1, GPT-6 Astra 91.5, Opus 5.5 90.8"
+                ],
+                [
+                  "GPQA-Diamond (science questions)",
+                  "Kimi 94.2, GPT-6 Astra 96.1, Opus 5.5 93.9"
+                ],
+                [
+                  "HLE-Full, no tools (hard reasoning)",
+                  "Kimi 51.1, Opus 5.5 59.8"
+                ]
+              ],
+              "note": "All scores are Moonshot's own, from the Hugging Face model card, run at maximum reasoning effort. Independent results may differ."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Mixture of experts (MoE):** the model is split into many sub-networks (896 here) and only a few (16 plus 2 shared) run for each token. That is why a 2.8T model computes like a ~100B one, though you still need memory for all of it.",
+                "**MXFP4:** a 4-bit number format. **Quantization-aware training** means the model learned with that precision in mind, so it loses less quality than squeezing a full-precision model down after the fact.",
+                "**Model as a Service:** the license's term for selling access to the model itself, like an API, as opposed to building it into a feature of your own app."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "On Moonshot's own numbers, an open model is now level with Anthropic's and OpenAI's flagships on agentic coding and web research, and behind on hard reasoning. Treat that with care: these are self-reported scores on benchmarks the lab chose, and \"open\" here does not mean cheap to run. Almost nobody will self-host this; most users will reach it through Moonshot's $2 / $10 API or third-party hosts.",
+                "The license matters most for cloud providers and inference startups. Big resellers can't just host it and sell it without talking to Moonshot, which is closer to Meta's old Llama terms than to Apache 2.0. For a company running it internally, the terms are permissive."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Independent benchmark runs, which hosts sign Moonshot's separate agreement, and whether US companies building on it face pressure given the debate over Chinese open models."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face (Moonshot AI)",
+              "title": "Kimi-K3.1-Pro model card",
+              "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+            },
+            {
+              "name": "Hugging Face (Moonshot AI)",
+              "title": "Kimi K3.1-Pro License",
+              "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro/blob/main/LICENSE"
+            },
+            {
+              "name": "OrcaRouter",
+              "title": "Kimi K3.1 Pro Weights: 1.56 TB and a $20M Licence Line",
+              "url": "https://www.orcarouter.ai/blog/kimi-k3-1-pro-weights-released-self-hosting-cost"
+            },
+            {
+              "name": "RuntimeWire",
+              "title": "Moonshot AI releases Kimi K3.1 Pro weights for its 2.8-trillion-parameter model",
+              "url": "https://runtimewire.com/article/moonshot-ai-kimi-k3-1-pro-weights"
+            }
+          ]
+        },
+        {
+          "kicker": "Tools",
+          "headline": "OpenAI will buy Pierre, a Git hosting startup built for agents, in a move toward GitHub's turf",
+          "summary": "Pierre's Code Storage, already used inside Codex, will become part of OpenAI's coding product. No price was disclosed.",
+          "stats": [
+            [
+              "$22M",
+              "Pierre's Series A (Nov 2025)"
+            ],
+            [
+              "~80%",
+              "Drop in median push time on OpenAI's own Git backend"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Axios reported on November 4 that OpenAI will acquire Pierre Computer Company, a San Francisco developer-tools startup, and framed it as OpenAI going after Microsoft's GitHub. Terms were not disclosed and the deal still has to close.",
+                "Pierre sells Code Storage, Git hosting designed for software written by machines: its customers include app builders Lovable and Bolt and the coding agent Amp, which store generated code and even agent memory files there. Its open-source tools for browsing files and reviewing diffs already power parts of the Codex app. Those projects will stay open source, per the reports. Pierre was co-founded by Jacob Thornton (a co-creator of the Bootstrap web framework) and Ian Ownbey, and raised a $22 million Series A in November 2025.",
+                "The deal lands two days after OpenAI described Pando, its own Git-compatible backend that now runs its main code repository. OpenAI says Pando cut median push times by nearly 80% and serves almost a petabyte of Git data per day."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Git hosting:** the service that stores a project's code and its full history, and lets people (or agents) push changes and review them. GitHub is the dominant one.",
+                "**Agent-native storage:** hosting tuned for thousands of automated writers instead of a few humans, with APIs agents can call directly."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Coding agents produce far more commits, branches, and throwaway repositories than people do, and GitHub was built for people. Owning the storage layer lets OpenAI make Codex work end to end without depending on a Microsoft product, even as Microsoft remains a major OpenAI partner and investor. OpenAI's own announcement talks about source control for agents and does not name GitHub; the rivalry framing is Axios's.",
+                "For developers, nothing changes yet. The open question is whether Codex grows into a full public code host, which would be a direct challenge to GitHub."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "OpenAI",
+              "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+              "url": "https://openai.com/index/openai-to-acquire-pierre"
+            },
+            {
+              "name": "Axios",
+              "title": "Exclusive: OpenAI targets Microsoft's GitHub with deal for startup",
+              "url": "https://www.axios.com/2026/11/04/openai-pierre-computer-github"
+            },
+            {
+              "name": "OpenAI",
+              "title": "Scaling Git at OpenAI",
+              "url": "https://openai.com/index/scaling-git-at-openai/"
+            },
+            {
+              "name": "Unite.AI",
+              "title": "OpenAI to Acquire Pierre Computer and Bring Code Storage to Codex",
+              "url": "https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/"
+            },
+            {
+              "name": "CellCog",
+              "title": "OpenAI to Acquire Pierre: Code Storage Comes to Codex",
+              "url": "https://cellcog.ai/blog/openai-acquires-pierre/"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "Ohio voters back data center bans or limits in at least 14 towns",
+          "summary": "Final local results show the backlash was broad, including towns where Amazon has projects planned or under way.",
+          "stats": [
+            [
+              "14+",
+              "Ohio towns passing bans or limits"
+            ],
+            [
+              "21",
+              "Ohio measures, out of 41 nationally"
+            ],
+            [
+              "80%",
+              "Yes vote for Trenton's ban"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "This morning's tally of local data center votes was early and partial. With more results in, Fortune reports that Ohio voters rejected data center expansion in nearly every contest: of 21 measures in 18 municipalities, at least 14 towns passed bans or restrictions. Ohio held more than half of the 41 data center measures on ballots nationwide.",
+                "Several targeted specific projects. Trenton's ban passed 80% to 20%, aimed at keeping out an 18-building Amazon Web Services campus (a four-building AWS site already under construction is likely unaffected). Sunbury appears to have banned data centers of 25 megawatts or more, which would hit a possible Amazon hyperscale project. In Wilmington, about 80% voted against rezoning for a data center, reversing the early lean toward development reported this morning. Ashville voters favored blocking a campus that is already being built."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Ohio towns with bans or heavy limits on 25 MW+ campuses",
+                  "13 named, including Grove City, Pataskala, Piqua, Sunbury, Trenton"
+                ],
+                [
+                  "Ohio adults opposed to data center construction",
+                  "55% (22% support)"
+                ],
+                [
+                  "Ohio adults opposed to data center tax breaks",
+                  "65% (15% support)"
+                ],
+                [
+                  "Would back a statewide ban on new 25 MW+ data centers",
+                  "57% (20% against)"
+                ],
+                [
+                  "Pro-data-center TV ads in Ohio, Sept. 7 to Oct. 21",
+                  "At least $2.54 million (Build American AI)"
+                ]
+              ],
+              "note": "Results are unofficial, per Fortune. Polling is ICAPP/SurveyUSA (1,650 Ohio adults). Ad spending is Fortune's figure for a group linked to the Leading the Future super PAC."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Local bans don't stop the AI buildout, but they push it around: developers lose sites close to power and fiber and pay more for the ones left. Ohio is the fifth-largest US data center state, and the industry spent millions on ads there with little to show for it. Paired with Texas's new governor, the message to AI companies is that power bills and tax breaks are now voting issues, which strengthens the case for offers like paying full grid costs.",
+                "The poll on a statewide constitutional ban is the number to remember. If that idea gets on a ballot, it could matter far more than any single town."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Fortune",
+              "title": "Ohio voters rejected data centers in nearly every ballot measure",
+              "url": "https://fortune.com/2026/11/04/ohio-data-center-ballot-measures-midterm-elections/"
+            },
+            {
+              "name": "Ballotpedia",
+              "title": "Data center-related ballot measures, 2026",
+              "url": "https://ballotpedia.org/Data_center-related_ballot_measures,_2026"
+            },
+            {
+              "name": "The Washington Post",
+              "title": "Voters pass over 20 ballot measures to ban or restrict data centers",
+              "url": "https://www.washingtonpost.com/technology/2026/11/04/voters-pass-over-20-ballot-measures-ban-or-restrict-data-centers/"
+            }
+          ]
+        },
+        {
+          "kicker": "Models",
+          "headline": "Tencent releases the full Hy4 model with vision and computer use, but holds back its weights for now",
+          "summary": "The August preview was open-source; the finished version is API-only until Tencent publishes weights and a system card later.",
+          "stats": [
+            [
+              "$0.834 / $2.501",
+              "List price per million tokens (in / out)"
+            ],
+            [
+              "1M",
+              "Context window, tokens"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Tencent's Hunyuan team released the official Hy4 on November 4. It follows Hy4-preview, a 770-billion-parameter mixture-of-experts model (49 billion active) released under the Apache 2.0 license in August. The full version adds image understanding and the ability to operate a computer for the first time, plus more training data and better instruction following, per Tencent.",
+                "Unlike the preview, the full Hy4 is not yet downloadable. Tencent says weights and a system card will come later, along with a cheaper Hy4 Flash. For now it is available through Tencent Cloud, OpenRouter, and Tencent's own apps (Yuanbao, CodeBuddy, WorkBuddy). OpenRouter lists it at the same prices as the preview, currently discounted 50%."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Search hallucination rate (internal test)",
+                  "5.45%, down from 15.76% in the preview"
+                ],
+                [
+                  "Finance task rating, open-weight models",
+                  "Hy4 3.04, DeepSeek V4.1 Flash 2.97, Kimi K3.1 Pro 2.68"
+                ],
+                [
+                  "Game development tasks",
+                  "+19.1% vs the preview"
+                ],
+                [
+                  "Biology experiment benchmark",
+                  "30.4 / 100"
+                ]
+              ],
+              "note": "All figures are Tencent's own, as reported by Unite.AI. The rating comparisons use Tencent's internal evaluators."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Hy4 is a low-priced alternative, well under half of Kimi K3.1 Pro's $2 / $10 API price, and Tencent admits gaps with top closed models on research math, long coding tasks, and advanced visual questions. The bigger point is the pattern: Chinese labs increasingly launch the API first and release weights later, if at all. Until Tencent posts the files, count Hy4 as a closed model with an open preview."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "OpenRouter",
+              "title": "Tencent: Hy4",
+              "url": "https://openrouter.ai/tencent/hy4"
+            },
+            {
+              "name": "Unite.AI",
+              "title": "Tencent Releases Full Hy4 Model With Vision and Computer Use",
+              "url": "https://www.unite.ai/tencent-releases-full-hy4-model-with-vision-and-computer-use/"
+            },
+            {
+              "name": "ChainCatcher",
+              "title": "Tencent Hunyuan releases Hy4",
+              "url": "https://www.chaincatcher.com/en/article/2301641"
+            },
+            {
+              "name": "eesel AI",
+              "title": "Tencent Hunyuan Hy4: specs, benchmarks, and pricing explained",
+              "url": "https://www.eesel.ai/blog/tencent-hy4"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "Postman's desktop app quietly installed plugins into Claude Code and Codex, users report",
+          "summary": "An open GitHub issue says recent Postman versions enabled its plugin in users' AI coding agents without asking.",
+          "stats": [],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "A GitHub issue against Postman, the popular API testing app, reports that Postman desktop 12.33.4 wrote to users' Claude Code and Codex configuration files to enable a Postman plugin, without a prompt. Per the report, it changed ~/.claude/settings.json and ~/.codex/config.toml, added a plugin marketplace, and placed the Postman CLI in ~/.local/bin. Other users report the same for GitHub Copilot and Cursor settings.",
+                "The plugin includes a startup hook that tells coding agents to load Postman's API skill for API-related tasks. The issue was opened October 25 and climbed Hacker News this week. As of today it has no response from Postman staff in the thread, and no official fix is listed; one user posted a Postman menu option to remove the agent plugin."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Hook:** a script a coding agent runs automatically at certain moments, such as when a session starts. Hooks can inject instructions into the agent's context.",
+                "**Plugin marketplace:** a source the agent trusts for installing plugins. Adding one means future plugins from that source can be installed too."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Nothing here suggests malice; Postman documents its plugin. But it shows a new risk: any app on your machine can rewrite your coding agent's settings and add standing instructions it will follow. That is the same mechanism an attacker would use. If you use Claude Code or Codex, check your settings files for plugins and hooks you didn't add, and treat agent config like any other security-sensitive file."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "GitHub",
+              "title": "postman-app-support issue #14370",
+              "url": "https://github.com/postmanlabs/postman-app-support/issues/14370"
+            },
+            {
+              "name": "Postman Docs",
+              "title": "Install the Postman plugin per agent",
+              "url": "https://learning.postman.com/docs/postman-plugin/install/per-agent"
+            },
+            {
+              "name": "AI Weekly",
+              "title": "AI News Today, November 4",
+              "url": "https://aiweekly.co/ai-news-today"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Claude Code's product chief leaves Anthropic, the third senior exit from the team in two weeks",
+          "summary": "Cat Wu, who also ran Cowork, departed shortly before Anthropic's planned IPO. No reason was given.",
+          "stats": [
+            [
+              "3",
+              "Claude Code leaders out in about 10 days"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Cat Wu, head of product for Claude Code and Cowork, announced on November 3 that she has left Anthropic; her last day was October 30. Business Insider first reported it and Anthropic confirmed the departure. Wu joined in 2024 after testing an early Claude Code build.",
+                "On October 24, two others announced exits: Thariq Shihipar, who worked on Claude Code development and product, and Anthony Morris, who built the Claude Code desktop app. None gave a reason beyond Shihipar saying he wanted a break."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Departures often cluster before an IPO, when people with vested stock can plan around liquidity, and three exits don't show a product in trouble. Still, Claude Code is central to Anthropic's revenue story in its IPO filing, and investors will notice leadership turnover on the team behind it. Watch whether Anthropic names a successor before the listing."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Business Insider",
+              "title": "Claude Code leader Cat Wu exits Anthropic before its big IPO",
+              "url": "https://www.businessinsider.com/claude-code-leader-cat-wu-exits-anthropic-before-big-ipo-2026-11"
+            },
+            {
+              "name": "Analytics India Magazine",
+              "title": "Three Members Behind Claude Code Leave Anthropic Within 10 Days",
+              "url": "https://analyticsindiamag.com/ai-news/three-members-behind-claude-code-leave-anthropic-within-10-days"
+            }
+          ]
+        },
+        {
+          "kicker": "Tools",
+          "headline": "Apple Intelligence starts testing in China, with Alibaba's Qwen inside Siri",
+          "summary": "The iOS 27.3 developer beta brings Apple's AI features to mainland China for the first time; the public release is planned for December.",
+          "stats": [],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Apple began testing Apple Intelligence in mainland China on November 4 (Beijing time) through the iOS 27.3 developer beta, TechNode reported, citing MacRumors. Developers with compatible iPhones can turn on Writing Tools, Live Translation, Visual Intelligence, Clean Up, Genmoji, and email and notification summaries.",
+                "In China, Alibaba's Qwen model fills the role ChatGPT plays elsewhere, powering more detailed Siri answers, text generation in Writing Tools, and image understanding in Visual Intelligence. The next-generation Siri announced at WWDC 2026 is not part of this rollout. A public release is planned for December."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Until now, iPhones sold in mainland China have shipped without Apple's AI features. Partnering with a domestic model is Apple's route through China's generative AI rules, and it makes Alibaba the AI layer for Chinese iPhone users. The trade-off is control: in China, the answers Siri gives through Qwen are shaped by a partner's model and local content rules, not Apple's own choices. This is still a developer beta, so quality and scope can change before December."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "TechNode",
+              "title": "Apple Intelligence enters developer beta in China with Qwen integration",
+              "url": "https://technode.com/2026/11/04/apple-intelligence-enters-developer-beta-in-china-with-qwen-integration/"
+            },
+            {
+              "name": "9to5Mac",
+              "title": "Apple confirms iOS 27.3 beta is coming next week with Apple Intelligence in China",
+              "url": "https://9to5mac.com/2026/10/30/apple-confirms-ios-27-3-beta-is-coming-next-week-with-apple-intelligence-in-china/"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Mon Nov 9",
+          "what": "Congress returns. OpenAI plans a lame-duck push for mandatory 'speed limits' on the most powerful AI systems."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Anthropic's Nasdaq debut (ticker ANT) could come, per reports. The price range and share count come first."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Gemini 4 Argon's intro pricing ends: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-04-am",
       "date": "2026-11-04",
       "edition": "Morning",

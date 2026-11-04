@@ -359,6 +359,68 @@
         "Explain to a friend why 'which model answered me?' is hard to prove, and how a zero-knowledge proof helps.",
         "From outside, an API is a black box: you send text and get text, and a cheaper model can sound similar. A zero-knowledge proof lets the provider attach evidence that the answer was computed with the exact weights it publicly committed to, without revealing those weights. Anyone can check the proof quickly. Today generating the proof is very expensive, so it would be used for spot-checks and audits rather than every request."
       ]
+    },
+    {
+      "id": "nw11",
+      "added": "2026-11-04",
+      "t": "Reading an Open-Weight License",
+      "cards": [
+        "\"Open weights\" only means you can download the model. What you may **do** with it is set by the **license**, and those vary a lot. **Permissive** licenses like **Apache 2.0** and **MIT** let anyone use, change, and sell products built on the model, with little more than keeping the copyright notice.",
+        "Many big labs use **custom licenses** that are free for most users but add conditions for large ones. Common patterns: a **revenue or user threshold** above which you need a separate deal, a rule that you must **display the model's name** in your product, limits on **Model as a Service** (reselling raw access via an API), and **acceptable-use** lists of banned purposes.",
+        "To read one quickly, ask four questions: Can I use it **commercially**? Is there a **threshold** I could cross? Must I **attribute** it? Am I allowed to **host it for others**? Also check whether the open release matches the API model, since labs sometimes ship different versions."
+      ],
+      "terms": [
+        [
+          "Permissive license",
+          "A license like Apache 2.0 or MIT that allows almost any use, including commercial, with minimal conditions."
+        ],
+        [
+          "Custom model license",
+          "A lab-written license with its own conditions, often not approved as open source."
+        ],
+        [
+          "Revenue threshold",
+          "A clause that adds obligations once a licensee's revenue or users pass a set level."
+        ],
+        [
+          "Model as a Service",
+          "Selling access to the model itself, such as through an API, rather than using it inside your own product."
+        ],
+        [
+          "Attribution requirement",
+          "A rule that you must name the model or its maker in your product or documentation."
+        ]
+      ],
+      "qs": [
+        [
+          "A startup with $3M in revenue wants to build a chatbot feature on a model whose license requires a separate deal for API resellers above $20M. What applies?",
+          "It can use the model freely; it is under the threshold and isn't reselling raw API access",
+          "It must pay Moonshot immediately",
+          "It cannot use the model commercially at all",
+          "It must open-source its whole app",
+          "Thresholds only bite when you cross them, and embedding a model in a feature is not Model as a Service."
+        ],
+        [
+          "Which license lets you sell a product built on the model with the fewest conditions?",
+          "Apache 2.0",
+          "A custom license with a 100M-user display rule",
+          "A research-only license",
+          "A non-commercial license",
+          "Apache 2.0 is permissive: keep the notices and you can sell."
+        ],
+        [
+          "A cloud provider with billions in revenue wants to offer an open model through its API under a license with a $20M Model-as-a-Service clause. What should it do first?",
+          "Sign the separate agreement with the model's maker",
+          "Nothing, open weights mean anything goes",
+          "Rename the model",
+          "Only offer it for free",
+          "Large resellers are exactly who these clauses target."
+        ]
+      ],
+      "ex": [
+        "Explain why 'open weights' doesn't automatically mean you can do anything with a model.",
+        "Open weights means the files are downloadable, but a license still governs use. Permissive ones like Apache 2.0 allow nearly anything. Custom ones can require a separate deal above a revenue or user threshold, force you to display the model's name, or limit reselling API access. So you check commercial use, thresholds, attribution, and hosting rights before building on it."
+      ]
     }
   ]
 }
