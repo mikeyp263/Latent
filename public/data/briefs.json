@@ -1,6 +1,500 @@
 {
   "editions": [
     {
+      "id": "2026-11-04-am",
+      "date": "2026-11-04",
+      "edition": "Morning",
+      "stories": [
+        {
+          "kicker": "Policy",
+          "headline": "Democrats win Congress, and Texas elects a governor who promised to halt new data centers",
+          "summary": "The midterms turned AI's power bill into a national issue, and AI infrastructure stocks fell in overnight trading.",
+          "stats": [
+            [
+              "27%",
+              "Texas share of planned US data center gigawatts (Wells Fargo)"
+            ],
+            [
+              "30 of 35",
+              "Local data center measures leaning toward limits"
+            ],
+            [
+              "-7%",
+              "CoreWeave, overnight"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Democrats won control of the Senate on election night, PBS reported, and Al Jazeera reported that the AP had Democrats crossing the 218 seats needed for a House majority. Several races were still uncalled early Wednesday, so final seat counts are not settled.",
+                "The result that hit AI most directly was in Texas. Democrat Gina Hinojosa beat Governor Greg Abbott; the AP called the race at 11:17 p.m. ET and Abbott conceded. Hinojosa campaigned on a moratorium on new data center construction until the legislature passes protections, stricter rules on data center water and power use, and an end to data center tax breaks. Abbott, who once wanted Texas to be the \"epicenter of AI development,\" had announced his own pause late in the race, which Hinojosa called an \"election year pause.\"",
+                "Voters also decided dozens of local data center measures. By FourWeekMBA's count of unofficial Ballotpedia returns early Wednesday, 30 of the 35 measures with posted results were leaning toward limits, including most proposed bans or pauses (each with at least 60% yes). The five leaning toward development were all in Ohio, mostly rezonings in Wilmington."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Texas governor",
+                  "Hinojosa (D) defeats Abbott (R)"
+                ],
+                [
+                  "Texas share of planned US data center capacity",
+                  "27% (Wells Fargo), more than 25% by 2030 (Yahoo Finance)"
+                ],
+                [
+                  "Local measures with results leaning toward limits",
+                  "30 of 35"
+                ],
+                [
+                  "Opposition to local data centers (UMass Amherst, Sept.)",
+                  "76% of Democrats, 52% of Republicans"
+                ],
+                [
+                  "CoreWeave, overnight",
+                  "-7%"
+                ],
+                [
+                  "Nebius, Oracle, overnight",
+                  "-4% each"
+                ],
+                [
+                  "Nasdaq-100 futures",
+                  "-0.8%"
+                ]
+              ],
+              "note": "Market moves are overnight trading as reported by CNBC via Unite.AI. Ballot counts are FourWeekMBA's tally of unofficial Ballotpedia returns and can change before certification."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Moratorium:** a temporary ban. Here, a pause on approving or building new data centers while rules on power, water, and costs are written.",
+                "**Lame duck:** the period between the election and when the new Congress is seated in January. The outgoing majority can still pass bills, but with less political cover."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "A governor can't stop data centers alone: Hinojosa needs the Texas legislature for a moratorium, and projects already approved are unlikely to be touched. But Texas is the single biggest pipeline of planned US AI capacity, and the market treated her win as a real risk to timelines. Expect developers to push harder on states like Louisiana, Pennsylvania, and the Mountain West, and to offer concessions on power costs (OpenAI's new \"Grid Protectors\" pitch to cut power use during peak demand is an example).",
+                "In Washington, a Democratic Congress makes a federal law that overrides state AI rules less likely, and makes oversight hearings on AI companies more likely. Anything the AI industry wants from this Congress, like OpenAI's proposed limits on the most powerful systems, now has to move in the lame-duck session that starts Monday or wait for very different committee chairs."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Certified results for the local measures, whether Hinojosa names specific projects or a timeline, and what passes in the lame-duck session starting November 9."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "PBS NewsHour",
+              "title": "Democrats take control of the Senate after winning key midterm races",
+              "url": "https://www.pbs.org/newshour/politics/democrats-take-control-of-the-senate-after-winning-key-midterm-races"
+            },
+            {
+              "name": "Al Jazeera",
+              "title": "Democrats win Congress: How they did it, and what it means",
+              "url": "https://www.aljazeera.com/news/2026/11/4/democrats-win-the-us-senate-what-does-this-mean"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "A Democrat won the Texas governor's race after promising to halt new data center construction",
+              "url": "https://finance.yahoo.com/economy/article/a-democrat-won-the-texas-governors-race-after-promising-to-halt-new-data-center-construction-044536389.html"
+            },
+            {
+              "name": "Unite.AI",
+              "title": "Data Center Policy Fears Hit AI Stocks After Hinojosa's Texas Win",
+              "url": "https://www.unite.ai/data-center-policy-fears-hit-ai-stocks-after-hinojosas-texas-win/"
+            },
+            {
+              "name": "FourWeekMBA",
+              "title": "Midterms: Data Center Limits Lead in 30 of 35 Ballot Votes",
+              "url": "https://fourweekmba.com/ai-midterms-data-center-limits-lead-in-30-of-35-ballot-votes/"
+            },
+            {
+              "name": "Washington Examiner",
+              "title": "Voters decide more than 40 data center ballot measures",
+              "url": "https://www.washingtonexaminer.com/live-blog-posts/voters-decide-more-than-40-data-center-ballot-measures/"
+            }
+          ]
+        },
+        {
+          "kicker": "Chips",
+          "headline": "AMD's data center sales nearly double to $8.5 billion, and it guides to $17 billion next quarter",
+          "summary": "The first MI450-generation GPUs and Helios racks shipped in Q3, and AMD says demand is still higher than supply.",
+          "stats": [
+            [
+              "$13.4B",
+              "Q3 revenue, +45%"
+            ],
+            [
+              "$8.5B",
+              "Data center, +97%"
+            ],
+            [
+              "~$17B",
+              "Q4 guidance"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "AMD reported third-quarter results on November 3. Revenue was $13.4 billion, up 45% from a year earlier, and data center revenue was $8.5 billion, up 97%, driven by EPYC server CPUs and the launch of the Instinct MI450 series GPUs. AMD guided fourth-quarter revenue to about $17 billion, plus or minus 3%, or roughly 66% growth.",
+                "On the earnings call, management said AMD began volume shipments of the MI455X and shipped its first Helios racks (complete rack-scale systems with GPUs, CPUs, and networking) for revenue. AMD says OpenAI, Anthropic, Meta, Microsoft, and Oracle Cloud have brought first Helios racks online. Lisa Su said \"demand is higher than supply.\" Management expects data center revenue to grow about 50% from Q3 to Q4, and for 2027 forecast more than 80% total revenue growth.",
+                "Shares closed up 3.7% at $483.90 and gained another 7.5% after hours, according to Investing.com."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Revenue",
+                  "$13.4B (+45% YoY); consensus ~$13.06B"
+                ],
+                [
+                  "Data center",
+                  "$8.5B (+97%)"
+                ],
+                [
+                  "Client (PC chips)",
+                  "$2.9B (+7%)"
+                ],
+                [
+                  "Gaming",
+                  "$773M (-40%)"
+                ],
+                [
+                  "Embedded",
+                  "$1.1B (+29%)"
+                ],
+                [
+                  "Gross margin",
+                  "54% GAAP, 56% non-GAAP"
+                ],
+                [
+                  "EPS",
+                  "$1.46 GAAP, $2.09 non-GAAP; consensus ~$1.94"
+                ],
+                [
+                  "Q4 guidance",
+                  "~$17B revenue, ~55% non-GAAP gross margin"
+                ],
+                [
+                  "Inventory",
+                  "$11.5B, up about $3B"
+                ]
+              ],
+              "note": "AMD's earnings release; consensus, inventory, and stock moves from Investing.com's earnings call coverage."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Rack-scale system:** instead of selling individual GPUs, the vendor sells a whole rack (dozens of GPUs, CPUs, switches, cooling) that works as one big computer. Nvidia's NVL72 racks set this pattern; Helios is AMD's answer.",
+                "**Non-GAAP:** results that exclude some costs, here including a $1.1 billion non-cash charge tied to warrants. GAAP is the official accounting number."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is the quarter AMD needed to show it is a real second source to Nvidia for AI racks, not just chips. Big labs want a second supplier for price leverage and supply, and the customer list on Helios says they are buying. The guide implies AMD's data center business alone could approach $13 billion in Q4.",
+                "The caveats: PCs and gaming are shrinking (management expects double-digit PC market declines in 2027), inventory rose by $3 billion, and the headline growth depends on a handful of very large buyers whose spending plans are now facing political pressure (see the lead story)."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "AMD",
+              "title": "AMD Reports Third Quarter 2026 Financial Results",
+              "url": "https://newsroom.amd.com/news/amd-reports-third-quarter-2026-earnings/"
+            },
+            {
+              "name": "Investing.com",
+              "title": "Earnings call transcript: AMD tops Q3 2026 estimates as stock jumps after hours",
+              "url": "https://uk.investing.com/news/stock-market-news/earnings-call-transcript-amd-tops-q3-2026-estimates-as-stock-jumps-after-hours-93CH-4954263"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Super Micro's quarterly revenue nearly quadruples to $19.9 billion, and it raises its full-year outlook",
+          "summary": "The AI server maker now expects $72 to $82 billion for the fiscal year, but its margins stay thin.",
+          "stats": [
+            [
+              "$19.9B",
+              "Q1 FY27 revenue, +298%"
+            ],
+            [
+              "12.8%",
+              "Non-GAAP gross margin"
+            ],
+            [
+              "$72-82B",
+              "FY27 revenue outlook"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Super Micro Computer reported fiscal first-quarter results (the quarter ended September 30) on November 3. Revenue was a record $19.9 billion, up 298% from a year earlier, after the company had guided to $14.5 to $15.5 billion and then preannounced a beat in October. Adjusted earnings were $1.81 per share against an analyst estimate of $1.62.",
+                "It guided the current quarter to $19.5 to $21.5 billion and raised its fiscal 2027 outlook to $72 to $82 billion, above the roughly $69 billion analysts expected. Shares rose nearly 8% after hours."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Revenue",
+                  "$19.9B (+298% YoY)"
+                ],
+                [
+                  "Original guidance",
+                  "$14.5B to $15.5B"
+                ],
+                [
+                  "Adjusted EPS",
+                  "$1.81 vs $1.62 estimate"
+                ],
+                [
+                  "Gross margin",
+                  "12.7% GAAP, 12.8% non-GAAP"
+                ],
+                [
+                  "Cash used in operations",
+                  "$434M"
+                ],
+                [
+                  "Q2 guidance",
+                  "$19.5B to $21.5B"
+                ],
+                [
+                  "FY27 outlook",
+                  "$72B to $82B (consensus ~$69.2B)"
+                ]
+              ],
+              "note": "Company figures as reported by Yahoo Finance; original guidance from Supermicro's October preliminary update filed with the SEC."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Super Micro assembles servers and racks around Nvidia and AMD chips, so its revenue is a fast read on how many AI systems are actually being installed. A near-quadrupling says the buildout is still accelerating through the end of September.",
+                "The business is low margin: about 13 cents of gross profit per dollar of sales, versus well over 50 cents for the chipmakers. It also burned cash in the quarter, because building racks ahead of delivery ties up money. Big revenue on thin margins means a delayed customer or a price fight hits hard."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Supermicro (SEC filing)",
+              "title": "Supermicro Provides First Quarter of Fiscal Year 2027 Preliminary Business Update",
+              "url": "https://www.sec.gov/Archives/edgar/data/0001375365/000137536526000025/smcifirstquarterfy2027busi.htm"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Super Micro shares jump as revenue surges, and full-year outlook tops estimates",
+              "url": "https://ca.finance.yahoo.com/news/super-micro-shares-jump-revenue-213800999.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "Reuters: OpenAI staff warned leaders about weak internal security for years",
+          "summary": "Five sources describe broad code access and unreviewed internal tools; OpenAI says it has tightened controls.",
+          "stats": [],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Reuters reported on November 3, citing five people familiar with the company, that OpenAI employees warned leaders and board members about operational security weaknesses for years, some before ChatGPT launched in late 2022. The concerns included broad access to code (most of it sat in one shared repository), research documentation kept on GitHub and Slack, and internal tools, including sandboxes used to stress-test models, that were not regularly security-reviewed. Some staff felt management prioritized keeping pace with Google and Anthropic.",
+                "OpenAI disputed that it neglected security. It said the most sensitive work, including model weights, lives in separate, tightly controlled repositories, that it now regularly reviews internal tools under security chief Dane Stuckey, and that a 2023 intrusion reached only company-wide Slack channels. Two sources said Thibault Sottiaux leads an effort to secure internal systems, and one said a quarter of production engineers were moved onto security infrastructure in August.",
+                "The report lands a day after OpenAI announced a security sprint with the outside firm Cathedral and much bigger bug bounties (covered in the last edition), and weeks after the Justice Department charged an OpenAI engineer with hiding a recording device in an executive conference room. He has been charged, not convicted."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Operational security (opsec):** the day-to-day practices that keep secrets secret: who can see what, how access is granted and removed, and how insiders are monitored.",
+                "**Monorepo:** one giant code repository for many projects. Convenient for engineers, but anyone with access can see a lot."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Frontier labs are now treated as national-security targets, and their model weights are among the most valuable files on earth. A report that security lagged growth is not surprising for a company that went from a research lab to a billion-user product in four years, but it explains the flurry of moves in the last month. For customers, the relevant question is whether OpenAI's controls are audited by outsiders, not what any company says about itself."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Unite.AI (summarizing Reuters)",
+              "title": "OpenAI Employees Warned for Years About Internal Security Risks",
+              "url": "https://www.unite.ai/openai-employees-warned-for-years-about-internal-security-risks/"
+            },
+            {
+              "name": "Runtime Wire",
+              "title": "Cathedral will use OpenAI models to test OpenAI's defenses",
+              "url": "https://runtimewire.com/article/openai-cathedral-security-sprint-bug-bounty-172000"
+            }
+          ]
+        },
+        {
+          "kicker": "Research",
+          "headline": "Anthropic releases FlashProve, a prototype for proving which model actually wrote an answer",
+          "summary": "It attaches a cryptographic proof to a response without revealing the model's weights, but it is still far too slow for everyday use.",
+          "stats": [
+            [
+              "70-95x",
+              "Extra GPU time vs normal inference"
+            ],
+            [
+              "1,024",
+              "Max tokens per proof"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Anthropic published research and open-source code for FlashProve on November 2, aimed at what it calls \"provable inference\": a cryptographic proof that an output came from a specific model. A lab publishes a fingerprint (a commitment) for each model, and anyone can later check a response's proof against it. The fingerprint does not reveal the weights, so closed models could take part.",
+                "TechCrunch says the motivating cases are a provider quietly swapping in a cheaper model to save money, and third parties wanting to prove, for example, that code was really scanned by a particular frontier model. Anthropic calls this \"intermediate progress\" and has no plans to deploy it in Claude or elsewhere."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Proof cost",
+                  "About 70 to 95 times the GPU time of the inference itself"
+                ],
+                [
+                  "Model size demonstrated",
+                  "~400B parameters"
+                ],
+                [
+                  "Response length limit",
+                  "1,024 tokens"
+                ],
+                [
+                  "Deployment plans",
+                  "None announced"
+                ]
+              ],
+              "note": "Figures from Runtime Wire's summary of Anthropic's post."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**zkSNARK:** a type of zero-knowledge proof: a short proof that a computation was done correctly, which anyone can check quickly, without seeing the private inputs (here, the weights).",
+                "**Commitment:** a published fingerprint that locks a party to a specific set of weights without revealing them, so it can't swap models later and claim nothing changed."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Today you take a provider's word that the model you're paying for is the one answering, and resellers and API routers make that harder to trust. Proofs would turn that into something you can check. But at 70 to 95 times the compute, nobody will prove every chat. Realistic early uses are spot-checks, audits, and high-stakes claims. Treat it as a research direction worth knowing, not a product."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "title": "Anthropic is working on a system to prove AI models' identity",
+              "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/"
+            },
+            {
+              "name": "Runtime Wire",
+              "title": "Anthropic says FlashProve proves model identity at 70 to 95 times inference GPU time",
+              "url": "https://runtimewire.com/article/anthropic-flashprove-provable-inference-model-identity"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Apple's annual report warns that AI agents may act in unintended ways it can't easily reverse",
+          "summary": "New risk language says agents could take unauthorized actions and that Apple's control over third-party agents may be limited.",
+          "stats": [],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Apple filed its annual 10-K report on November 3. CNBC reported that it adds risk-factor language about AI agents behaving in \"unintended or unpredictable\" ways, with consequences that could be \"difficult to reverse.\" Per reports on the filing, Apple says agents can access systems, run or modify code, send messages, and complete transactions, may act without being asked or authorized, and that its ability to oversee third-party agents may be limited. It also flags evolving AI regulation and compliance costs.",
+                "The filing does not name specific products. Apple has been expanding Siri's ability to take actions inside other apps since announcing the new Siri at WWDC in June."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**10-K risk factors:** a required section of the annual report where a company lists what could hurt its business. Lawyers add items when a risk becomes material, so new entries signal what a company is actually worried about."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Risk factors are partly legal cover, but this is still notable: the world's most valuable consumer device company is telling investors that agents acting on users' phones and Macs can cause real, hard-to-undo harm. For builders, it's a signal that Apple's permissions and review rules for agents are likely to stay strict."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "CNBC",
+              "title": "Apple warns of risks related to AI agents behaving in 'unintended or unpredictable' ways",
+              "url": "https://www.cnbc.com/2026/11/03/apple-warns-of-ai-agents-behave-in-unintended-or-unpredictable-ways.html"
+            },
+            {
+              "name": "Techbuzz",
+              "title": "Apple Flags AI Agent Risks in Annual Filing",
+              "url": "https://www.techbuzz.ai/articles/apple-flags-ai-agent-risks-in-annual-filing"
+            },
+            {
+              "name": "KuCoin News (via IT Home)",
+              "title": "Apple Warns of AI Agent Risks, Including Legal and Reputational Threats",
+              "url": "https://www.kucoin.com/news/flash/apple-warns-of-ai-agent-risks-including-legal-and-reputational-threats"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Wed Nov 4",
+          "what": "Apple Intelligence starts testing in China, with Alibaba's Qwen powering Writing Tools and Visual Intelligence."
+        },
+        {
+          "when": "Wed Nov 4",
+          "what": "Moonshot's promised date for Kimi K3.1 Pro's full open weights (about 3 trillion parameters). Not posted as of this morning."
+        },
+        {
+          "when": "Mon Nov 9",
+          "what": "Congress returns. OpenAI plans a lame-duck push for mandatory 'speed limits' on the most powerful AI systems."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Anthropic's Nasdaq debut (ticker ANT) could come, per reports. The price range and share count come first."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Gemini 4 Argon's intro pricing ends: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-03-pm",
       "date": "2026-11-03",
       "edition": "Afternoon",

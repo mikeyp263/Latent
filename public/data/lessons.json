@@ -297,6 +297,68 @@
         "Explain why a rule saying 51% of a cloud's capacity must go to non-Chinese customers matters for export controls.",
         "Export controls stop chips being shipped to China but not rented abroad, so Chinese labs have trained on foreign clouds. Requiring most capacity to go to non-Chinese customers limits that rental route without needing a new law, though how well it works depends on enforcement and verification."
       ]
+    },
+    {
+      "id": "nw10",
+      "added": "2026-11-04",
+      "t": "Proving Which Model Answered",
+      "cards": [
+        "When you call an AI API, you trust the provider that the model you're paying for is the one answering. Nothing stops a provider, reseller, or router from quietly **swapping** in a cheaper model. **Verifiable inference** is the effort to make that claim checkable.",
+        "The main tool is a **zero-knowledge proof** (such as a **zkSNARK**): a short proof that a computation was done correctly, which anyone can verify quickly, without seeing private inputs. The lab publishes a **commitment** (a fingerprint) to its weights; each proof shows the answer came from those exact weights.",
+        "The catch is **overhead**: generating proofs for huge models costs many times the compute of just running them (tens of times today). So early uses are **spot-checks** and **audits**, not every chat. Lighter alternatives include signed outputs from trusted hardware and statistical fingerprinting of a model's behavior."
+      ],
+      "terms": [
+        [
+          "Verifiable inference",
+          "Being able to check that a specific model produced a specific output."
+        ],
+        [
+          "Zero-knowledge proof",
+          "A proof that something is true that reveals nothing beyond that fact."
+        ],
+        [
+          "zkSNARK",
+          "A compact, fast-to-check kind of zero-knowledge proof."
+        ],
+        [
+          "Commitment",
+          "A public fingerprint that locks in a set of weights without revealing them."
+        ],
+        [
+          "Proving overhead",
+          "The extra compute needed to generate the proof, compared with the original work."
+        ]
+      ],
+      "qs": [
+        [
+          "A startup resells 'frontier model' access at a steep discount. What would a provable-inference proof let you check?",
+          "That each answer came from the committed frontier model's weights",
+          "That the answer is factually correct",
+          "That the startup is profitable",
+          "That your data wasn't logged",
+          "Proofs verify which computation ran, not whether its output is true."
+        ],
+        [
+          "Why can a closed lab use this without leaking its model?",
+          "The commitment and proofs reveal nothing about the weights themselves",
+          "It uploads weights to a public server",
+          "It only works on open models",
+          "The weights are encrypted with the user's password",
+          "Zero knowledge means the verifier learns only that the claim holds."
+        ],
+        [
+          "If proving costs ~80x the inference compute, what's the realistic first use?",
+          "Random spot-checks and audits of high-stakes outputs",
+          "Proving every consumer chat",
+          "Replacing benchmarks",
+          "Speeding up inference",
+          "At that overhead, you sample rather than prove everything."
+        ]
+      ],
+      "ex": [
+        "Explain to a friend why 'which model answered me?' is hard to prove, and how a zero-knowledge proof helps.",
+        "From outside, an API is a black box: you send text and get text, and a cheaper model can sound similar. A zero-knowledge proof lets the provider attach evidence that the answer was computed with the exact weights it publicly committed to, without revealing those weights. Anyone can check the proof quickly. Today generating the proof is very expensive, so it would be used for spot-checks and audits rather than every request."
+      ]
     }
   ]
 }
