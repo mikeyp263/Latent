@@ -545,6 +545,122 @@
         "Explain why a model with a million-token context window can still get 'what's the current value?' questions wrong.",
         "Seeing all the text isn't the same as correctly applying every change in order. Transformers re-read the input with attention rather than keeping a running memory, so long chains of updates get muddled. Recurrent or hybrid designs carry state forward and do better, and in practice you can have the model track state with code or a scratchpad."
       ]
+    },
+    {
+      "id": "nw14",
+      "added": "2026-11-05",
+      "t": "Abliteration and Open-Weight Safety",
+      "cards": [
+        "When a lab trains a model to refuse harmful requests, that refusal lives in the model's **weights**. Researchers found that refusal often runs through a single direction inside the model's internal activations. **Abliteration** finds that direction and edits the weights to remove it, so the model stops refusing, with no retraining.",
+        "This only works on **open-weight** models, because you need the weights to edit them. With a closed **API** model, the provider keeps the weights and can add outside filters, monitoring, and account bans. That is why safeguards on commercial APIs held up in real attack cases while attackers simply ran stripped open models locally.",
+        "Abliteration usually costs some capability: the edited model makes more mistakes. The policy debate is whether the benefits of open weights (research, privacy, competition, local control) outweigh the fact that **safeguards can be removed** once weights are public. Defenders should assume capable, unfiltered models are available to attackers."
+      ],
+      "terms": [
+        [
+          "Abliteration",
+          "Editing a model's weights to remove its refusal behavior without retraining."
+        ],
+        [
+          "Refusal direction",
+          "A pattern in a model's internal activations that tends to trigger refusals."
+        ],
+        [
+          "Open weights",
+          "A model whose trained parameters are downloadable, so anyone can run or modify it."
+        ],
+        [
+          "API safeguards",
+          "Protections a provider adds around a hosted model: filters, monitoring, rate limits, bans."
+        ]
+      ],
+      "qs": [
+        [
+          "An attacker's requests are refused by every commercial API they try. What is the most likely next move?",
+          "Run an abliterated open-weight model on their own GPUs",
+          "Ask the API politely in another language forever",
+          "Give up, since all models refuse",
+          "Wait for the API provider to approve them",
+          "Open weights can be edited to remove refusals, and nobody can monitor local use."
+        ],
+        [
+          "Why can't someone abliterate a model they only reach through an API?",
+          "They don't have the weights to edit",
+          "APIs have no refusals",
+          "Abliteration needs internet access",
+          "APIs are too slow",
+          "Abliteration modifies weights directly, which an API user never sees."
+        ],
+        [
+          "What is a typical cost of abliterating a model?",
+          "It often becomes less accurate and makes more errors",
+          "It becomes much smarter",
+          "It loses the ability to write code entirely",
+          "It can only answer in English",
+          "Editing internals is blunt; capability usually drops somewhat."
+        ]
+      ],
+      "ex": [
+        "Explain why safety training on an open-weight model is weaker protection than on an API model.",
+        "Once weights are public, anyone can modify them. Techniques like abliteration remove the refusal behavior directly, and no one can watch how the local copy is used. An API provider keeps the weights and can layer on filters, monitoring, and bans, so its safeguards are much harder to strip away."
+      ]
+    },
+    {
+      "id": "nw15",
+      "added": "2026-11-05",
+      "t": "Who Pays for a Data Center's Power",
+      "cards": [
+        "A big AI data center can draw hundreds of megawatts, as much as a small city. Serving it can require new **transmission lines, substations, and power plants**. Utilities normally recover such costs from all customers through rates, so households can end up paying for upgrades built for one company.",
+        "A **large-load tariff** is a special electricity rate that makes very big users pay the costs they cause, often with long contracts and **financial guarantees** so others aren't stuck with the bill if the project shrinks or is canceled. **Demand flexibility** (or curtailment) means the data center agrees to cut usage, or switch to batteries or on-site generation, when the grid is strained.",
+        "These levers matter because local opposition, driven by electricity bills, water, and noise, is now a real limit on AI buildout. The cost and speed of getting power connected shape where data centers get built, how fast labs get compute, and ultimately what AI services cost."
+      ],
+      "terms": [
+        [
+          "Large-load tariff",
+          "An electricity rate for very large customers that charges them the grid costs they create."
+        ],
+        [
+          "Curtailment",
+          "Reducing a customer's power use on request when the grid is under stress."
+        ],
+        [
+          "Interconnection",
+          "Getting a new user or power plant hooked up to the grid, often a multi-year queue."
+        ],
+        [
+          "Ratepayers",
+          "The utility's customers, whose bills fund grid costs."
+        ]
+      ],
+      "qs": [
+        [
+          "A town worries a new data center will raise household power bills. Which policy most directly addresses that?",
+          "A large-load tariff that charges the data center its own grid costs",
+          "A tax on electric cars",
+          "Banning all new homes",
+          "Lowering the data center's rate",
+          "It assigns the upgrade costs to the customer that needs them."
+        ],
+        [
+          "Why would a data center agree to curtailment?",
+          "To get connected faster or more cheaply by easing peak grid demand",
+          "Because AI chips need less power at night",
+          "It's required by all federal law",
+          "To increase its electricity bill",
+          "Agreeing to cut use at peaks reduces the new capacity the grid must build."
+        ],
+        [
+          "Why do chip stocks fall when towns vote to limit data centers?",
+          "Fewer or slower data centers mean fewer chip orders",
+          "Chips are made in those towns",
+          "Voters own chip stocks",
+          "Data centers don't use chips",
+          "Chip sales depend on new buildings filling with servers."
+        ]
+      ],
+      "ex": [
+        "Explain why a data center's power hookup can become a cost for ordinary households, and one way to prevent that.",
+        "Serving a huge new load can require new lines, substations, and generation, and utilities usually spread those costs across all ratepayers. A large-load tariff with long contracts and financial guarantees makes the data center pay for what it needs, and demand-flexibility agreements reduce how much new capacity has to be built at all."
+      ]
     }
   ]
 }
