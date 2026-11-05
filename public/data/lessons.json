@@ -421,6 +421,130 @@
         "Explain why 'open weights' doesn't automatically mean you can do anything with a model.",
         "Open weights means the files are downloadable, but a license still governs use. Permissive ones like Apache 2.0 allow nearly anything. Custom ones can require a separate deal above a revenue or user threshold, force you to display the model's name, or limit reselling API access. So you check commercial use, thresholds, attribution, and hosting rights before building on it."
       ]
+    },
+    {
+      "id": "nw12",
+      "added": "2026-11-05",
+      "t": "AI Bug Hunting and Disclosure",
+      "cards": [
+        "A software **vulnerability** is a bug an attacker can use. Finding one is only step one. The full chain is **find** the suspicious code, **reproduce** it (prove it really crashes or misbehaves), **exploit** it (show it gives an attacker real power, like **root**), **patch** it, and **disclose** it to the maintainers.",
+        "AI agents now run that chain at scale. Labs split it into stages: cheap agents narrow the code to what's reachable, others propose bugs, a test harness confirms them in isolated machines, and stronger models write exploits and fixes. The cost per bug falls to hundreds or thousands of dollars, versus tens of thousands in **bug bounties**.",
+        "The bottleneck moves to humans. Maintainers must review, prioritize, and ship fixes, and **coordinated disclosure** (private report, time to patch, then publish) assumes a trickle, not a flood. The same tools in attackers' hands shrink the time between a bug landing and a working exploit, so **patch speed** and **sandboxing** matter more."
+      ],
+      "terms": [
+        [
+          "Privilege escalation",
+          "Turning limited access (a normal user or sandboxed app) into higher access, usually administrator or root."
+        ],
+        [
+          "Exploit",
+          "Working code that uses a vulnerability to do something the attacker shouldn't be able to do."
+        ],
+        [
+          "Coordinated disclosure",
+          "Reporting a bug privately to maintainers and publishing only after they've had time to fix it."
+        ],
+        [
+          "CVE",
+          "A public ID number for a specific known vulnerability, used to track fixes across vendors."
+        ],
+        [
+          "Sandbox",
+          "An isolated environment that limits what code can touch if it misbehaves or is compromised."
+        ]
+      ],
+      "qs": [
+        [
+          "An AI pipeline reports 2,000 possible kernel bugs. What should happen before any are reported to maintainers?",
+          "Reproduce them in isolated test machines and have humans review the results",
+          "Publish them all immediately so everyone can patch",
+          "Assume they're all real and file CVEs",
+          "Ignore them because AI findings are unreliable",
+          "Reproduction filters false positives, and human review keeps maintainers from being buried in noise."
+        ],
+        [
+          "Why does a local privilege escalation bug matter if an attacker already has a normal account?",
+          "It turns a small foothold into full control of the machine",
+          "It doesn't; they already have access",
+          "It only matters on phones",
+          "It lets them log in remotely without a password",
+          "Most real attacks chain a foothold with an escalation to get admin rights."
+        ],
+        [
+          "If AI makes finding exploits cheap for everyone, which defense gains the most value?",
+          "Patching quickly and sandboxing untrusted code",
+          "Keeping source code secret",
+          "Switching to a different programming language overnight",
+          "Turning off logging",
+          "Cheap discovery shortens the window between bug and exploit, so fast updates and containment matter most."
+        ]
+      ],
+      "ex": [
+        "Explain why AI that finds bugs cheaply is both good and bad news for defenders.",
+        "Good: defenders can find and fix far more bugs before attackers do, at a fraction of bounty prices. Bad: attackers get the same ability, and maintainers can't review and patch hundreds of reports at once. The bottleneck shifts from finding bugs to validating, prioritizing, and shipping fixes, so patch speed and sandboxing become the main defenses."
+      ]
+    },
+    {
+      "id": "nw13",
+      "added": "2026-11-05",
+      "t": "State Tracking and Recurrent Models",
+      "cards": [
+        "**State tracking** is keeping a correct, current picture of something that changes over a sequence: a variable's value after many reassignments, a game board after many moves, or which files an agent has already edited. It's different from **retrieval**, which is just finding a fact somewhere in the text.",
+        "**Transformers** look back over the whole input with attention at every step. That's great for retrieval, but they have no built-in running memory, so long chains of updates can trip them up even inside a huge **context window**. **Recurrent** designs (like **Gated DeltaNet** or state space models) carry a fixed-size memory forward and update it at each step, which suits tracking change.",
+        "Many new models are **hybrids** that mix attention layers with recurrent layers to get both. In practice today, the reliable fix is to let the model offload state to **tools**: code, a scratchpad file, or a database it updates and reads back."
+      ],
+      "terms": [
+        [
+          "State tracking",
+          "Following how values or situations change across a sequence and knowing the current state."
+        ],
+        [
+          "Recurrent model",
+          "A model that processes input step by step and carries a running memory forward."
+        ],
+        [
+          "Gated DeltaNet",
+          "A recurrent-style architecture with a fixed-size memory that it selectively updates each step."
+        ],
+        [
+          "Hybrid architecture",
+          "A model mixing attention layers with recurrent or state space layers."
+        ],
+        [
+          "Length generalization",
+          "Working correctly on inputs longer than any seen in training."
+        ]
+      ],
+      "qs": [
+        [
+          "You paste a 50,000-line change log into a chatbot and ask for each setting's final value. What's the most reliable approach?",
+          "Have the model write and run code that replays the log",
+          "Trust the answer because the log fits in the context window",
+          "Ask the model to think harder",
+          "Split the log and only send the last page",
+          "Fitting in context doesn't guarantee every update is applied; code tracks state exactly."
+        ],
+        [
+          "Which task is retrieval rather than state tracking?",
+          "Finding the sentence that names the CEO",
+          "Knowing x's value after 1,000 reassignments",
+          "Knowing a chess position after 80 moves",
+          "Knowing which files an agent already changed",
+          "Retrieval finds a fixed fact; the others require applying changes in order."
+        ],
+        [
+          "Why might a recurrent model trained on a tracking task generalize to inputs 10x longer?",
+          "It updates a running memory each step, so length doesn't change the procedure",
+          "It has a bigger context window",
+          "It memorized the test set",
+          "Recurrent models always beat transformers",
+          "Applying the same update rule step by step works at any length, if the memory holds what's needed."
+        ]
+      ],
+      "ex": [
+        "Explain why a model with a million-token context window can still get 'what's the current value?' questions wrong.",
+        "Seeing all the text isn't the same as correctly applying every change in order. Transformers re-read the input with attention rather than keeping a running memory, so long chains of updates get muddled. Recurrent or hybrid designs carry state forward and do better, and in practice you can have the model track state with code or a scratchpad."
+      ]
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "models": [
     { "name": "Hy4", "lab": "Tencent", "released": "2026-11-04", "access": "Closed", "price": "$0.834 / $2.501", "context": "1M", "note": "Full release of Tencent's 770B MoE (preview was Apache 2.0 open weights). Adds vision and computer use. Weights and system card promised later. 50% launch discount on OpenRouter.", "link": "https://openrouter.ai/tencent/hy4" },
     { "name": "Gemini 4 Carbon", "lab": "Google", "released": "2026-10-28", "access": "Limited", "price": "$2 / $10 intro, then $4 / $20", "context": "", "note": "#1 on the Artificial Analysis Intelligence Index (59). Strongest at long multi-step engineering and cyber defense. Only selected cyber defenders and partners can use it so far.", "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/" },
