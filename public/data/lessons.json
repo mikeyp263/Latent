@@ -661,6 +661,68 @@
         "Explain why a data center's power hookup can become a cost for ordinary households, and one way to prevent that.",
         "Serving a huge new load can require new lines, substations, and generation, and utilities usually spread those costs across all ratepayers. A large-load tariff with long contracts and financial guarantees makes the data center pay for what it needs, and demand-flexibility agreements reduce how much new capacity has to be built at all."
       ]
+    },
+    {
+      "id": "nw16",
+      "added": "2026-11-06",
+      "t": "When AI Speeds Up AI Research",
+      "cards": [
+        "Frontier labs now use their own models to write code, run experiments, and analyze results. If that help is big enough, each new model arrives faster than the last. This is **AI R&D acceleration**, and the extreme version is a feedback loop sometimes called **recursive self-improvement**.",
+        "To measure it, evaluators track a **capability index** (many benchmark scores combined into one number) over time and look for a **trend break**: a point where the slope gets steeper. Then comes the hard part, **attribution**: how much of the speedup came from AI help versus more compute, more staff, or better ideas. Interviews, usage data, and compute records all feed in, and the uncertainty is wide.",
+        "Labs tie this to safety rules. Anthropic's policy, for example, has a **2x acceleration threshold** that triggers stronger safeguards. Because the lab grades itself and can redact evidence, **independent assessments** by outside groups like METR matter, but only as much as the access they get."
+      ],
+      "terms": [
+        [
+          "AI R&D acceleration",
+          "AI tools speeding up the work of building the next AI model."
+        ],
+        [
+          "Capability index",
+          "A single score combining many benchmarks to track overall progress."
+        ],
+        [
+          "Trend break",
+          "The point where a progress curve changes slope."
+        ],
+        [
+          "Attribution",
+          "Estimating how much of a change is due to a specific cause, here AI help."
+        ],
+        [
+          "Independent assessment",
+          "An outside evaluator reviewing a lab's claims with some inside access."
+        ]
+      ],
+      "qs": [
+        [
+          "A lab's capability index rose 15 points a year, then 29 points a year after a certain date. What has it most likely measured?",
+          "A trend break showing roughly 2x faster progress",
+          "Proof that AI built the model alone",
+          "A drop in compute use",
+          "A benchmark error",
+          "Nearly doubling the slope is about a 2x acceleration; it says nothing yet about the cause."
+        ],
+        [
+          "Progress doubled, but the lab also tripled its training compute in the same period. What should an evaluator do before blaming AI help?",
+          "Separate out the compute effect before attributing the speedup",
+          "Assume AI caused all of it",
+          "Ignore compute because benchmarks don't measure it",
+          "Stop measuring",
+          "Attribution means ruling out other causes like more compute."
+        ],
+        [
+          "Why does it matter that a lab can redact an outside evaluator's report?",
+          "The public can't check the strongest evidence behind the conclusions",
+          "Redaction makes the numbers more accurate",
+          "Redaction is illegal",
+          "It means the lab crossed its threshold",
+          "Independent review is only as checkable as what gets published."
+        ]
+      ],
+      "ex": [
+        "Explain how you would tell whether AI is really speeding up a lab's AI research.",
+        "Track a combined capability score over time and look for a lasting increase in its slope. Then rule out other causes, like more compute or staff, using compute records and interviews, and estimate what share is left for AI help. Compare against other labs' progress to check the baseline, and have an outside evaluator with real access verify it, since the lab is grading itself."
+      ]
     }
   ]
 }
