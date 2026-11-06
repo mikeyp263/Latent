@@ -723,6 +723,72 @@
         "Explain how you would tell whether AI is really speeding up a lab's AI research.",
         "Track a combined capability score over time and look for a lasting increase in its slope. Then rule out other causes, like more compute or staff, using compute records and interviews, and estimate what share is left for AI help. Compare against other labs' progress to check the baseline, and have an outside evaluator with real access verify it, since the lab is grading itself."
       ]
+    },
+    {
+      "id": "nw17",
+      "added": "2026-11-06",
+      "t": "How an IPO Gets Priced",
+      "cards": [
+        "A company going public files an **S-1** with the SEC, then sets a **price range** per share. Over a one to two week **roadshow**, it and its bankers pitch large investors, who place orders saying how many shares they want and at what price. This process is called **book building**, and the list of orders is **the book**.",
+        "At **pricing**, the night before trading starts, the bankers set the final price from the book. If demand is strong (the book is **oversubscribed**), the price can go above the range; if weak, below it, or the deal is delayed. Companies usually leave an **IPO discount** so the stock rises on day one, which keeps big buyers happy for future deals.",
+        "Private valuations and public prices are different things. A private round sets a price for a few investors; an IPO needs thousands of buyers at once, priced against similar public stocks that day. That is why a market selloff can cut an IPO's valuation by hundreds of billions without anything changing inside the company."
+      ],
+      "terms": [
+        [
+          "S-1",
+          "The registration filing with financials and risks a company files before an IPO."
+        ],
+        [
+          "Roadshow",
+          "The pre-IPO tour of investor meetings that gathers orders."
+        ],
+        [
+          "Book building",
+          "Collecting investor orders to discover what price the market will pay."
+        ],
+        [
+          "Oversubscribed",
+          "More shares ordered than are being sold."
+        ],
+        [
+          "IPO discount",
+          "Pricing below expected trading value so the stock is likely to rise on day one."
+        ],
+        [
+          "Lockup",
+          "A period, often 180 days, when insiders cannot sell their shares after the IPO."
+        ]
+      ],
+      "qs": [
+        [
+          "A company's private round valued it at $1 trillion. During its roadshow the book is thin. What is most likely?",
+          "It prices at or below its range, or delays the deal",
+          "It must price at $1 trillion because of the private round",
+          "The SEC sets a higher price to protect early investors",
+          "The IPO proceeds at the top of the range anyway",
+          "Public pricing comes from the orders in the book that week, not from past private rounds."
+        ],
+        [
+          "Why do companies often price an IPO a bit below what they think it is worth?",
+          "To leave a first-day gain that rewards buyers and supports future demand",
+          "Because the SEC caps IPO prices",
+          "To reduce the number of shares sold",
+          "Because private investors require it in the S-1",
+          "A modest discount keeps institutions willing to buy this and future deals."
+        ],
+        [
+          "Investors say a company's October revenue is blank in its updated S-1. Why would they care before pricing?",
+          "It is the most recent sign of whether growth is slowing, which drives the price they will pay",
+          "Blank fields make the IPO illegal",
+          "Revenue does not affect IPO pricing",
+          "It means the company has no revenue",
+          "Buyers price growth; the newest month tells them the most about the current trend."
+        ]
+      ],
+      "ex": [
+        "Explain why an AI company's IPO valuation could fall 25% in a month without its business changing.",
+        "An IPO is priced by what public buyers will pay at that moment, through book building during the roadshow. Those buyers compare the company to similar public stocks. If AI stocks fall sharply, comparable valuations drop, investors demand a bigger discount, and the price that clears the book falls, even if the company's revenue and products are unchanged."
+      ]
     }
   ]
 }

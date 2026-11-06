@@ -1,6 +1,645 @@
 {
   "editions": [
     {
+      "id": "2026-11-06-pm",
+      "date": "2026-11-06",
+      "edition": "Afternoon",
+      "stories": [
+        {
+          "kicker": "Business",
+          "headline": "Anthropic's IPO valuation talk falls to $1.2 to $1.3 trillion, and a November listing is now in doubt",
+          "summary": "After two days of AI stock losses, prospective buyers are pricing Anthropic well below the $1.5 trillion discussed last week, and new Ramp data shows business AI spending growing slowly.",
+          "stats": [
+            [
+              "$1.2T-$1.3T",
+              "Valuation now discussed (Bloomberg)"
+            ],
+            [
+              "$2T",
+              "Talk in early October"
+            ],
+            [
+              "+8.9%",
+              "Business token spend, Sep 23 to Oct 23 (Ramp)"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Bloomberg reported Friday that some prospective investors in Anthropic's IPO are now discussing a valuation of about $1.2 trillion to $1.3 trillion, citing a person familiar with the matter. That is below the $1.4 trillion to $1.5 trillion range investors had previously given the banks running the deal, and far below the roughly $2 trillion floated in early October. No final decisions have been made. Anthropic declined to comment.",
+                "The Wall Street Journal reported Thursday evening that three prospective investors expected a lower price than $1.5 trillion, with one suggesting something closer to $1 trillion. Reuters, in an exclusive Friday, said potential investors doubt Anthropic can start its roadshow next week as planned and still list in November, and that the deal could slip toward year-end if AI stocks stay under pressure. Reuters also said investors are waiting on Anthropic's October revenue, which was left blank in its updated S-1, to see whether growth has recovered from a recent slowdown.",
+                "The spending data adds to the doubt. TechCrunch, citing Ramp's AI Index (built from the corporate card and bill-pay data of Ramp's business customers), reported that business token spend jumped 42% in July, then grew only 1.5% across August and September combined even as token volumes rose, before rising 8.9% from September 23 to October 23. Separately, the Financial Times reported that OpenAI has lowered the valuation it is seeking in its current fundraising from $1.4 trillion to $1.25 trillion and cut the target by about $10 billion."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Early October valuation talk",
+                  "Up to ~$2T"
+                ],
+                [
+                  "Range investors gave bankers",
+                  "$1.4T to $1.5T"
+                ],
+                [
+                  "Range now discussed",
+                  "$1.2T to $1.3T"
+                ],
+                [
+                  "Lowest view reported (WSJ)",
+                  "~$1T"
+                ],
+                [
+                  "Business token spend, July",
+                  "+42% month over month"
+                ],
+                [
+                  "Token spend, Aug and Sep combined",
+                  "+1.5%"
+                ],
+                [
+                  "Token spend, Sep 23 to Oct 23",
+                  "+8.9%"
+                ],
+                [
+                  "Median firm AI spend",
+                  "~$12 to $15 per employee per month"
+                ],
+                [
+                  "Top 10% of firms",
+                  "~$600 to $1,000 per employee per month"
+                ],
+                [
+                  "Anthropic adoption among Ramp firms (Sep)",
+                  "43.8% (OpenAI 40.6%)"
+                ]
+              ],
+              "note": "Valuation figures from Bloomberg (via Investing.com) and the WSJ, as reported; timing from Reuters. Spend figures from Ramp's AI Index as reported by TechCrunch; adoption shares from Ramp's October 2026 index. Ramp data covers only Ramp's own customers."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Roadshow:** the week or two of meetings where a company and its bankers pitch big investors before an IPO. It ends with **pricing**, when the share price is set from the orders collected.",
+                "**S-1:** the registration document a company files with the SEC before going public. It contains audited financials, risks, and the deal terms.",
+                "**Token spend vs. token volume:** volume is how much AI businesses use; spend is what they pay. When prices fall, volume can rise while spend stays flat."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "An IPO is priced by what buyers will pay this week, not by the last private round's story. Thursday's rout reset what investors will pay for AI growth, and Anthropic's own disclosures (quarterly losses, large compute commitments, price cuts that its filing says cost about $600 million in revenue growth) give buyers room to push back. Even $1.2 trillion would be an enormous valuation for a company that is still losing money.",
+                "The Ramp data deserves care. It shows businesses using more AI while paying only a little more, mostly because frontier prices are falling. That is good for people building with AI and harder for labs selling it. It does not show demand collapsing, and Ramp's sample is small businesses and mid-market firms, not the big enterprise contracts that drive much of Anthropic's revenue.",
+                "These are anonymous-source reports during a live negotiation. Investors talking down the price before a deal is normal, and a valuation 'discussed' is not a price."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether Anthropic files an amended S-1 with a price range, which would signal the roadshow is starting, and whether that filing fills in October revenue. A slip past Thanksgiving would also push the deal closer to the holidays, when IPO activity usually thins."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Investing.com (Bloomberg)",
+              "title": "Anthropic IPO valuation discussions fall to $1.3 trillion, Bloomberg reports",
+              "url": "https://www.investing.com/news/stock-market-news/anthropic-ipo-valuation-discussions-fall-to-13-trillion-bloomberg-reports-5008125"
+            },
+            {
+              "name": "BNN Bloomberg (Reuters)",
+              "title": "AI backlash could threaten Anthropic IPO timing, potential investors say: Reuters exclusive",
+              "url": "https://bnnbloomberg.ca/business/artificial-intelligence/2026/11/06/ai-backlash-could-threaten-anthropic-ipo-timing-potential-investors-say-reuters-exclusive"
+            },
+            {
+              "name": "Wall Street Journal",
+              "title": "Major investors are skeptical Anthropic IPO can achieve $1.5 trillion valuation",
+              "url": "https://www.wsj.com/finance/major-investors-are-skeptical-anthropic-ipo-can-achieve-1-5-trillion-valuation-ca965d8b"
+            },
+            {
+              "name": "TechCrunch",
+              "title": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+              "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo"
+            },
+            {
+              "name": "Ramp",
+              "title": "October 2026 Ramp AI Index: Cracks in the AI thesis, part 3",
+              "url": "https://ramp.com/data/ai-index-oct-2026"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Chip stocks win back part of Thursday's losses as a strong jobs report lands",
+          "summary": "The Nasdaq rose about 1.4% by early afternoon and AMD about 10%, but the big chipmakers had recovered only around a third of Thursday's drop.",
+          "stats": [
+            [
+              "+165K",
+              "October payrolls"
+            ],
+            [
+              "+1.4%",
+              "Nasdaq, early afternoon"
+            ],
+            [
+              "$200M",
+              "IREN AI cloud revenue, Q1"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "US stocks bounced Friday after Thursday's worst day since April 2025. As of about 2 p.m. ET, Yahoo Finance showed the Nasdaq Composite up 1.42% at 24,661, the S&P 500 up 0.72% at 7,406.56, and the Dow about flat. The VIX volatility index fell about 13% to 24.54. The Philadelphia chip index was up around 4% after Thursday's roughly 12% fall. AMD led with a gain of 8% to 10% after losing 17% Thursday; Nvidia was up 3% to 6% at different points in the day after a 9% drop. StockTitan calculated that the eight largest chip stocks had won back about a third of Thursday's losses on average by late morning.",
+                "The October jobs report helped: employers added 165,000 jobs against forecasts of roughly 65,000 to 70,000, and unemployment fell to 4.1%. Yahoo Finance noted the strong number keeps a December Fed rate hike in play, which cuts against the cheap-money case for heavily borrowed AI builders.",
+                "One data center name stood out. IREN, a former bitcoin miner turned AI cloud provider, rose as much as 20% after reporting quarterly revenue of $228 million, with AI cloud revenue of $200 million, up from $71 million. It still lost $263 million in the quarter and pushed its target of more than $4 billion in annualized contracted revenue from year-end to January 2027, possibly February, after a customer asked for a design change. IREN has said Microsoft requested changes to its network design. Bloomberg reported Thursday that Microsoft is tightening oversight of neocloud projects at IREN, Nebius, and Nscale."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Nasdaq Composite",
+                  "+1.42% to 24,661 (about 2 p.m. ET)"
+                ],
+                [
+                  "S&P 500",
+                  "+0.72% to 7,406.56"
+                ],
+                [
+                  "Dow",
+                  "-0.06% to 51,490"
+                ],
+                [
+                  "VIX",
+                  "-12.9% to 24.54"
+                ],
+                [
+                  "Chip index (SOX)",
+                  "about +4%"
+                ],
+                [
+                  "October payrolls",
+                  "+165,000 (forecast ~65,000 to 70,000)"
+                ],
+                [
+                  "Unemployment rate",
+                  "4.1%"
+                ],
+                [
+                  "IREN revenue, quarter to Sep 30",
+                  "$228M (+66% vs prior quarter)"
+                ],
+                [
+                  "IREN AI cloud revenue",
+                  "$200M (vs $71M)"
+                ],
+                [
+                  "IREN net loss",
+                  "$263M"
+                ]
+              ],
+              "note": "Intraday index levels from Yahoo Finance's live page, which will differ from the close. Chip moves from Yahoo Finance and StockTitan. IREN figures from its Nov 5 results release filed with the SEC."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Neocloud:** a newer cloud company that mainly rents out GPUs for AI (CoreWeave, Nebius, IREN, Nscale), as opposed to the big general clouds like Azure or AWS.",
+                "**Annualized recurring revenue (ARR):** current monthly contracted revenue times 12. IREN's $4 billion target is contracted revenue it expects to be running at, not money already earned."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "A one-day bounce after a record drop is normal and settles nothing. The Friday moves are smaller than Thursday's in every major chip name, and the underlying worries (state limits on data centers, a Democratic Congress, borrowing costs) did not change overnight. IREN's quarter is a useful reality check in both directions: AI cloud revenue nearly tripled, but the company is losing heavily and its biggest customer is asking for changes that push delivery back."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "The Friday close, and Nvidia's quarterly results later this month, which will be the first hard read on chip demand since the selloff."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "IREN (SEC filing)",
+              "title": "IREN Reports Q1 FY27 Results",
+              "url": "https://www.sec.gov/Archives/edgar/data/0001878848/000187884826000065/irenreportsq1-fy27result.htm"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Stock market today: Nasdaq, S&P 500 rebound after brutal sell-off as US adds 165K jobs",
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-earnings-135953863.html"
+            },
+            {
+              "name": "StockTitan",
+              "title": "Chip Stocks Bounce Back in the Stock Market Today Live, November 6, 2026",
+              "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-6-2026"
+            },
+            {
+              "name": "Investing.com (Reuters)",
+              "title": "Microsoft tightens oversight of neocloud data center projects, Bloomberg News reports",
+              "url": "https://www.investing.com/news/stock-market-news/microsoft-tightens-oversight-of-neocloud-data-center-projects-bloomberg-news-reports-5005281"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Google plans a $17 billion Wyoming data center powered by 702 megawatts of gas fuel cells",
+          "summary": "Google's first Wyoming site will run largely on Bloom Energy fuel cells with carbon capture, and Google says it will pay for all the power it uses.",
+          "stats": [
+            [
+              "$17B",
+              "Investment"
+            ],
+            [
+              "702 MW",
+              "Planned fuel-cell power"
+            ],
+            [
+              "~1 GW",
+              "Google's total contracted carbon capture"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Google announced Thursday evening a $17 billion long-term investment in its first Wyoming data center, near Cheyenne in Laramie County. Power will come in large part from a planned 702-megawatt development of natural gas fuel cells made by Bloom Energy, described as the largest planned commercial-scale fuel-cell project of its kind, plus gas generation from Tallgrass Energy and Black Hills Energy. Carbon dioxide captured from the system will be piped to Tallgrass's Eastern Wyoming Sequestration Hub for permanent underground storage. AEP and Related Digital are also partners.",
+                "Google said it will pay for all the electricity the site uses and for the grid upgrades its growth requires, use air cooling to limit water use, and form a community council after a meeting with more than 200 residents. No construction timeline was given."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Investment",
+                  "$17 billion"
+                ],
+                [
+                  "Fuel-cell capacity planned",
+                  "702 MW"
+                ],
+                [
+                  "Fuel-cell maker",
+                  "Bloom Energy"
+                ],
+                [
+                  "Google's contracted carbon capture",
+                  "nearly 1 GW in total"
+                ],
+                [
+                  "Planned US data center capacity facing new-governor limits",
+                  "~45% (Goldman Sachs); ~40% (Cleanview)"
+                ]
+              ],
+              "note": "Project details from Google's announcement as reported by Interesting Engineering and Bloomberg. Capacity-at-risk estimates are Goldman Sachs's (via Yahoo Finance) and Cleanview's (via Bloomberg)."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Fuel cell:** a device that turns fuel (here natural gas) into electricity through a chemical reaction rather than burning it. It still emits CO2.",
+                "**Behind-the-meter power:** generation built at the site itself rather than drawn from the public grid, which avoids years-long grid connection queues."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is what building looks like after Tuesday's votes: go where officials welcome you, bring your own power, and promise local ratepayers won't pay. Goldman Sachs estimates about 45% of planned US data center capacity sits in states whose new governors have pledged pauses or restrictions, and Cleanview put it near 40%. Wyoming is not one of them.",
+                "The 'carbon capture' framing deserves skepticism. The power is still natural gas, the system is designed to capture most emissions, not all, and large-scale carbon capture has a mixed record of hitting its targets. The deal is more evidence that AI's power demand is being met with gas in the near term."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Bloomberg",
+              "title": "Google Plans to Spend $17 Billion on Wyoming Data Center",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-05/google-plans-to-spend-17-billion-on-wyoming-data-center"
+            },
+            {
+              "name": "Interesting Engineering",
+              "title": "Google's Wyoming data center plan pairs gas power with carbon capture",
+              "url": "https://interestingengineering.com/energy/google-wyoming-data-center-702mw-fuel-cell-carbon-capture"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "New Governors Set to Challenge Big Swath of Data Center Capacity",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-06/new-governors-set-to-challenge-big-swath-of-data-center-capacity"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Stock market today: Nasdaq, S&P 500 rebound after brutal sell-off as US adds 165K jobs",
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-earnings-135953863.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "Censys finds more than 800 copies of the Artex AI hacking tool open to anyone on the internet",
+          "summary": "The Chinese-made autonomous attack tool has been tied to breaches of South Korean banks and ConnectWise customers, and many operators left it with no password.",
+          "stats": [
+            [
+              "800+",
+              "Exposed Artex deployments"
+            ],
+            [
+              "July 2026",
+              "Artex public release"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Internet-scanning firm Censys reported Friday that it found more than 800 distinct deployments of Artex reachable from the web with no password, according to TechCrunch. Artex is an open-source, Chinese-made autonomous penetration testing tool released in July. Microsoft has described it as a system of AI agents that can run an attack from reconnaissance through data theft with little human involvement.",
+                "Some exposed instances likely belong to authorized testers, but Censys researcher Silas Cutler said the software does not need to face the internet, so the exposure is likely misconfiguration. Exposed systems can reveal the operator's tools, including implants used to keep access to victims' networks. Artex has been linked to a September campaign against South Korean financial firms (attributed by CrowdStrike to a Chinese-speaking actor) and to an October breach in which Microsoft said Chinese-linked hackers used it against ConnectWise customers' cloud environments. Its developers now say it will go closed-source and paid-only, but dozens of copies remain on code-sharing sites."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Penetration testing:** authorized hacking to find weaknesses before criminals do. The same tools work for real attacks.",
+                "**Implant:** software an attacker leaves on a compromised machine to keep access."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is the open-source version of the story we covered with OpenAI's GPT-6 Cyber: autonomous attack tooling is here and spreading. The labs gate their cyber models to vetted teams; Artex had no gate, and closing the source now cannot recall copies already forked. The good news in the details: many Artex-linked breaches used basic weaknesses like reused passwords and missing multi-factor authentication, which ordinary hygiene still blocks. The exposure also cuts both ways, since defenders can now study live attacker setups."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "title": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+              "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/"
+            }
+          ]
+        },
+        {
+          "kicker": "Tools",
+          "headline": "Perplexity launches Teammates, background agents that take on ongoing work, for $200-a-month Max users",
+          "summary": "Each Teammate gets its own role, works around the clock inside Perplexity Computer, and can hand tasks to other Teammates.",
+          "stats": [
+            [
+              "$200/mo",
+              "Perplexity Max required"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Perplexity on Friday launched Teammates, persistent AI agents that run inside Perplexity Computer, its cloud-based agent product. You give each Teammate a role or an ongoing job, and several can work at once. They run in the background around the clock, notify you when they need a decision, and can manage other Teammates, bringing in new ones and planning their tasks as the workload grows. Each has its own sidebar entry where you can see its activity, hand it more work, change its focus, or ask for a status update.",
+                "Teammates are available only on Perplexity Max ($200 a month or $2,000 a year), on the web and iOS."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Background (always-on) agent:** an agent that keeps working on a standing job after you close the chat, rather than answering one request and stopping.",
+                "**Orchestration:** one agent splitting work and assigning it to others, then combining results."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Every major assistant is heading the same way: OpenAI's dots, Anthropic's scheduled tasks, and now Perplexity. The pitch is delegation instead of chatting. The hard parts are reliability over long stretches and cost, since an agent running all day burns compute whether or not it is doing useful work, which is likely why this sits behind the most expensive plan.",
+                "Real-world evidence for agents doing ongoing work is still thin. This week Uber said agents booked 4 rides in its busiest October week. Agents that manage other agents also multiply the ways errors can compound, so the approval prompts matter more than the org chart."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Engadget",
+              "title": "Perplexity's 'teammates' are the company's AI agents for daily work tasks",
+              "url": "https://www.engadget.com/2308870/perplexity-teammates-ai-agents-for-ongoing-work/"
+            },
+            {
+              "name": "Perplexity",
+              "title": "Perplexity Teammates",
+              "url": "https://www.perplexity.ai/hub/products/teammate"
+            },
+            {
+              "name": "TechCrunch",
+              "title": "Almost no one uses AI agents to book their Uber, company says",
+              "url": "https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says/"
+            }
+          ]
+        },
+        {
+          "kicker": "Tools",
+          "headline": "Cursor's cloud agents can now build, host, and publish a working web app with a database and sign-in",
+          "summary": "The coding editor moves into Lovable and Replit territory, with security checks that must pass before an app goes live.",
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Cursor said Thursday that its cloud agents can now build web apps and share them by link. You start a cloud agent and say you want an app; it scaffolds the code, creates a Postgres database if needed, sets up sign-in through Cursor's own login, and provisions hosting. When you publish, you pick a unique domain. Apps can be shared with specific people, groups, or the whole team behind Cursor sign-in, and individual plans can also share apps publicly.",
+                "Before anything goes live, deterministic and AI-based checks scan for problems such as secrets written into app files and exposed credentials. If a check fails, the agent reports what to fix. Team admins can see every app and secret, add review rules, override blocked publishes, and unpublish any app. It works with repos on Cursor Origin and GitHub (GitLab 'coming soon') and is on all paid plans with cloud agents enabled. Cursor did not publish separate pricing or limits."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Deterministic check:** a fixed rule (for example, a pattern match for API keys) that gives the same answer every time, as opposed to an AI reviewer that might miss things.",
+                "**Scaffold:** generate the basic project structure and boilerplate code."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The bottleneck for AI-built software has moved from writing code to running it safely. Bundling hosting, auth, and a pre-publish security gate targets exactly the mistakes that sink vibe-coded apps (leaked keys, open databases). Putting apps behind company sign-in by default is the sensible choice. The catch is lock-in: your app's login and hosting now live inside Cursor, and with no published pricing, the cost of running these apps at scale is unknown."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Cursor",
+              "title": "Build Live Apps in Cursor",
+              "url": "https://cursor.com/changelog/build-live-apps"
+            },
+            {
+              "name": "The New Stack",
+              "title": "Cursor takes on Lovable and Replit with fully managed app deployment",
+              "url": "https://thenewstack.io/cursor-ai-app-deployment/"
+            }
+          ]
+        },
+        {
+          "kicker": "Models",
+          "headline": "Google's Gemini Omni 1.2 Flash makes 15-second video clips and cuts the API price 30%",
+          "summary": "The video model is now generally available, including on Google Cloud for the first time, at about $0.07 per second of 720p.",
+          "stats": [
+            [
+              "15 s",
+              "Max clip length (was 10)"
+            ],
+            [
+              "~$0.07/s",
+              "720p via Gemini API"
+            ],
+            [
+              "-30%",
+              "Price cut"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Google made Gemini Omni 1.2 Flash generally available on Thursday. It generates clips up to 15 seconds in one go, up from 10 seconds in the May preview, and lets you refine a clip over several chat turns (swap a product or background, change the lighting) without starting over. Google says faces, clothing, on-pack text, and brand colors stay more consistent across camera angles.",
+                "Price through the Gemini API falls from $0.10 to about $0.07 per second of 720p video. It is available in the Gemini API, Flow, Google Vids, Google Ads, the Gemini app for AI Ultra subscribers, and Google Cloud. Every video carries an invisible SynthID watermark. Google says fast sports action, quick script changes, and complex physics remain weak spots."
+              ]
+            },
+            {
+              "h": "Price and specs",
+              "table": [
+                [
+                  "Max clip length",
+                  "15 seconds"
+                ],
+                [
+                  "720p API price",
+                  "~$0.07/second (was $0.10)"
+                ],
+                [
+                  "15-second 720p clip",
+                  "~$1.05"
+                ],
+                [
+                  "Preferred over v1.1 for consistency",
+                  "62% (Google's own test)"
+                ],
+                [
+                  "Rival: ByteDance Seedance 2.5",
+                  "30-second clips"
+                ]
+              ],
+              "note": "Google's figures as reported by The Next Web; per-clip cost is our arithmetic."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The headline is the price, not the length. At about a dollar per 15-second clip, generated video becomes cheap enough for ad variations and product shots at volume, which is why it is wired into Google Ads. The 62% preference number is Google testing against its own previous model, not against rivals, and Chinese models still lead public video rankings."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Google",
+              "title": "Introducing Gemini Omni 1.2 Flash",
+              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+            },
+            {
+              "name": "The Next Web",
+              "title": "Google's Gemini Omni 1.2 Flash makes 15-second AI videos for less",
+              "url": "https://thenextweb.com/news/google-gemini-omni-1-2-flash-video-15-seconds-price-cut"
+            }
+          ]
+        },
+        {
+          "kicker": "Tools",
+          "headline": "Amazon lets shoppers text Alexa to find and buy things, two months after blocking Meta's shopping agent",
+          "summary": "The text agent searches, compares, tracks prices, and checks out on Amazon, starting with invited US customers.",
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Amazon on Friday began letting customers shop by texting its Alexa AI agent. You can search, add to cart, and buy with plain-language messages, manage lists, track prices, compare products, check order status, and send a photo to find similar items. Amazon says Alexa will learn your preferences over time. Select US customers get an invite by text; others can join a waitlist, and Amazon says it will reach millions of users in the coming weeks. In September, Amazon blocked Meta's Muse agent from querying its site."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Amazon wants the shopping agent to be its own, not someone else's agent scraping its store. Blocking outside agents while launching an in-house one is the same move DoorDash made after third-party agents placed only several hundred orders. For anyone building shopping agents, the big stores are signaling they will not be a neutral back end, just in time for the holidays."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "title": "After blocking Muse, Amazon now lets users text Alexa to help them shop",
+              "url": "https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models, which The Information reported could arrive as early as Nov 6. Not announced yet."
+        },
+        {
+          "when": "Mon Nov 9",
+          "what": "Congress returns. OpenAI plans a lame-duck push for mandatory 'speed limits' on the most powerful AI systems."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Anthropic's IPO roadshow was expected to start, but Reuters reports investors doubt it can begin and still list in November. A price range filing would come first."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Thinking Machines plans to release Inkling 2 Small's weights under Apache 2.0, if outside safety testing is done."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Fri Nov 13",
+          "what": "Conductor Cloud goes read-only after Meta's acquisition; it shuts down Nov 20."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Anthropic's Nasdaq debut (ticker ANT) was targeted before Thanksgiving; it could slip toward year-end, per Reuters."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Nvidia reports quarterly results, the first big read on AI chip demand since this week's selloff."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Gemini 4 Argon's intro pricing ends: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-06-am",
       "date": "2026-11-06",
       "edition": "Morning",
