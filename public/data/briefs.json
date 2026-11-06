@@ -307,7 +307,7 @@
             {
               "h": "What it means",
               "p": [
-                "This is what building looks like after Tuesday's votes: go where officials welcome you, bring your own power, and promise local ratepayers won't pay. Goldman Sachs estimates about 45% of planned US data center capacity sits in states whose new governors have pledged pauses or restrictions, and Cleanview put it near 40%. Wyoming is not one of them.",
+                "This is what building looks like after Tuesday's votes: go where officials welcome you, bring your own power, and promise local ratepayers won't pay. Goldman Sachs estimates about 45% of planned US data center capacity sits in states whose new governors have pledged pauses or restrictions, and Cleanview put it near 40%.",
                 "The 'carbon capture' framing deserves skepticism. The power is still natural gas, the system is designed to capture most emissions, not all, and large-scale carbon capture has a mixed record of hitting its targets. The deal is more evidence that AI's power demand is being met with gas in the near term."
               ]
             }
@@ -407,7 +407,7 @@
             {
               "h": "What it means",
               "p": [
-                "Every major assistant is heading the same way: OpenAI's dots, Anthropic's scheduled tasks, and now Perplexity. The pitch is delegation instead of chatting. The hard parts are reliability over long stretches and cost, since an agent running all day burns compute whether or not it is doing useful work, which is likely why this sits behind the most expensive plan.",
+                "Every major assistant is heading the same way: OpenAI's dots, which keep working between conversations, and now Perplexity's Teammates. The pitch is delegation instead of chatting. The hard parts are reliability over long stretches and cost, since an agent running all day burns compute whether or not it is doing useful work, which is likely why this sits behind the most expensive plan.",
                 "Real-world evidence for agents doing ongoing work is still thin. This week Uber said agents booked 4 rides in its busiest October week. Agents that manage other agents also multiply the ways errors can compound, so the approval prompts matter more than the org chart."
               ]
             }
@@ -461,11 +461,6 @@
               "name": "Cursor",
               "title": "Build Live Apps in Cursor",
               "url": "https://cursor.com/changelog/build-live-apps"
-            },
-            {
-              "name": "The New Stack",
-              "title": "Cursor takes on Lovable and Replit with fully managed app deployment",
-              "url": "https://thenewstack.io/cursor-ai-app-deployment/"
             }
           ]
         },
