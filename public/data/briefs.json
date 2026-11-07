@@ -1,6 +1,410 @@
 {
   "editions": [
     {
+      "id": "2026-11-07-pm",
+      "date": "2026-11-07",
+      "edition": "Afternoon",
+      "stories": [
+        {
+          "kicker": "Chips",
+          "headline": "US intelligence believes an Nvidia cloud partner executive close to Jensen Huang worked for China's spy agency, NYT reports",
+          "summary": "The allegation centers on Megaspeed, a Singapore firm that buys Nvidia chips, and lands the same day Bloomberg reports Nvidia is tying partner status in Southeast Asia to chip location tracking.",
+          "stats": [
+            [
+              "$4.6B",
+              "Hardware purchases linked to Megaspeed (C4ADS)"
+            ],
+            [
+              "~1 year",
+              "Reported US surveillance"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The New York Times reported Friday that US intelligence officials told the Trump administration that Alice Huang (also known as Huang Le), an executive at Singapore-based Megaspeed International, had become close to Nvidia CEO Jensen Huang and was working for China's Ministry of State Security (MSS). According to the Times, cited by Bloomberg, the MSS wanted to learn more about US AI chips and possibly to persuade Nvidia to make its most advanced chips available to China. The Times reported US agencies conducted electronic surveillance of her for about a year and that President Trump was briefed in 2025. These are allegations from unnamed sources; the CIA and the Office of the Director of National Intelligence did not comment.",
+                "Megaspeed is part of Nvidia's cloud partner network: it buys Nvidia hardware and rents computing to AI developers. It has been under US and Singaporean investigation for more than a year over suspected diversion of chips to China, and has denied wrongdoing. Nvidia said after the report that its cloud partners \"do not ask us to seek changes in US law or advocate for sales to China\" and that \"We neither have nor share classified information with customers.\" Jensen Huang has previously called the company's dealings with Megaspeed normal and said Nvidia checked that Megaspeed did not illegally send chips to China.",
+                "Separately on Friday, Bloomberg reported that Nvidia now requires Southeast Asian cloud providers that want official Nvidia Cloud Partner status to enroll in its fleet tracking software, which can report where individual accelerators are located. House lawmakers, led by the Select Committee on China, have asked Huang for a closed-door briefing on Megaspeed."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Hardware purchases linked to Megaspeed",
+                  "$4.6B (C4ADS investigation)"
+                ],
+                [
+                  "Restricted Nvidia GPUs traced through regional routes, 2022 to 2025",
+                  "$13.4M (C4ADS)"
+                ],
+                [
+                  "Servers allegedly diverted to China in the Super Micro case",
+                  "~$2.5B (US prosecutors)"
+                ],
+                [
+                  "Malaysian capacity a landlord took back from Megaspeed in April",
+                  "68.4 MW"
+                ],
+                [
+                  "Reported US surveillance of the executive",
+                  "About one year"
+                ]
+              ],
+              "note": "C4ADS, prosecutor, and Malaysia figures as reported by Tom's Hardware, citing Bloomberg and earlier reporting. Surveillance detail from the New York Times as relayed by Bloomberg and The Week."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Nvidia Cloud Partner (NCP):** an official Nvidia designation for companies that rent out Nvidia-powered computing. It comes with Nvidia's endorsement and preferred access to scarce chips.",
+                "**Chip diversion:** restricted chips sold to a legal buyer in one country, then moved or rented to a buyer the export rules are meant to block, often through a third country.",
+                "**Location verification:** software that estimates where a GPU is physically running, using telemetry and network delay measurements. Nvidia describes it as an opt-in tool customers install."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Nothing here is a charge or a finding of wrongdoing by Nvidia or Jensen Huang, and the central claim rests on unnamed intelligence sources. But it lands at a bad moment for Nvidia: Huang has been the loudest voice for loosening chip exports to China, a Democratic House takes over in January, and Bloomberg reported this week that Democrats plan more oversight of Nvidia's exports and financing deals.",
+                "The tracking requirement is the more concrete change. Southeast Asia has been the main transit route for restricted chips, and making location reporting a condition of partner status is Nvidia's strongest step yet to show it can police its own customers. It is still limited: it applies to partner status in one region, participation elsewhere is voluntary, and Nvidia has not said whether existing partners must enroll."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether Huang agrees to the briefing, whether Congress or Commerce writes location verification into export rules, and any action from the US or Singapore investigations into Megaspeed."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Bloomberg (via Yahoo Finance)",
+              "title": "US Believes Woman Close to Nvidia CEO Was a China Spy, NYT Says",
+              "url": "https://finance.yahoo.com/technology/ai/articles/us-believes-woman-close-nvidia-013053857.html"
+            },
+            {
+              "name": "Tom's Hardware",
+              "title": "Nvidia tightens tracking of AI GPUs in Southeast Asia as Chinese chip smuggling draws scrutiny, report claims",
+              "url": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-tightens-tracking-of-ai-gpus-in-southeast-asia-as-chinese-chip-smuggling-draws-scrutiny-report-claims-cloud-providers-must-join-monitoring-program-to-qualify-for-official-partner-status"
+            },
+            {
+              "name": "The Week",
+              "title": "US intelligence believes NVIDIA CEO Jensen Huang had romance link with suspected Chinese spy",
+              "url": "https://www.theweek.in/news/world/2026/11/07/us-intelligence-believes-nvidia-ceo-jensen-huang-had-romance-link-with-suspected-chinese-spy.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Research",
+          "headline": "Anthropic's agent memory study: stronger models keep fewer notes and do better, and a background 'dreaming' pass fixes mistakes",
+          "summary": "An engineering post with experiments on databases, Pokemon Red, and a 420 million token codebase shows memory helps newer Claude models a lot, but rigid rules about what to save hurt.",
+          "stats": [
+            [
+              "0.838",
+              "Opus 5.5 with memory (0.655 without)"
+            ],
+            [
+              "413 vs 9",
+              "Memory files: Sonnet 3.7 vs Fable 5"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Anthropic published \"The components of agent memory\" on November 6, written by Lance Martin. It defines agent memory as knowledge an agent gains from experience and keeps across sessions as readable files, not changes to the model's weights. It describes four layers: raw transcripts (a searchable log), notes the agent writes, larger structures such as wikis built from those notes, and a small amount of context injected into every session.",
+                "The post's main idea is **dreaming**: a background process that rereads an agent's logs while it is idle, corrects wrong notes, and builds better summaries, modeled on how sleep helps people consolidate memories. It builds on 'sleep-time compute' work from Letta and UC Berkeley. Dreaming is already offered in Claude Managed Agents, with cookbooks for it and for knowledge wikis.",
+                "In Pokemon Red, Sonnet 3.7 wrote 413 memory files in 225 folders over about 10,000 steps and earned one badge; much of what it saved went stale. Fable 5 kept nine files in two folders, saved only things the screen did not show (plans, tested rules), and earned four badges. Opus 5.5 used a similarly lean approach and beat the game. In one test, a wrong note about a Pokemon Center made the agent loop; after a dreaming pass checked notes against transcripts, it reached Cerulean City at action 1,935. Without memory it never got there."
+              ]
+            },
+            {
+              "h": "Benchmarks",
+              "table": [
+                [
+                  "Opus 5.5, database task (no memory / memory)",
+                  "0.655 / 0.838"
+                ],
+                [
+                  "Sonnet 5.5",
+                  "0.644 / 0.833"
+                ],
+                [
+                  "Opus 5",
+                  "0.564 / 0.828"
+                ],
+                [
+                  "Opus 4.7",
+                  "0.383 / 0.700"
+                ],
+                [
+                  "Sonnet 4.6",
+                  "0.330 / 0.364 (0.641 with extra prompting)"
+                ],
+                [
+                  "Codebase Q&A, search alone",
+                  "53% of criteria"
+                ],
+                [
+                  "Codebase Q&A, dreamed wiki plus search",
+                  "61%, about 20,000 fewer tokens per question"
+                ],
+                [
+                  "Legal merger questions, wiki vs search alone",
+                  "87% vs 73%"
+                ],
+                [
+                  "'Record only failures' rule, lost memory gain (Opus 5)",
+                  "-0.234"
+                ]
+              ],
+              "note": "All figures from Anthropic's post. Database task is CL-Bench (mean reward). Codebase corpus is about 350,000 files (~420M tokens) from Stainless, graded on 25 questions; legal set is 24 Harvey LAB questions."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Salience:** how important a piece of information will turn out to be. An agent has to guess this when it decides what to write down, before it knows what will matter.",
+                "**Sleep-time compute:** spending compute while an agent is idle to reorganize what it learned, so later sessions start from better notes.",
+                "**Injected context:** the small set of instructions and memory loaded into every session. Anthropic notes Claude Code reads only the first 200 lines or 25 KB of its MEMORY.md index, because long instruction files lower how well models follow them."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The useful finding for builders is that memory design should depend on the model. Newer models did best when simply told a memory folder exists; a fixed rule like 'record only failures' cost Opus 5 a large part of its gain. Older models needed explicit steering: Sonnet 5 reads memory before answering 9 times in 10, versus under half the time for Sonnet 4.6.",
+                "Keep the limits in mind. These are Anthropic's own tests on Anthropic models, several on small question sets (24 to 25 questions), and some results cut the other way: on one legal task the generated wiki ended up 1.77 times larger than the source documents and gave no clear gain on single-document questions. Dreaming also costs compute. The post itself says Anthropic still has much to learn, and that plain transcript search is a strong baseline that wikis only modestly beat."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether dreaming moves from Managed Agents into Claude Code and the Claude apps, and whether outside teams reproduce the gains on non-Anthropic models."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Anthropic",
+              "title": "The components of agent memory",
+              "url": "https://www.anthropic.com/research/components-of-agent-memory"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Microsoft is winding down a 2023 deal to rent AI servers from Oracle, Bloomberg reports",
+          "summary": "The rented capacity ran older Nvidia chips; Oracle shares fell about 3% and Oracle says demand stays strong.",
+          "stats": [
+            [
+              "~3%",
+              "Oracle share drop on the report"
+            ],
+            [
+              "$80B+",
+              "Microsoft's rented-capacity commitments"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Bloomberg reported Friday, citing people familiar with the matter, that Microsoft chose not to renew a 2023 agreement to rent Oracle cloud servers, which it used to run AI features in Bing, and has been switching that capacity off in recent months. The sources said the servers used older Nvidia chips that no longer fit Microsoft's needs. Bloomberg could not determine the deal's full size.",
+                "Microsoft declined to comment. Oracle said demand for its AI infrastructure remains \"strong,\" including for older chips. Separate talks for Microsoft to lease more Oracle capacity collapsed in June, according to Business Insider."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Oracle share move on the report",
+                  "About -3%"
+                ],
+                [
+                  "Oracle shares since June peak",
+                  "Down more than half"
+                ],
+                [
+                  "Microsoft commitments to rent capacity from others",
+                  "More than $80B (CoreWeave, Nscale, Nebius and others)"
+                ],
+                [
+                  "Deal signed",
+                  "2023"
+                ]
+              ],
+              "note": "Figures from Bloomberg's report as summarized by The Next Web."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Neocloud / rented capacity:** instead of building every data center itself, a big cloud company can rent GPU servers from another provider. It is faster, but the renter does not control which chips it gets or how long they stay useful.",
+                "**Depreciation risk:** AI chips lose value quickly as newer generations arrive. If customers stop wanting older chips, the owner may have to write down their value."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "On its own this is one older contract. The pattern matters more: this week Microsoft passed on doubling a Texas deal with Nscale, weeks after leaving an Nscale site in the UK, and Bloomberg reports its leaders are frustrated with costs and delays at rental providers. Microsoft appears to be shedding capacity it no longer wants rather than stopping AI spending.",
+                "For Oracle the story is sharper, because its bet depends on long-lived demand for the servers it has bought with heavy borrowing. Its free cash flow is negative and its credit rating sits one notch above junk, per the same reporting. A big customer walking away from older-chip capacity is exactly the risk analysts have flagged."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Oracle's fiscal Q2 results on December 14, and whether other hyperscalers trim rented older-generation capacity."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Bloomberg",
+              "title": "Microsoft Is Winding Down Oracle Deal to Rent AI Cloud Capacity",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-06/microsoft-is-winding-down-oracle-deal-to-rent-ai-cloud-capacity"
+            },
+            {
+              "name": "The Next Web",
+              "title": "Microsoft is winding down its deal to rent AI computing from Oracle",
+              "url": "https://thenextweb.com/news/microsoft-winds-down-oracle-ai-cloud-capacity-deal"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Google's $17 billion Wyoming campus is on a site it bought from Crusoe",
+          "summary": "Crusoe, which had pitched the site to customers, sold it to Google after doing the permits and power planning; the price was not disclosed.",
+          "stats": [
+            [
+              "$17B",
+              "Google's planned Wyoming investment"
+            ],
+            [
+              "6 GW+",
+              "Crusoe's contracted capacity"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "A day after Google announced a $17 billion data center in Wyoming, Crusoe said on November 6 that Google had acquired its southeast Wyoming site. Crusoe and Tallgrass Energy had started the campus together, and Crusoe says the sale completes its pre-development work: choosing the site, getting government approvals, and planning power. Terms were not disclosed, Reuters reported.",
+                "Bloomberg reported that Crusoe had pitched the site to other customers before Google took it over. Google will build with Tallgrass Energy, Black Hills Energy, American Electric Power, and Related Digital. The planned power mix combines fuel cells, grid power, and gas turbines, with long-term plans to capture carbon through Tallgrass's sequestration hub."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Entitlement:** the permits, zoning, and approvals needed before construction. For data centers, securing land, power, and permits is often the slowest part, so developers can profit by doing that work and then selling the site."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This fills in Thursday's story: Google did not start from scratch in Wyoming; it bought a site already through the hardest early steps. It also shows how the AI build-out is shaking out. Developers like Crusoe take the permitting and power risk, and the companies with the cash and the demand (here, Google) end up owning the campuses. A site that was being shopped to customers is also a reminder that not every planned AI data center has a customer lined up."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Crusoe",
+              "title": "Google Acquires Crusoe's Wyoming Data Center Site",
+              "url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update"
+            },
+            {
+              "name": "Reuters (via Investing.com)",
+              "title": "Google acquires Wyoming data center site from AI infrastructure firm Crusoe",
+              "url": "https://www.investing.com/news/stock-market-news/google-acquires-wyoming-data-center-site-from-ai-infrastructure-firm-crusoe-5009084"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "Google Takes Over Wyoming Data Center That Crusoe Had Pitched",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-06/google-takes-over-wyoming-data-center-that-crusoe-had-pitched"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "Alibaba's Qwen4. The official Qwen account posted a teaser, 'The becoming begins.', on Nov 6 with no date, specs, or license."
+        },
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; still not announced as of Saturday morning."
+        },
+        {
+          "when": "Mon Nov 9",
+          "what": "Congress returns. OpenAI plans a lame-duck push for mandatory 'speed limits' on the most powerful AI systems."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Anthropic's IPO roadshow was expected to start, but Reuters reports investors doubt it can begin and still list in November. A price range filing would come first."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Thinking Machines plans to release Inkling 2 Small's weights under Apache 2.0, if outside safety testing is done."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Fri Nov 13",
+          "what": "Conductor Cloud goes read-only after Meta's acquisition; it shuts down Nov 20."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Late Nov",
+          "what": "House lawmakers want Jensen Huang at a closed-door briefing on Megaspeed and the alleged Chinese intelligence link, reportedly at the end of the month."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Anthropic's Nasdaq debut (ticker ANT) was targeted before Thanksgiving; it could slip toward year-end, per Reuters."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Nvidia reports quarterly results, the first big read on AI chip demand since this week's selloff."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Gemini 4 Argon's intro pricing ends: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-07-am",
       "date": "2026-11-07",
       "edition": "Morning",

@@ -855,6 +855,68 @@
         "Explain why a Lean-verified AI proof can still be wrong about the problem it claims to solve.",
         "Lean checks that each step is valid for the exact formal statement written in code. If humans or the AI formalized the problem slightly wrong, with a missing condition or a different definition, the proof is correct for that statement but does not settle the real question. Experts must still confirm the formal statement matches the intended problem."
       ]
+    },
+    {
+      "id": "nw19",
+      "added": "2026-11-07",
+      "t": "Agent Memory and Consolidation",
+      "cards": [
+        "Models are stateless, so an agent 'remembers' only what gets written down and fed back in. Agent memory usually has layers: raw **transcripts** of past work, **notes** the agent writes, larger **representations** like wikis built from those notes, and a small block of **injected context** loaded into every session. Each layer up is smaller and more useful, but further from the original evidence.",
+        "The hard part is **salience**: deciding what to save before you know what will matter. Save too much and memory fills with stale or contradictory notes the agent has to wade through. Save too little and it repeats mistakes. Stronger models tend to save less but better, such as tested rules and plans rather than facts they can see again anyway.",
+        "**Consolidation** (Anthropic calls it **dreaming**; researchers call it **sleep-time compute**) is a background pass that rereads transcripts while the agent is idle, fixes wrong notes, and reorganizes them. It catches errors the agent made in the moment, at the cost of extra compute and a delay before the improved memory is available."
+      ],
+      "terms": [
+        [
+          "Agent memory",
+          "Knowledge an agent keeps across sessions as stored text, not as changes to model weights."
+        ],
+        [
+          "Salience",
+          "How much a piece of information will matter later; agents must guess it when saving."
+        ],
+        [
+          "Consolidation / dreaming",
+          "An offline pass that reviews logs, corrects notes, and builds better summaries."
+        ],
+        [
+          "Sleep-time compute",
+          "Using idle time to process past experience so future sessions start smarter."
+        ],
+        [
+          "Injected context",
+          "The small, always-loaded memory and instructions at the start of every session."
+        ]
+      ],
+      "qs": [
+        [
+          "Your agent's memory folder has grown to hundreds of files and its performance is slipping. What is the most likely cause?",
+          "Stale and redundant notes are crowding out what matters",
+          "The model's weights are degrading",
+          "Too few tokens in the context window",
+          "Memory files slow the GPU",
+          "More saved notes is not better; stale memory misleads and distracts the agent."
+        ],
+        [
+          "An agent wrote a wrong note mid-task and keeps acting on it. Which approach is designed to fix this?",
+          "A background pass that checks notes against transcripts and corrects them",
+          "Restarting the model with a higher temperature",
+          "Deleting all transcripts",
+          "Adding more instructions to the system prompt",
+          "Consolidation compares notes with the raw record and repairs errors the agent made in the moment."
+        ],
+        [
+          "You add a strict rule, 'only save failures,' to a strong model's memory instructions. What did Anthropic's tests suggest?",
+          "It cost the model much of its memory gain",
+          "It always improves results",
+          "It has no effect",
+          "It makes the model forget its training",
+          "Strong models did better with general guidance; rigid save rules removed useful memories."
+        ]
+      ],
+      "ex": [
+        "Explain why an AI agent's memory can make it worse, and what consolidation does about it.",
+        "An agent saves notes before it knows what will matter, so memory accumulates stale, wrong, or redundant entries that mislead it later. Consolidation runs in the background, rereads the original transcripts, corrects bad notes, and reorganizes the rest, so future sessions start from cleaner, more accurate memory. It costs extra compute and adds delay."
+      ]
     }
   ]
 }
