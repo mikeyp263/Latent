@@ -789,6 +789,72 @@
         "Explain why an AI company's IPO valuation could fall 25% in a month without its business changing.",
         "An IPO is priced by what public buyers will pay at that moment, through book building during the roadshow. Those buyers compare the company to similar public stocks. If AI stocks fall sharply, comparable valuations drop, investors demand a bigger discount, and the price that clears the book falls, even if the company's revenue and products are unchanged."
       ]
+    },
+    {
+      "id": "nw18",
+      "added": "2026-11-07",
+      "t": "Machine-Checked Proofs",
+      "cards": [
+        "A **proof assistant** such as **Lean** lets you write a math proof as code. A small trusted program, the **kernel**, checks that every step follows from the previous ones by the rules of logic. If the proof compiles with no gaps (no **sorry** placeholders or extra **axioms**), the steps are valid, no matter who or what wrote them.",
+        "That matters for AI because language models can write convincing nonsense. A human referee might miss a subtle error in 40 pages; Lean will not. So AI math claims backed by a Lean check are much stronger than claims backed only by the model's own explanation, and labs increasingly pair models with Lean to search for proofs.",
+        "The check has a limit: Lean proves the **formal statement** you gave it. If that statement does not match the real problem (a missing condition, a slightly different definition), the proof is valid but answers the wrong question. That is why experts still read the formal statement and the argument, and why outside review still counts."
+      ],
+      "terms": [
+        [
+          "Proof assistant",
+          "Software that checks each step of a proof written in a formal language."
+        ],
+        [
+          "Lean",
+          "A widely used proof assistant and programming language with a large math library, Mathlib."
+        ],
+        [
+          "Kernel",
+          "The small core of a proof assistant that does the actual checking and must be trusted."
+        ],
+        [
+          "Formalization",
+          "Translating a math statement and proof into a proof assistant's language."
+        ],
+        [
+          "Axiom",
+          "A statement accepted without proof; adding new ones can make anything provable."
+        ],
+        [
+          "Autoformalization",
+          "Using AI to translate ordinary math into formal code automatically."
+        ]
+      ],
+      "qs": [
+        [
+          "A lab says its model proved a famous conjecture and the Lean proof compiles with no placeholders. What is the main thing experts still need to check?",
+          "That the formal statement actually matches the real conjecture",
+          "Whether Lean made an arithmetic mistake",
+          "Whether the model was large enough",
+          "How long the run took",
+          "Lean verifies the proof of the statement as written; a mismatched statement means a valid proof of the wrong thing."
+        ],
+        [
+          "Why are Lean-checked AI proofs more trustworthy than a model's written explanation?",
+          "Every logical step is mechanically verified by a small trusted checker",
+          "Lean only accepts proofs written by humans",
+          "Lean runs the model a second time to compare",
+          "Lean checks whether the result is famous",
+          "The kernel checks each step, so persuasive but wrong reasoning cannot pass."
+        ],
+        [
+          "A formal proof compiles, but the authors added a new axiom stating a key lemma is true. How should you read it?",
+          "The result now depends on that unproven assumption",
+          "It is fully proved because it compiled",
+          "Axioms are always safe to add",
+          "Lean rejects any added axioms automatically",
+          "An added axiom is assumed, not proved, so the proof is only as good as that assumption."
+        ]
+      ],
+      "ex": [
+        "Explain why a Lean-verified AI proof can still be wrong about the problem it claims to solve.",
+        "Lean checks that each step is valid for the exact formal statement written in code. If humans or the AI formalized the problem slightly wrong, with a missing condition or a different definition, the proof is correct for that statement but does not settle the real question. Experts must still confirm the formal statement matches the intended problem."
+      ]
     }
   ]
 }
