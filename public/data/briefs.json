@@ -1,6 +1,400 @@
 {
   "editions": [
     {
+      "id": "2026-11-08-pm",
+      "date": "2026-11-08",
+      "edition": "Afternoon",
+      "stories": [
+        {
+          "kicker": "Business",
+          "headline": "Anthropic agrees to pay $3.4 billion for 1.7 gigawatts of gas generators to power its data centers, FT reports",
+          "summary": "Anthropic took over a Texas supplier's stalled Caterpillar order, the largest known single purchase of power equipment by an AI company, though where the machines will run is not known.",
+          "stats": [
+            [
+              "$3.4B",
+              "Reported deal value"
+            ],
+            [
+              "1.7 GW",
+              "Gas-fired generating capacity"
+            ],
+            [
+              "$895B",
+              "Anthropic's disclosed commitments"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The Financial Times reported on Sunday, Nov 8, that Anthropic agreed in late September to pay about $3.4 billion for 1.7 gigawatts of large gas-fired generators to power its data centers. The FT, citing one person with knowledge of the deal, called it the biggest known single purchase of power equipment by an AI company.",
+                "The counterparty is OnePWR Solutions, a power supplier in San Antonio, Texas. OnePWR had ordered the generators from Caterpillar about two years ago but needed money to complete the purchase. Anthropic first planned to buy electricity from OnePWR; instead it took over the Caterpillar orders, plus the engineering and construction work to install the machines. Anthropic did not buy OnePWR and no OnePWR staff moved over. Both companies declined to comment to the FT, and Reuters said it could not immediately verify the report.",
+                "The FT says it is not known where the generators will be used. The report does not give a delivery schedule, emissions figures, or permit filings."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Reported price",
+                  "About $3.4 billion"
+                ],
+                [
+                  "Capacity",
+                  "1.7 GW of gas-fired generators"
+                ],
+                [
+                  "Implied cost",
+                  "About $2 billion per GW (Latent's arithmetic), including installation"
+                ],
+                [
+                  "Equipment maker",
+                  "Caterpillar (originally ordered by OnePWR about two years ago)"
+                ],
+                [
+                  "Deal signed",
+                  "Late September 2026"
+                ],
+                [
+                  "Anthropic's disclosed commitments",
+                  "$895 billion, nearly all for compute and infrastructure (IPO filing, Nov 2)"
+                ]
+              ],
+              "note": "Deal figures from the Financial Times, as relayed by CNBC/Reuters and The Next Web. Commitments figure from Anthropic's amended IPO filing, covered in the Nov 3 Morning edition."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Gigawatt (GW):** a billion watts. 1.7 GW running flat out is roughly the output of one and a half large nuclear reactors, and enough for several of today's biggest AI data center campuses.",
+                "**On-site (behind-the-meter) generation:** power produced at or next to the data center instead of drawn from the utility grid. It skips years-long waits to connect to the grid, but the owner takes on fuel, maintenance, and air-permit work.",
+                "**Reciprocating gas generators:** big engines (here, Caterpillar's) that burn natural gas to spin a generator. They start quickly and come in modular units, which is why AI builders are buying them alongside turbines and fuel cells."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The constraint on AI is now power as much as chips. Grid connections for large loads can take years, so labs are buying the generating equipment itself, and buying someone else's place in the order queue for it. Taking over an order placed two years ago is the point of the deal: Caterpillar and turbine makers have long backlogs, and a slot already in line is worth paying for.",
+                "It also shows Anthropic moving from renting compute toward owning pieces of the stack, weeks before a planned IPO. That cuts both ways for investors: more control over timelines, but more capital tied up and more exposure to a political fight. Gas-powered AI sites are drawing local opposition (xAI faces a lawsuit over turbines at its Memphis site), and the incoming Democratic Congress has named data center energy costs a priority. Treat the details as reported, not confirmed: the source is one person, and neither company has commented."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether the generators show up in an IPO filing update or a permit application, which would reveal the sites. Anthropic's roadshow timing is still unsettled."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "CNBC (Reuters)",
+              "title": "Anthropic secures $3.4 billion generator deal for AI data centers, FT reports",
+              "url": "https://www.cnbc.com/2026/11/08/anthropic-generator-deal-ai-data-centers.html"
+            },
+            {
+              "name": "The Next Web",
+              "title": "Anthropic buys $3.4bn of gas generators for its data centres, FT reports",
+              "url": "https://thenextweb.com/news/anthropic-3-4bn-gas-generators-onepwr-ft"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "Anthropic Buys Power for AI Data Centers in $3.4B Deal, FT Says",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-08/anthropic-buys-power-for-ai-data-centres-in-3-4b-deal-ft-says"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Apple CEO John Ternus is pushing software chief Craig Federighi to move faster on AI agents, Bloomberg reports",
+          "summary": "Fixing Siri is 'no longer enough,' Ternus reportedly told Federighi, as Apple explores a Siri that can carry out multistep tasks on its own.",
+          "stats": [
+            [
+              "$45.8B",
+              "Apple R&D, fiscal 2026"
+            ],
+            [
+              "+32%",
+              "R&D growth vs. fiscal 2025"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Bloomberg's Mark Gurman reported in his Power On newsletter on Sunday that John Ternus, who succeeded Tim Cook as Apple CEO in September, held a closed-door meeting with software chief Craig Federighi in recent weeks and pressed him for a more ambitious AI roadmap. Ternus reportedly sees too little urgency compared with rivals and told Federighi that improving Siri is \"no longer enough.\" Federighi is described by Gurman's sources as cautious about AI, citing privacy, security, and job concerns.",
+                "The rebuilt Siri that shipped in iOS 27 delivered much of what Apple promised in 2024 (personal context, on-screen awareness, actions inside apps), but it mostly responds to one command at a time. Apple is reportedly exploring a Siri that can pursue a goal through several steps without a new instruction each time, similar to the computer-use agents from OpenAI and Anthropic. Apple has not announced such a feature.",
+                "Gurman also reports that Apple is changing the development cycle for iOS 28 and its other major OS releases to give engineers more time to code and explore before features are merged, and that Siri engineering head Mike Rockwell is considering stepping back or leaving next year. Apple has not commented."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "R&D spending, fiscal 2026",
+                  "$45.8 billion"
+                ],
+                [
+                  "R&D spending, fiscal 2025",
+                  "$34.6 billion"
+                ],
+                [
+                  "Growth",
+                  "About 32%"
+                ],
+                [
+                  "R&D as share of sales",
+                  "About 9.6%, up from 8.3%"
+                ],
+                [
+                  "Net sales, fiscal 2026",
+                  "$478.8 billion, up 15%"
+                ]
+              ],
+              "note": "From Apple's fiscal 2026 10-K filed Nov 3, as calculated by FourWeekMBA. Apple says the R&D rise was mainly higher infrastructure costs and headcount; it does not break out AI."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Agentic AI:** an assistant that takes a goal (\"rebook my flight and tell the hotel\") and works through the steps itself, using apps and tools, instead of answering one request at a time.",
+                "**Computer use:** an agent that operates software the way a person does, reading the screen and clicking or typing. On a phone, Apple's version would more likely work through App Intents, the hooks apps expose so Siri can act inside them."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is reporting from anonymous sources, but it fits the public record: Ternus called agentic AI \"promising\" on Apple's last earnings call, and Apple's own annual report this week warned that AI agents could act in unintended ways it cannot easily reverse. The tension is real. Apple's selling point is privacy and reliability, and agents that act on your behalf are where those are hardest to guarantee.",
+                "For developers, the practical signal is that Apple's agent push, if it comes, will run through apps that expose actions to Siri. Apps that already support App Intents would be first in line. Don't expect anything concrete before Apple's developer conference, usually held in June, and the iOS 28 schedule change suggests Apple is buying time rather than rushing."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The Apple Post",
+              "title": "Apple CEO pushes software chief to speed up AI plans amid fears of falling behind",
+              "url": "https://www.theapplepost.com/2026/11/08/74000/apple-ceo-pushes-software-chief-to-speed-up-ai-plans-amid-fears-of-falling-behind/"
+            },
+            {
+              "name": "Gizmodo",
+              "title": "Apple's CEO Reportedly Pushing for More AI Features, Faster",
+              "url": "https://gizmodo.com/apples-new-ceo-is-reportedly-pushing-to-stuff-more-ai-into-iphones-2000836769"
+            },
+            {
+              "name": "FourWeekMBA",
+              "title": "Apple's Ternus Presses Federighi on AI as R&D Rises 32%",
+              "url": "https://fourweekmba.com/ai-apples-ternus-presses-federighi-on-ai-as-rd-rises-32/"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "OpenAI hires Hacktron, the firm that broke into its internal code with Claude's help, to probe its systems",
+          "summary": "Hacktron, paid a $6,500 bounty for a July attack chain that reached OpenAI's private repos, will test how OpenAI's services connect to outside platforms and gets OpenAI's restricted cyber models.",
+          "stats": [
+            [
+              "<72 hrs",
+              "Forum bug to internal repo"
+            ],
+            [
+              "$6,500",
+              "Bounty paid for the chain"
+            ],
+            [
+              "~14 hrs",
+              "OpenAI's time to fix SSO flaw"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "OpenAI announced a formal partnership with security firm Hacktron, which builds AI agents for code review and penetration testing. Engineers from both companies will pick test targets together, focusing on weaknesses \"that arise when AI agents connect services in new ways\": the links between ChatGPT and Codex and third-party apps, identity systems, and infrastructure. Hacktron also gets expanded access to OpenAI's purpose-built cyber models through its Daybreak Red program.",
+                "The backstory: on July 25, Hacktron reported to OpenAI's bug bounty an attack chain that started with a crafted image uploaded to OpenAI's Discourse community forum (exploiting a known flaw in the libheif image library), used an OpenAI single sign-on flaw to take over employees' ChatGPT and Codex accounts, and reached private internal repositories through a connected GitHub integration. The researchers proved access with a harmless pull request and stopped. OpenAI fixed its side about 14 hours after the report; Discourse patched two days after notice. OpenAI paid $6,500 on Sept 1. Hacktron's September writeup said it did most of the work with Anthropic's Opus models in under 72 hours and about $3,000 of tokens, with skilled humans steering."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Single sign-on (SSO):** one login that unlocks many apps. A flaw there lets an attacker hop from a minor system (a help forum) to important ones.",
+                "**Daybreak Red:** OpenAI's restricted tier of cybersecurity models, including GPT-6 Cyber, for vetted organizations doing vulnerability research and exploit testing. Access requires identity checks and legal attestations."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Bringing in the people who embarrassed you is standard practice and a good sign. The more telling part is the focus. The weakest point in Hacktron's chain was not a model but the plumbing around it: a forum, a login system, and an agent connected to GitHub with broad permissions. That is the same pattern as this week's Claude Code secrets leak and the WorkOS incident. Anyone wiring agents into company systems should assume the integrations, not the model, are where attackers will go.",
+                "Note the $6,500 bounty for a chain that reached OpenAI's internal code. OpenAI has since raised its bounty caps more than fourfold, which reads partly as a response to criticism that payouts like this were too low."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "OpenAI's \"Cyber at the Frontier\" livestream on Thursday, Nov 12 at 10 a.m. PT, where it says it will introduce its latest cyber products."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "OpenAI",
+              "title": "Partnering with Hacktron",
+              "url": "https://openai.com/index/partnering-with-hacktron/"
+            },
+            {
+              "name": "Unite.AI",
+              "title": "OpenAI partners with Hacktron",
+              "url": "https://www.unite.ai/?p=507050"
+            },
+            {
+              "name": "Constellation Research",
+              "title": "Three researchers, three days and about $3,000 landed OpenAI's crown code jewels",
+              "url": "https://www.constellationr.com/insights/news/three-researchers-three-days-and-about-3000-landed-openais-crown-code-jewels"
+            },
+            {
+              "name": "Scalevise",
+              "title": "OpenAI Sets Cyber at the Frontier Livestream for November 12 at 10 AM PT",
+              "url": "https://scalevise.com/resources/openai-cyber-at-the-frontier-livestream/"
+            }
+          ]
+        },
+        {
+          "kicker": "Tools",
+          "headline": "Claude Enterprise adds a security posture page and hooks that let company security tools check prompts and tool calls",
+          "summary": "Inference hooks are generally available; the Security Center, a company-wide admin console, and running endpoint security sensors inside Cowork are in beta.",
+          "stats": [],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Anthropic posted a set of Claude Enterprise admin updates on Nov 5. The headline feature for builders is **inference hooks**, now generally available: prompt hooks send prompts from supported Claude products to a company's security tool for checking, and pre-tool-call hooks check an agent's tool calls before they run, so existing data loss prevention policies can apply through supported security vendors.",
+                "In beta: a **Security Center** page that compares an organization's Claude settings with Anthropic's recommended configuration, shows each control's current and recommended value, and exports a report for auditors (Anthropic says it is guidance, not a compliance certification); a company-wide admin console at admin.claude.com for SSO, directory sync, and groups across multiple organizations; signing members out through the Admin API; self-serve IP allowlisting; and running a company's EDR sensor inside the Cowork virtual machine on macOS and Windows, in detection mode."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**DLP (data loss prevention):** software that spots and blocks sensitive data, such as customer records or passwords, leaving the company.",
+                "**EDR (endpoint detection and response):** security software on each computer that watches for malicious behavior. Running it inside Cowork's sandbox means the agent's actions are visible to the same tools that watch employees' laptops."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Pre-tool-call hooks are the meaningful piece: they put a company-controlled checkpoint between what an agent decides to do and what it actually does. That is the control the week's incidents argue for. Note what is missing: the hooks depend on supported vendors (Anthropic points to its Help Center for the list), the Security Center only checks Claude's own settings, and the posture page would not have caught the Claude Code permission-file leak, which lives in developers' repos."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Anthropic",
+              "title": "More visibility and control over Claude Enterprise for security teams",
+              "url": "https://claude.com/blog/claude-enterprise-security-updates"
+            },
+            {
+              "name": "Claude Help Center",
+              "title": "Review your organization's security posture with the Security Center",
+              "url": "https://support.claude.com/en/articles/18246629-review-your-organization-s-security-posture-with-the-security-center"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "Alibaba's Qwen4. The official Qwen account posted a teaser, 'The becoming begins.', on Nov 6 with no date, specs, or license."
+        },
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; still not announced as of Saturday morning."
+        },
+        {
+          "when": "Mon Nov 9",
+          "what": "Congress returns. OpenAI plans a lame-duck push for mandatory 'speed limits' on the most powerful AI systems."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Anthropic's IPO roadshow was expected to start, but Reuters reports investors doubt it can begin and still list in November. A price range filing would come first."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Thinking Machines plans to release Inkling 2 Small's weights under Apache 2.0, if outside safety testing is done."
+        },
+        {
+          "when": "Tue Nov 10",
+          "what": "CoreWeave reports third-quarter results, call at 5 p.m. ET. First big AI cloud report since last week's selloff."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's proposed cutoff of Cursor's access to its models, after SpaceX bought Cursor. The date could still move."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's 'Cyber at the Frontier' livestream, 10 a.m. PT, to introduce its latest cyber products."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Nebius reports third-quarter results before the market opens, call at 8 a.m. ET."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Fri Nov 13",
+          "what": "Conductor Cloud goes read-only after Meta's acquisition; it shuts down Nov 20."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Requested date for Jensen Huang's closed-door briefing to three House committee chairs on Megaspeed and the alleged Chinese intelligence link. Nvidia has not said whether he will attend."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Anthropic's Nasdaq debut (ticker ANT) was targeted before Thanksgiving; it could slip toward year-end, per Reuters."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Nvidia reports quarterly results, the first big read on AI chip demand since this week's selloff."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Gemini 4 Argon's intro pricing ends: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-08-am",
       "date": "2026-11-08",
       "edition": "Morning",
