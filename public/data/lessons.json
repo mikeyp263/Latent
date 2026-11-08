@@ -917,6 +917,68 @@
         "Explain why an AI agent's memory can make it worse, and what consolidation does about it.",
         "An agent saves notes before it knows what will matter, so memory accumulates stale, wrong, or redundant entries that mislead it later. Consolidation runs in the background, rereads the original transcripts, corrects bad notes, and reorganizes the rest, so future sessions start from cleaner, more accurate memory. It costs extra compute and adds delay."
       ]
+    },
+    {
+      "id": "nw20",
+      "added": "2026-11-08",
+      "t": "Copyright vs. Voice Rights in AI",
+      "cards": [
+        "AI companies face two different legal claims, and they work differently. **Copyright** protects specific works: a song's lyrics and melody, a recording, a book. Claims are about copying, either during **training** (making copies of works to learn from) or in **outputs** (spitting out something too close to the original). The main defense for training is **fair use**, which courts are still deciding case by case.",
+        "The **right of publicity** protects a person's identity: name, likeness, and in some states, voice. It doesn't care whether any specific work was copied. A model that never reproduces a single song can still violate it by generating a convincing imitation of a particular singer. Laws vary by state; Tennessee's **ELVIS Act** (2024) explicitly covers AI simulations of a voice.",
+        "In practice, **verbatim output** is the weakest spot for AI companies, because reproducing lyrics or text word for word is hard to call transformative. Publicity claims are a second front that doesn't depend on how fair use is resolved. That is why voice-cloning and 'in the style of' features carry legal risk even if training itself is eventually ruled legal."
+      ],
+      "terms": [
+        [
+          "Copyright",
+          "Legal protection for a specific creative work against unauthorized copying."
+        ],
+        [
+          "Fair use",
+          "A US defense allowing some unlicensed use, judged on purpose, amount, and market harm."
+        ],
+        [
+          "Right of publicity",
+          "A person's right to control commercial use of their name, likeness, and voice."
+        ],
+        [
+          "ELVIS Act",
+          "Tennessee's 2024 law adding voice, including AI imitations, to publicity rights."
+        ],
+        [
+          "Verbatim output",
+          "A model reproducing source text or lyrics word for word."
+        ]
+      ],
+      "qs": [
+        [
+          "An AI music app never outputs any real song but lets users make tracks that sound exactly like a famous singer. Which claim fits best?",
+          "Right of publicity",
+          "Copyright infringement of a specific song",
+          "Patent infringement",
+          "Trademark dilution",
+          "Imitating a person's voice targets their identity, which publicity law protects, even if no work is copied."
+        ],
+        [
+          "Which fact would most hurt an AI company's fair use defense?",
+          "Its model outputs a song's lyrics word for word",
+          "It trained on public web pages",
+          "It charges a subscription",
+          "It uses a transformer architecture",
+          "Verbatim reproduction looks like copying, not transformation, and can substitute for the original."
+        ],
+        [
+          "A court rules that training on copyrighted songs is fair use. Are voice-imitation claims over?",
+          "No, publicity rights are a separate claim",
+          "Yes, fair use covers every claim",
+          "Yes, but only in Tennessee",
+          "No, but only for living artists",
+          "Publicity rights protect identity, not works, so a fair use ruling on training doesn't decide them."
+        ]
+      ],
+      "ex": [
+        "Explain the difference between suing an AI company for copyright and for right of publicity.",
+        "Copyright protects specific works, so the claim is that the company copied songs or text, in training or in outputs; the main defense is fair use. Right of publicity protects a person's identity, like their voice, so the claim is that the model imitates the artist, even without copying any work. The two are independent, so winning on fair use doesn't end a voice-imitation suit."
+      ]
     }
   ]
 }

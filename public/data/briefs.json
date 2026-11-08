@@ -1,6 +1,515 @@
 {
   "editions": [
     {
+      "id": "2026-11-08-am",
+      "date": "2026-11-08",
+      "edition": "Morning",
+      "stories": [
+        {
+          "kicker": "Security",
+          "headline": "Claude Code's 'don't ask again' file has leaked more than 1,300 passwords and keys into public GitHub repos, Apiiro finds",
+          "summary": "Approving a command once can save it, password and all, in a project file that often gets committed, and Microsoft says attackers' agents are already hunting GitHub for exactly these secrets.",
+          "stats": [
+            [
+              "1,122",
+              "Public files holding a secret"
+            ],
+            [
+              "2,539",
+              "Secrets found, all sources"
+            ],
+            [
+              "5 min",
+              "GitHub secret to Key Vault theft (Microsoft)"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Security firm Apiiro published research, reported by The Hacker News on Saturday, showing how a Claude Code convenience feature leaks credentials. When Claude Code asks permission to run a shell command and you pick \"Yes, and don't ask again,\" it writes an allow rule into `.claude/settings.local.json` inside the project. If the rule is a pattern like `npm test *`, that's harmless. If it is the exact command you approved, and that command had a password or token typed into it (for example after `PGPASSWORD=`, `sshpass -p`, or `mysql -p`), the secret is saved in plain text.",
+                "Claude Code tries to keep the file out of git by adding it to the user's global git excludes, but that only protects one machine and never touches the project's own `.gitignore`. Apiiro found 104,185 copies of the file in public repos; 1,122 of them contain at least one secret, 1,379 distinct secrets in total. In 539 of 1,105 repos it traced, the commit that changed the file listed Claude as co-author, which suggests the agent itself often commits it. Counting older git history, the shared `.claude/settings.json`, and saved agent chat logs, the total rises to 2,539 secrets across 1,994 repositories. Apiiro says it reproduced the behavior with Opus 5.5 and Fable 5.1, and that of 16 coding agents it reviewed, Claude Code is the only one confirmed to save the full approved command in a project file by default.",
+                "Apiiro says the behavior was reported to Anthropic on GitHub in August 2025 (issue #5544), that an automated bot closed it as \"not planned\" after 60 days of inactivity, and that four related reports met the same fate. No Anthropic response or fix was reported as of Saturday. Separately, Microsoft Threat Intelligence wrote on Nov 5 that attackers using the ARTEX agent framework have been searching GitHub for secrets since August, and in one case went from finding a client secret to pulling data out of Azure Key Vault in five minutes."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Copies of settings.local.json in public repos",
+                  "104,185"
+                ],
+                [
+                  "Copies holding at least one secret",
+                  "1,122 (about 1.1%)"
+                ],
+                [
+                  "Distinct secrets in those files",
+                  "1,379"
+                ],
+                [
+                  "Database passwords among them",
+                  "379"
+                ],
+                [
+                  "SSH logins for public servers",
+                  "43"
+                ],
+                [
+                  "GitHub, GitLab, and npm tokens",
+                  "42"
+                ],
+                [
+                  "AWS keys",
+                  "23"
+                ],
+                [
+                  "Secrets in older versions only",
+                  "734, across 509 repos"
+                ],
+                [
+                  "Files neither gitleaks nor TruffleHog flagged",
+                  "215 of 1,122"
+                ],
+                [
+                  "Total incl. history, shared settings, chat logs",
+                  "2,539 secrets, 1,994 repos"
+                ]
+              ],
+              "note": "Apiiro's figures as reported by The Hacker News. Apiiro did not test whether the secrets still work; one notified company confirmed its key was live."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Allowlist rule:** a saved permission telling an agent it may run a command without asking. A pattern rule (`Bash(npm run:*)`) covers a family of commands; an exact rule stores the literal command text.",
+                "**Global git excludes:** a per-user ignore list on one computer. Unlike a repo's `.gitignore`, it does nothing for teammates, CI, or files already committed.",
+                "**Secret scanning:** tools like gitleaks and TruffleHog that look for keys in code. They are good at recognizable token formats and bad at a bare password typed after a flag, which is why they missed 215 of these files.",
+                "**Service principal:** a non-human identity an app uses to log in to a cloud. A leaked client secret for one lets an attacker act as that app."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is a design default, not a clever exploit: the agent writes secrets into a file inside the repo and sometimes commits that file itself. The fix for users is cheap, but the scale shows that the safety of agent tools depends on boring defaults like where approvals are stored. It also undercuts the common assumption that the risk of coding agents is what they do on their own; here the leak comes from a human clicking a helpful button.",
+                "Pair it with Microsoft's report and the window between \"secret pushed to GitHub\" and \"secret used\" is now minutes, because attackers run agents too. Deleting the file later does not help, since it stays in git history and forks. Any password or key that ever sat in one of these files should be treated as stolen and rotated.",
+                "Caveat: Apiiro sells application security tools, and these are its counts. They are specific and checkable, though, and the mechanism is easy to reproduce."
+              ]
+            },
+            {
+              "h": "What to do",
+              "list": [
+                "Search your repos, including history, for `.claude/settings.local.json` and `.claude/settings.json`.",
+                "Rotate every credential those files ever contained before cleaning up.",
+                "Run `git rm --cached .claude/settings.local.json` and add it to the repo's `.gitignore`.",
+                "Approve command patterns, not one-off commands with secrets in them, and pass secrets through environment variables from a secrets manager.",
+                "Treat agent folders (`.claude/`, `.cursor/`, `.gemini/`) like `.env` files in pre-commit and CI scanning."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether Anthropic changes the default (for example, storing approvals outside the project, or writing patterns instead of literal commands) and reopens the closed GitHub issues."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Microsoft Security Blog",
+              "title": "Threat actors use agentic AI tooling to find and abuse exposed secrets",
+              "url": "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/"
+            },
+            {
+              "name": "The Hacker News",
+              "title": "Claude Code's \"Don't Ask Again\" File Exposes Passwords and Keys in 1,122 Public Copies on GitHub",
+              "url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Chips",
+          "headline": "US cleared Chinese firms with empty offices and blacklist ties to build Nvidia H200 servers, NYT reports",
+          "summary": "Two of roughly two dozen approved licensees appear to have no real presence at their listed addresses, and others have owners linked to firms serving China's military.",
+          "stats": [
+            [
+              "~24",
+              "Chinese firms reportedly approved"
+            ],
+            [
+              "2",
+              "Licensees with apparently empty offices"
+            ],
+            [
+              "$324M",
+              "US export penalties in 2025 (BIS)"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The New York Times reported Saturday that the Commerce Department approved a Chinese company called New Matrix this year to assemble Nvidia H200 chips into AI servers, and that its listed office in an industrial park on Beijing's northwest edge is \"a hollow gray shell with wires dangling from the ceiling where lights should be.\" Chinese corporate records link New Matrix's owners to Wise Road, a private equity fund the US put on its entity list in 2024. The company was set up 17 months ago and did not respond to the Times. Two analysts told the paper it may be a front for firms tied to that fund.",
+                "A second licensee, Maginfra, appeared deserted when the Times visited in September; analysts believe it is an offshoot of Inspur, which is on the entity list for work with China's military. The Times also said two more licensees, Zhejiang Yindun Cloud Technology and Shanghai Jiatang, have owners tied to firms that serve the military. According to people familiar with the approvals, about two dozen Chinese firms were cleared, including Baidu, BYD, and Tesla Shanghai, each for tens of thousands of chips, and none has yet hit its quota.",
+                "The Bureau of Industry and Security said it carefully reviews every application, imposed $324 million in export-violation penalties in 2025, and hired more than 90 enforcement officers this year. Nvidia spokesman John Rizzo said it \"makes no sense for the Chinese military to depend on American technology.\""
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Chinese firms reportedly approved for H200s",
+                  "About two dozen"
+                ],
+                [
+                  "Licensees with apparently empty offices",
+                  "2 (New Matrix, Maginfra)"
+                ],
+                [
+                  "Age of New Matrix",
+                  "17 months"
+                ],
+                [
+                  "US cut on H200 sales to China",
+                  "25% tariff, collected as chips route through the US"
+                ],
+                [
+                  "H200 shipments to China, quarter ending July",
+                  "Under 1% of Nvidia data center revenue"
+                ],
+                [
+                  "BIS enforcement hires this year",
+                  "90+"
+                ]
+              ],
+              "note": "From the New York Times as summarized by FourWeekMBA. The full licensee list has not been published; the total comes from unnamed people familiar with the approvals."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Entity list:** the Commerce Department's list of foreign companies that need a special license to receive US technology, usually over national security concerns.",
+                "**Front company:** a firm that exists on paper to let another, often restricted, company buy what it can't buy directly.",
+                "**H200:** an Nvidia data center GPU one generation behind its newest chips. Trump allowed its sale to China in December, with the US government taking a cut."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The H200 policy rests on the idea that licenses plus vetting keep chips away from blacklisted buyers. This report suggests the vetting is thin: an empty shell with owners tied to an entity-listed fund got approved. Nothing here is proven wrongdoing; the Times did not establish who controls New Matrix, no licenses have been revoked, and the licenses cover assembling servers, not final sales. But it lands the same week as the Megaspeed spy allegation and adds to pressure on both Commerce and Nvidia.",
+                "In practice, the China H200 business is still tiny for Nvidia (under 1% of data center revenue last reported quarter). The bigger risk is political: tighter rules or license reviews could follow, and this gives lawmakers a concrete example."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Calls for an audit of the licenses, and whether the topic comes up at the House chairs' requested Nov 18 briefing with Jensen Huang."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The New York Times",
+              "title": "U.S. Cleared Nvidia Chips to Chinese Firms With Empty Offices and Troubling Ties",
+              "url": "https://www.nytimes.com/2026/11/07/business/economy/nvidia-chips-chinese-firms.html"
+            },
+            {
+              "name": "FourWeekMBA",
+              "title": "Two US-Cleared Nvidia H200 Firms in China Had Empty Offices",
+              "url": "https://fourweekmba.com/ai-two-us-cleared-nvidia-h200-firms-in-china-had-empty-offices/"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "AI safety PACs mostly backed midterm winners; the industry-funded network's biggest bets lost",
+          "summary": "An FEC count finds 97.5% of the Anthropic-backed Public First network's general-election money went to races that ended its way, versus 52.6% for Leading the Future.",
+          "stats": [
+            [
+              "97.5%",
+              "Public First money on winning side"
+            ],
+            [
+              "52.6%",
+              "Leading the Future money on winning side"
+            ],
+            [
+              "$4.11M",
+              "LTF network spend on one losing Senate race"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "With the midterm results mostly called, the two rival AI super PAC networks can be scored. **Public First**, backed by Anthropic, wants stronger AI rules and keeps states' power to pass them. **Leading the Future (LTF)**, backed by OpenAI president Greg Brockman and Andreessen Horowitz, wants one national framework that would override state laws. Bloomberg reported Saturday that candidates favoring stricter AI oversight won key congressional races, and that Public First said it put more than $63 million into the midterms (the group's own figure).",
+                "A FourWeekMBA count of FEC independent-expenditure filings through Oct 30, matched to AP race calls, found Public First's network spent $10.54 million across 13 general-election races, mostly opposing candidates, and 12 of 13 went its way. LTF's network spent $9.31 million across 22 races, all supporting candidates, and 19 of 20 called races went its way, but its one big loss, South Carolina's Senate race, swallowed most of its money. TechCrunch reported LTF's Republican arm also spent over $500,000 each on House candidates Aaron Flint (Montana) and Laurie Buckhout (North Carolina), who both lost, while Guardrails Alliance, a group that attacks candidates for taking AI industry money, helped defeat California Rep. Jimmy Gomez."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Public First network, general election",
+                  "$10.54M across 13 races"
+                ],
+                [
+                  "Races that went Public First's way",
+                  "12 of 13 ($10.28M, 97.5%)"
+                ],
+                [
+                  "LTF network, general election",
+                  "$9.31M across 22 races"
+                ],
+                [
+                  "LTF called races won",
+                  "19 of 20 ($4.56M of $8.67M, 52.6%)"
+                ],
+                [
+                  "LTF spend on Darline Graham (SC Senate, lost)",
+                  "$4.11M (FEC through Oct 30); TechCrunch: $4.8M"
+                ],
+                [
+                  "LTF primary spending",
+                  "$27.38M, incl. $8M against Alex Bores"
+                ],
+                [
+                  "Public First's claimed total cycle spending",
+                  "$63M+ (group's figure, via Bloomberg)"
+                ]
+              ],
+              "note": "FourWeekMBA's analysis of FEC 24/48-hour reports and AP calls as of Nov 7; spending after Oct 30 is excluded. Primary and race details from TechCrunch."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Super PAC:** a political committee that can raise and spend unlimited money on ads for or against candidates, as long as it doesn't coordinate with campaigns.",
+                "**Independent expenditure:** the spending super PACs must report to the FEC within 24 or 48 hours close to an election. It shows where money went, not who gave it.",
+                "**Preemption:** a federal law overriding state laws on the same topic. It is the core fight between the two networks."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Don't read the win rate as proof that AI money decided races. Public First mostly spent against candidates in a strong Democratic year, and TechCrunch notes it is hard to separate AI spending from the broader wave. The dollar-weighted scores are also skewed by one race on each side. What the numbers do show is that the pro-regulation camp chose its general-election races well, and that LTF put its money mostly into primaries, where it says name recognition matters more.",
+                "For people building with AI, the practical stake is preemption. A Congress less friendly to a single light-touch federal rule makes it more likely that state laws, like California's and New York's, keep applying and keep multiplying."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Congress returns Monday, Nov 9, and OpenAI plans a lame-duck push for federal \"speed limits\" on the most powerful AI systems. Both networks say they will keep spending in 2028."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "title": "AI PACs spent millions trying to shape Congress, here's how they fared",
+              "url": "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/"
+            },
+            {
+              "name": "FourWeekMBA",
+              "title": "AI Safety PACs Put 97.5% on the Winning Side; Industry 52.6%",
+              "url": "https://fourweekmba.com/ai-safety-pacs-put-97-5-on-the-winning-side-industry-52-6/"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "Eminem's publisher and Elvis Presley's rights holders sue Suno, one over copyright and one over voice imitation",
+          "summary": "Eight Mile Style says Suno copied 269 compositions and seeks damages that could top $40 million; the Presley suit leans on Tennessee's ELVIS Act.",
+          "stats": [
+            [
+              "269",
+              "Eminem compositions in the suit"
+            ],
+            [
+              "$40M+",
+              "Possible damages sought"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Eight Mile Style, the Michigan publisher that controls much of Eminem's catalog, sued AI music generator Suno on Friday in federal court in the Northern District of California, CBS News reported. It claims direct copyright infringement over 269 compositions, circumvention of copy protections, and removal of copyright management information. Citing a 404 Media report, it alleges Suno scraped songs and lyrics from YouTube Music, Deezer, and Genius, and gives an example of a generated track that reproduces an Eminem lyric word for word. It asks for a willful infringement finding, destruction of unauthorized copies, and damages that could exceed $40 million. Eminem himself is not a plaintiff.",
+                "Separately, rights holders for Elvis Presley, including Authentic Brands Group and Raleigh Music Publishing, filed a 51-page complaint in federal court in California saying Suno lets users generate songs that imitate Presley's voice and musical identity, invoking Tennessee's 2024 ELVIS Act. Suno told CBS it prohibits \"any unauthorized use of an artist's work,\" blocks prompts naming specific artists or songs, and screens uploads; it has argued in other cases that training is fair use."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Copyright vs. right of publicity:** copyright protects a specific work (a song's lyrics and melody, a recording). The right of publicity protects a person's identity, such as their name, likeness, and voice. A model can avoid copying any song and still violate publicity rights by sounding like a specific singer.",
+                "**ELVIS Act:** a 2024 Tennessee law that explicitly adds a person's voice, including an AI simulation of it, to the state's publicity-rights protections.",
+                "**Copyright management information:** credits and metadata attached to a work. Stripping it can be a separate violation under the DMCA."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Suno already faces suits from labels and a class action from musicians over publicity rights; this adds a publisher with a verbatim-lyrics example, which is harder to defend as fair use than a general training claim. The two filings show the two legal routes rights holders now use against AI music: copying the works, and copying the artist. The second doesn't depend on how courts rule on training, which makes it the more durable threat to voice-cloning features.",
+                "Nothing is proven yet; these are complaints. The same Presley rights group separately sued Anthropic over 274 songs last month, so this is a coordinated campaign, not a one-off."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Suno's response and any motion to dismiss, and whether other publishers join. The EU and US courts are also still working out whether training itself is allowed."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "CBS News via KION",
+              "title": "AI platform reproduced Michigan music publisher's copyrighted works without authorization, lawsuit says",
+              "url": "https://kioncentralcoast.com/news/2026/11/07/ai-platform-reproduced-michigan-music-publishers-copyrighted-works-without-authorization-lawsuit-says/"
+            },
+            {
+              "name": "The Express Tribune",
+              "title": "Elvis Presley rights holders and Eminem's publisher sue AI music generator Suno",
+              "url": "https://tribune.com.pk/story/2639163/elvis-presley-rights-holders-and-eminems-publisher-sue-ai-music-generator-suno"
+            },
+            {
+              "name": "Tom's Guide",
+              "title": "Anthropic is being sued by Elvis Presley's estate for $41 million",
+              "url": "https://www.tomsguide.com/ai/anthropic-is-being-sued-by-elvis-presleys-estate-for-usd41-million-and-these-artists-songs-are-also-at-the-center-of-lawsuits"
+            }
+          ]
+        },
+        {
+          "kicker": "Research",
+          "headline": "Microsoft's AI Frontiers lab, which built AutoGen, is over, says its departing leader John Langford",
+          "summary": "The roughly 50-person research group was folded into Microsoft AI in September; Langford says its ideas couldn't get used there, and AutoGen no longer gets security fixes.",
+          "stats": [
+            [
+              "~50",
+              "People in AI Frontiers"
+            ],
+            [
+              "0",
+              "AutoGen security fixes going forward"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "John Langford, a well-known machine learning researcher, wrote on his blog on Nov 6 that \"AI Frontiers is over\" and that he has left Microsoft. He co-founded the group inside Microsoft Research in 2023, after ChatGPT, and it grew to about 50 people. Its work focused on making agents work, including the AutoGen multi-agent framework and Fara, a computer-use agent. In early September the group was moved into Microsoft AI, the model-building division. Langford described a clash between scaling and research, said leadership's focus was on getting, making, and refining data, and that his group's innovations couldn't get used or seriously considered. \"So I situated my folks as best I could and left,\" he wrote. There will be no internships with the group next year.",
+                "AutoGen was already winding down: since an Oct 16 README change, Microsoft says it is \"not providing bug fixes, security fixes, new features, or support,\" and points users to Microsoft Agent Framework, which shipped 1.0 in April."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**AutoGen:** an open-source Python framework for building systems where several AI agents talk to each other to finish a task. It was one of the most popular early agent frameworks.",
+                "**Microsoft Agent Framework:** Microsoft's newer, supported agent SDK for .NET and Python that replaces AutoGen and Semantic Kernel.",
+                "**Scaling vs. research:** the tension between putting resources into bigger models and more data, which reliably improves results, and into new methods that may or may not pay off."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "It fits a pattern: Google, Meta, and now Microsoft have moved independent AI research groups under product or model teams, and researchers who want to explore leave. For Microsoft, it signals Microsoft AI is concentrating on building its own frontier models, which matters as Microsoft reportedly winds down a server rental deal with Oracle.",
+                "For developers, the practical point is AutoGen: if you still run it, you are on unmaintained code with no security patches, and the GitHub repo isn't marked archived, so automated checks may miss that. Note that the `autogen` package on PyPI belongs to AG2, a separate community fork."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "DEV Community",
+              "title": "The Microsoft Lab That Worked on AutoGen Is Over. AutoGen Already Gets No Security Fixes",
+              "url": "https://dev.to/gabrielanhaia/the-microsoft-lab-that-worked-on-autogen-is-over-autogen-already-gets-no-security-fixes-281"
+            },
+            {
+              "name": "Digg (summary of Langford's hunch.net post)",
+              "title": "John Langford announces Microsoft exit and declares AI Frontiers over",
+              "url": "https://digg.com/ai/knmglebe"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "Alibaba's Qwen4. The official Qwen account posted a teaser, 'The becoming begins.', on Nov 6 with no date, specs, or license."
+        },
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; still not announced as of Saturday morning."
+        },
+        {
+          "when": "Mon Nov 9",
+          "what": "Congress returns. OpenAI plans a lame-duck push for mandatory 'speed limits' on the most powerful AI systems."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Anthropic's IPO roadshow was expected to start, but Reuters reports investors doubt it can begin and still list in November. A price range filing would come first."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Thinking Machines plans to release Inkling 2 Small's weights under Apache 2.0, if outside safety testing is done."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Fri Nov 13",
+          "what": "Conductor Cloud goes read-only after Meta's acquisition; it shuts down Nov 20."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Requested date for Jensen Huang's closed-door briefing to three House committee chairs on Megaspeed and the alleged Chinese intelligence link. Nvidia has not said whether he will attend."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Anthropic's Nasdaq debut (ticker ANT) was targeted before Thanksgiving; it could slip toward year-end, per Reuters."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Nvidia reports quarterly results, the first big read on AI chip demand since this week's selloff."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Gemini 4 Argon's intro pricing ends: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-07-pm",
       "date": "2026-11-07",
       "edition": "Afternoon",
