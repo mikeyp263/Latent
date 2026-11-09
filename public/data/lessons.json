@@ -979,6 +979,68 @@
         "Explain the difference between suing an AI company for copyright and for right of publicity.",
         "Copyright protects specific works, so the claim is that the company copied songs or text, in training or in outputs; the main defense is fair use. Right of publicity protects a person's identity, like their voice, so the claim is that the model imitates the artist, even without copying any work. The two are independent, so winning on fair use doesn't end a voice-imitation suit."
       ]
+    },
+    {
+      "id": "nw21",
+      "added": "2026-11-09",
+      "t": "GPUs, NPUs, and the Interconnect",
+      "cards": [
+        "Big AI models don't run on one chip. They are split across many, and the chips constantly trade data. So a system's speed depends on the **accelerators** (the chips doing the math) and on the **interconnect** (the wiring between them). A fast chip on a slow link sits idle waiting for data.",
+        "There are two layers of wiring. **Scale-up** links connect chips inside a rack so tightly they act like one big chip; Nvidia's **NVLink** is the best-known. **Scale-out** networks (InfiniBand or Ethernet) connect racks to each other and are slower. Nvidia's lead comes partly from owning both, not just the GPU.",
+        "Not every chip is a GPU. An **NPU** or other **ASIC** is built only for AI math, often for **inference**, and can be cheaper per answer but less flexible. Programs like **NVLink Fusion** let other companies' chips join Nvidia's scale-up fabric, so customers can mix chips while still buying Nvidia's racks and networking."
+      ],
+      "terms": [
+        [
+          "Accelerator",
+          "A chip specialized for the math AI needs, like a GPU or NPU."
+        ],
+        [
+          "Interconnect",
+          "The links that move data between chips; often the real bottleneck."
+        ],
+        [
+          "Scale-up",
+          "Tightly linking chips within a rack so they behave like one."
+        ],
+        [
+          "Scale-out",
+          "Networking many racks together, at lower bandwidth."
+        ],
+        [
+          "NPU / ASIC",
+          "A custom chip built for one job, such as running AI models."
+        ]
+      ],
+      "qs": [
+        [
+          "A company doubles its chips' raw math speed but keeps the same links between them. Training barely speeds up. Most likely why?",
+          "The chips are waiting on data over the interconnect",
+          "The model is too small to train",
+          "GPUs can't run training",
+          "The software has a memory leak",
+          "When chips trade data constantly, a slow link leaves the faster chips idle."
+        ],
+        [
+          "Why would Nvidia let a rival's inference chip connect to its NVLink?",
+          "So customers mixing chips still buy Nvidia racks and networking",
+          "Because NVLink is a free public standard",
+          "To make its GPUs slower",
+          "Regulators require it everywhere",
+          "Opening the link keeps Nvidia in the system even when some chips aren't Nvidia's."
+        ],
+        [
+          "Which job is a specialized NPU usually best suited for?",
+          "Running a finished model cheaply at high volume",
+          "Researching brand-new model architectures",
+          "Rendering video games",
+          "Storing training data",
+          "NPUs trade flexibility for efficiency on known workloads like inference."
+        ]
+      ],
+      "ex": [
+        "Explain why the links between AI chips matter as much as the chips.",
+        "Large models are split across many chips that must constantly exchange data. If the links are slow, the chips wait, so the whole system runs at the speed of the interconnect. That is why scale-up links like NVLink, which make a rack of chips act like one, are a big part of Nvidia's advantage, and why opening them to other chips (NVLink Fusion) matters."
+      ]
     }
   ]
 }

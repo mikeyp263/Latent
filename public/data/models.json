@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "models": [
     { "name": "Gemini Omni 1.2 Flash", "lab": "Google DeepMind", "released": "2026-11-05", "access": "Closed", "price": "~$0.07 per second (720p video)", "context": "", "note": "Video generation model, now generally available. Clips up to 15 seconds with multi-turn edits; 30% cheaper than before. In Gemini API, Google Cloud, Flow, Vids, Ads, and the Gemini app (Ultra).", "link": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/" },
     { "name": "Inkling 2 Small", "lab": "Thinking Machines Lab", "released": "2026-11-05", "access": "Preview", "price": "", "context": "1M", "note": "594B MoE, 17B active, text and image input. Closed on Tinker for now; Apache 2.0 weights promised the week of Nov 9 after outside safety testing. AA Intelligence Index 31.", "link": "https://thinkingmachines.ai/inkling/" },

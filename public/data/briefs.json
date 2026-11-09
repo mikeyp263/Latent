@@ -1,6 +1,538 @@
 {
   "editions": [
     {
+      "id": "2026-11-09-am",
+      "date": "2026-11-09",
+      "edition": "Morning",
+      "stories": [
+        {
+          "kicker": "Chips",
+          "headline": "Jensen Huang admits an affair in a memo to staff, and Nvidia's board opens an independent investigation",
+          "summary": "The board says it has no reason to think secrets were compromised, but Nvidia shares fell before Monday's open as the spy story moved from news reports to a formal company probe.",
+          "stats": [
+            [
+              "4.4%",
+              "Premarket drop, 5:15 a.m. ET Mon"
+            ],
+            [
+              "~$270B",
+              "Value lost in Frankfurt trading (LSEG)"
+            ],
+            [
+              "Nov 18",
+              "Requested House briefing"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Sunday, Nov 8, Nvidia CEO Jensen Huang sent employees a memo, later released publicly, in which he wrote: \"I was unfaithful to my wife. My actions hurt her and our children.\" and \"There is no excuse for what I did. I am deeply sorry.\" Reuters reported he did not give further details.",
+                "The same day Nvidia's board said it is \"initiating an independent investigation in light of recent reporting\" that Huang \"has been the target of a foreign intelligence effort.\" The board said it has no reason to believe national security or Nvidia secrets were compromised and that its inquiry will \"examine all available information.\" It did not name who will run the probe.",
+                "The backdrop: the New York Times reported last month that US intelligence believes Alice Huang (no relation), a senior executive at Singapore-based Megaspeed, a company under investigation over alleged smuggling of Nvidia chips into China, was recruited by China's Ministry of State Security, and that surveillance of her revealed a close relationship with Huang. On Sunday the Times added that Secretary of State Marco Rubio oversaw a classified memo warning senior officials about the relationship before President Trump's May trip to China. China's Foreign Ministry called the spy claims \"purely a groundless accusation, slander, and a smear.\" Trump said he had not spoken with Huang, called him a fine person, and said he likely has an explanation."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Premarket move, Mon Nov 9",
+                  "Down 4.4% as of 5:15 a.m. ET (Axios)"
+                ],
+                [
+                  "Frankfurt trading, Mon",
+                  "Down more than 6%, about $270 billion off Friday's value (Reuters, LSEG data)"
+                ],
+                [
+                  "Decline through Friday",
+                  "About 13% since the first reports on the Alice Huang relationship (Axios)"
+                ],
+                [
+                  "Asian chip peers, Mon",
+                  "TSMC +6.5%, SK Hynix +4.7%, Samsung +2.9% (Reuters)"
+                ],
+                [
+                  "House briefing request",
+                  "Closed-door, Nov 18, from three committee chairs"
+                ]
+              ],
+              "note": "Market figures from Axios and Reuters on Monday morning; premarket and overseas trading are thin and the regular session can differ."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Independent board investigation:** a review run by directors who are not company executives, usually with outside lawyers, so the CEO is not investigating himself. It reports to the board, which decides whether to publish findings.",
+                "**Premarket trading:** US stock trades before the 9:30 a.m. ET open. Volume is low, so moves are a signal of sentiment, not a settled price."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Two separate questions are now tangled together. The affair is a personal and governance matter. The intelligence question is whether a suspected foreign agent got access to the CEO of the company at the center of US chip export policy. Huang's memo addresses the first and is silent on the second; the board's probe is aimed at the second. Note what the board did not say: that nothing happened, only that it has no reason to believe secrets were compromised.",
+                "For the AI industry the practical risk is policy, not product. Nvidia's case for selling H200-class chips into China leaned on Huang's personal standing in Washington. If Congress treats this as a security problem, expect tighter scrutiny of export licenses and of Nvidia's partners in Southeast Asia. Analysts' talk of succession is speculation for now: Huang has not stepped back and the board said nothing about his role. Asian chipmakers rising on the same day suggests investors see this as an Nvidia-specific problem rather than a hit to AI demand."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "How the stock trades in the regular session, whether the board names outside counsel, whether Huang attends the requested Nov 18 House briefing, and Nvidia's quarterly results later this month, where analysts will ask about all of it."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Axios (via Yahoo Finance)",
+              "title": "Nvidia shares sink as board launches probe into Jensen Huang's affair",
+              "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-shares-sink-board-launches-102317406.html"
+            },
+            {
+              "name": "Reuters (via Business Standard)",
+              "title": "Nvidia's shares slide as chip giant probes CEO Huang over spy claims",
+              "url": "https://www.business-standard.com/markets/news/nvidia-s-shares-slide-as-chip-giant-probes-ceo-huang-over-spy-claims-126110900547_1.html"
+            },
+            {
+              "name": "Investing.com",
+              "title": "Nvidia CEO Huang admits to affair; shares drop as board launches investigation",
+              "url": "https://za.investing.com/news/stock-market-news/nvidia-ceo-huang-admits-to-affair-apologizes-to-employees-as-probe-launched-4560176"
+            },
+            {
+              "name": "CNBC",
+              "title": "Read Huang's email to his staff and statement from Nvidia's board of directors",
+              "url": "https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-email-board-of-directors-statement.html"
+            },
+            {
+              "name": "Newsmax Wires (via Yahoo News), relaying The New York Times",
+              "title": "Rubio Warned of Nvidia Chief's China Spy Relationship",
+              "url": "https://www.yahoo.com/news/politics/articles/rubio-warned-nvidia-chiefs-china-213553688.html"
+            },
+            {
+              "name": "Stocktwits (via Yahoo Finance)",
+              "title": "Nvidia Faces Governance Overhang: Jensen Huang's Affair Admission Sparks Board Probe",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-faces-governance-overhang-jensen-020907411.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "Anthropic tells customers and Korea's privacy regulator what Cathedral's agents reached in its business systems",
+          "summary": "About 100 Korean corporate Claude accounts were in the exposed data, which Anthropic says covered names, emails, and plan details but not prompts, outputs, or payments.",
+          "stats": [
+            [
+              "~100",
+              "Korean corporate accounts affected"
+            ],
+            [
+              "<12 hrs",
+              "Time Cathedral says its agents needed"
+            ],
+            [
+              "Oct 31",
+              "Report filed with Korea's PIPC"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "In late October, the Washington Post reported that Cathedral, a months-old security startup founded by four former DOGE staffers, told Anthropic its AI agents had found paths into Anthropic's internal business systems in under 12 hours. The way in was third-party sales, administrative, and HR software, not Claude itself. Anthropic said then that its monitoring flagged some of the activity, it cut off access the same day, and Claude conversations, source code, and model weights were not reached.",
+                "The new part is the notification. Anthropic began emailing affected customers around Nov 7; security researcher Jamieson O'Reilly posted his on X, which said Anthropic could not confirm whose information was viewed and that recipients face no heightened risk. On Nov 9, Yonhap and the Seoul Economic Daily reported that Anthropic told South Korea's Personal Information Protection Commission (PIPC) on Oct 31 that account details for about 100 Korean corporate customers may have been exposed. An Anthropic staff member posted on X on Nov 8 that the data included account names, email addresses, and subscription plans, but not prompts, outputs, or payment data. The PIPC says it is doing a preliminary review and has not opened a formal investigation."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Korean corporate accounts",
+                  "About 100 (Seoul Economic Daily; headline says 'over 100')"
+                ],
+                [
+                  "Data exposed",
+                  "Account and organization IDs, names, business emails, plan tiers; some reports add usage and spend figures"
+                ],
+                [
+                  "Not exposed (per Anthropic)",
+                  "Prompts, model outputs, payment data, source code, model weights"
+                ],
+                [
+                  "Cathedral's claimed time to access",
+                  "Under 12 hours (its draft report, per the Post)"
+                ],
+                [
+                  "Cathedral funding",
+                  "$160 million at a $1.4 billion valuation, July 2026"
+                ]
+              ],
+              "note": "Figures from the Seoul Economic Daily, TechFlow (citing Yonhap), Runtime Wire, and Decrypt's summary of the Washington Post report."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Third-party software risk:** a company's own systems can be locked down while a vendor's tool it uses (a CRM, an HR app) has a flaw that opens a door. Attackers often go through those side doors.",
+                "**PIPC:** South Korea's Personal Information Protection Commission, which can investigate and fine companies that mishandle personal data of people in Korea, including foreign companies."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is not a breach of Claude, but it is the kind of exposure that matters to enterprise buyers: who your company is, who your admins are, and what you pay. That is useful material for targeted phishing, which is why notices that say 'no heightened risk' deserve some skepticism. It also shows how quickly AI-driven penetration testing now finds weak points in ordinary business software, a pattern also seen in OpenAI's Hacktron episode, reported this weekend.",
+                "The dispute between the two companies remains. Anthropic said Cathedral overstated the national security angle and did not disclose all of its testing; Cathedral says it kept data access to a minimum. Neither side has published the full report. Timing matters too: Anthropic is trying to go public this month, and customer data notices land in risk-factor territory."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether the PIPC opens a formal probe, whether regulators elsewhere receive similar notices, and whether Anthropic's next IPO filing amendment mentions the incident."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Seoul Economic Daily",
+              "title": "Data Breach at Anthropic's Claude Hits Over 100 Korean Corporate Accounts",
+              "url": "https://en.sedaily.com/international/2026/11/09/data-breach-at-anthropics-claude-hits-over-100-korean"
+            },
+            {
+              "name": "TechFlow (citing Yonhap)",
+              "title": "Anthropic Reports Leak of Claude Account Information for Over 100 South Korean Companies",
+              "url": "https://techflowpost.com/en-US/newsletter/143704"
+            },
+            {
+              "name": "Runtime Wire",
+              "title": "Anthropic notifies customers after unnamed security firm accessed internal systems",
+              "url": "https://runtimewire.com/article/anthropic-customer-notice-unnamed-security-firm-access"
+            },
+            {
+              "name": "Decrypt",
+              "title": "AI Agents Found a Way Into Anthropic's Business Systems in Under 12 Hours",
+              "url": "https://decrypt.co/381860/ai-agents-hack-anthropic-business-systems-12-hours"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "Staff at the US government's AI testing center are informally reporting to the White House, AP reports",
+          "summary": "As Congress returns, the $10 million-a-year center has no permanent director and stopped publishing safety reports, and Trump told 60 Minutes that AI risk 'can be managed.'",
+          "stats": [
+            [
+              "$10M",
+              "CAISSI annual budget"
+            ],
+            [
+              "1/8",
+              "Its budget vs. the UK counterpart"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The Associated Press reported on Sunday, Nov 8, that officials at CAISSI, the Commerce Department division that tests frontier AI models, were recently asked to report informally to a White House office, according to two former officials. CAISSI (now the Center for Advancing Innovation and Standards for Super Intelligence, until recently the Center for AI Standards and Innovation) has a budget of about $10 million a year, roughly one-eighth of the UK's equivalent. Its director was hired and fired within days in April, his replacement resigned after a few months, and it has had no permanent leader since. In August, Congress asked why it had stopped publishing reports on how AI systems performed in its tests.",
+                "The White House did not answer specific questions, pointing instead to the 'Super Intelligence Force' Trump created under National Intelligence Director Jay Clayton. Separately, in a 60 Minutes interview with Ross Douthat that aired Sunday night, Trump said the risk of AI catastrophe \"is not nearly as real\" as portrayed and \"can be managed,\" and that he doesn't \"mind guardrails\" but doesn't want the US in \"a deep second position\" to China."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**CAISSI:** the federal unit that runs voluntary pre-release tests of frontier models from labs like OpenAI and Anthropic. It was set up under Biden as the AI Safety Institute and has been renamed twice.",
+                "**Pre-deployment testing:** checking a model for dangerous capabilities (cyberattacks, bioweapons help, autonomy) before the public gets it. Labs grant access voluntarily and can limit it."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The government's main technical check on frontier models is small, leaderless, and now closer to political control, just as labs ship models with stronger cyber skills. Supporters say White House ties could raise its profile and funding; critics quoted by AP worry results could be muted or shaped. Either way, without published reports outsiders can't tell what testing is happening.",
+                "It also frames this week in Congress. OpenAI plans to push lawmakers for mandatory limits on the most powerful systems, and a newly Democratic House majority arrives in January. Trump's message is consistent: some guardrails are fine, falling behind China is not. Any bill that slows US labs without addressing China will face the White House."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether lawmakers in the lame-duck session move on CAISSI's funding or independence, and the administration's promised inventory of federal rules that apply to AI labs."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "AP (via ABC News)",
+              "title": "Staff at the US center for AI safety are reporting to the White House, raising independence concerns",
+              "url": "https://abcnews.com/US/wireStory/staff-us-center-ai-safety-reporting-white-house-137950879"
+            },
+            {
+              "name": "CBS News",
+              "title": "60 Minutes Transcript: Donald Trump, the 2026 post-midterm elections interview",
+              "url": "https://www.cbsnews.com/news/donald-trump-2026-post-midterm-elections-interview-60-minutes-transcript/"
+            }
+          ]
+        },
+        {
+          "kicker": "Chips",
+          "headline": "Nvidia, SK Telecom, and Rebellions agree to put Korean AI chips in Nvidia racks, linked by NVLink Fusion",
+          "summary": "The memorandum targets commercial data center deployment of Rebellions' R200 inference chip alongside Nvidia GPUs in 2028.",
+          "stats": [
+            [
+              "2028",
+              "Target for commercial deployment"
+            ],
+            [
+              "144GB",
+              "HBM3E on today's Rebellions R100"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "At Nvidia AI Day Seoul on Monday, Nov 9, Nvidia signed a memorandum of understanding with SK Telecom and Rebellions, a Korean AI chip startup, to build a combined GPU and NPU system. Several of Rebellions' next-generation R200 chips would be connected with NVLink Fusion, Nvidia's program that lets other companies' chips plug into its high-speed link, and housed in racks built to Nvidia's MGX server design. SK Telecom will validate the system on its infrastructure, with commercial deployment targeted for 2028.",
+                "Rebellions merged with Sapeon Korea, SK Telecom's former AI chip unit, in December 2024. Its CEO Park Sung-hyun said the partnership aims at \"cost-competitive AI infrastructure.\" Reuters noted Madison Huang, Jensen Huang's daughter and an Nvidia executive, cancelled her planned Seoul visit; the event went ahead."
+              ]
+            },
+            {
+              "h": "Price and specs",
+              "table": [
+                [
+                  "Chip in the deal",
+                  "Rebellions R200 NPU (specs not disclosed)"
+                ],
+                [
+                  "Current chip, R100",
+                  "4 stacks of HBM3E, 144GB, 4.8 TB/s memory bandwidth"
+                ],
+                [
+                  "Link",
+                  "NVLink Fusion (announced by Nvidia, May 2025)"
+                ],
+                [
+                  "Rack design",
+                  "Nvidia MGX"
+                ],
+                [
+                  "Status",
+                  "Memorandum of understanding, not a purchase order"
+                ]
+              ],
+              "note": "Details from the Seoul Economic Daily."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**NPU (neural processing unit):** a chip built just for AI math, often tuned for inference (running models) rather than training. Simpler than a GPU, and often cheaper per answer.",
+                "**NVLink Fusion:** Nvidia opening its fast chip-to-chip connection to outside designs, so a customer can mix its own chips with Nvidia GPUs in one rack.",
+                "**MoU:** a statement of intent. It is not binding and doesn't commit anyone to buy."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Nvidia's strategy is visible here: if customers want cheaper inference chips, it would rather they run inside Nvidia racks, on Nvidia networking, than replace Nvidia altogether. For Korea, which wants homegrown 'sovereign AI' capacity, it gives a local chip a path into real data centers. But 2028 is a long way off, the R200's specs are unknown, and an MoU is the softest form of deal. Treat it as direction, not demand."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Seoul Economic Daily",
+              "title": "Nvidia to Run Korean AI Chips Alongside Its GPUs in Data Centers",
+              "url": "https://en.sedaily.com/finance/2026/11/09/nvidia-to-run-korean-ai-chips-alongside-its-gpus-in-data"
+            },
+            {
+              "name": "MoneyToday",
+              "title": "Nvidia, SKT and Rebellions join forces to integrate Korean-made NPUs with Nvidia GPUs",
+              "url": "https://www.mt.co.kr/en/tech/2026/11/09/2026110909113557282"
+            },
+            {
+              "name": "Reuters (via Business Standard)",
+              "title": "Nvidia's shares slide as chip giant probes CEO Huang over spy claims",
+              "url": "https://www.business-standard.com/markets/news/nvidia-s-shares-slide-as-chip-giant-probes-ceo-huang-over-spy-claims-126110900547_1.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Tools",
+          "headline": "DeepSeek says its open-source agent framework, Harness, reached 1.54 million daily users",
+          "summary": "Daily users roughly tripled in a month, and DeepSeek says they burn about 92 trillion tokens a day, a sign of how much compute agents eat.",
+          "stats": [
+            [
+              "1.54M",
+              "Daily active users, week to Nov 4"
+            ],
+            [
+              "92T",
+              "Tokens per day"
+            ],
+            [
+              "35,000",
+              "Third-party plug-ins"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "DeepSeek disclosed usage numbers for Harness, its open-source agent framework, for the first time. It said Harness had 1.54 million daily active users on DeepSeek's official API in the week ended Nov 4, up from 429,000 in the week ended Oct 7 and 271,000 the week ended Sept 30. Users consume about 92 trillion tokens a day, and about 35,000 third-party plug-ins have been made, with roughly 60% of users creating or installing at least one. Bloomberg reported the figures on Nov 8; Yicai first reported them Nov 6.",
+                "DeepSeek describes Harness as the 'operating system' a model needs to act as an agent. On Oct 31 its team wrote about 'super-agents' that persist across sessions and run several tasks at once."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "DAU, week to Sept 30",
+                  "271,000"
+                ],
+                [
+                  "DAU, week to Oct 7",
+                  "429,000"
+                ],
+                [
+                  "DAU, week to Nov 4",
+                  "1.54 million"
+                ],
+                [
+                  "Tokens per day",
+                  "About 92 trillion"
+                ],
+                [
+                  "Tokens per user per day",
+                  "About 60 million (Latent's arithmetic)"
+                ],
+                [
+                  "Plug-ins",
+                  "About 35,000"
+                ]
+              ],
+              "note": "Company-reported figures via Yicai and Bloomberg. Not independently audited."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Agent harness:** the software around a model that lets it act: running tools, reading files, keeping memory, retrying, and planning steps. Claude Code and OpenAI's Codex are harnesses too.",
+                "**Daily active users (DAU):** distinct users in a day. Here it counts API usage, so many 'users' may be developers or automated setups, not people chatting."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The token figure is the real story. About 60 million tokens per user per day is far beyond what chat uses; it means agents running long loops, mostly unattended. That is the demand behind the data center build-out, and DeepSeek's low prices make long-running agents affordable. These are self-reported numbers from a company that doesn't publish audited figures, so take the growth curve as a direction. Still, it shows Chinese open-source agent tools gaining users quickly, not just Chinese models."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Yicai Global",
+              "title": "DeepSeek Harness Releases DAU Data for First Time, Topping 1.5 Million",
+              "url": "https://www.yicaiglobal.com/news/deepseek-harness-releases-dau-data-for-first-time-topping-15-million"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "DeepSeek's AI Agent Platform Hits 1.54 Million Daily Users",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-08/deepseek-s-ai-agent-platform-hits-1-54-million-daily-users"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "Alibaba's Qwen4. The official Qwen account posted a teaser, 'The becoming begins.', on Nov 6 with no date, specs, or license."
+        },
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; no announcement as of Monday morning."
+        },
+        {
+          "when": "Mon Nov 9",
+          "what": "Congress returns. OpenAI plans a lame-duck push for mandatory 'speed limits' on the most powerful AI systems."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Anthropic's IPO roadshow was expected to start, but Reuters reports investors doubt it can begin and still list in November. A price range filing would come first."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Thinking Machines plans to release Inkling 2 Small's weights under Apache 2.0, if outside safety testing is done."
+        },
+        {
+          "when": "Tue Nov 10",
+          "what": "SoftBank reports fiscal second-quarter results (3:30 p.m. Japan time), its first read since OpenAI's new funding round."
+        },
+        {
+          "when": "Tue Nov 10",
+          "what": "CoreWeave reports third-quarter results, call at 5 p.m. ET. First big AI cloud report since last week's selloff."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's proposed cutoff of Cursor's access to its models, after SpaceX bought Cursor. The date could still move."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's 'Cyber at the Frontier' livestream, 10 a.m. PT, to introduce its latest cyber products."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Nebius reports third-quarter results before the market opens, call at 8 a.m. ET."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Fri Nov 13",
+          "what": "Conductor Cloud goes read-only after Meta's acquisition; it shuts down Nov 20."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Requested date for Jensen Huang's closed-door briefing to three House committee chairs on Megaspeed and the alleged Chinese intelligence link, now alongside Nvidia's board investigation. Nvidia has not said whether he will attend."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Anthropic's Nasdaq debut (ticker ANT) was targeted before Thanksgiving; it could slip toward year-end, per Reuters."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Nvidia reports quarterly results, the first big read on AI chip demand since this week's selloff."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Gemini 4 Argon's intro pricing ends: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-08-pm",
       "date": "2026-11-08",
       "edition": "Afternoon",
