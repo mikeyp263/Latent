@@ -1,6 +1,547 @@
 {
   "editions": [
     {
+      "id": "2026-11-09-pm",
+      "date": "2026-11-09",
+      "edition": "Afternoon",
+      "stories": [
+        {
+          "kicker": "Chips",
+          "headline": "Google adds two new TPU systems, one built for confidential AI and one that packs two chips into a single package",
+          "summary": "TPU 8tx and TPU 8i Max bring Google's eighth-generation chip family to four systems this year, aimed at regulated customers and long-context agents.",
+          "stats": [
+            [
+              "4",
+              "TPU systems Google introduced in 2026"
+            ],
+            [
+              "~100",
+              "TPU customers, per Google"
+            ],
+            [
+              "2027",
+              "Expected availability, per Bloomberg"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Monday, Nov 9, Google announced two new members of its eighth-generation Tensor Processing Unit (TPU) line in a blog post by Amin Vahdat, its chief technologist for AI infrastructure. They join TPU 8t (for training) and TPU 8i (for inference), which Google unveiled at Cloud Next in April. Google says this is the first time it has introduced four TPU systems in one year; historically it released a new chip roughly every two years.",
+                "**TPU 8tx** uses the same silicon as TPU 8t but is built for confidential workloads: it pairs with 5th Gen AMD EPYC CPU hosts and encrypts data in hardware while it is being processed, which Google says carries a 'near-zero performance penalty.' It targets governments and regulated industries, can handle fine-tuning and small-scale training on private data, and Data Center Knowledge reports select customers can run it in their own data centers. **TPU 8i Max** puts two TPU 8i chips on one package, doubling compute, on-chip SRAM, and memory bandwidth versus a single 8i, and fitting twice the silicon in the same rack space. Google pitches it for 'massive context windows,' such as many agents working on one large codebase.",
+                "Google also released software: an open-source TPU agent suite that works with Claude Code, Cursor, and Antigravity; an XLA serving engine; TPU Sync, which it says cuts time to first token by more than 90%; and general availability of Cloud Pathways (the runtime behind Gemini) on Google Kubernetes Engine. Google gave no price or launch date for either chip. Bloomberg reports they are expected in 2027."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "TPU 8tx latency",
+                  "Up to 2x lower than TPU 8t (Google's network claim)"
+                ],
+                [
+                  "TPU 8i Max vs. 8i",
+                  "2x compute, SRAM, and memory bandwidth"
+                ],
+                [
+                  "TPU 8i Max memory",
+                  "384 GB of HBM (Data Center Knowledge)"
+                ],
+                [
+                  "TPU 8t vs. prior gen",
+                  "Up to 2.7x training performance (April claim)"
+                ],
+                [
+                  "TPU 8i vs. prior gen",
+                  "Up to 80% better inference price-performance (April claim)"
+                ],
+                [
+                  "TPU customers",
+                  "Nearly 100, including Apple, Meta, and Oracle (Google, Gizmodo)"
+                ],
+                [
+                  "Alphabet stock",
+                  "Up about 3% in premarket trading Monday"
+                ]
+              ],
+              "note": "Performance figures are Google's own and have not been independently tested. Availability timing is Bloomberg's reporting, not Google's."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**TPU:** Google's custom AI chip. Google doesn't sell TPUs; it rents them through Google Cloud.",
+                "**Confidential computing:** hardware that keeps data and model weights encrypted even while the chip is working on them, so the cloud operator can't read them. Until now it has mostly been a CPU feature; extending it to AI accelerators is newer.",
+                "**SRAM and HBM:** SRAM is small, very fast memory on the chip itself; HBM (high-bandwidth memory) is the larger stacked memory next to it. Long-context work is often limited by how fast data moves from memory, not by raw math."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "These are variants, not a new generation. The 8tx is the old 8t silicon with secure CPU hosts and networking; the 8i Max is two existing chips glued together. That is a sensible way to answer customer requests quickly, and it shows where demand is moving: agents that hold huge amounts of context, and buyers (banks, health systems, governments) who won't send data to a cloud they can't verify. IDC's Dave McCarthy told Data Center Knowledge that Nvidia is still developing its own approach to confidential AI, which could give Google an opening.",
+                "Two caveats. Every number here is Google's, including the benchmark results it cites from InferenceX and AgentX. And with no price or date, and a reported 2027 arrival, this is a roadmap, not something customers can use this quarter. The timing, on the day Nvidia stock fell on the board's investigation of Jensen Huang, made it look like a challenge to Nvidia, but Google's TPU business was growing well before this week."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Pricing and availability for both systems, any independent benchmarks, and which regulated customers sign on for on-premises 8tx deployments."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Google",
+              "title": "Our newest TPUs: 8tx and 8i Max, built for the agentic era",
+              "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/"
+            },
+            {
+              "name": "Data Center Knowledge",
+              "title": "Google Adds TPU 8tx, 8i Max for Enterprise AI",
+              "url": "https://www.datacenterknowledge.com/data-center-chips/google-adds-tpu-8tx-8i-max-for-enterprise-ai"
+            },
+            {
+              "name": "The Next Web (citing Bloomberg)",
+              "title": "Google reportedly adds two TPU variants for secure and long-context AI",
+              "url": "https://thenextweb.com/news/google-reportedly-adds-two-tpu-variants"
+            },
+            {
+              "name": "Gizmodo",
+              "title": "Google Has Two New Weapons in Its Fight Against Nvidia",
+              "url": "https://gizmodo.com/google-has-two-new-weapons-in-its-fight-against-nvidia-2000837111"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Stock market today: Nasdaq rallies despite Nvidia stock slide",
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-9-dow-sp-500-nasdaq-nvidia-090535419.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Nvidia falls about 5% on its board's investigation of Jensen Huang while the rest of tech rebounds",
+          "summary": "The Nasdaq rose about 2.6% on Monday after last week's AI selloff, but Nvidia dropped as much as 8% as investors weighed what analysts call key-person risk.",
+          "stats": [
+            [
+              "-5%",
+              "Nvidia, midday Monday"
+            ],
+            [
+              "+2.6%",
+              "Nasdaq Composite, early afternoon"
+            ],
+            [
+              "Nov 17",
+              "Nvidia's next earnings"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Monday was Nvidia's first trading day since its board said on Sunday it would independently investigate reports that CEO Jensen Huang was targeted by a foreign intelligence effort, and since Huang told staff he had been unfaithful to his wife (covered in this morning's edition). Nvidia opened at $173.07, fell as much as 8% to an intraday low of $170.24, and was down about 5% around midday at roughly $176, versus Friday's close of $186.64. Reuters said a drop of that size would erase more than $250 billion in market value.",
+                "The broader market moved the other way. By about 2 p.m. ET the Nasdaq Composite was up about 2.6%, the S&P 500 about 2.4%, and chipmakers including AMD, Micron, and ASML rallied, partly reversing last week's selloff. In Asia, Nvidia supplier TSMC closed 4.7% higher. China's Foreign Ministry spokesperson Guo Jiakun called the spy allegations 'a groundless accusation, slander, and a smear.' President Trump told reporters on Sunday, 'I think he's an honorable guy,' and said he had not discussed it with Huang. In Seoul, Nvidia's AI Day went ahead without Huang, and his daughter Madison Huang canceled planned meetings there."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Nvidia, Friday close",
+                  "$186.64"
+                ],
+                [
+                  "Nvidia, Monday low",
+                  "$170.24 (down about 8.8%)"
+                ],
+                [
+                  "Nvidia, ~11:50 a.m. ET",
+                  "$176.41 (down 5.5%)"
+                ],
+                [
+                  "Nasdaq Composite, ~2 p.m. ET",
+                  "Up about 2.6%"
+                ],
+                [
+                  "S&P 500, ~2 p.m. ET",
+                  "Up about 2.4%"
+                ],
+                [
+                  "TSMC (Taiwan close)",
+                  "Up 4.7%"
+                ]
+              ],
+              "note": "Intraday figures from FinanceFeeds and Yahoo Finance's live blog; market value estimate from Reuters. Closing prices were not available when this edition was written."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Key-person risk:** the risk that a company depends so heavily on one leader that losing or weakening them would hurt the business. Analysts are applying it to Huang, who has run Nvidia since founding it in 1993."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The market is treating this as an Nvidia problem, not an AI demand problem: suppliers and rival chipmakers rose. Most analysts quoted, including Dan Ives, who called it a 'black eye,' expect Huang to stay CEO. The real risks are slower-moving: findings from the board's outside counsel, congressional scrutiny over Megaspeed and China, and whether this complicates Nvidia's export license dealings with Washington.",
+                "One day's move says little on its own. The better test is Nvidia's Nov 17 earnings, where investors will look for any sign the controversy affects customers or guidance."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Nov 11 is the date the three House committee chairs asked Huang to confirm the Nov 18 briefing or offer another date. Earnings follow on Nov 17 at 5 p.m. ET."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Nvidia",
+              "title": "Statement from NVIDIA Board of Directors",
+              "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+            },
+            {
+              "name": "Reuters (via Korea Times)",
+              "title": "Nvidia's shares slide as chip giant probes CEO over spy claims",
+              "url": "https://www.koreatimes.co.kr/world/20261110/nvidias-shares-slide-as-chip-giant-probes-ceo-over-spy-claims"
+            },
+            {
+              "name": "FinanceFeeds",
+              "title": "Nvidia Stock Today: Down Nearly 5% as Trump Calls Huang 'an Honorable Guy'",
+              "url": "https://financefeeds.com/nvidia-stock-today-down-nearly-5-as-trump-calls-huang-an-honorable-guy-and-wall-street-weighs-key-person-risk/"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Stock market today: Nasdaq rallies despite Nvidia stock slide, Dow and S&P 500 rise as AI stocks rebound",
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-9-dow-sp-500-nasdaq-nvidia-090535419.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "Sen. Markey asks Google to let schools keep Search without its AI features",
+          "summary": "Google's new K-12 controls let schools turn off Gemini but not the AI in Search, and a third senator is now pressing Sundar Pichai on it.",
+          "stats": [
+            [
+              "3",
+              "Senators who have written Pichai on AI in schools"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Monday, Nov 9, Sen. Ed Markey (D-Mass.) wrote to Alphabet CEO Sundar Pichai urging Google to give schools an AI-free version of Search and to drop the policy changes it announced for students, Bloomberg reported. Senators Josh Hawley and Richard Blumenthal sent an earlier letter on AI in classrooms on Oct 21.",
+                "The dispute started Nov 3, when Google's education chief Chris Phillips said Gemini and Search would be off for K-12 student accounts until administrators turned them on, and told The New York Times that schools rejecting AI would lose Search because 'Search and AI are deeply integrated.' After criticism from Sen. Bernie Sanders (who called it 'extortion'), former FTC chair Lina Khan, and New York Mayor Zohran Mamdani, Google said within a day that Gemini and Search are 'separate controls,' so schools can enable Search without Gemini. But Search itself still comes with AI Overviews, which is what Markey wants removable. Google has not publicly responded to his letter."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**AI Overviews:** the AI-written summaries Google shows above regular search results. A university study cited this week found about 11% of their factual claims weren't supported by the sources they cite."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Google's partial reversal fixed the headline problem (losing Search) but not the underlying one: schools on Chromebooks and Google accounts can't easily switch search engines, so whatever Google bundles into Search reaches students by default. That is why critics frame it as a market-power issue, not just an education one, with Google already found to have violated antitrust law in search.",
+                "A letter has no legal force, but it adds to pressure from both parties, and Democrats take the House in January with plans for AI hearings. The cheapest fix for Google is a school setting that hides AI Overviews; watch whether it offers one before this becomes a hearing topic."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Bloomberg",
+              "title": "US Senator Urges Google to Provide AI-Free Search for Schools",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-09/us-senator-urges-google-to-provide-ai-free-search-for-schools"
+            },
+            {
+              "name": "TechCrunch",
+              "title": "Google faces backlash for plan that would turn off search for schools that restrict AI",
+              "url": "https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/"
+            },
+            {
+              "name": "GovTech",
+              "title": "Google reverses decision to turn off search for schools not using AI",
+              "url": "https://www.govtech.com/education/k-12/google-reverses-decision-to-turn-off-search-for-schools-not-using-ai"
+            },
+            {
+              "name": "FourWeekMBA",
+              "title": "Markey Asks Google to Let Schools Block AI and Keep Search",
+              "url": "https://fourweekmba.com/ai-markey-asks-google-to-let-schools-block-ai-and-keep-search/"
+            },
+            {
+              "name": "PsyPost",
+              "title": "How Google AI search summaries alter online information and publisher revenue",
+              "url": "https://www.psypost.org/how-google-ai-search-summaries-alter-online-information-and-publisher-revenue/"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "A Russian network used AI-cloned voices to exploit France's riots, an EU report says, but its reach was small next to domestic accounts",
+          "summary": "Operation Overload's top posts drew 2.8 million views, while the top MAGA-linked posts on the same unrest drew more than 49 million, according to documents seen by Reuters.",
+          "stats": [
+            [
+              "2.8M",
+              "Views, top 10 pro-Russian posts"
+            ],
+            [
+              "49M+",
+              "Views, top 10 MAGA-linked posts"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Reuters reported on Monday, Nov 9, on a restricted internal assessment by disinformation experts in the EU's diplomatic service, covering Oct 7 to 21, plus a separate French foreign ministry assessment. Both describe how 'Operation Overload,' a covert Russian network active since September 2023, exploited October's riots in France, which began over living costs and public services. It posted videos made to look like reports from Western news outlets, used AI to clone the voices of real experts, forged newspaper headlines, and pushed false claims that migrants had raped protesters or that terrorist attacks were imminent.",
+                "The EU found no evidence that Moscow started or escalated the protests, calling it 'opportunistic exploitation of unrest.' The French report says accounts linked to Israel and to the US MAGA movement also pushed 'hostile narratives' tying the riots to radical Islam and migration. Reuters could not independently verify either report, and Russia's foreign ministry did not respond."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Top 10 pro-Russian X posts",
+                  "~2.8 million views (Oct 16 to 18)"
+                ],
+                [
+                  "Top 10 MAGA-linked X posts",
+                  "49 million+ views (same period)"
+                ],
+                [
+                  "Top 10 Israel-linked X posts",
+                  "35 million+ views (same period)"
+                ],
+                [
+                  "Operation active since",
+                  "September 2023"
+                ]
+              ],
+              "note": "Figures from the EU and French assessments as reported by Reuters (via TimesLIVE)."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Voice cloning:** using an AI model to generate speech in a specific person's voice from a short sample. Here it put fake words in the mouths of real experts."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "AI made this operation cheaper and more convincing (fake newscasts with familiar voices), but it did not make it the biggest voice in the room. The numbers suggest the larger amplification came from real, high-follower accounts. That matches what researchers have found before: AI lowers the cost of producing fakes, but distribution still depends on people and platforms.",
+                "For anyone building voice or video tools, this is the misuse case regulators cite most. The EU AI Act includes rules on labeling AI-generated deepfakes, and reports like this will feed arguments for enforcing them ahead of France's 2027 elections."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Reuters (via TimesLIVE)",
+              "title": "Russian operation exploited French unrest on social media: EU report",
+              "url": "https://www.timeslive.co.za/news/world/2026-11-09-russian-operation-exploited-french-unrest-on-social-media-eu-report/"
+            },
+            {
+              "name": "France 24",
+              "title": "Russian network used social media to blame French riots on immigration, EU report says",
+              "url": "https://www.france24.com/en/france/20261109-russian-network-used-social-media-to-blame-french-riots-on-immigration-eu-report-says"
+            },
+            {
+              "name": "ISD",
+              "title": "Stolen voices: Russia-aligned operation manipulates audio and images to impersonate experts",
+              "url": "https://www.isdglobal.org/digital-dispatch/stolen-voices-russia-aligned-operation-manipulates-audio-and-images-to-impersonate-experts/"
+            },
+            {
+              "name": "AI Weekly",
+              "title": "EU Report Ties AI Voice-Clone French Riot Videos to Russia Network",
+              "url": "https://aiweekly.co/alerts/eu-report-ties-ai-voice-clone-french-riot-videos-to-russia-network"
+            }
+          ]
+        },
+        {
+          "kicker": "Models",
+          "headline": "Nous Research retrains Alibaba's Qwen3.8-27B to stop repeating Chinese state positions, and says it cost almost no capability",
+          "summary": "Arete-27B is an open-weight fine-tune that Nous says cut propaganda-tagged answers from 22% to 0.9% on its own test, graded by one AI judge.",
+          "stats": [
+            [
+              "22% to 0.9%",
+              "Propaganda-tagged answers (Nous's eval)"
+            ],
+            [
+              "~53M",
+              "Fine-tuning tokens used"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Late last week (Nov 6 to 7), Nous Research released Arete-27B on Hugging Face under the Apache 2.0 license. It is Alibaba's Qwen3.8-27B with extra supervised fine-tuning that Nous says was meant to 'reinforce western values' on topics where Chinese-trained models tend to give the state's account, such as freedom of expression, state ideology, and democracy. Nous generated 20,000 training prompts across seven categories and used answers from Thinking Machines' open model Inkling as the teacher. Training used about 52.8 million tokens over 2 epochs, with no reinforcement learning or architecture changes.",
+                "Nous tested it on its own 803-prompt evaluation drawn from English-language statutes, news, and research reports. Grok 4.7 graded the answers without knowing which model wrote them."
+              ]
+            },
+            {
+              "h": "Benchmarks",
+              "table": [
+                [
+                  "Propaganda-tagged answers",
+                  "22% (Qwen base) to 0.9% (Arete); teacher 0.3%"
+                ],
+                [
+                  "Fact score (0 to 5)",
+                  "2.32 to 2.98; teacher 3.96"
+                ],
+                [
+                  "Largest category change",
+                  "Freedom of expression: 60% to 1%"
+                ],
+                [
+                  "Hermes Bench (capability)",
+                  "65.77% to 65.60% (Nous calls this noise)"
+                ],
+                [
+                  "Terminal-Bench 2.1",
+                  "67% to 70%"
+                ]
+              ],
+              "note": "All numbers are Nous Research's own; no independent replication has been published."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Supervised fine-tuning (SFT):** further training a model on example prompts and the answers you want, so it learns to imitate them.",
+                "**LLM judge:** using one AI model to grade another's answers. It's cheap and scalable but can share blind spots with the models it grades."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The interesting finding is how shallow the behavior appears to be: a small amount of fine-tuning shifted it a lot without hurting coding or agent scores. That matters for companies that want strong, cheap Chinese open-weight models but worry about their political defaults.",
+                "Treat the numbers carefully. Nous wrote the categories, the prompts, and the rubric, then trained on similar material, so some of the gain may be teaching to its own test. One AI judge did most of the grading and only 25 prompts were checked by hand. And 'western values' is a stated viewpoint, not neutrality: this swaps one set of defaults for another, which is fine if you know that's what you're getting."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face (Nous Research)",
+              "title": "Arete-27B model card",
+              "url": "https://huggingface.co/NousResearch/Arete-27B"
+            },
+            {
+              "name": "AI Weekly",
+              "title": "Nous Research's Arete-27B Cuts Qwen Propaganda From 22% to 0.9%",
+              "url": "https://aiweekly.co/alerts/nous-researchs-arete-27b-cuts-qwen-propaganda-from-22-to-09"
+            },
+            {
+              "name": "ExplainX",
+              "title": "Nous Research Arete-27B: claimed vs verified",
+              "url": "https://explainx.ai/blog/nous-research-arete-27b-qwen3-8-western-values-propaganda-22-to-0-9-percent-claimed-vs-verified-2026"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "Alibaba's Qwen4. The official Qwen account posted a teaser, 'The becoming begins.', on Nov 6 with no date, specs, or license."
+        },
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; no announcement as of Monday morning."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Anthropic's IPO roadshow was expected to start, but Reuters reports investors doubt it can begin and still list in November. A price range filing would come first."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Thinking Machines plans to release Inkling 2 Small's weights under Apache 2.0, if outside safety testing is done."
+        },
+        {
+          "when": "Tue Nov 10",
+          "what": "SoftBank reports fiscal second-quarter results (3:30 p.m. Japan time), its first read since OpenAI's new funding round."
+        },
+        {
+          "when": "Tue Nov 10",
+          "what": "CoreWeave reports third-quarter results, call at 5 p.m. ET. First big AI cloud report since last week's selloff."
+        },
+        {
+          "when": "Wed Nov 11",
+          "what": "Deadline the House committee chairs gave Jensen Huang to confirm the Nov 18 briefing or propose another date."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's proposed cutoff of Cursor's access to its models, after SpaceX bought Cursor. The date could still move."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's 'Cyber at the Frontier' livestream, 10 a.m. PT, to introduce its latest cyber products."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Nebius reports third-quarter results before the market opens, call at 8 a.m. ET."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Fri Nov 13",
+          "what": "Conductor Cloud goes read-only after Meta's acquisition; it shuts down Nov 20."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Nvidia reports third-quarter results, call at 5 p.m. ET. First read since last week's selloff and the board's investigation of Huang."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Requested date for Jensen Huang's closed-door briefing to three House committee chairs on Megaspeed and the alleged Chinese intelligence link. The chairs asked for a reply by Nov 11; Nvidia has not said whether he will attend."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Anthropic's Nasdaq debut (ticker ANT) was targeted before Thanksgiving; it could slip toward year-end, per Reuters."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Gemini 4 Argon's intro pricing ends: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-09-am",
       "date": "2026-11-09",
       "edition": "Morning",

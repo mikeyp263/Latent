@@ -1041,6 +1041,68 @@
         "Explain why the links between AI chips matter as much as the chips.",
         "Large models are split across many chips that must constantly exchange data. If the links are slow, the chips wait, so the whole system runs at the speed of the interconnect. That is why scale-up links like NVLink, which make a rack of chips act like one, are a big part of Nvidia's advantage, and why opening them to other chips (NVLink Fusion) matters."
       ]
+    },
+    {
+      "id": "nw22",
+      "added": "2026-11-09",
+      "t": "Confidential Computing for AI",
+      "cards": [
+        "Normally data is encrypted while it is stored and while it travels, but it has to be decrypted while a chip works on it. That moment is the gap: whoever runs the machine (a cloud provider, an insider, an attacker who owns the server) could in principle read it. **Confidential computing** closes the gap by keeping data encrypted inside a protected area of the hardware, called a **trusted execution environment (TEE)**, even during processing.",
+        "For AI, two things need protecting: the customer's data (prompts, documents, fine-tuning sets) and the model's **weights**, which are the lab's most valuable asset. A TEE lets a hospital send patient records to a cloud model, or a lab rent out its model to a bank, without either side having to fully trust the operator. **Remote attestation** is how you check: the hardware produces a signed report proving what code and chip are running before you send anything.",
+        "This started as a CPU feature and is now spreading to AI accelerators, which is harder because they move huge amounts of data between chips and memory. The usual trade-offs are **performance overhead** from encryption, a smaller set of supported hardware, and trust shifting to the chipmaker instead of disappearing. When a vendor claims 'near-zero penalty,' ask whose benchmark it is."
+      ],
+      "terms": [
+        [
+          "Confidential computing",
+          "Keeping data encrypted even while a chip is processing it."
+        ],
+        [
+          "TEE",
+          "Trusted execution environment: a hardware-isolated area the host system can't read."
+        ],
+        [
+          "Remote attestation",
+          "A signed hardware report proving what code and chip are running."
+        ],
+        [
+          "Data in use",
+          "Data being actively processed, the hardest state to protect."
+        ],
+        [
+          "Model weights",
+          "The learned numbers that make up a model; a lab's core asset."
+        ]
+      ],
+      "qs": [
+        [
+          "A hospital wants to use a cloud AI model on patient records without the cloud provider being able to see them. What feature should it look for?",
+          "Confidential computing with remote attestation",
+          "A bigger context window",
+          "Lower temperature settings",
+          "Open-weight models only",
+          "A TEE keeps the records encrypted during processing, and attestation lets the hospital verify the setup first."
+        ],
+        [
+          "Why might an AI lab like confidential computing even if customers don't ask for it?",
+          "It helps protect its model weights on hardware it doesn't control",
+          "It makes models more accurate",
+          "It removes the need for GPUs",
+          "It lowers token prices automatically",
+          "Weights are valuable, and a TEE helps keep them unreadable on someone else's servers."
+        ],
+        [
+          "A chipmaker says its confidential AI chip has a 'near-zero performance penalty.' What's the right reaction?",
+          "Wait for independent benchmarks on real workloads",
+          "Assume encryption is free now",
+          "Assume it is slower than a CPU",
+          "Ignore it because TEEs don't work for AI",
+          "Encryption usually costs some speed, and vendor numbers are best checked by others."
+        ]
+      ],
+      "ex": [
+        "Explain what confidential computing protects that ordinary encryption doesn't, and why it matters for AI.",
+        "Ordinary encryption protects data when it's stored or sent, but data must be decrypted while a chip works on it. Confidential computing keeps it protected inside a hardware-isolated area even during processing, and attestation proves what's running. For AI that means customers can send sensitive data to a cloud model, and labs can deploy weights on hardware they don't own, without fully trusting the operator."
+      ]
     }
   ]
 }
