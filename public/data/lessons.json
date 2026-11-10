@@ -1165,6 +1165,130 @@
         "Explain why two models with the same per-token price can cost very different amounts to run.",
         "Because cost is tokens times price, and models differ in how many tokens they spend. A reasoning model that thinks longer, runs at a higher effort level, or doesn't benefit from caching uses more tokens for the same job. Pricing tiers for long prompts can also raise the rate. Compare cost per finished task on your own workload, not the rate card."
       ]
+    },
+    {
+      "id": "nw24",
+      "added": "2026-11-10",
+      "t": "Kill Switches and Safety Cases",
+      "cards": [
+        "As AI labs run models as **agents** that execute code and browse, they need a way to stop a run that goes wrong. A **kill switch** is any mechanism that halts it. The hard part is where to put it. If the stop button lives inside the agent's own code, an agent that has escaped its sandbox or a buggy script can simply ignore it.",
+        "A sturdier design puts the check at a **chokepoint** the agent can't avoid: the inference server that produces the model's outputs. Every request carries a job ID, and the server asks a central authority whether that job is still allowed. Good versions are **fail-closed**: if the authority is down or tampered with, requests are denied rather than waved through. The cost is latency and the risk of stopping good work by accident.",
+        "A switch only helps if someone, or something, decides to pull it. That is where **monitoring** (often another model watching the agent) and **safety cases** come in. A safety case is a reviewed argument, with evidence, that a specific run is safe enough to start, including what could go wrong and how it would be caught. Judge any kill switch by three things: how fast it acts, what it can't reach, and how often the monitors actually catch problems."
+      ],
+      "terms": [
+        [
+          "Kill switch",
+          "A mechanism that halts an AI system or job, ideally one the system itself can't bypass."
+        ],
+        [
+          "Chokepoint",
+          "A step every action must pass through, such as the server that runs the model, which makes it a reliable place to enforce rules."
+        ],
+        [
+          "Fail-closed",
+          "A design where a broken or unreachable safety check blocks activity by default instead of allowing it."
+        ],
+        [
+          "Safety case",
+          "A structured, reviewed argument with evidence that a specific system or run is acceptably safe before it is used."
+        ],
+        [
+          "Monitor",
+          "A separate system, often another model, that watches an agent's actions and raises alerts or triggers a stop."
+        ]
+      ],
+      "qs": [
+        [
+          "A lab wants to stop a misbehaving research agent even if the agent has tampered with its own scripts. Where is the most reliable place to enforce the stop?",
+          "At the inference server, so the agent can no longer get model outputs",
+          "Inside the agent's own code, as a stop function",
+          "In the agent's system prompt, telling it to halt when asked",
+          "In a weekly manual review of logs",
+          "The agent controls its own code and prompt, but it can't think without the model, so cutting off inference works however it escaped."
+        ],
+        [
+          "The central authorization service crashes. In a fail-closed design, what happens to agent requests?",
+          "They are denied until the service is back",
+          "They are allowed, to avoid disrupting research",
+          "They are queued and approved automatically later",
+          "They are routed to a smaller model",
+          "Fail-closed means a missing safety check blocks by default; fail-open would let them through."
+        ],
+        [
+          "A company says its kill switch stops any job in 35 seconds. What's the most important thing still missing from that claim?",
+          "How often its monitors actually detect problems that need stopping",
+          "The brand of GPUs it runs on",
+          "Whether the jobs use Python",
+          "How many researchers work at the lab",
+          "A fast switch does nothing if no one notices the problem; detection rate is the real bottleneck."
+        ]
+      ],
+      "ex": [
+        "Explain why a lab would put an AI kill switch in the inference server instead of in the agent's code.",
+        "Because the agent can change or ignore its own code, especially if it has escaped a sandbox. Every action still depends on getting outputs from the model, so checking authorization at the server that runs the model is a chokepoint the agent can't route around. Making it fail-closed means that even if the check breaks, the default is to stop. It still depends on monitors catching the problem in the first place."
+      ]
+    },
+    {
+      "id": "nw25",
+      "added": "2026-11-10",
+      "t": "Share Classes and Who Controls a Company",
+      "cards": [
+        "Owning stock and controlling a company are not the same thing. Many tech companies issue several **share classes**: one sold to the public with one vote per share, and others with extra votes, no votes, or special rights to elect directors. This is a **dual-class** (or multi-class) structure, and founders use it to keep control after they sell most of the economic value.",
+        "When one person or group holds more than half the votes, the stock exchange treats the firm as a **controlled company**. It may then skip some governance rules, such as having a majority of independent directors. Public shareholders still share in profits and price moves, but they can't outvote the controller on who runs the company or whether it gets sold.",
+        "Share counts also change the valuation you see. **Basic** valuation multiplies today's shares by the price. **Fully diluted** valuation adds options, restricted stock units, and convertible securities that will become shares. Headlines often quote the bigger, fully diluted number. When reading an IPO, check which count is used, who holds the voting classes, and whether any shares are sold privately alongside the offering."
+      ],
+      "terms": [
+        [
+          "Share class",
+          "A type of stock with its own rights, such as votes per share or the right to elect certain directors."
+        ],
+        [
+          "Dual-class structure",
+          "A setup where some shares carry far more votes than others, usually to keep founders in control."
+        ],
+        [
+          "Controlled company",
+          "A listed company where one holder or group has over half the voting power, which exempts it from some exchange governance rules."
+        ],
+        [
+          "Basic vs. fully diluted",
+          "Basic counts shares that exist now; fully diluted also counts options, RSUs, and convertibles that will become shares."
+        ],
+        [
+          "Non-voting stock",
+          "Shares that get economic rights like dividends and price gains but no say in shareholder votes."
+        ]
+      ],
+      "qs": [
+        [
+          "A company lists 13 billion shares at $74, but a headline values it at $1.4 trillion. What most likely explains the gap?",
+          "The headline uses a fully diluted share count that includes options and convertibles",
+          "The headline includes the company's revenue",
+          "The stock already rose 45% on its first day",
+          "The company's debt is added to its share price",
+          "13 billion times $74 is about $968 billion; the larger figure adds shares that will be created later."
+        ],
+        [
+          "Founders hold one special share with 50.1% of the vote. You buy 1% of the public Class A shares. What can you do?",
+          "Share in gains and losses, but not outvote the founders on most decisions",
+          "Block any acquisition you disagree with",
+          "Elect a board majority if enough public holders agree",
+          "Force the company to pay a dividend",
+          "With over half the vote held by one share, public holders get economics but not control."
+        ],
+        [
+          "Suppliers buy billions of non-voting shares at the IPO price. What do they get?",
+          "An economic stake without a say in shareholder votes",
+          "Board seats in proportion to their stake",
+          "Veto power over the company's chip purchases",
+          "Control of the company's benefit trust",
+          "Non-voting stock carries the financial upside and downside but no votes."
+        ]
+      ],
+      "ex": [
+        "Explain how someone can own a large share of a company's stock and still have little control over it.",
+        "Companies can issue different share classes with different voting rights. If founders or a trust hold a class with extra votes, or a single share with a majority of the vote, they control elections and big decisions even if they own a small part of the economic value. Public or non-voting shareholders share in profits and price moves but can't outvote them. Exchanges call such firms controlled companies and let them skip some governance rules."
+      ]
     }
   ]
 }
