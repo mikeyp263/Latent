@@ -1103,6 +1103,68 @@
         "Explain what confidential computing protects that ordinary encryption doesn't, and why it matters for AI.",
         "Ordinary encryption protects data when it's stored or sent, but data must be decrypted while a chip works on it. Confidential computing keeps it protected inside a hardware-isolated area even during processing, and attestation proves what's running. For AI that means customers can send sensitive data to a cloud model, and labs can deploy weights on hardware they don't own, without fully trusting the operator."
       ]
+    },
+    {
+      "id": "nw23",
+      "added": "2026-11-10",
+      "t": "Cost per Task, Not Price per Token",
+      "cards": [
+        "AI APIs charge per **token**, usually quoted as dollars per million input tokens and per million output tokens. But a sticker price says little about what a job costs, because models differ in how many tokens they need. Reasoning models 'think' in output tokens, and one model may write three times as many as another to reach the same answer. The number that matters is **cost per task**: tokens used times price.",
+        "Several knobs change that number. **Effort levels** (Low to Max) trade accuracy for tokens, so the same model can be cheap or expensive. **Prompt caching** discounts input you send repeatedly, like a codebase an agent rereads every step, often by 90% or more. **Batch** processing is usually half price if you can wait. **Fast modes** cost more for quicker output. And many models use **tiered pricing**, charging more once a prompt passes a length like 100K or 200K tokens.",
+        "So when a lab says its model is 'cheaper,' ask: per token or per task, at which effort level, with or without caching, and for prompts how long? Independent indexes that report the dollar cost to run their whole test suite are more useful than rate cards. The best check is running your own workload on two models and comparing the bill."
+      ],
+      "terms": [
+        [
+          "Cost per task",
+          "Total spend to finish one job: tokens used times their price."
+        ],
+        [
+          "Effort level",
+          "A setting that controls how long a model reasons, trading cost for accuracy."
+        ],
+        [
+          "Prompt caching",
+          "A discount on input tokens the provider has already seen recently."
+        ],
+        [
+          "Tiered pricing",
+          "Higher per-token rates once a prompt passes a set length."
+        ],
+        [
+          "Batch API",
+          "Cheaper, slower processing for jobs that can wait hours."
+        ]
+      ],
+      "qs": [
+        [
+          "Model A costs $0.10 per million output tokens and Model B costs the same. On a test, A uses 115M output tokens and B uses 298M for the same score. Which is cheaper to run?",
+          "Model A, because it needs fewer tokens per task",
+          "They cost the same, since the rate is equal",
+          "Model B, because more tokens means more thorough work",
+          "It can't be known without the context window size",
+          "Same rate, but A spends well under half the tokens, so its cost per task is much lower."
+        ],
+        [
+          "Your agent rereads the same 150K-token codebase on every step. Which pricing feature matters most?",
+          "Prompt caching",
+          "Fast mode",
+          "A larger output limit",
+          "Batch processing",
+          "Cached input is billed at a steep discount, and repeated context is exactly what caching is for."
+        ],
+        [
+          "A lab says its flagship is now cheaper than a rival's per token. What should you check before switching?",
+          "Cost per task at the effort level you'd actually use",
+          "Only the input price",
+          "Whether the model has a new name",
+          "The model's parameter count",
+          "Higher effort settings can burn far more tokens, so a lower rate can still mean a higher bill."
+        ]
+      ],
+      "ex": [
+        "Explain why two models with the same per-token price can cost very different amounts to run.",
+        "Because cost is tokens times price, and models differ in how many tokens they spend. A reasoning model that thinks longer, runs at a higher effort level, or doesn't benefit from caching uses more tokens for the same job. Pricing tiers for long prompts can also raise the rate. Compare cost per finished task on your own workload, not the rate card."
+      ]
     }
   ]
 }

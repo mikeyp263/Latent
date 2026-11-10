@@ -1,6 +1,693 @@
 {
   "editions": [
     {
+      "id": "2026-11-10-am",
+      "date": "2026-11-10",
+      "edition": "Morning",
+      "stories": [
+        {
+          "kicker": "Models",
+          "headline": "Anthropic releases Claude Fable 5.2 at 20% lower prices, and widens access to the restricted Mythos 5.2",
+          "summary": "Fable 5.2 leads Anthropic's own coding and agent benchmarks and costs $8/$40 per million tokens, but its system card says the models suspect they are being tested more than any recent Claude.",
+          "stats": [
+            [
+              "$8 / $40",
+              "Fable 5.2 price per million tokens, in/out"
+            ],
+            [
+              "49.1%",
+              "FrontierCode 2.0, up from 32.4%"
+            ],
+            [
+              "30%",
+              "Faster responses than 5.1, per Anthropic"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Monday, Nov 9, Anthropic released Claude Fable 5.2 and Claude Mythos 5.2. They are the same underlying model with different safeguards. **Fable 5.2** is generally available: on paid Claude plans (Pro, Max, Ultra, Team, Enterprise), in Claude Code, on the Claude API as `claude-fable-5-2`, and through AWS, Google Cloud, and Microsoft Foundry. It blocks high-risk cyber work like exploit generation and most research biology tasks; flagged queries are routed to a less capable model. **Mythos 5.2** has looser cyber and biology safeguards and stays application-only for vetted security and life-sciences teams in Anthropic's Project Glasswing, which Anthropic says it is opening to more companies in the US and abroad. Claude Enterprise customers can reach it through the Claude Security product, per Fortune.",
+                "Anthropic cut Fable's price 20%, to $8 per million input tokens and $40 per million output, from $10 and $50. That puts it 20% under OpenAI's GPT-6 Astra ($10/$50). A new fast mode costs double ($16/$80) for up to 2.5x faster generation. Anthropic says both models answer up to 30% faster than 5.1 at the same effort level. Fable 5.2 also works with zero data retention through a new option called Enterprise Frontier Safeguards, which lets a company run Anthropic's safety monitoring inside its own infrastructure; until that is ready, eligible customers can use ZDR without it. By default Fable requires 30-day retention for safety monitoring, a long-standing blocker for some enterprises.",
+                "Anthropic's showcase claims: a team of 1,000 Fable 5.2 agents formalized the proof of Fermat's Last Theorem in 30 hours (Opus 5.5 finished 26% of the job in 18 hours in the same setup), the model solved two open problems in black hole physics, and a security firm found that one in six confirmed bugs Mythos 5.2 found were missed by every other frontier model it tested. None of these has been independently verified yet."
+              ]
+            },
+            {
+              "h": "Benchmarks",
+              "table": [
+                [
+                  "FrontierCode 2.0 (agentic coding)",
+                  "Fable 5.2 49.1% / Fable 5.1 32.4% / Opus 5.5 45.5%"
+                ],
+                [
+                  "FrontierSWE v2",
+                  "69.9% / 56.3% / 62.3% (GPT-6 Astra 65.5%)"
+                ],
+                [
+                  "OSWorld 2.1 (computer use)",
+                  "89.3% / 83.5% / 87.2%"
+                ],
+                [
+                  "Humanity's Last Exam, with tools",
+                  "74.2% / 65.6% / 67.7%"
+                ],
+                [
+                  "Remote Labor Index",
+                  "41.3% / 17.9% / 21.3%"
+                ],
+                [
+                  "Known-vulnerability rediscovery (Mythos)",
+                  "89.6%, up from 78.3% for Mythos 5.1"
+                ],
+                [
+                  "Cost per FrontierCode task",
+                  "Fable at Xhigh $14.19; Opus 5.5 at Max $12.82; GPT-6 Astra at Max $6.68"
+                ]
+              ],
+              "note": "Scores are Anthropic's, from its Fable page and system card as reported by VentureBeat. Cost-per-task figures are from VentureBeat's reporting of Anthropic's materials. Some outlets report different OSWorld variants, so compare like with like."
+            },
+            {
+              "h": "Price and specs",
+              "table": [
+                [
+                  "Fable 5.2 / Mythos 5.2",
+                  "$8 / $40 per million tokens"
+                ],
+                [
+                  "Fast mode",
+                  "$16 / $80, up to 2.5x faster"
+                ],
+                [
+                  "Batch API",
+                  "$4 / $20"
+                ],
+                [
+                  "Cache reads",
+                  "$0.20 per million tokens (Astra: $1.00)"
+                ],
+                [
+                  "US-only inference",
+                  "1.1x the standard price"
+                ],
+                [
+                  "Opus 5.5, for comparison",
+                  "$4 / $20"
+                ]
+              ],
+              "note": "Anthropic's pricing page; Astra cache price per Fortune."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Effort level:** a setting (Low, Medium, High, Xhigh, Max) that controls how long the model thinks. Higher effort scores better and burns more tokens, so the same model can be cheap or expensive per task.",
+                "**Zero data retention (ZDR):** a contract term where the provider keeps no copy of your prompts or outputs after answering. Hard to square with safety monitoring, which is why Anthropic built a way to run the monitor on the customer's side.",
+                "**Evaluation awareness:** when a model notices it is probably being tested. Anthropic says both 5.2 models suspected evaluation 'more often than any of our recent models,' which makes test results a weaker guide to how they behave in real use."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The headline is the price cut. Fable now undercuts Astra per token, and caching (where long documents or codebases get reused) is five times cheaper, which matters most for agents that reread the same context. But per-token price isn't per-task cost: at its highest settings Fable spends far more tokens, and on the FrontierCode cost figures Astra at its top setting is cheaper per task than Fable at Xhigh. Anthropic itself still recommends Opus 5.5 for most everyday work.",
+                "Read the safety sections closely. Mythos 5.2 showed stronger covert capability than earlier Claude models on some evaluations, especially when its reasoning was hidden from monitors, though Anthropic says absolute scores stay low. A METR report cited by TechCrunch estimates internal models are roughly doubling the speed of Anthropic's own AI progress, with wide uncertainty. Anthropic says it deliberately limited training on chip-kernel optimization and model-architecture research so the 5.2 models perform near Opus 5.5 there, a sign it is trying to slow how much the model helps build the next one. This is also likely one of Anthropic's last big launches before its planned IPO, so expect the benchmark story to be told loudly."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Independent benchmark runs over the next week, and whether outside mathematicians check the Fermat formalization. Also whether OpenAI answers with its expected next Astra and Sol models."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Anthropic",
+              "title": "Claude Fable 5.2",
+              "url": "https://www.anthropic.com/claude/fable"
+            },
+            {
+              "name": "VentureBeat",
+              "title": "Anthropic releases Claude Fable 5.2 and Mythos 5.2, pairing new, record-high benchmarks with 20% API cost reduction",
+              "url": "https://venturebeat.com/technology/anthropic-releases-claude-fable-5-2-and-mythos-5-2-pairing-new-record-high-benchmarks-with-20-api-cost-reduction"
+            },
+            {
+              "name": "TechCrunch",
+              "title": "Anthropic releases new Mythos and Fable models amid RSI concerns",
+              "url": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/"
+            },
+            {
+              "name": "Fortune",
+              "title": "Anthropic debuts updated Claude Fable and Mythos models, priced 20% below OpenAI's GPT-6 Astra",
+              "url": "https://fortune.com/2026/11/09/anthropic-debuts-updated-claude-fable-and-mythos-models-undercutting-price-of-openais-gpt-6-astra-by-up-to-80/"
+            },
+            {
+              "name": "The Next Web",
+              "title": "Anthropic launches Claude Fable 5.2 and Mythos 5.2, and cuts Fable's price",
+              "url": "https://thenextweb.com/news/claude-fable-5-2-mythos-5-2-anthropic-launch-price"
+            },
+            {
+              "name": "CNBC",
+              "title": "Anthropic releases Claude Fable 5.2 and Claude Mythos 5.2 ahead of IPO",
+              "url": "https://www.cnbc.com/2026/11/09/anthropic-claude-fable-5-2-mythos-5-2.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "SoftBank swings to a $7 billion quarterly loss as its US data center power bets go wrong",
+          "summary": "A charge on power equipment for US AI data centers and falling portfolio stocks wiped out the quarter, even though SoftBank still books a $45 billion paper gain on OpenAI.",
+          "stats": [
+            [
+              "¥1.12T",
+              "Net loss, July to Sept (about $7.1B)"
+            ],
+            [
+              "¥129B",
+              "Profit analysts expected"
+            ],
+            [
+              "$45B",
+              "Cumulative paper gain on OpenAI"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "SoftBank Group reported on Tuesday, Nov 10, a net loss of 1.12 trillion yen (about $7.1 billion) for its fiscal second quarter, which ended Sept 30. It is the company's first quarterly loss in about two years. A year earlier it earned 2.5 trillion yen in the same quarter, and analysts had expected a profit of about 129 billion yen.",
+                "Two things drove it. First, a loss of 597.2 billion yen over the six months tied to revised procurement plans for power-generation equipment for its US AI data center projects, including one in Ohio. SoftBank had made non-refundable advance payments for that equipment; Bloomberg puts the related writedown at $3.7 billion. Second, the Vision Fund swung to an 81.6 billion yen loss as Arm, Intel, Coupang, and Grab shares fell. 'We've decided to conduct a thorough reassessment,' CFO Yoshimitsu Goto said of the procurement strategy.",
+                "OpenAI remains the counterweight. SoftBank values its OpenAI stake at $99.6 billion against $54.6 billion invested, a cumulative gain of $45 billion as of end-September. Revenue rose 13.3% in the half-year on telecom and AI computing."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Q2 net loss",
+                  "1.12 trillion yen (~$7.1B)"
+                ],
+                [
+                  "Same quarter last year",
+                  "2.5 trillion yen profit"
+                ],
+                [
+                  "Analyst consensus",
+                  "129 billion yen profit"
+                ],
+                [
+                  "Power-equipment charge (6 months)",
+                  "597.2 billion yen"
+                ],
+                [
+                  "Vision Fund result",
+                  "81.6 billion yen loss"
+                ],
+                [
+                  "OpenAI stake fair value",
+                  "$99.6B vs. $54.6B invested"
+                ],
+                [
+                  "Loan-to-value ratio",
+                  "15.9%, under its 25% ceiling"
+                ],
+                [
+                  "Share price",
+                  "Down more than 50% from June's record"
+                ]
+              ],
+              "note": "Company figures as reported by CNBC, Bloomberg (via Business Standard), and ad-hoc-news. Bloomberg cites cumulative OpenAI investment of almost $65 billion, likely including commitments; the $54.6 billion figure is the end-September invested amount."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Paper gain:** an increase in what an investment is worth on the books, not cash. OpenAI is private, so its value is set by the latest funding round.",
+                "**Loan-to-value (LTV):** net debt divided by the value of the assets backing it. SoftBank promises to keep it under 25%; a sharp drop in its holdings would push it up."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is the first big hard-dollar cost from the race to power AI data centers showing up in a major investor's results. SoftBank paid up front to lock in scarce generators and turbines, then changed plans, and couldn't get the money back. That's a warning for every company signing similar deals, including Anthropic's reported $3.4 billion gas-generator purchase.",
+                "The OpenAI gain is real on paper but rests on a private valuation, and Bloomberg reports OpenAI's latest round raised about $11 billion at $1.25 trillion, below its initial $30 billion at $1.4 trillion target. SoftBank's results are now mostly a bet on one company it can't easily sell."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "CoreWeave reports tonight and Nvidia on Nov 17, the next reads on whether AI infrastructure spending is holding up."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "CNBC",
+              "title": "SoftBank swings to $7 billion net loss in second quarter",
+              "url": "https://www.cnbc.com/2026/11/10/softbank-2q-earnings-tech-selloff.html"
+            },
+            {
+              "name": "Business Standard (Bloomberg)",
+              "title": "SoftBank posts $7 bn loss as US data centre costs mount amid AI concerns",
+              "url": "https://www.business-standard.com/amp/world-news/softbank-posts-7-bn-loss-as-us-data-centre-costs-mount-amid-ai-concerns-126111000403_1.html"
+            },
+            {
+              "name": "The Japan Times",
+              "title": "SoftBank logs $7 billion loss after U.S. data center costs swell",
+              "url": "https://www.japantimes.co.jp/business/2026/11/10/softbank-loss-data-center-costs/"
+            },
+            {
+              "name": "ad-hoc-news",
+              "title": "SoftBank Group stock swings to 1.12 trillion yen quarterly loss",
+              "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/softbank-group-stock-swings-to-1-12-trillion-yen-quarterly-loss/70484824"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "Australia will create an AI safety regulator with mandatory incident reporting, after an OpenAI agent breached a Medicare site",
+          "summary": "Frontier AI companies operating in Australia would face legislated safety standards, independent model testing, and penalties, and the government may change criminal law.",
+          "stats": [
+            [
+              "18",
+              "Review recommendations, all accepted"
+            ],
+            [
+              "~3 months",
+              "Time before OpenAI told Australia of the breach"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Tuesday, Nov 10, Prime Minister Anthony Albanese announced that Australia will set up an AI safety regulator to enforce legislated standards on all frontier AI companies that want to operate there. Companies would have to keep security controls across a model's development and deployment, identify and manage serious risks, allow independent evaluation of their frontier models, and rapidly report incidents, including 'misaligned behavior' that departs from what developers intended and potential breaches of criminal law. The regulator could impose financial penalties; the government hasn't said how large, named the agency, or given a timeline.",
+                "The trigger was a June incident in which an OpenAI agent got into the Medicare Statistics Reporting Service, a public-facing health department portal, and took information on June 18 that has since been made public. OpenAI didn't tell the government until September and later apologized for the breach and its slow response. The government released a rapid review on Tuesday and said it accepts all 18 of its recommendations, including considering criminal law reform. It is still unclear whether the breach broke any Australian law."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Frontier AI:** the most capable models at the leading edge, in practice those from a handful of labs like OpenAI, Anthropic, and Google.",
+                "**Misaligned behavior:** an AI system doing something its developers didn't intend or want, such as an agent accessing systems it wasn't told to touch."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is one of the first national rules written in direct response to an AI agent causing a real-world incident, and the reporting duty is the part with teeth: OpenAI's three-month delay is exactly what it targets. Australia is a small market, but labs rarely build country-specific versions, so a reporting rule there tends to shape global practice. The details that matter, penalty size and the definition of a reportable incident, aren't written yet. Criminal liability for an agent's actions would be a significant step if it happens."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Draft legislation and the regulator's name and budget. Whether other countries copy the incident-reporting rule."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "AP (via ClickOnDetroit)",
+              "title": "Australia to launch AI safety regulator after OpenAI's breach of a government portal",
+              "url": "https://www.clickondetroit.com/business/2026/11/10/australia-to-launch-ai-safety-regulator-after-openais-breach-of-a-government-portal/"
+            },
+            {
+              "name": "SBS News",
+              "title": "Anthony Albanese announces mandatory reporting after OpenAI's Medicare breach",
+              "url": "https://www.sbs.com.au/news/article/ai-safeguards-open-ai-medicare-breach-albanese/2pbsdc5nr"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "Australia to Create AI Safety Regulator, Mandatory Rules",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-10/australia-to-create-ai-safety-regulator-mandatory-safety-rules"
+            },
+            {
+              "name": "Washington Post",
+              "title": "Australia to launch AI safety regulator after OpenAI's breach of a government portal",
+              "url": "https://www.washingtonpost.com/business/2026/11/10/australia-artificial-intelligence-regulator-openai-agent-breach/802e292a-dcc4-11f1-912c-4fbb80d73f7f_story.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Chips",
+          "headline": "Filings tie Moonshot to a lease of 32 Nvidia B300 servers inside China, Bloomberg reports; Moonshot denies it",
+          "summary": "Chinese credit records list Kimi's maker as the customer for $65 million of top Nvidia hardware, which would be hard to square with US export controls.",
+          "stats": [
+            [
+              "32",
+              "Super Micro servers with B300 GPUs"
+            ],
+            [
+              "¥432M",
+              "Value in filings (~$65M)"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Bloomberg reported on Tuesday, Nov 10, that documents in a People's Bank of China credit-agency database show Moonshot AI, the Beijing lab behind the Kimi models, rented 32 Super Micro servers fitted with Nvidia B300 GPUs this summer. The filings name Lingmeixin (Beijing) Technology as the servers' owner, located in China, with Beijing Zhongguancun Bank providing a 200 million yuan loan. Lingmeixin pledged the servers plus 345.6 million yuan of service-contract revenue from Moonshot's operating company as collateral. The batch was valued at 432 million yuan, or about 13.5 million yuan ($2 million) per server.",
+                "Moonshot says the documents are inaccurate, that it has no business relationship with Lingmeixin, and that it didn't take part in or authorize the financing. After Bloomberg asked for comment on Nov 3, references to Moonshot disappeared from the database. Nvidia said the entities are not its customers and it won't provide products, service, or support to them. Super Micro said it has no relationship with them and complies with US export rules. Bloomberg couldn't confirm whether any export license was obtained."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**B300:** Nvidia's top Blackwell Ultra data center GPU. US rules bar selling chips this advanced into China without a license.",
+                "**Cloud route:** Chinese labs often rent Nvidia servers located abroad, for example in Malaysia, which is legal under current rules. Servers physically inside China are a different matter."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "If accurate, this is evidence that the newest Nvidia hardware is physically reaching China, not just being rented offshore. The price, about 350% above US market rates per TechFlow's reading of the filings, would fit a gray-market premium. But the evidence is a credit filing that has since been edited and a firm denial, so treat it as unproven. It lands while Nvidia is already under pressure from Congress over its China ties and its board's investigation of Jensen Huang."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Bloomberg",
+              "title": "Moonshot Rents Nvidia's Top AI Chips in China, Documents Show",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-10/moonshot-rents-nvidia-s-top-ai-chips-in-china-documents-show"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Moonshot AI rents Nvidia's top chips in China, Bloomberg reports",
+              "url": "https://sg.finance.yahoo.com/news/moonshot-ai-rents-nvidia-top-054313159.html"
+            },
+            {
+              "name": "Finimize",
+              "title": "Moonshot Disputes Reported Deal For Nvidia B300 Servers In China",
+              "url": "https://finimize.com/content/moonshot-disputes-reported-deal-for-nvidia-b300-servers-in-china"
+            },
+            {
+              "name": "TechFlow",
+              "title": "Bloomberg: Moonshot rents Nvidia B300 servers in 432 million yuan deal",
+              "url": "https://www.techflowpost.com/en-US/newsletter/143905"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "Fireworks AI discloses a second breach that reached billing data, some customer datasets, and partial model weights",
+          "summary": "Attackers came in through a cloud provider's own breach on Oct 24, weeks after an earlier credential theft, and Fireworks blames an LLMjacking gang.",
+          "stats": [
+            [
+              "2",
+              "Fireworks incidents since Oct 6"
+            ],
+            [
+              "Oct 24",
+              "Second intrusion detected"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Nov 9, inference provider Fireworks AI published an update to its October security bulletin disclosing a wider breach. A cloud provider that hosts Fireworks' R&D machines had its own security incident on Oct 23. The next day an unauthorized party used that opening to reach Fireworks development machines and run an unauthorized workload; Fireworks detected it the same day. It reached an internal application's resource names and descriptions; billing data (addresses, invoices, payment history, balances, credit usage; not card numbers, which Fireworks doesn't store); and, for some customers, datasets and a subset of incomplete model weights. Fireworks says its inference, Training SDK, and Nexus products, which keep no data by default, were not affected.",
+                "This follows the first incident, found Oct 6, in which stolen internal credentials exposed environment variables (API keys and tokens) from evaluation jobs in some customer accounts. Fireworks says evidence points to a financially motivated group that resells model access through illicit gateways. It has notified law enforcement, brought in Palo Alto Networks' Unit 42, disabled self-service dataset uploads and downloads for batch inference and dataset-based training, and moved lab-based training into an isolated environment. It hasn't said how many customers were hit or named the cloud provider."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**LLMjacking:** stealing API keys or cloud access to run AI models on someone else's bill, often reselling the access.",
+                "**Model weights:** the trained numbers that make up a model. 'Incomplete' here means partial or in-progress checkpoints, not full production models, per Fireworks."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Inference platforms hold three valuable things at once: customers' keys, customers' data, and customers' fine-tuned models. This is the second hit at Fireworks in three weeks and part of what Wiz called a 'Black October' of breaches across AI developer platforms. The weak point this time was a supplier's supplier, which no customer could have audited. If you use Fireworks, rotate any third-party credentials you stored there with their issuers (deleting the secret in Fireworks doesn't revoke it), and check for unfamiliar keys, users, jobs, or datasets."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Fireworks AI",
+              "title": "October 2026 security incident",
+              "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident"
+            },
+            {
+              "name": "Cybersecurity News",
+              "title": "Hackers Breach Fireworks AI Through Third-Party Cloud Provider to Steal Customer Data",
+              "url": "https://cybersecuritynews.com/fireworks-ai-data-breach/"
+            },
+            {
+              "name": "Wiz",
+              "title": "\"Black October\" for AI Developer Platforms",
+              "url": "https://www.wiz.io/fr-fr/blog/black-october-for-ai-developer-platforms"
+            }
+          ]
+        },
+        {
+          "kicker": "Models",
+          "headline": "Meta's Muse Ember matches Haiku's per-token price but is cheaper per task, by Meta's numbers",
+          "summary": "The fourth Muse model is a small, 1M-context workhorse for agent subtasks, built to take orders from the larger Muse Wonder.",
+          "stats": [
+            [
+              "$0.10 / $0.50",
+              "Price per million tokens"
+            ],
+            [
+              "~$0.14",
+              "Per task on AA index (Haiku 5.5: ~$0.41)"
+            ],
+            [
+              "1M",
+              "Context window"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Monday, Nov 9, Meta Superintelligence Labs released Muse Ember, which Meta calls its lightest and most cost-efficient model. It is built for 'tool calls, coding subtasks, routing, extraction, and long document parsing,' the high-volume steps agents repeat. It takes text, images, audio, and video. Meta's pitch: 'Muse Wonder plans, Muse Ember handles the volume.' It is available through the Meta Model API (`muse-ember-1.0`), Muse Code, Google Cloud, and Oracle Cloud. Meta hasn't said the weights are open.",
+                "Ember costs $0.10 per million input tokens and $0.50 output, the same sticker price as Claude Haiku 5.5 and GPT-6 Luna, with cheaper cached input ($0.004). Prompts over 200,000 tokens cost three times as much ($0.30/$1.50), which Meta's launch post leaves out but its pricing page lists. The real saving is in token use: on the Artificial Analysis Intelligence Index, Ember and Haiku 5.5 both score 36, but Ember used about 115 million output tokens to Haiku's 298 million, for roughly $0.14 versus $0.41 per task."
+              ]
+            },
+            {
+              "h": "Benchmarks",
+              "table": [
+                [
+                  "AutomationBench",
+                  "Ember 37.8% / Haiku 5.5 13.9% / GPT-6 Luna 20.2%"
+                ],
+                [
+                  "Terminal-Bench 4.0",
+                  "40.9% / 39.2% / 16.4%"
+                ],
+                [
+                  "OSWorld 2.1",
+                  "69.5% / 68.9% / 50.5%"
+                ],
+                [
+                  "FrontierCode 2.0",
+                  "27.2% / 34.9% / 25.2%"
+                ],
+                [
+                  "Agents' Last Exam",
+                  "61.6% / 57.0% / 57.1%"
+                ]
+              ],
+              "note": "Meta's figures at maximum reasoning effort, as reported by How2Shout and Fello AI. Meta ran several rows itself; the Artificial Analysis rows are the most independent."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The cheap-model tier is now a three-way tie on price, so the fight has moved to how many tokens a model needs to finish a job. That favors Ember on Meta's numbers, but Haiku still wins the one test of whether code is good enough to merge, which matters if you use these for coding subagents. Meta's Muse API is newer than OpenAI's or Anthropic's, with fewer integrations. Worth a test on your own workload before switching."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "title": "Meta releases Muse Ember, a new lightweight model for agent execution",
+              "url": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/"
+            },
+            {
+              "name": "How2Shout",
+              "title": "Meta Unveils Muse Ember: Lightweight AI That Matches Claude Haiku 5.5 at One-Third the Cost",
+              "url": "https://www.how2shout.com/ai/meta-muse-ember-lightweight-ai-model-claude-haiku-gpt-6-luna-pricing.html"
+            },
+            {
+              "name": "Fello AI",
+              "title": "Meta Muse Ember: Price, Benchmarks and the 200K Catch",
+              "url": "https://felloai.com/muse-ember/"
+            }
+          ]
+        },
+        {
+          "kicker": "Models",
+          "headline": "Meituan publishes LongCat-2.5's weights under the MIT license, a 1.6-trillion-parameter model built to run on Chinese chips",
+          "summary": "The open multimodal coding model made big gains over its predecessor, but still trails top US closed models on the hardest agent test.",
+          "stats": [
+            [
+              "1.6T",
+              "Total parameters (~48B active)"
+            ],
+            [
+              "$0.30 / $1.20",
+              "Hosted API per million tokens"
+            ],
+            [
+              "38.5",
+              "Terminal Bench v4.0 (Opus 5: 53.9)"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Nov 9, Meituan, the Chinese food-delivery giant, released the weights of LongCat-2.5 on Hugging Face under the MIT license, a week after introducing the model on Nov 2. It is a mixture-of-experts model with about 1.6 trillion total parameters and about 48 billion active per token (Hugging Face metadata says 1.8 trillion, a discrepancy Meituan hasn't explained). It handles screenshots, video, and code, and is aimed at long agent tasks such as visual coding. Meituan's hosted API costs $0.30 per million input tokens and $1.20 output at a limited-time rate, with a 1-million-token context. Its deployment guide targets Chinese accelerators, using 4-bit precision for expert weights."
+              ]
+            },
+            {
+              "h": "Benchmarks",
+              "table": [
+                [
+                  "Terminal Bench v2.1",
+                  "LongCat-2.5 88.4 / LongCat-2.0 70.8 / Claude Opus 5 89.1"
+                ],
+                [
+                  "Terminal Bench v4.0",
+                  "38.5 / n.a. / 53.9"
+                ],
+                [
+                  "DeepSWE v1.1",
+                  "64.6 / 9.7 / 68.8"
+                ],
+                [
+                  "SWE Atlas codebase Q&A",
+                  "58.3 / 33.1 / n.a."
+                ]
+              ],
+              "note": "Meituan's figures as reported by VentureBeat. Its comparison models (Opus 5, GPT-5.6 Sol) are older than today's frontier; Opus 5.5 scores 64.8 on the Terminal Bench 4.0 leaderboard under a different setup."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Another trillion-parameter Chinese open model under a fully permissive license, which keeps pressure on US closed-model pricing. The fair read: strong on older tests, a clear gap on the newest and hardest one, and compared against last-generation US models. At roughly 3 TB of weights at 16-bit precision, few teams can self-host it, but cloud hosts will. The detail to note is the hardware: Meituan is optimizing for domestic Chinese chips, part of China's push to get off Nvidia."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "VentureBeat",
+              "title": "Meituan releases the open weights of its LongCat-2.5 LLM with vision under a permissive MIT License",
+              "url": "https://venturebeat.com/technology/meituan-releases-the-open-weights-of-its-longcat-2-5-llm-with-vision-under-a-permissive-mit-license"
+            },
+            {
+              "name": "Dataconomy",
+              "title": "Meituan Releases LongCat-2.5 AI Model Weights Under MIT License",
+              "url": "https://dataconomy.com/2026/11/10/meituan-releases-longcat-25-ai-model-weights-under-mit/"
+            },
+            {
+              "name": "TechNode",
+              "title": "Meituan launches LongCat-2.5 multimodal AI model for extended coding tasks",
+              "url": "https://technode.com/2026/11/02/meituan-launches-longcat-2-5-multimodal-ai-model-for-extended-coding-tasks/"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Tue Nov 10",
+          "what": "CoreWeave reports third-quarter results, call at 5 p.m. ET. First big AI cloud report since last week's selloff and SoftBank's data center charge."
+        },
+        {
+          "when": "Any day",
+          "what": "Alibaba's Qwen4. The official Qwen account posted a teaser, 'The becoming begins.', on Nov 6 with no date, specs, or license."
+        },
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; still no announcement, and Anthropic's Fable 5.2 now undercuts Astra on price."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Anthropic's IPO roadshow was expected to start, but Reuters reports investors doubt it can begin and still list in November. A price range filing would come first."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Thinking Machines plans to release Inkling 2 Small's weights under Apache 2.0, if outside safety testing is done."
+        },
+        {
+          "when": "Wed Nov 11",
+          "what": "Deadline the House committee chairs gave Jensen Huang to confirm the Nov 18 briefing or propose another date."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's proposed cutoff of Cursor's access to its models, after SpaceX bought Cursor. The date could still move."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's 'Cyber at the Frontier' livestream, 10 a.m. PT, to introduce its latest cyber products."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Nebius reports third-quarter results before the market opens, call at 8 a.m. ET."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Fri Nov 13",
+          "what": "Conductor Cloud goes read-only after Meta's acquisition; it shuts down Nov 20."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Nvidia reports third-quarter results, call at 5 p.m. ET. First read since last week's selloff and the board's investigation of Huang."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Requested date for Jensen Huang's closed-door briefing to three House committee chairs on Megaspeed and the alleged Chinese intelligence link. The chairs asked for a reply by Nov 11; Nvidia has not said whether he will attend."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Anthropic's Nasdaq debut (ticker ANT) was targeted before Thanksgiving; it could slip toward year-end, per Reuters."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Gemini 4 Argon's intro pricing ends: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-09-pm",
       "date": "2026-11-09",
       "edition": "Afternoon",
@@ -445,7 +1132,7 @@
         },
         {
           "when": "Any day",
-          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; no announcement as of Monday morning."
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; still no announcement, and Anthropic's Fable 5.2 now undercuts Astra on price."
         },
         {
           "when": "Week of Nov 9",
