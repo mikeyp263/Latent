@@ -1289,6 +1289,68 @@
         "Explain how someone can own a large share of a company's stock and still have little control over it.",
         "Companies can issue different share classes with different voting rights. If founders or a trust hold a class with extra votes, or a single share with a majority of the vote, they control elections and big decisions even if they own a small part of the economic value. Public or non-voting shareholders share in profits and price moves but can't outvote them. Exchanges call such firms controlled companies and let them skip some governance rules."
       ]
+    },
+    {
+      "id": "nw26",
+      "added": "2026-11-11",
+      "t": "Formally Verifying Software",
+      "cards": [
+        "Testing runs code on some inputs and checks the results. **Formal verification** proves, with math a computer checks, that code behaves correctly on **every** input. You write a **specification**, a precise statement of what the code must do (for a messaging protocol: an attacker who steals today's key can't read yesterday's messages), then build a proof in a tool like **Lean** that the code meets it.",
+        "The catch has always been effort. Proofs are often many times longer than the code, so verified software has been rare, used for things like aircraft controls, OS kernels, and cryptography libraries. AI changes the economics: models can write the long, tedious proof steps, and the proof checker catches any that are wrong, so you don't have to trust the AI. That is why AI-written proofs are more trustworthy than AI-written code.",
+        "What you do have to trust is the **trusted base**: the specification, the model of the hardware, and assumptions such as 'the cryptography is unbreakable'. A proof of the wrong spec is a valid proof of the wrong thing. So when someone says code is 'formally verified', ask: which properties, of which code, under which assumptions, and who reviewed the spec?"
+      ],
+      "terms": [
+        [
+          "Formal verification",
+          "Proving with computer-checked math that code meets a specification for all inputs."
+        ],
+        [
+          "Specification",
+          "A precise, formal statement of what the code must and must not do."
+        ],
+        [
+          "Trusted base",
+          "Everything a proof assumes is correct, such as the spec, the hardware model, and the checker."
+        ],
+        [
+          "Forward secrecy",
+          "Stealing a current key doesn't expose past messages."
+        ],
+        [
+          "Post-compromise security",
+          "After a key is stolen, the protocol recovers so future messages are secure again."
+        ]
+      ],
+      "qs": [
+        [
+          "An AI writes a 6-million-line proof that a library is secure, and Lean accepts it. What still needs human scrutiny?",
+          "The specification and assumptions the proof rests on",
+          "Each of the 6 million proof lines",
+          "Whether the AI was confident in its answer",
+          "The proof's file size",
+          "The checker confirms every step; humans must confirm the spec says what you actually care about."
+        ],
+        [
+          "A vendor says its app is 'formally verified'. Which follow-up question matters most?",
+          "Which properties of which code were proved, and under what assumptions",
+          "How many engineers worked on it",
+          "Which programming language it uses",
+          "Whether it passed unit tests",
+          "Verification is always of specific properties under specific assumptions; the claim means little without them."
+        ],
+        [
+          "Why are AI-written proofs easier to trust than AI-written code?",
+          "A proof checker rejects any invalid step, so errors can't slip through",
+          "AI models make fewer mistakes in math",
+          "Proofs are shorter than code",
+          "Proofs are always reviewed line by line by humans",
+          "The checker gives an independent yes or no; ordinary code has no such check."
+        ]
+      ],
+      "ex": [
+        "Explain what it means to formally verify a piece of software and what it doesn't guarantee.",
+        "You write a precise specification of how the code must behave, then build a proof, checked by a tool like Lean, that the code meets it for every possible input. Unlike testing, nothing is left to chance within that scope. But it only covers the properties in the spec, under the stated assumptions (for example, that the encryption itself can't be broken), and only the code that was checked. If the spec is wrong or too narrow, a valid proof can still miss a real bug."
+      ]
     }
   ]
 }

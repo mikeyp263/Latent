@@ -1,6 +1,742 @@
 {
   "editions": [
     {
+      "id": "2026-11-11-am",
+      "date": "2026-11-11",
+      "edition": "Morning",
+      "stories": [
+        {
+          "kicker": "Business",
+          "headline": "OpenAI's quarterly revenue reaches about $10 billion, but its operating loss widens to $10.9 billion, WSJ reports",
+          "summary": "Leaked investor figures land the same week Anthropic markets its IPO, and the FT says Anthropic's bankers now weigh pricing above the $70 to $78 range.",
+          "stats": [
+            [
+              "~$10B",
+              "OpenAI Q3 revenue"
+            ],
+            [
+              "$10.9B",
+              "Q3 operating loss"
+            ],
+            [
+              "-109%",
+              "Adjusted operating margin"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The Wall Street Journal reported on Tuesday, Nov 10, that OpenAI told investors its revenue rose about 50% in the third quarter to roughly $10 billion, based on documents the paper viewed. Its operating loss still widened, to $10.9 billion from $10.1 billion in the second quarter. The adjusted operating margin improved from -150% to -109%, meaning that on OpenAI's own adjusted basis it still spent about $2.09 for every $1 of revenue. OpenAI did not respond to Reuters' request for comment, and the figures are unaudited internal numbers.",
+                "The leak lands in the middle of Anthropic's IPO roadshow, which makes the two companies easy to compare. Anthropic's amended S-1 filing reports $17.0 billion of third-quarter revenue. Separately, the Financial Times reported that Anthropic's bankers now expect to price the shares above the $70 to $78 range set on Tuesday, because demand has been strong. That could value Anthropic at $1.5 trillion or more on a fully diluted basis, according to the FT as relayed by TipRanks and Seeking Alpha. Pricing is still expected Nov 18 and trading Nov 19, per earlier CNBC reporting."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "OpenAI Q3 2026 revenue",
+                  "About $10B (up ~50% from Q2)"
+                ],
+                [
+                  "OpenAI Q2 revenue implied",
+                  "About $6.7B"
+                ],
+                [
+                  "OpenAI Q3 operating loss",
+                  "$10.9B (Q2: $10.1B)"
+                ],
+                [
+                  "OpenAI adjusted operating margin",
+                  "-109% (Q2: -150%)"
+                ],
+                [
+                  "Anthropic Q3 2026 revenue",
+                  "$17.0B"
+                ],
+                [
+                  "Anthropic IPO range",
+                  "$70 to $78 per share"
+                ],
+                [
+                  "Valuation discussed if priced above range",
+                  "$1.5T or more, fully diluted (FT)"
+                ]
+              ],
+              "note": "OpenAI figures from the WSJ via Reuters; Q2 revenue is our calculation from the 50% growth figure. Anthropic revenue from its Nov 10 S-1/A. The above-range pricing is the FT's report, not a filing."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Operating loss:** revenue minus the costs of running the business (compute, staff, sales), before interest and taxes. For AI labs most of it is compute for training and serving models.",
+                "**Adjusted operating margin:** operating profit as a share of revenue, after the company strips out items it considers unusual, often stock-based pay. Companies choose the adjustments, so compare it only with the same company's past figures.",
+                "**Pricing above the range:** if orders far exceed the shares on offer, underwriters can raise the price before the final sale. It usually means more money for the company and less first-day upside for buyers."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Revenue is growing fast at both labs, but OpenAI is not yet growing its way out of losses: the loss got bigger in dollars even as the margin improved. The margin trend is the part to watch, since a lab that keeps cutting the cost per dollar of revenue can eventually turn profitable, while one that only grows revenue cannot.",
+                "The comparison also helps Anthropic's IPO. On reported numbers Anthropic now books about 1.7 times OpenAI's quarterly revenue, and public investors appear willing to pay up for that. Keep two cautions in mind: the OpenAI figures are leaked and unaudited, and an IPO that prices high has less room to rise once trading starts."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether Anthropic files a new range before Nov 18, and whether OpenAI's reported talks on a new funding round produce terms that reflect these losses."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Reuters via Investing.com",
+              "title": "OpenAI posts steep losses even as quarterly revenue rises to $10 billion, WSJ reports",
+              "url": "https://www.investing.com/news/stock-market-news/openai-posts-steep-losses-even-as-quarterly-revenue-rises-to-10-billion-wsj-reports-5017353"
+            },
+            {
+              "name": "The Wall Street Journal",
+              "title": "OpenAI Continues to Suffer Heavy Losses as Revenue Rises to $10 Billion",
+              "url": "https://www.wsj.com/business/earnings/openai-continues-to-suffer-heavy-losses-as-revenue-rises-to-10-billion-d2a96bbb"
+            },
+            {
+              "name": "Seeking Alpha",
+              "title": "Anthropic bankers weigh higher IPO price range as investor demand surges: FT",
+              "url": "https://seekingalpha.com/news/4670408-anthropic-bankers-weigh-higher-ipo-price-range-as-investor-demand-surges-ft"
+            },
+            {
+              "name": "TipRanks",
+              "title": "Anthropic IPO May Exceed $1.5 Trillion After Strong Investor Demand",
+              "url": "https://www.tipranks.com/news/anthropic-ipo-may-exceed-1-5-trillion-after-strong-investor-demand"
+            }
+          ]
+        },
+        {
+          "kicker": "Models",
+          "headline": "Google opens Gemini 4 Carbon to paying developers and AI Ultra users, at $2/$10 until prices double on Dec 1",
+          "summary": "Google's top model had been limited to vetted cyber defenders for two weeks; the public version keeps its strongest hacking abilities locked.",
+          "stats": [
+            [
+              "$2 / $10",
+              "Per M tokens to Nov 30"
+            ],
+            [
+              "$4 / $20",
+              "From Dec 1"
+            ],
+            [
+              "60",
+              "AA Intelligence Index, 4th"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Tuesday, Nov 10, Google made Gemini 4 Carbon (model ID gemini-4-carbon) available on the paid tier of the Gemini API through AI Studio, to businesses, and to Google AI Ultra subscribers in the Gemini app, AI Mode in Search, and its Antigravity coding tool. Since its Oct 28 announcement it had been limited to selected cyber defenders and partners. There is no free API tier.",
+                "Google also previewed /swarm in Antigravity, which turns one prompt into a team of agents: Carbon plans and leads, cheaper models do routine work, and other agents test each change. A cyber-specialized version stays restricted to vetted defenders through Google's Fairwind program; Google says the public version blocked 99% of attack attempts in its own red-team tests.",
+                "Google itself says Carbon thinks longer and uses more tokens than Gemini 4 Argon, and recommends Argon for most coding and office work, with Carbon for long debugging and research tasks."
+              ]
+            },
+            {
+              "h": "Price and specs",
+              "table": [
+                [
+                  "Standard, to Nov 30",
+                  "$2 in / $10 out per M tokens"
+                ],
+                [
+                  "Standard, from Dec 1",
+                  "$4 in / $20 out"
+                ],
+                [
+                  "Batch and Flex, to Nov 30",
+                  "$1 / $5"
+                ],
+                [
+                  "Cached input, to Nov 30",
+                  "$0.10 per M"
+                ],
+                [
+                  "Context window",
+                  "1M tokens"
+                ],
+                [
+                  "AA Intelligence Index (high)",
+                  "60, 4th of 74"
+                ],
+                [
+                  "Above it on AA",
+                  "Three Claude Fable 5.2 settings (65, 62, 62)"
+                ],
+                [
+                  "Output tokens to run the AA index",
+                  "205M (median 72.8M)"
+                ]
+              ],
+              "note": "Pricing and specs from Google's pricing as summarized by OrcaRouter and The Next Web. Index figures are Artificial Analysis's. Google separately claims first place on CursorBench 4.0, Perplexity's WANDR, and Zapier's AutomationBench; those are not independent."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The headline price is a quarter of Claude Fable 5.2's $8/$40, but the per-token price undersells the cost. Carbon used almost three times the median model's output tokens on Artificial Analysis's test suite, and the price doubles in three weeks. Work out cost per finished task on your own workload before switching.",
+                "It is also no longer the top model on the independent index it led in October; Anthropic's Fable 5.2 has passed it. Google's case rests on cost per task in agent benchmarks run by partners, which are useful but not neutral."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "The Dec 1 price change for both Carbon and Argon, and whether /swarm leaves preview."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The Next Web",
+              "title": "Google's Gemini 4 Carbon is now open to paying developers and Ultra users",
+              "url": "https://thenextweb.com/news/google-gemini-4-carbon-available-developers-ultra"
+            },
+            {
+              "name": "OrcaRouter",
+              "title": "Gemini 4 Carbon is callable now, price doubles 1 Dec",
+              "url": "https://www.orcarouter.ai/blog/gemini-4-carbon-now-available"
+            },
+            {
+              "name": "Google",
+              "title": "Gemini 4 Carbon now available",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+            }
+          ]
+        },
+        {
+          "kicker": "Research",
+          "headline": "DeepMind's AlphaProof Code proves key security properties of Signal's code in four weeks, with 6.5 million lines of Lean",
+          "summary": "AI agents wrote machine-checked proofs for libsignal's core guarantees; humans wrote and reviewed the specifications that define what was proved.",
+          "stats": [
+            [
+              "~6.5M",
+              "Lines of Lean proof"
+            ],
+            [
+              "4 weeks",
+              "Five-person team"
+            ],
+            [
+              "~1%",
+              "Flagged for human recheck"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Google DeepMind on Tuesday, Nov 10, introduced AlphaProof Code, a research framework in which AI agents and human experts formally verify software. Its first target was libsignal, the reference code behind the Signal protocol used by Signal, WhatsApp, and others. Models first translated Signal's security goals into formal specifications, then Gemini-powered agents wrote proofs in the Lean proof assistant that the code meets them, checked down to the machine-code level.",
+                "The properties proved include forward secrecy, authentication, post-compromise security, and handshake secrecy. The proofs run to about 6.5 million lines of Lean, per DeepMind's paper, resting on about 26,000 lines of trusted specifications and machine semantics. A team of five did it in four weeks. Humans reviewed every specification, and the agents flagged about 1% of the code for a second human look.",
+                "As a test, the team reinserted two real, long-fixed Signal bugs into an isolated copy; in both cases the proof failed, showing the buggy code was not secure. No new vulnerabilities were found. DeepMind says it is open-sourcing the specifications and proofs. Google would not say what the work cost."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Formal verification:** proving with math, checked by a computer, that code always meets a precise specification, rather than testing some inputs.",
+                "**Forward secrecy:** if a key is stolen today, past messages stay unreadable. **Post-compromise security:** after a breach, the protocol heals so that future messages become secure again.",
+                "**Trusted base:** the parts you must take on faith, here the 26,000 lines of specs and the model of the machine. If they are wrong, a valid proof can still miss a real problem."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Formal verification of real cryptographic code has usually taken expert teams years. Doing it in four weeks is the strongest evidence yet that AI can make high-assurance software practical, and unlike most AI claims, the output can be rechecked by anyone with Lean.",
+                "The limits are real: only selected properties of one library were proved, the work assumes the underlying cryptography is perfect, and it says nothing about the rest of the Signal app or your phone. The specifications carry the weight, and humans still wrote and reviewed them."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Google DeepMind",
+              "title": "Introducing AlphaProof Code",
+              "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
+            },
+            {
+              "name": "WIRED",
+              "title": "A New AI Tool From Google DeepMind Formally Verified the Signal Protocol",
+              "url": "https://www.wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol/"
+            },
+            {
+              "name": "Qodo",
+              "title": "Google DeepMind Says AI Formally Verified Signal's Protocol Code and Flagged Only 1% for a Human Look",
+              "url": "https://www.qodo.ai/blog/alphaproof-code-signal-formal-verification/"
+            },
+            {
+              "name": "Startup Fortune",
+              "title": "Google DeepMind's AI proves key Signal protocol guarantees in four weeks",
+              "url": "https://startupfortune.com/google-deepminds-ai-proves-key-signal-protocol-guarantees-in-four-weeks/"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "CoreWeave beats on revenue and raises its 2026 forecast to $13.0 to $13.3 billion, but its quarterly net loss grows to $709 million",
+          "summary": "Revenue rose 168% and backlog reached $132.5 billion, while interest costs and $14.5 billion of quarterly capex kept it deep in the red.",
+          "stats": [
+            [
+              "$3.66B",
+              "Q3 revenue, up 168%"
+            ],
+            [
+              "$132.5B",
+              "Revenue backlog"
+            ],
+            [
+              "$14.5B",
+              "Q3 capex"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "CoreWeave, the largest independent AI cloud, reported third-quarter results after the close on Tuesday, Nov 10. Revenue was $3.661 billion, up from $1.365 billion a year earlier and above the roughly $3.55 billion analysts expected. It raised its full-year revenue forecast to $13.0 billion to $13.3 billion and said it expects about $9 billion of customer prepayments and deposits over the next three months. It expanded deals with OpenAI, Cohere, and Perplexity.",
+                "Profit went the other way. Net interest expense nearly tripled to $846 million, and the GAAP net loss grew to $709 million from $110 million. Capital spending was $14.5 billion in the quarter and $30.7 billion so far this year. Shares swung after hours, then rose about 14% in premarket trading Wednesday after CEO Michael Intrator said on the call that he did not expect post-election regulation to materially affect its pipeline and that CoreWeave does not plan to issue more parent-level unsecured debt through 2027."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Q3 revenue",
+                  "$3.661B (Q3 2025: $1.365B)"
+                ],
+                [
+                  "Adjusted operating income",
+                  "$379M, 10% margin (year ago 16%)"
+                ],
+                [
+                  "GAAP operating income",
+                  "$207M, 6% margin"
+                ],
+                [
+                  "Net interest expense",
+                  "$846M (year ago $310M)"
+                ],
+                [
+                  "GAAP net loss",
+                  "$709M (year ago $110M)"
+                ],
+                [
+                  "Revenue backlog",
+                  "$132.5B, up 138%"
+                ],
+                [
+                  "Q3 capex",
+                  "$14.511B"
+                ],
+                [
+                  "Active / contracted power",
+                  "1.7 GW / 4.6 GW"
+                ],
+                [
+                  "2026 revenue forecast",
+                  "$13.0B to $13.3B"
+                ]
+              ],
+              "note": "Company figures as reported by TradingKey and Tradingpedia. Analyst estimate per Tradingpedia."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Backlog (remaining performance obligations):** revenue customers have contracted for but CoreWeave hasn't delivered yet. Only 36% of it is due within two years, so it is a long promise, not near-term cash.",
+                "**Contracted vs. active power:** contracted is data center capacity signed for; active is capacity actually running and earning money."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This was the first big AI cloud report since last week's selloff, and demand looks intact. The worry is the financing: CoreWeave borrows heavily to buy GPUs, and interest now eats more than its operating profit. Its adjusted operating margin fell to 10% from 16% a year ago. The model works only if customers like OpenAI keep paying for years and the GPUs hold their value long enough to pay off the debt."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Nebius reports Thursday and Nvidia on Nov 17, the next reads on whether AI infrastructure demand is holding up."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "TradingKey",
+              "title": "CoreWeave Q3 Revenue Surges 168% but Capex Soars to $14.511 Billion, Sparking Sharp After-Hours Divide",
+              "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262299527-coreweave-earnings-report-q3-revenue-growth-backlog-capital-expenditures-net-loss-tradingkey"
+            },
+            {
+              "name": "Tradingpedia",
+              "title": "CoreWeave Surges 14% on Strong Earnings and Guidance Hike",
+              "url": "https://www.tradingpedia.com/2026/11/11/coreweave-surges-14-on-strong-earnings-and-guidance-hike/"
+            },
+            {
+              "name": "Benzinga",
+              "title": "CoreWeave Reports Q3 Double Beat, Raises Guidance: 'This Was a Breakout Quarter'",
+              "url": "https://www.benzinga.com/markets/earnings/26/11/63123969/coreweave-reports-q3-double-beat-raises-guidance-this-was-a-breakout-quarter"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "Railway's incident report says stolen customer AI keys ran up about $740,000 in charges, and it will cover what providers won't refund",
+          "summary": "The attacker spent about 25 hours inside Railway's build system in October and decrypted secrets in up to 1.85% of workspaces, roughly 100,000.",
+          "stats": [
+            [
+              "~$740K",
+              "Unauthorized AI usage"
+            ],
+            [
+              "~100,000",
+              "Workspaces, upper bound"
+            ],
+            [
+              "1,852",
+              "Users' linked tokens taken"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Cloud host Railway has published its full incident report on the October breach, reported by BleepingComputer and The Hacker News on Nov 10 and 11. On Oct 20 at 07:28 UTC an attacker used an unknown flaw to escape a build's file isolation. A build-server credential then gave access to other builds' histories and a copy of Railway's internal code. Early on Oct 21 a misconfigured cloud identity binding yielded cloud credentials and an SSH key to a machine that could decrypt customer variables. The attacker searched specifically for AI provider key names and was removed at 09:24 UTC, about 25.5 hours after the first exploit; detection came after about 6.5 hours.",
+                "Railway estimates the stolen keys produced about $740,000 of unauthorized AI usage, and believes they were used by services that resell AI access, possibly for distillation. It reversed its Oct 26 position that it could not refund such spend. Now AWS Bedrock and Google Gemini are refunding under existing fraud policies, OpenAI and SpaceXSI are reviewing case by case, Anthropic is in talks (Railway covers costs meanwhile), and Railway will pay all OpenRouter charges since OpenRouter doesn't refund."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Time attacker was active",
+                  "About 25.5 hours"
+                ],
+                [
+                  "Time to detection",
+                  "About 6.5 hours"
+                ],
+                [
+                  "Workspaces with decrypted variables",
+                  "Up to 1.85%, about 100,000"
+                ],
+                [
+                  "Users whose linked tokens were taken",
+                  "1,852 (agent keys, GitHub OAuth)"
+                ],
+                [
+                  "Build histories exposed",
+                  "353"
+                ],
+                [
+                  "Estimated unauthorized AI spend",
+                  "About $740,000"
+                ]
+              ],
+              "note": "From Railway's incident report as reported by The Hacker News. Railway calls the workspace count an upper limit and has not explained how the dollar estimate was calculated."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is the clearest case yet of attackers breaking into a developer platform to harvest AI keys, which are now worth stealing because they convert straight into compute that can be resold. It follows the Northflank breach earlier this month. If you stored any secret on Railway before Oct 21, rotate it with the issuing provider; filing a charge report does not revoke the key. More broadly, set spending caps and alerts on every AI API key you own."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The Hacker News",
+              "title": "Railway Says Stolen Customer AI Keys Led to $740,000 in Estimated Unauthorized Usage Charges",
+              "url": "https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html"
+            },
+            {
+              "name": "BleepingComputer",
+              "title": "Railway breach leads to $740,000 in fraudulent AI charges",
+              "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "An outside audit of Anthropic's Glasswing bug hunt finds 442 CVEs, two exploited, and a 55.9% false-positive rate at curl",
+          "summary": "VulnCheck says AI-found bugs are real but small in number, fixes have stalled, and triage work is landing on open-source maintainers.",
+          "stats": [
+            [
+              "442",
+              "CVEs attributed"
+            ],
+            [
+              "217",
+              "Fixes of 37,966 findings"
+            ],
+            [
+              "55.9%",
+              "False positives at curl"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Security firm VulnCheck published a seven-month review of Project Glasswing, Anthropic's program that uses its models to find vulnerabilities in widely used software, on Nov 9 using Anthropic's ledger as of Nov 2. Researcher Patrick Garrity counted 442 CVEs attributed to Anthropic since April 17, about 0.5% of the 93,450 CVEs published this year. Two of them are known to be exploited in the wild.",
+                "Anthropic's own ledger lists 37,966 findings, 7,349 made public, and 217 fixed. Since Sept 8 findings grew by 11,813 while fixes grew by 15, and duplicates rose from 2 to about 1,670. At curl, maintainers have assessed 34 of 45 Anthropic reports: 19 were not vulnerabilities and 6 were confirmed low-severity bugs. That is a 55.9% false-positive rate, against Anthropic's claimed 94.2% true-positive rate across its ledger."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "CVEs attributed to Anthropic",
+                  "442 (about 63 a month)"
+                ],
+                [
+                  "Known exploited",
+                  "2"
+                ],
+                [
+                  "Self-reported findings",
+                  "37,966"
+                ],
+                [
+                  "Public / fixed",
+                  "7,349 / 217"
+                ],
+                [
+                  "Anthropic's claimed true-positive rate",
+                  "94.2%"
+                ],
+                [
+                  "curl reports: not a bug / confirmed / pending",
+                  "19 / 6 / 9"
+                ],
+                [
+                  "Rated critical or high (Claude vs. maintainers, Sept)",
+                  "91.5% vs. 51.3%"
+                ]
+              ],
+              "note": "VulnCheck's analysis, published Nov 9, using Anthropic's ledger as of Nov 2."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The audit doesn't say AI bug hunting fails: hundreds of real CVEs is meaningful. It says the scale claims outrun the results that matter (fixed, serious bugs), and that the model rates its own findings as far more severe than maintainers do. One project's sample is small, and curl is unusually strict, but the pattern matters for anyone running AI scanners: budget for human triage, or you shift the cost onto volunteers. It also matters as Anthropic widens access to Mythos 5.2 for security work."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "VulnCheck",
+              "title": "Anthropic Glasswing November update",
+              "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update"
+            }
+          ]
+        },
+        {
+          "kicker": "Models",
+          "headline": "Alibaba opens a 15-day preview of Qwen4-Max, its next flagship, with a 1M-token context and no benchmarks or weights",
+          "summary": "The first Qwen4 model is limited to interactive use through Alibaba's Token Plan subscription and a few of its own apps.",
+          "stats": [
+            [
+              "1M",
+              "Context tokens"
+            ],
+            [
+              "Nov 25",
+              "Preview ends"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Alibaba opened a preview of Qwen4-Max (qwen4-max-preview) at 10:00 Beijing time on Wednesday, Nov 11, after the Qwen account's 'The becoming begins.' teaser last week. It is available through the Token Plan subscription in Alibaba Cloud's Singapore region and in Alibaba's Qwen App, Qwen Office, Qoder, and QwenStudio. Alibaba pitches it for advanced programming, front-end design, agents, and multi-step office and software tasks. The preview ends after Nov 25, and Alibaba says the model won't change during it.",
+                "Terms are narrow: no pay-as-you-go, and use is limited to interactive coding and agent tools, not batch scripts. It takes text, images, and video, outputs up to 393,216 tokens, has thinking on by default, and offers OpenAI- and Anthropic-compatible APIs. Alibaba's roadmap lists Qwen4-Flash, Qwen4-Plus, and a 27B version for on-premises use."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Qwen's open models are among the most used in the world, so Qwen4 matters, but this preview gives nothing to judge it by: no benchmark scores, no parameter count, and no weights. Treat it as a hands-on trial. The open question for builders is whether Qwen4's smaller models, especially the 27B, ship with open weights as Qwen3 did."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "OrcaRouter",
+              "title": "Qwen4-Max Preview: a 1M-token flagship, rentable 15 days",
+              "url": "https://www.orcarouter.ai/blog/qwen-4-max-preview-token-plan"
+            },
+            {
+              "name": "KuCoin News (BitPush)",
+              "title": "Qwen4 Launches with Max Preview Focused on Complex Programming and Software Operations",
+              "url": "https://www.kucoin.com/news/flash/qwen4-launches-with-max-preview-focused-on-complex-programming-and-software-operations"
+            },
+            {
+              "name": "Qwen on X",
+              "title": "Qwen4-Max preview announcement",
+              "url": "https://x.com/Alibaba_Qwen/status/2120335993643684315"
+            }
+          ]
+        },
+        {
+          "kicker": "Tools",
+          "headline": "Anthropic puts Claude into Google Meet calls as a participant, and adds Claude Sheets and Whiteboards",
+          "summary": "Claude Meetings, in beta for Team and Enterprise, drafts plans and answers questions during a call instead of summarizing afterward.",
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Tuesday, Nov 10, Anthropic launched Claude Meetings in beta for Team and Enterprise customers, starting with Google Meet. Claude joins as a visible participant, follows the conversation, and can draft plans, build timelines, and answer questions in the meeting chat while the call is going on. Anthropic says other meeting platforms will follow.",
+                "It also released Claude Sheets and Claude Whiteboards in beta, the latter for turning discussions into timelines and action plans, and Claude Data, a shared data-analysis and dashboard tool. The launches came the same day Anthropic began its IPO roadshow."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Anthropic is moving from a chat window into the office suite, where Microsoft and Google already have Copilot and Gemini built in. Its edge is model quality and working across apps; its weakness is that it doesn't own the documents or the calendar. For teams, an AI that acts during a meeting raises practical questions about consent from other participants and where transcripts go; check your admin settings before turning it on."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Reuters via The Star",
+              "title": "Anthropic brings Claude to Google Meet to tackle tasks live",
+              "url": "https://www.thestar.com.my/tech/tech-news/2026/11/11/anthropic-brings-claude-to-google-meet-to-tackle-tasks-live"
+            },
+            {
+              "name": "MarketScreener (MT Newswires)",
+              "title": "Anthropic Launches Workplace AI Tools Including Claude Sheets",
+              "url": "https://www.marketscreener.com/news/anthropic-launches-workplace-ai-tools-including-claude-sheets-ce785edad18df32d"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "Bessent says the US and China will share practices for testing advanced models before release, ahead of next week's Xi meeting",
+          "summary": "The two sides have agreed to a direct channel for warning each other about serious AI incidents, and a 'superintelligence' dialogue moves forward in Shenzhen.",
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "In prepared remarks to the National Committee on US-China Relations in New York on Tuesday, Nov 10, Treasury Secretary Scott Bessent said the two countries should cooperate on AI risks while competing for leadership, with 'no illusions' about their differences. He said they expect to share best practices for evaluating and testing advanced models before release, and to discuss keeping human judgment in control.",
+                "He said the sides have agreed to set up a direct channel to alert each other to serious AI incidents, building on what Trump and Xi agreed at the White House in September, and that a bilateral dialogue on 'superintelligence', the administration's preferred term, will advance at next week's meeting in Shenzhen on the sidelines of the APEC summit (Nov 18 and 19)."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "An incident hotline and shared testing practices are modest, but they are the first concrete AI safety mechanisms between the two powers, similar in spirit to nuclear-era hotlines. They don't touch the real friction points: chip export controls, smuggling probes like Megaspeed, and model-weight exports. Watch whether Shenzhen produces a written agreement or only statements."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Reuters via Investing.com",
+              "title": "US and China should stay clear-eyed on AI cooperation and competition, Bessent says",
+              "url": "https://www.investing.com/news/economic-indicators/us-and-china-should-stay-cleareyed-on-ai-cooperation-and-competition-bessent-says-5017469"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Wed Nov 11",
+          "what": "Deadline the House committee chairs gave Jensen Huang to confirm the Nov 18 briefing or propose another date."
+        },
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; still no announcement as of Wednesday morning."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Thinking Machines plans to release Inkling 2 Small's weights under Apache 2.0, if outside safety testing is done."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's proposed cutoff of Cursor's access to its models, after SpaceX bought Cursor. The date could still move."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's 'Cyber at the Frontier' livestream, 10 a.m. PT, to introduce its latest cyber products."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Nebius reports third-quarter results before the market opens, call at 8 a.m. ET."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Fri Nov 13",
+          "what": "Conductor Cloud goes read-only after Meta's acquisition; it shuts down Nov 20."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Nvidia reports third-quarter results, call at 5 p.m. ET. First read since last week's selloff and the board's investigation of Huang."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Anthropic is expected to price its IPO. The filed range is $70 to $78; the FT reports bankers may price above it."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Requested date for Jensen Huang's closed-door briefing to three House committee chairs on Megaspeed and the alleged Chinese intelligence link."
+        },
+        {
+          "when": "Nov 18 to 19",
+          "what": "APEC summit in Shenzhen, where Trump meets Xi and the US-China 'superintelligence' dialogue is due to advance."
+        },
+        {
+          "when": "Thu Nov 19",
+          "what": "Anthropic shares (ANT) are expected to start trading on Nasdaq, per CNBC."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Wed Nov 25",
+          "what": "Alibaba's Qwen4-Max preview ends."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Intro pricing ends for Gemini 4 Argon and Gemini 4 Carbon: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-10-pm",
       "date": "2026-11-10",
       "edition": "Afternoon",
