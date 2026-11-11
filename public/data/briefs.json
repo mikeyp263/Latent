@@ -1,6 +1,653 @@
 {
   "editions": [
     {
+      "id": "2026-11-11-pm",
+      "date": "2026-11-11",
+      "edition": "Afternoon",
+      "stories": [
+        {
+          "kicker": "Chips",
+          "headline": "A blacklisted Chinese military university bought two Nvidia H200s through a reseller last month, Reuters finds",
+          "summary": "Northwestern Polytechnical University, on the US Entity List since 2001, also rented H200 servers, one of 26 Chinese records Reuters reviewed showing restricted Nvidia chips still reaching blocked buyers.",
+          "stats": [
+            [
+              "2",
+              "H200s bought Oct 21"
+            ],
+            [
+              "$123K",
+              "Price paid"
+            ],
+            [
+              "26",
+              "Records Reuters reviewed"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Reuters reported on Wednesday, Nov 11, that Northwestern Polytechnical University (NPU) in Xi'an bought two Nvidia H200 chips for its management school, according to an Oct 21 procurement record. It paid 874,700 yuan (about $123,000) to a reseller, Shaanxi Bosuan Network Technology, not to Nvidia. Reuters could not find contact details for the reseller.",
+                "The purchase was not the only one. NPU's cybersecurity school signed two seven-month contracts in January, worth about 441,000 yuan each, for access to servers with eight H200s apiece, to fine-tune models and run reinforcement-learning training. The university also rented servers with A100 and A800 chips. Across 26 Chinese procurement and corporate records from this year, Reuters found other universities buying or renting restricted Nvidia hardware, including Shenzhen University (three H100s for 769,800 yuan) and Beihang University, another sanctioned defense school (four A800s for 489,000 yuan).",
+                "NPU, Nvidia, and the Commerce Department's Bureau of Industry and Security did not respond to Reuters. Nothing in the records shows Nvidia sold to these buyers directly."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "NPU: two H200s (Oct 21)",
+                  "874,700 yuan (~$123,000)"
+                ],
+                [
+                  "NPU: two H200 server rentals (Jan)",
+                  "~441,000 yuan each, 7 months, 8 H200s per server"
+                ],
+                [
+                  "Shenzhen University: three H100s (Sept)",
+                  "769,800 yuan"
+                ],
+                [
+                  "Beihang University: four A800s (Apr)",
+                  "489,000 yuan"
+                ],
+                [
+                  "UCAS: H800 access listing",
+                  "10 yuan per chip-hour"
+                ],
+                [
+                  "NPU on Entity List since",
+                  "2001"
+                ]
+              ],
+              "note": "All figures from Chinese procurement records as reported by Reuters (via BNN Bloomberg). Dollar conversion is Reuters'."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Entity List:** a US Commerce Department blacklist. Selling US-controlled technology to a listed organization needs a license, and for NPU those are denied in most cases.",
+                "**Seven Sons of National Defense:** a group of Chinese universities closely tied to the military, doing research on aircraft, missiles, and satellites. NPU and Beihang are two of them.",
+                "**Renting compute:** paying a cloud or hosting company for time on its chips instead of owning them. It is one of the main ways controls get around: the chips sit with a seller, and the blocked user just logs in."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Two chips is a tiny amount of compute; this is not a training cluster. The story matters because it shows the controls leaking at the retail level, in public government records, to one of the most clearly blocked buyers there is. The rental contracts are arguably the bigger finding, since US rules adopted in January require safeguards against blacklisted users reaching exported chips remotely, and here the access looks routine.",
+                "It lands at a bad moment for Nvidia, a week before Jensen Huang's requested House briefing and amid bipartisan pressure for chip-tracking requirements. Expect it to be cited as evidence for location verification on chips, which Nvidia has resisted."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether BIS adds Shaanxi Bosuan or the hosting providers to the Entity List, and whether the House chairs raise these records at the requested Nov 18 briefing."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Reuters via BNN Bloomberg",
+              "title": "Military-linked Chinese university bought Nvidia chips despite U.S. blacklist: Reuters exclusive",
+              "url": "https://bnnbloomberg.ca/business/artificial-intelligence/2026/11/11/military-linked-chinese-university-bought-nvidia-chips-despite-us-blacklist-reuters-exclusive"
+            },
+            {
+              "name": "Al Jazeera",
+              "title": "Chinese university buys Nvidia AI H200 chips despite US ban, records show",
+              "url": "https://www.aljazeera.com/news/2026/11/11/chinese-university-buys-nvidia-ai-h200-chips-despite-us-ban-records-show"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "Republican Sen. Kevin Cramer calls for Jensen Huang to resign, citing the risk of extortion",
+          "summary": "The North Dakota senator, a member of the Banking Committee that oversees export controls, says the risk of extortion is too high for the head of Nvidia.",
+          "stats": [],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Sen. Kevin Cramer (R-N.D.) told Politico late on Tuesday, Nov 10, that Nvidia CEO Jensen Huang should step down over his affair with a businesswoman US officials suspect is a Chinese intelligence asset. \"The potential for extortion is so tremendous that something as sensitive as Nvidia chips, I just think he's got to go,\" he said, adding that even if the affair is the worst of it, \"we don't know\" what else there is. Reuters described him as a senior Republican on the Senate Banking panel.",
+                "Nvidia's board is investigating with outside counsel and says it has no reason to believe national security or company secrets were compromised. Huang has told staff he was unfaithful and has committed to cooperate. President Trump said on Monday the FBI is looking into the matter, and that he believes Huang's account that he did not know she was a spy. China's foreign ministry called the spying claims \"groundless\"."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "One senator's call does not remove a CEO; only Nvidia's board can do that. But Huang's support in Washington has come largely from Republicans and the White House, so a Republican senator breaking ranks matters. The Banking Committee has jurisdiction over the Commerce Department's export control arm, so Cramer's view carries more weight on chips than a random member's. The market impact is the thing to watch: any sign the board is weighing leadership changes would be a far bigger story than any letter."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether other Republicans join Cramer, Nvidia's Nov 17 earnings call, and the requested Nov 18 House briefing, which Nvidia had been asked to confirm by Wednesday."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Reuters via Yahoo News",
+              "title": "Senior Republican on US Senate banking panel calls on Nvidia CEO Huang to resign",
+              "url": "https://www.yahoo.com/news/articles/senior-republican-us-senate-banking-034318929.html"
+            },
+            {
+              "name": "Benzinga",
+              "title": "GOP Senator Kevin Cramer Calls for Nvidia CEO Jensen Huang's Resignation Over China Spy Concerns",
+              "url": "https://www.benzinga.com/news/politics/26/11/63130636/gop-senator-kevin-cramer-calls-for-nvidia-ceo-jensen-huangs-resignation-over-china-spy-concerns-says-potential-for-extortion-is-tremendous"
+            }
+          ]
+        },
+        {
+          "kicker": "Tools",
+          "headline": "OpenAI lets businesses claim their ChatGPT profiles and run their own sales agents inside ChatGPT",
+          "summary": "The beta gives companies a dashboard of how often ChatGPT mentions them, and lets them make a branded agent the landing spot for ChatGPT ads.",
+          "stats": [
+            [
+              "1.2B",
+              "ChatGPT weekly users (OpenAI)"
+            ],
+            [
+              "28 days",
+              "Analytics window"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Tuesday afternoon, Nov 10, OpenAI launched Businesses in ChatGPT in beta. Companies can claim a profile, verify it (by business phone, email, domain, or Shopify account, plus a Persona identity check for the person managing it), and get a blue check. A Business Hub lets them update details, upload a product feed with prices and stock, and see 28 days of aggregate activity: how often ChatGPT mentioned them, how many users clicked through, and recurring topics. OpenAI says it does not share users' chats with businesses.",
+                "Eligible US ecommerce and online-service companies can also publish a **Business Agent**. When a business comes up in an answer, a user can open its profile and chat with the company's agent, which answers from the company's own product data. ChatGPT labels these chats so users know they have left the general assistant. Businesses can also make the agent the destination for a ChatGPT ad, building on the Sponsored Agents test OpenAI started in September. Claiming and publishing are free at launch, per Digiday via VentureBeat, and OpenAI did not rule out charging later. Checkout still sends buyers to the brand's own website."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Launch",
+                  "Beta, Nov 10"
+                ],
+                [
+                  "Business Agents eligibility",
+                  "US ecommerce and online-service firms"
+                ],
+                [
+                  "Analytics shown",
+                  "Mentions, clicks, topics over 28 days"
+                ],
+                [
+                  "Cost to claim or publish",
+                  "Free at launch"
+                ],
+                [
+                  "OpenAI ads run rate (August)",
+                  "$1B a year, 100,000 advertisers"
+                ]
+              ],
+              "note": "From VentureBeat and The Next Web, citing OpenAI and Digiday."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Business Agent:** a chatbot run inside ChatGPT on a company's behalf, following that company's instructions and product data. It is the seller's assistant, not a neutral one.",
+                "**Product feed:** a structured file of a store's products, prices, and stock levels, the same thing retailers send to Google Shopping."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is ChatGPT becoming a storefront and an ad platform at once. The analytics are the immediate draw: brands have been paying third parties to estimate how often AI assistants recommend them, and now OpenAI reports it directly. The tension is trust. OpenAI says paying does not change how often ChatGPT recommends a business, and the labeled handoff is a real safeguard, but users now meet a seller's agent one tap from a supposedly neutral answer, and ads can point straight at it. Rules require agents to say they are AI, keep prices accurate, and avoid pressure tactics, but enforcement is OpenAI's own.",
+                "For developers and small sellers, it is another channel to manage alongside search. For startups selling 'AI visibility' tracking, it is direct competition from the platform itself."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Agent payments, which OpenAI is building with Visa, and whether claiming or agent use becomes paid after the beta."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "VentureBeat",
+              "title": "OpenAI lets you claim your business in ChatGPT and set up a custom agentic AI customer sales rep",
+              "url": "https://venturebeat.com/technology/openai-lets-you-claim-your-business-in-chatgpt-and-set-up-a-custom-agentic-ai-customer-sales-rep"
+            },
+            {
+              "name": "The Next Web",
+              "title": "OpenAI lets businesses claim ChatGPT profiles and launch their own agents",
+              "url": "https://thenextweb.com/news/openai-businesses-in-chatgpt-business-agents"
+            },
+            {
+              "name": "Quartz",
+              "title": "OpenAI adds verified business profiles and AI agents to ChatGPT",
+              "url": "https://qz.com/openai-chatgpt-business-profiles-ai-agents-111126"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "Kazakhstan-linked hackers used an AI agent running on DeepSeek to steal 2,000+ Tajik defense documents, CloudSEK says",
+          "summary": "An exposed server showed the operator directing an open-source agent called Hermes to scout targets and write the tool that downloaded and packaged the files.",
+          "stats": [
+            [
+              "2,000+",
+              "Documents stolen"
+            ],
+            [
+              "~2 weeks",
+              "Recon to break-in"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Singapore security firm CloudSEK published a report on Wednesday, Nov 11, on a server left exposed by a hacking group it calls Silent Lynx, which other researchers have tied to Kazakhstan. The server held logs of the operator's conversations with Hermes, an open-source autonomous agent framework that mainly ran on DeepSeek models. The operator's instructions cast the agent as an offensive security specialist. Reconnaissance began around mid-August; about two weeks later the group got into a shared electronic document system used by Tajik ministries, using an ordinary state railway employee's account. The system reportedly did not check whether a user was allowed to see each document.",
+                "The agent helped map target systems and wrote a custom program to download, sort, and split the files into chunks for exfiltration. CloudSEK says more than 2,000 documents routed through Tajikistan's Ministry of Defence were taken, covering procurement, spending, and military cooperation, plus files from the investment committee and security services. The operator also held admin access to parts of the state railway's network from mid-August until at least Oct 10. Kazakh and Tajik officials did not respond to Reuters."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Documents stolen",
+                  "More than 2,000"
+                ],
+                [
+                  "Recon started",
+                  "Around mid-August 2026"
+                ],
+                [
+                  "Railway network access",
+                  "Mid-August to at least Oct 10"
+                ],
+                [
+                  "Attribution to Silent Lynx",
+                  "High confidence (CloudSEK)"
+                ],
+                [
+                  "Kazakhstan link",
+                  "Moderate confidence (CloudSEK)"
+                ]
+              ],
+              "note": "From CloudSEK's report as described by Reuters (via teiss) and ManagerPlus (via Poland Insight)."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Exfiltration:** copying stolen data out of a network. Splitting it into chunks makes the transfer less likely to trip alarms.",
+                "**Agent framework:** software that lets a model plan steps and run tools (scanners, scripts, file downloads) on its own, instead of just answering questions."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is the second case in two days of researchers watching a state-linked or criminal crew use an off-the-shelf agent, after the jailbroken DeepSeek agent in the European telecom intrusion reported Tuesday. Note what the AI did and did not do: the way in was a weak access check and a stolen low-level login, which is old-fashioned. The agent saved the operator time on scouting and tooling. That is the realistic near-term threat: agents make mid-tier groups faster, not magically capable.",
+                "It also shows the limits of model-side safeguards. The framework is open source and the model is open weights, so there is no provider to cut off. Defense has to come from the target side: per-document access checks and monitoring for bulk downloads."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Reuters via teiss",
+              "title": "Kazakhstan-linked hackers used AI to steal Tajik government documents, researchers say",
+              "url": "https://www.teiss.co.uk/news/kazakhstan-linked-hackers-used-ai-to-steal-tajik-government-documents-researchers-say-18447"
+            },
+            {
+              "name": "Poland Insight",
+              "title": "Silent Lynx Used AI to Steal More Than 2,000 Tajik Documents",
+              "url": "https://polandinsight.com/silent-lynx-tajik-documents-ai-cloudsek-17114/"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "35,578 apps made with Grok's app builder were open to anyone with the link, including 24 built by SpaceXSI staff",
+          "summary": "Researchers found the apps through public DNS records; about one in ten held business or personal data, and the share setting defaulted to 'Anyone with the link'.",
+          "stats": [
+            [
+              "35,578",
+              "Apps open without sign-in"
+            ],
+            [
+              "94.7%",
+              "Of 37,571 live apps"
+            ],
+            [
+              "24",
+              "Staff apps exposed"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Security firm Claroc reported this week that of 37,571 live apps built with Grok's chat-based app builder (Grok Build, opened to all Grok plans Aug 19), 35,578 could be opened without signing in. Each app gets a grok.me subdomain, and those names show up in passive DNS data that anyone with an account can search. In the researchers' account, the access setting came preselected as 'Anyone with the link'.",
+                "Most open apps were games, landing pages, and calculators, but about one in ten held internal business or personal data and about 2% were rated high or critical. Exposed apps included 24 from X and SpaceXSI (formerly xAI) staff, among them a map of 594 sales accounts and a confidential ad proposal to a federal agency, plus data from 30 other organizations including six Fortune 500 companies: a hospital group's list of over 3,500 employees, an ICU patient briefing, and a timesheet app storing passwords in plain text. In a test app with Google and X sign-in, a flawed check let any outside account view, edit, and delete records. SpaceXSI took down the 24 staff apps and said apps stay private until shared; it did not say it would change the default or notify other owners."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Live Grok Build apps found",
+                  "37,571"
+                ],
+                [
+                  "Open without sign-in",
+                  "35,578 (94.7%)"
+                ],
+                [
+                  "Holding business or personal data",
+                  "About 1 in 10"
+                ],
+                [
+                  "Rated high or critical",
+                  "About 2%"
+                ],
+                [
+                  "Other organizations exposed",
+                  "30, including 6 Fortune 500"
+                ]
+              ],
+              "note": "Claroc's figures as reported by The Hacker News and FourWeekMBA. Claroc sells tools for securing AI-built apps."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Passive DNS:** databases that record domain names as computers look them up. They make 'secret' subdomains discoverable, because someone visiting the link leaves a trace.",
+                "**Vibe-coded app:** software generated from a plain-English description, usually by people who never see or review the code."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "An unguessable link is not access control. Once anyone opens it, the name can leak into logs and DNS records, and a search finds it. The bigger lesson is about defaults: when a tool lets anyone build an app in a minute, the default share setting is the security policy for most of them. Claroc is a vendor in this space, so its framing is not neutral, but the test results (an access check that always passed) are concrete. If your company allows AI app builders, assume some internal data is in apps nobody in IT knows about."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The Hacker News",
+              "title": "Over 35,000 Grok-Built Apps Exposed Online, Some Leaking Confidential Data and Passwords",
+              "url": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html"
+            },
+            {
+              "name": "FourWeekMBA",
+              "title": "Grok Build Left 94.7% of 37,571 Live Apps Open to Anyone",
+              "url": "https://fourweekmba.com/ai-grok-build-left-94-7-of-37571-live-apps-open-to-anyone/"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "Notion confirms the Fireworks AI breach exposed some Notion AI chat transcripts, and drops Fireworks",
+          "summary": "Under 1% of workspaces are affected; Notion has disabled its Insights feature and tells affected customers to rotate any credentials pasted into Notion AI.",
+          "stats": [
+            [
+              "<1%",
+              "Workspaces affected"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Notion's advisory, updated Nov 10, says Fireworks AI, which Notion used for classification jobs in its Notion AI Insights feature and to serve open-weight models, was accessed by attackers. Fireworks first told Notion on Nov 2 that only synthetic test data was involved; Notion disconnected and deleted its data there on Nov 3. Fireworks then said on Nov 6 that customer data may have been reached, and on Nov 8 confirmed the set included Notion AI chat transcripts used by Insights. Notion contacted affected customers Nov 9.",
+                "For most affected workspaces the transcripts do not identify the author or workspace and contain no tool-call results. Notion says its own systems were not breached, Insights is off during the investigation, and it no longer serves models through Fireworks."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is the concrete downstream cost of the Fireworks breach covered Tuesday: data a customer typed into one product ended up at a vendor most users had never heard of. The six-day gap between 'synthetic data only' and 'customer transcripts' is the familiar pattern of breach disclosures growing over time. If you use AI features in SaaS tools, the useful question for vendors is which sub-processors see your prompts, and whether they keep them. And the standing advice holds: do not paste secrets into AI chats."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Notion",
+              "title": "Security incident involving a third-party AI vendor",
+              "url": "https://www.notion.com/security/advisories/security-incident-involving-a-third-party-ai-vendor"
+            },
+            {
+              "name": "eSecurity Planet",
+              "title": "Fireworks AI Hit by Second Breach: Notion Chat Transcripts Exposed",
+              "url": "https://www.esecurityplanet.com/threats/news-fireworks-ai-second-breach-notion-chat-transcripts/"
+            }
+          ]
+        },
+        {
+          "kicker": "Models",
+          "headline": "Baidu releases ERNIE 5.5 Flash Preview, a 280B mixture-of-experts model it says it will open under Apache 2.0",
+          "summary": "The tuned follow-up to last week's base model is live by API in China, but Baidu calls it an unfinished checkpoint and has not published weights yet.",
+          "stats": [
+            [
+              "280B",
+              "Total parameters"
+            ],
+            [
+              "14B",
+              "Active per token"
+            ],
+            [
+              "1M",
+              "Context, tokens"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Baidu announced ERNIE 5.5 Flash Preview on Nov 11. It is the post-trained version of ERNIE 5.5 Flash Base, whose untuned weights Baidu posted on Nov 5: a mixture-of-experts model with 280 billion total parameters, 14 billion active per token, and a 1-million-token context. The API is live on Baidu's Qianfan platform. Baidu says the weights will be released under Apache 2.0 'soon'; some outlets report a Nov 25 target.",
+                "Baidu describes it as an intermediate checkpoint with post-training still under way, and says some capabilities may fall short. Its showcase is an 11-hour single coding task in which the model built a third-person game in C++ on Unreal Engine 5.8, turning playtest bugs into automated tests because it cannot see the screen."
+              ]
+            },
+            {
+              "h": "Price and specs",
+              "table": [
+                [
+                  "Architecture",
+                  "Mixture of experts, 280B total / 14B active"
+                ],
+                [
+                  "Context",
+                  "1M tokens"
+                ],
+                [
+                  "Access",
+                  "API on Qianfan (Baidu); weights promised"
+                ],
+                [
+                  "Planned license",
+                  "Apache 2.0"
+                ],
+                [
+                  "Status",
+                  "Preview, post-training ongoing"
+                ]
+              ],
+              "note": "From Baidu's release page. Baidu's benchmark charts are published as images and have not been independently checked."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The license is the news. The Base model shipped under Baidu's own restrictive license; Apache 2.0 for the tuned model would put it alongside Qwen and DeepSeek as a fully permissive Chinese open model. Until the weights ship, though, this is an API product with vendor benchmarks, and Baidu itself says it is unfinished. The 11-hour game demo is a single showcase, not a measured success rate."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "The weights release and whether the license is plain Apache 2.0 with no added terms."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Baidu",
+              "title": "Introducing ERNIE 5.5 Flash Preview",
+              "url": "https://ernie.baidu.com/release/ernie-5-5-flash-preview"
+            },
+            {
+              "name": "Runtime Wire",
+              "title": "Baidu ships ERNIE 5.5 Flash Preview with 280B parameters on a 14B active path",
+              "url": "https://runtimewire.com/article/baidu-ernie-5-5-flash-preview-280b-14b-active"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Mercor raises $750 million at a $20 billion valuation to sell AI training and evaluation beyond the big labs",
+          "summary": "The round doubles the expert-data startup's value from a year ago and includes an undisclosed employee share sale.",
+          "stats": [
+            [
+              "$750M",
+              "Series D"
+            ],
+            [
+              "$20B",
+              "Valuation"
+            ],
+            [
+              "2x",
+              "vs Oct 2025"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Mercor announced a $750 million Series D at a $20 billion valuation on Nov 10, double the $10 billion it reached when it raised $350 million in October 2025. Investors include Benchmark, Felicis, General Catalyst, Nvidia, Salesforce, Sapphire Ventures, and Zoom, with funds affiliated with Apollo and others. The round included an employee tender offer; Mercor did not say how much of the $750 million went to it.",
+                "Mercor runs a network of more than five million experts who write training data and grade model outputs, mostly for frontier labs. It plans to sell custom evaluations built from a company's own workflows, then post-train models on that work. In April a breach at Mercor led Meta to pause its data work with the company; the funding announcement does not mention it."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Employee tender:** existing employees sell some of their shares to the new investors. That money goes to staff, not the company, so the headline raise overstates new capital.",
+                "**Post-training:** the stage after pretraining where a model is taught to follow instructions and do specific jobs, often using expert-written examples and graded answers."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Human expert data is still a bottleneck even as labs lean on synthetic data and reinforcement learning, and Mercor is betting enterprises will pay for evaluations of their own work. The concentration risk is real: its revenue has depended on a few big labs, one of which pulled back after the breach. Revenue was not disclosed."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The Next Web",
+              "title": "Mercor raises $750m at a $20bn valuation to train AI on every job",
+              "url": "https://thenextweb.com/news/mercor-750m-series-d-20bn-valuation"
+            },
+            {
+              "name": "Unite.AI",
+              "title": "Mercor Raises $750M Series D at $20B Valuation to Expand AI Training",
+              "url": "https://www.unite.ai/mercor-raises-750m-series-d-at-20b-valuation-to-expand-ai-training/"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; still no announcement as of Wednesday morning."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Thinking Machines plans to release Inkling 2 Small's weights under Apache 2.0, if outside safety testing is done."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's proposed cutoff of Cursor's access to its models, after SpaceX bought Cursor. The date could still move."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's 'Cyber at the Frontier' livestream, 10 a.m. PT, to introduce its latest cyber products."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Nebius reports third-quarter results before the market opens, call at 8 a.m. ET."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Fri Nov 13",
+          "what": "Conductor Cloud goes read-only after Meta's acquisition; it shuts down Nov 20."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Anthropic's Australian retail offer closes at 5 p.m. AEDT, the day before the IPO is priced."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Nvidia reports third-quarter results, call at 5 p.m. ET. First read since last week's selloff and the board's investigation of Huang."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Anthropic is expected to price its IPO. The filed range is $70 to $78; the FT reports bankers may price above it."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Requested date for Jensen Huang's closed-door briefing to three House committee chairs on Megaspeed and the alleged Chinese intelligence link."
+        },
+        {
+          "when": "Nov 18 to 19",
+          "what": "APEC summit in Shenzhen, where Trump meets Xi and the US-China 'superintelligence' dialogue is due to advance."
+        },
+        {
+          "when": "Thu Nov 19",
+          "what": "Anthropic shares (ANT) are expected to start trading on Nasdaq, per CNBC."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Wed Nov 25",
+          "what": "Alibaba's Qwen4-Max preview ends."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Intro pricing ends for Gemini 4 Argon and Gemini 4 Carbon: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-11-am",
       "date": "2026-11-11",
       "edition": "Morning",

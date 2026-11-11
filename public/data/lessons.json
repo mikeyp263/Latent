@@ -1351,6 +1351,68 @@
         "Explain what it means to formally verify a piece of software and what it doesn't guarantee.",
         "You write a precise specification of how the code must behave, then build a proof, checked by a tool like Lean, that the code meets it for every possible input. Unlike testing, nothing is left to chance within that scope. But it only covers the properties in the spec, under the stated assumptions (for example, that the encryption itself can't be broken), and only the code that was checked. If the spec is wrong or too narrow, a valid proof can still miss a real bug."
       ]
+    },
+    {
+      "id": "nw27",
+      "added": "2026-11-11",
+      "t": "Unlisted Links Aren't Access Control",
+      "cards": [
+        "Many tools let you share something with a long random link instead of a login: 'anyone with the link can view'. That is an **unlisted link**, and it relies on **security through obscurity**: nobody can find it unless they know the address. Real **access control** is different: the server checks who you are and whether you're allowed in, every time.",
+        "Secret links leak. They end up in chat logs, browser history, email scanners, and **passive DNS** databases that record every domain name computers look up. If each app gets its own subdomain, a simple search of those records lists thousands of them. Researchers found 35,578 apps built with Grok's builder this way, many holding company data.",
+        "The setting that matters most is the **default**. When a tool lets anyone build an app in a minute, most people never change the share option, so the default effectively is the security policy. Secure-by-default tools start at 'only me' and make sharing a deliberate step. For anything with real data, require sign-in, then test it with an outside account."
+      ],
+      "terms": [
+        [
+          "Unlisted link",
+          "A shareable URL that isn't indexed but works for anyone who has it."
+        ],
+        [
+          "Access control",
+          "The server checking identity and permission on every request."
+        ],
+        [
+          "Security through obscurity",
+          "Relying on something being hard to find rather than locked."
+        ],
+        [
+          "Passive DNS",
+          "Databases of observed domain lookups that reveal subdomains."
+        ],
+        [
+          "Secure by default",
+          "Shipping with the safest setting on, so users must opt in to risk."
+        ]
+      ],
+      "qs": [
+        [
+          "A team shares an internal dashboard via an 'anyone with the link' URL with a random 4-word subdomain. What is the main risk?",
+          "The link can leak through logs or DNS records, and then anyone can open it",
+          "Someone will guess the four words by brute force",
+          "Search engines are legally required to index it",
+          "The data is encrypted, so there is no risk",
+          "Hard-to-guess names don't help once the name is recorded somewhere searchable."
+        ],
+        [
+          "Which change most improves security for a no-code AI app builder used by thousands of people?",
+          "Make 'only me' the default share setting",
+          "Add a warning in the documentation",
+          "Make subdomain names longer",
+          "Let users choose a custom domain",
+          "Most users keep the default, so the default decides what most apps expose."
+        ],
+        [
+          "An app requires Google sign-in, but adds every signed-in user to the team before checking membership. What does that mean?",
+          "Any outside account gets in, so the sign-in protects nothing",
+          "Only Google employees can use it",
+          "It's secure because sign-in is required",
+          "It only affects performance",
+          "Authentication (who you are) without a correct authorization check (whether you're allowed) isn't access control."
+        ]
+      ],
+      "ex": [
+        "Explain why an 'anyone with the link' share setting is not real security.",
+        "It only works as long as nobody else learns the address, and addresses leak through logs, forwarded messages, browser history, and DNS records that anyone can search. Real access control has the server check who you are and whether you're allowed on every request. For anything sensitive, require sign-in with a correct permission check, start from 'only me' by default, and test with an outside account."
+      ]
     }
   ]
 }
