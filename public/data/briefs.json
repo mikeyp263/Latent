@@ -1,6 +1,493 @@
 {
   "editions": [
     {
+      "id": "2026-11-12-pm",
+      "date": "2026-11-12",
+      "edition": "Afternoon",
+      "stories": [
+        {
+          "kicker": "Chips",
+          "headline": "Jensen Huang resigns as Nvidia CEO; CFO Colette Kress takes over on an interim basis",
+          "summary": "Nvidia's founder left the CEO job and the board effective immediately, a day after a second alleged affair surfaced, and the stock fell as much as 13% in early trading.",
+          "stats": [
+            [
+              "33 yrs",
+              "Huang's tenure as CEO"
+            ],
+            [
+              "-13%",
+              "NVDA intraday low, Thu"
+            ],
+            [
+              "$530B",
+              "Nvidia commitments and guarantees"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Nvidia announced Thursday morning, Nov 12, that Jensen Huang had resigned as president, CEO, and a member of the board, effective immediately. Colette Kress, Nvidia's CFO since 2013, becomes interim CEO and keeps the CFO job while the board searches for a permanent chief, considering internal and external candidates. The board gave no timeline. Harvey C. Jones, a director since 1993 and former CEO of Synopsys, becomes Nvidia's first-ever board chair, a role Huang's dual position had made unnecessary.",
+                "The resignation came less than a day after The New York Times reported Huang had a relationship with Kimberly Powell, an Nvidia vice president who reports to him, and The Wall Street Journal reported the board was preparing to remove him. That followed the affair Huang admitted to staff on Nov 8, with a woman US officials believe is tied to Chinese intelligence (China denies it). Nvidia's statement thanked Huang for his contributions and did not give a reason for his departure. Bloomberg described him as ousted by the board.",
+                "Earnings stay on schedule: Nvidia reports third-quarter results Tuesday, Nov 17, with a call at 5 p.m. ET, which Kress will now lead. Separately, Sens. Elizabeth Warren and Chris Coons asked Commerce, State, and the White House on Wednesday to preserve records on Nvidia's exports to China and on Huang's affair, and asked for confirmation by Tuesday. President Trump suggested on Truth Social that Apple's Tim Cook should replace Huang; Nvidia has named no candidates."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Intraday low, Thursday",
+                  "Down as much as 13% in the first minutes"
+                ],
+                [
+                  "Shortly after the open",
+                  "$160.28 (-7.7%)"
+                ],
+                [
+                  "10:51 a.m. ET",
+                  "$165.05 (-5.0%)"
+                ],
+                [
+                  "Record close, Oct 6",
+                  "$239.24"
+                ],
+                [
+                  "Huang's stake",
+                  "About 3.6% of Nvidia (WSJ)"
+                ],
+                [
+                  "Nvidia commitments and guarantees",
+                  "About $530 billion"
+                ],
+                [
+                  "Of which: OpenAI lease guarantee",
+                  "$105 billion (pays only if OpenAI defaults)"
+                ],
+                [
+                  "Pledged to Anthropic's IPO",
+                  "Up to $10 billion"
+                ],
+                [
+                  "Cash and securities vs. debt, end of July",
+                  "About $99B vs. $33B"
+                ]
+              ],
+              "note": "Prices from Tech Times and Yahoo Finance; stake per the Wall Street Journal via Tech Times; commitments are Yahoo Finance's tally from Nvidia's July 10-Q."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Interim CEO:** a temporary chief who runs the company while the board looks for a permanent one. Kress holding both CEO and CFO jobs is unusual and signals the board wanted continuity before Tuesday's earnings, not that she is the pick.",
+                "**Separating chair and CEO:** many boards split these roles so the board can oversee the CEO independently. Naming Jones as Nvidia's first chair moves power to the board at a moment when it is managing a crisis.",
+                "**Circular deals:** arrangements where Nvidia invests in or guarantees a customer, which then buys Nvidia chips. Analysts worry these lean on Huang's personal relationships, and the new leadership now decides whether to keep writing them."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The confirmed part is narrow: Huang is out, Kress is in temporarily, and the board now has an independent chair. The underlying allegations, including the national security ones, remain reports and an ongoing review, not findings. Wall Street is split. Oppenheimer downgraded the stock and withdrew its target, citing possible brain drain, and Bernstein cut its target to $200; Raymond James kept a Strong Buy and argued the business is untouched.",
+                "For people building with AI, the chips, software, and delivery schedules don't change this quarter. The real question is the deal machine. Nvidia has roughly $530 billion in commitments and guarantees spread across OpenAI, Anthropic, CoreWeave, and others, and Fortune and Bloomberg flagged its $10 billion Anthropic IPO pledge as a deal now under scrutiny. If a new CEO pulls back on financing customers, the neoclouds that depend on it (see the Nebius story) are most exposed. Nvidia also has about 60 direct reports to the CEO and no chief operating officer, per Fortune, which makes a smooth handoff harder."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Tuesday's earnings and whether Kress gives any update on the Anthropic and OpenAI commitments. The House chairs' requested Nov 18 briefing was addressed to Huang; watch who, if anyone, appears. Then the CEO search: names floated by the Financial Times and others include Nvidia's Ian Buck and Arm CEO Rene Haas."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Nvidia",
+              "title": "NVIDIA Announces CEO Transition",
+              "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+            },
+            {
+              "name": "SEC (Nvidia 8-K)",
+              "title": "NVIDIA Corp Form 8-K",
+              "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "Jensen Huang Removed as Nvidia CEO Following Affairs, Board Appoints Kress",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-12/jensen-huang-face-of-the-ai-boom-ousted-by-nvidia-board-as-ceo"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Nvidia live updates: Jensen Huang ousted, CFO Colette Kress to serve as interim CEO",
+              "url": "https://finance.yahoo.com/technology/live/nvidia-live-updates-jensen-huang-resigns-cfo-colette-kress-to-serve-as-interim-ceo-140341430.html"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Jensen Huang's exit puts Nvidia's $530 billion web of AI deals under the microscope",
+              "url": "https://finance.yahoo.com/markets/article/jensen-huangs-exit-puts-nvidias-530-billion-web-of-ai-deals-under-the-microscope-153142269.html"
+            },
+            {
+              "name": "Tech Times",
+              "title": "Jensen Huang Resigns: Nvidia Shares Tumble as Interim CEO Kress Keeps CFO Job Before Earnings",
+              "url": "https://www.techtimes.com/articles/330561/20261112/jensen-huang-resigns-nvidia-shares-tumble-interim-ceo-kress-keeps-cfo-job-before-earnings.htm"
+            },
+            {
+              "name": "Fortune",
+              "title": "Anthropic's blockbuster IPO just got harder after Jensen Huang's dramatic exit as Nvidia CEO",
+              "url": "https://fortune.com/2026/11/12/anthropic-ipo-jensen-huang-resignation-nvidia/"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Nebius beats on revenue but lifts spending to $27 billion and trims its 2026 outlook; shares fall about 15% to 20%",
+          "summary": "Quarterly revenue rose 571% to $980.8 million, but delays at third-party data centers push revenue into 2027 while capex keeps climbing.",
+          "stats": [
+            [
+              "$980.8M",
+              "Q3 revenue, +571%"
+            ],
+            [
+              "$27B",
+              "2026 capex, up from $20-25B"
+            ],
+            [
+              "$40-45B",
+              "2027 capex plan"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Nebius, the Amsterdam-based AI cloud provider, reported third-quarter results before the market opened Thursday, Nov 12. Revenue was $980.8 million, up 571% from a year earlier and above the roughly $907.5 million analysts expected (LSEG). Adjusted EBITDA was $465.8 million and the net loss from continuing operations narrowed to $37.5 million.",
+                "The outlook is what moved the stock. Nebius now expects 2026 revenue at the low end of its $3.0 to $3.4 billion range, blaming delays at third-party colocation sites; CEO Arkady Volozh said Microsoft-contracted capacity in New Jersey slipped to the second quarter of 2027. At the same time it raised 2026 capital spending to about $27 billion and guided 2027 capex to $40 to $45 billion, far above the roughly $28.8 billion analysts had modeled (FactSet). It gave first 2027 revenue guidance of $12 to $13 billion and said it expects to break even before tax in the fourth quarter of 2027. Shares fell roughly 15% to 20% during Thursday trading, on a day Nvidia's CEO exit was already hitting AI infrastructure stocks."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Q3 revenue",
+                  "$980.8M (+571% y/y)"
+                ],
+                [
+                  "Analyst estimate",
+                  "About $907.5M"
+                ],
+                [
+                  "Adjusted EBITDA",
+                  "$465.8M"
+                ],
+                [
+                  "Net loss, continuing operations",
+                  "$37.5M (vs. $119.6M a year ago)"
+                ],
+                [
+                  "Q3 capex",
+                  "About $7.3B"
+                ],
+                [
+                  "2026 revenue guide",
+                  "$3.0B to $3.2B (low end of prior $3.0B to $3.4B)"
+                ],
+                [
+                  "2026 capex guide",
+                  "About $27B (prior $20B to $25B)"
+                ],
+                [
+                  "2027 revenue / capex guide",
+                  "$12B to $13B / $40B to $45B"
+                ],
+                [
+                  "Contracted power",
+                  "More than 4 GW, targeting 5 GW by year end"
+                ],
+                [
+                  "Cash, Sept 30",
+                  "$7.4B"
+                ]
+              ],
+              "note": "Results from Nebius's 6-K filing; guidance and power from the earnings call transcript (Motley Fool); estimates from LSEG and FactSet via Yahoo Finance and Investing.com."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Neocloud:** a cloud company that mainly rents out GPUs for AI, like Nebius or CoreWeave, as opposed to general clouds like AWS.",
+                "**Colocation:** renting space and power in someone else's data center. When the landlord's building is late, Nebius's revenue is late too, even if customers are signed.",
+                "**Prepayments and asset-backed financing:** Nebius funds construction partly with customers paying upfront and partly with loans secured by its GPUs and contracts. It expects 75% to 85% of 2027 capex to be funded this way."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The business is growing fast and is already profitable at the EBITDA level, but every dollar of revenue now costs many dollars of upfront building. Spending $27 billion this year to earn about $3 billion only works if the contracts hold and the money keeps flowing, which is why investors focused on capex and delays rather than the beat. An analyst on the call noted remaining contract obligations rose only about 3%, even as Nebius said customers committed over $12 billion since July.",
+                "Nebius also said it will stop guiding to annualized run-rate revenue (ARR) after one more update and focus on revenue and pretax earnings. Fewer flattering metrics is a sensible move for a company this capital-hungry. For AI builders, the practical read is that GPU capacity at neoclouds is still arriving later than promised."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether the New Jersey capacity lands in the second quarter of 2027 as now promised, how Nebius funds the 2027 build, and whether Nvidia's leadership change affects its support for neoclouds (Nvidia invested $2 billion in Nebius in March)."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "SEC (Nebius 6-K)",
+              "title": "Nebius Group N.V. Q3 2026 results",
+              "url": "https://www.sec.gov/Archives/edgar/data/0001513845/000110465926126008/tm2629571d1_ex99-1.htm"
+            },
+            {
+              "name": "Motley Fool",
+              "title": "Nebius Group (NBIS) Q3 2026 Earnings Call Transcript",
+              "url": "https://www.fool.com/earnings/call-transcripts/2026/11/12/nebius-group-nbis-q3-2026-earnings-call-transcript/"
+            },
+            {
+              "name": "CNBC",
+              "title": "Nebius falls 16% as company expects increased 2026 capex spend, issues weak outlook",
+              "url": "https://www.cnbc.com/2026/11/12/nebius-q3-earnings-report-2026.html"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Nebius Sinks 15% as Capex Swells and 2027 Outlook Takes a 'Conservative Approach' to Build-Out",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/nebius-sinks-15-capex-swells-145344286.html"
+            },
+            {
+              "name": "Investing.com",
+              "title": "Why is Nebius stock tumbling today?",
+              "url": "https://www.investing.com/news/stock-market-news/why-is-nebius-stock-tumbling-today-93CH-5022147"
+            }
+          ]
+        },
+        {
+          "kicker": "Chips",
+          "headline": "Anthropic tells IPO investors its Mythos model ported Claude to AMD GPUs in about three days",
+          "summary": "The claim, from Anthropic's investor presentation, says the model wrote or ported nearly all the low-level code, a job that normally takes dozens of engineers months; it has not been independently checked.",
+          "stats": [
+            [
+              "~3 days",
+              "Claimed AMD bring-up time"
+            ],
+            [
+              "~100%",
+              "Kernels written or ported by Mythos"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "In Anthropic's IPO roadshow presentation, published around Nov 11, co-founder and Chief Compute Officer Tom Brown said Anthropic used AMD GPUs for the first time this year and had its frontier model, Claude Mythos, do the porting. He said Claude was running on AMD in about three days with almost no human intervention, and that the model ported or wrote almost 100% of the kernels. Bringing up a new chip platform previously took dozens of engineers several months, he said.",
+                "Anthropic says it now trains and serves Claude on all four major chip families: AWS Trainium, Google TPUs, Nvidia GPUs, and AMD GPUs, treated as one pool of compute. The chart behind the claim, per The Decoder, refers to prompt processing on AMD MI355X GPUs reaching usable performance, not the full serving stack. The presentation also pitched \"compute multipliers\", research gains that get more out of the same hardware, which Anthropic says compound and could eventually be discovered by Claude itself."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Kernel:** a small, highly tuned program that runs one operation (like a matrix multiply or attention) on a chip. Fast kernels are hand-written for each chip, and they are where most of the porting work lives.",
+                "**CUDA moat:** Nvidia's advantage from CUDA, its GPU programming platform, and years of kernels written for it. Switching to another chip has meant rewriting that code, which kept customers on Nvidia.",
+                "**Prompt processing (prefill):** the step where a model reads the input before generating. It is one part of inference, so being fast at it on new hardware is not the same as a full production deployment."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "If accurate, this is a real shift: the cost of switching chip vendors is largely engineering labor, and Anthropic is saying AI can now do most of that labor. That would weaken Nvidia's software lock-in and strengthen buyers' hand in pricing, which matters given Anthropic's deal to deploy up to 2 gigawatts of AMD MI455X GPUs starting in 2027.",
+                "Be careful with the source, though. This is a company selling stock, the figures are self-reported, they cover prompt processing rather than the whole stack, and \"usable performance\" is not defined. Anthropic also has years of multi-chip experience, so the three days built on a lot of prior infrastructure. The broader idea, that AI is getting good at writing kernels, is well supported; the specific speedup is not yet verifiable."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether Anthropic publishes technical detail or AMD confirms performance numbers, and whether other labs report similar AI-driven ports. Anthropic is expected to price its IPO around Nov 18."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Anthropic (via Simon Willison's transcript)",
+              "title": "Anthropic's IPO roadshow video",
+              "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow"
+            },
+            {
+              "name": "The Decoder",
+              "title": "Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch from months to three days",
+              "url": "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/"
+            }
+          ]
+        },
+        {
+          "kicker": "Research",
+          "headline": "DeepMind's AlphaGenome 2 predicts how DNA variants act in specific cell types, roughly doubling its predecessor's hit rate",
+          "summary": "The model finds the likely causal variant 30% of the time on an immune-cell test versus 16% before, and is available for non-commercial research through an API.",
+          "stats": [
+            [
+              "30%",
+              "Causal variants found (vs. 16%)"
+            ],
+            [
+              "100M+",
+              "Single-cell profiles in training"
+            ],
+            [
+              "1M",
+              "DNA letters per input"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Google DeepMind released AlphaGenome 2 on Wednesday, Nov 11. Like the original AlphaGenome from 2025, it reads up to one million letters of DNA and predicts what a change in that sequence does. The new version adds the dimension that matters most for disease: you pick a tissue, cell type, or cell state, and it predicts the effect there. It was trained on more than 100 million single-cell profiles from 68 tissues, in human and mouse, and adds DNA methylation to the readouts it predicts. It can also adapt to new single-cell data from a few dozen cells without retraining.",
+                "Access is through the AlphaGenome API for non-commercial research, with commercial access in private preview. DeepMind says the model is a research tool not validated for clinical or diagnostic use, and researcher Žiga Avsec said it won't immediately replace the first version because it needs more computing power to run."
+              ]
+            },
+            {
+              "h": "Benchmarks",
+              "table": [
+                [
+                  "Causal variants identified, TenK10K (28 immune cell types)",
+                  "30% (AlphaGenome 1: 16%)"
+                ],
+                [
+                  "Direction of gene effect predicted correctly",
+                  "43% (AlphaGenome 1: 23%)"
+                ],
+                [
+                  "Expression-altering variants found",
+                  "About 2x AlphaGenome 1"
+                ]
+              ],
+              "note": "DeepMind's figures as reported by Dataconomy; not yet independently replicated."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Variant:** a spot where one person's DNA differs from the reference. Most are harmless; the hard problem is finding the few that change how genes behave.",
+                "**Causal variant:** the variant that actually drives an effect, as opposed to neighbors that are merely inherited alongside it and show up in the same statistical signal.",
+                "**Single-cell data:** measurements taken cell by cell rather than averaged across a tissue sample, which reveals effects that only happen in, say, activated T cells."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The gain is real but read the denominators: the model now flags the likely culprit 30% of the time on this test, which is a big step up and still wrong most of the time. That is useful for narrowing which experiments to run, not for diagnosing patients. DeepMind's example, that a variant linked to severe COVID-19 disrupts gene activity most in vaccine-activated T cells, shows the kind of hypothesis it can generate.",
+                "For builders, the restricted API (non-commercial, with commercial access in preview) means most companies can't build products on it yet."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Nature",
+              "title": "DeepMind's ultra-powerful AI for genome mapping wows scientists",
+              "url": "https://www.nature.com/articles/d41586-026-03673-0"
+            },
+            {
+              "name": "Dataconomy",
+              "title": "Google DeepMind Releases AlphaGenome 2 To Study Disease",
+              "url": "https://dataconomy.com/2026/11/12/google-deepmind-releases-alphagenome-2-to-study-disease/"
+            },
+            {
+              "name": "Interesting Engineering",
+              "title": "AlphaGenome 2: DeepMind's DNA model finds nearly 2x more causal variants in cells",
+              "url": "https://interestingengineering.com/ai-robotics/deepmind-alphagenome-2-causal-dna-variants"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; still no announcement as of Wednesday morning."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Nvidia's search for a permanent CEO. Interim CEO Colette Kress also remains CFO; no timeline given."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Thinking Machines plans to release Inkling 2 Small's weights under Apache 2.0, if outside safety testing is done."
+        },
+        {
+          "when": "Fri Nov 13",
+          "what": "Conductor Cloud goes read-only after Meta's acquisition; it shuts down Nov 20."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Anthropic's Australian retail offer closes at 5 p.m. AEDT, the day before the IPO is priced."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Nvidia reports third-quarter results, call at 5 p.m. ET, its first under interim CEO Colette Kress."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Deadline Sens. Warren and Coons set for the administration to confirm it is preserving records on Nvidia's China exports and Huang's affair."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Anthropic is expected to price its IPO. The filed range is $70 to $78; the FT reports bankers may price above it."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Requested date for the House committee chairs' briefing on Nvidia's espionage safeguards, originally sought from Jensen Huang."
+        },
+        {
+          "when": "Nov 18 to 19",
+          "what": "APEC summit in Shenzhen, where Trump meets Xi and the US-China 'superintelligence' dialogue is due to advance."
+        },
+        {
+          "when": "Thu Nov 19",
+          "what": "Anthropic shares (ANT) are expected to start trading on Nasdaq, per CNBC."
+        },
+        {
+          "when": "November",
+          "what": "Commerce's rule blocking Chinese firms from remotely using advanced chips abroad could be announced, per The Information."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Wed Nov 25",
+          "what": "Alibaba's Qwen4-Max preview ends."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Intro pricing ends for Gemini 4 Argon and Gemini 4 Carbon: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-12-am",
       "date": "2026-11-12",
       "edition": "Morning",

@@ -1475,6 +1475,68 @@
         "Explain what it means for an AI model's confidence scores to be calibrated, and why it matters.",
         "A calibrated model's confidence matches reality: of all answers it gives at 0.8, about 80% are right. You check by bucketing answers by confidence and comparing to actual accuracy. It matters because you can then set thresholds, such as auto-accepting high-confidence answers and escalating low ones, and trust the result. Calibration can differ between a vendor's benchmark and your data, so test it yourself."
       ]
+    },
+    {
+      "id": "nw29",
+      "added": "2026-11-12",
+      "t": "Kernels and the CUDA Moat",
+      "cards": [
+        "A model is math, but the math runs as **kernels**: small, heavily tuned programs for one operation, like a matrix multiply or attention, on one kind of chip. The same model can be 2x to 10x faster or slower depending on how good its kernels are, so labs spend serious engineering on them.",
+        "Nvidia's **CUDA** platform has a decade-plus head start: libraries, tools, and countless kernels already written and tuned for its GPUs. Moving to AMD, Google TPUs, or AWS Trainium has meant rewriting and re-tuning that code, which takes teams months. That switching cost is the **CUDA moat**, and it is a big reason Nvidia can charge high margins.",
+        "Two things erode the moat: **portable layers** (compilers and frameworks that target many chips) and now **AI-written kernels**, where a model generates and tests the low-level code. If porting drops from months to days, buyers can pick chips on price and supply. Judge claims carefully: getting one stage like prompt processing working is not the same as matching full production performance and reliability."
+      ],
+      "terms": [
+        [
+          "Kernel",
+          "A small, optimized program that runs one operation on a specific chip."
+        ],
+        [
+          "CUDA",
+          "Nvidia's GPU programming platform and the ecosystem of code built on it."
+        ],
+        [
+          "Switching cost",
+          "The time and money needed to move from one supplier to another."
+        ],
+        [
+          "Porting",
+          "Adapting software so it runs on different hardware."
+        ],
+        [
+          "Bring-up",
+          "Getting a model working on a new chip platform for the first time."
+        ]
+      ],
+      "qs": [
+        [
+          "A lab says its AI ported a model to a new chip in three days, measured on prompt processing. What is the most accurate takeaway?",
+          "One stage reached usable speed quickly; full production performance is still unproven",
+          "The new chip is now as good as Nvidia's for everything",
+          "Kernels no longer matter",
+          "The model was retrained from scratch on the new chip",
+          "Prompt processing is one part of inference; serving, generation speed, and reliability still need to be shown."
+        ],
+        [
+          "Why has CUDA helped Nvidia keep customers even when rivals' chips look competitive on paper?",
+          "Rewriting and tuning years of CUDA code for another chip takes many engineers months",
+          "Other chips can't do matrix math",
+          "CUDA is required by law for AI training",
+          "Nvidia chips are always cheaper",
+          "The software switching cost, not just the hardware, has kept buyers on Nvidia."
+        ],
+        [
+          "If AI can reliably write fast kernels for any chip, who gains the most bargaining power?",
+          "Large chip buyers, who can switch vendors more easily",
+          "The dominant chip vendor",
+          "Nobody; prices are fixed",
+          "End users of chatbots only",
+          "Lower switching costs let buyers push for better prices and diversify supply."
+        ]
+      ],
+      "ex": [
+        "Explain what the 'CUDA moat' is and how AI-written kernels could weaken it.",
+        "Models run as kernels, tuned low-level programs specific to each chip. Nvidia's CUDA ecosystem has years of these already written, so moving to another vendor's chip means rewriting and tuning a lot of code, which takes teams months. That switching cost keeps customers on Nvidia. If AI models can write and tune kernels for new chips in days, the switching cost falls, buyers can choose chips on price and availability, and Nvidia's software advantage shrinks, though only once the ported code matches full production performance."
+      ]
     }
   ]
 }
