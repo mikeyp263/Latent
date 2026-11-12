@@ -1413,6 +1413,68 @@
         "Explain why an 'anyone with the link' share setting is not real security.",
         "It only works as long as nobody else learns the address, and addresses leak through logs, forwarded messages, browser history, and DNS records that anyone can search. Real access control has the server check who you are and whether you're allowed on every request. For anything sensitive, require sign-in with a correct permission check, start from 'only me' by default, and test with an outside account."
       ]
+    },
+    {
+      "id": "nw28",
+      "added": "2026-11-12",
+      "t": "Calibration: When a Model's Confidence Means Something",
+      "cards": [
+        "Many AI systems attach a **confidence score** to an answer. That number is only useful if it's **calibrated**: when the model says 0.8, it should be right about 80% of the time. A model can be accurate overall but badly calibrated, for example saying 0.99 on everything, including the answers it gets wrong.",
+        "You check calibration by grouping answers by confidence and comparing each group's stated confidence with its actual accuracy. Plotted, that is a **reliability diagram**; a perfectly calibrated model lies on the diagonal. **Expected calibration error (ECE)** summarizes the average gap in one number. Lower is better.",
+        "Calibration is what makes **thresholds** work. With trustworthy scores you can auto-approve above 0.9, send 0.6 to 0.9 to a cheaper review, and route the rest to a human or a bigger model. Calibration also drifts: a model calibrated on a vendor's benchmark can be overconfident on your data, so measure it on your own labeled examples before relying on it."
+      ],
+      "terms": [
+        [
+          "Confidence score",
+          "A model's estimate, from 0 to 1, that its answer is correct."
+        ],
+        [
+          "Calibration",
+          "How well stated confidence matches the actual rate of being right."
+        ],
+        [
+          "Reliability diagram",
+          "A chart of stated confidence vs. actual accuracy; the diagonal is perfect."
+        ],
+        [
+          "Expected calibration error",
+          "The average gap between confidence and accuracy, weighted by how many answers fall in each bucket."
+        ],
+        [
+          "Threshold",
+          "A cutoff score that decides what happens next, like escalating to a human."
+        ]
+      ],
+      "qs": [
+        [
+          "On 1,000 answers a classifier labeled 0.9 confidence, it was right 70% of the time. What does that tell you?",
+          "It is overconfident: its scores overstate how often it's right",
+          "It is well calibrated",
+          "It is underconfident",
+          "Its accuracy must be 90% overall",
+          "Calibrated 0.9 answers should be right about 90% of the time; 70% means the scores run too high."
+        ],
+        [
+          "A vendor says its routing model has 'the lowest calibration error' but publishes no numbers. What should you do before using its scores as thresholds?",
+          "Measure accuracy at each confidence level on your own labeled data",
+          "Trust it, since vendors test thoroughly",
+          "Set every threshold at 0.5",
+          "Ignore confidence and use only the top answer",
+          "Calibration depends on the data, so verify it on your own examples."
+        ],
+        [
+          "Why can a cheap, well-calibrated scorer save money in an agent pipeline?",
+          "It lets you handle confident cases cheaply and escalate only uncertain ones",
+          "It makes the expensive model more accurate",
+          "It removes the need for any human review",
+          "It reduces the size of the input",
+          "Trustworthy confidence lets you spend expensive compute only where it's needed."
+        ]
+      ],
+      "ex": [
+        "Explain what it means for an AI model's confidence scores to be calibrated, and why it matters.",
+        "A calibrated model's confidence matches reality: of all answers it gives at 0.8, about 80% are right. You check by bucketing answers by confidence and comparing to actual accuracy. It matters because you can then set thresholds, such as auto-accepting high-confidence answers and escalating low ones, and trust the result. Calibration can differ between a vendor's benchmark and your data, so test it yourself."
+      ]
     }
   ]
 }

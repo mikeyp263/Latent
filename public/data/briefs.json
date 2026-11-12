@@ -1,6 +1,537 @@
 {
   "editions": [
     {
+      "id": "2026-11-12-am",
+      "date": "2026-11-12",
+      "edition": "Morning",
+      "stories": [
+        {
+          "kicker": "Chips",
+          "headline": "Nvidia's board is preparing to remove Jensen Huang as CEO, WSJ reports, after a second alleged affair surfaces",
+          "summary": "The New York Times reported Huang had a relationship with a vice president who reports to him; hours later the Journal said the board was moving to oust him, and the stock fell about 8.6% after hours.",
+          "stats": [
+            [
+              "-8.6%",
+              "NVDA after hours, Wed"
+            ],
+            [
+              "$158.78",
+              "After-hours price"
+            ],
+            [
+              "$450B+",
+              "Value lost since Nov 8 probe"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Wednesday afternoon, Nov 11, The New York Times reported that Jensen Huang had an extramarital relationship with Kimberly Powell, Nvidia's vice president of health care, who reports directly to him. Five employees told the Times the two were seen on video being affectionate at a San Jose hotel during a conference earlier this year. Nvidia has rules discouraging managers from relationships with people they supervise. This is separate from the affair Huang admitted in a memo to staff on Sunday, with a former Megaspeed executive US officials believe was a Chinese intelligence asset (China denies it).",
+                "About half an hour later, The Wall Street Journal reported that Nvidia's board was preparing to oust Huang and could meet as soon as that night. Reuters said, citing a source, that the board was due to meet late Wednesday to decide his future. Bloomberg reported the board has been working with an outside firm to identify replacement candidates and may name a temporary CEO while it searches. As of early Thursday there was no announcement from Nvidia, and it did not comment to Reuters or CBS.",
+                "Huang co-founded Nvidia in 1993 and has run it ever since, and the company has no public succession plan. On Sunday the board had said it had confidence in him and no reason to believe national security or company secrets were compromised. Powell has since pulled out of a scheduled appearance at the Milken Future of Health Summit, according to Yahoo Finance's live coverage."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Wednesday close",
+                  "$173.73 (+2.92%)"
+                ],
+                [
+                  "After hours, Wednesday",
+                  "$158.78 (-8.61%)"
+                ],
+                [
+                  "Premarket, Thursday (about 4 a.m. ET)",
+                  "Down about 7%"
+                ],
+                [
+                  "Market value lost since Nov 8 probe announcement",
+                  "More than $450 billion (CBS)"
+                ],
+                [
+                  "Record close, Oct 6",
+                  "$239.24"
+                ],
+                [
+                  "Nasdaq 100 futures, Thursday 4:11 a.m. ET",
+                  "-0.79%"
+                ],
+                [
+                  "CoreWeave / Nebius premarket",
+                  "-7.2% / -4.7%"
+                ]
+              ],
+              "note": "Prices from Forbes and CBS News; premarket and futures from Reuters via Yahoo Finance; record close from Yahoo Finance."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Key-person risk:** when a company's value depends heavily on one individual, so losing that person is itself a risk to the business. Investors have long flagged it at Nvidia, where Huang sets strategy, sells to customers, and is the public face of the company.",
+                "**Interim CEO:** a temporary chief executive who runs the company while the board searches for a permanent one. Nvidia's CFO Colette Kress has been named by some analysts as a natural candidate, but nothing has been announced.",
+                "**Code of conduct conflict:** a relationship between a CEO and a direct report is a governance problem regardless of anything else, because the CEO controls that person's pay and promotion. That is a cleaner reason for a board to act than the unproven spy allegations."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is the biggest leadership crisis at the company that supplies most of the world's AI training chips. Note what is confirmed and what is not: the Powell relationship is the Times' reporting from employees (Reuters said it could not verify it), and the ouster is a report about preparations, not a decision. But the board's tone has clearly moved since Sunday's statement of confidence.",
+                "For people building with AI, nothing changes in the short term: the chips, roadmap, and supply contracts don't depend on who is CEO this week. The bigger effects are second-order. Nvidia is a roughly $10 billion buyer in Anthropic's IPO next week, it reports earnings Tuesday, and the scandal is giving Congress momentum on tighter export controls (see the next story). Analysts are split: Baird and Bernstein downgraded the stock, while Raymond James argues the fundamentals are untouched."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "A board announcement could come any time. After that: who runs the Nov 17 earnings call, whether Huang appears for the House chairs' requested Nov 18 briefing (Rep. Brian Mast has threatened a subpoena), and whether Nvidia's Anthropic commitment is affected."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "CBS News",
+              "title": "Nvidia's stock dives as chipmaker's board weighs move to oust CEO Jensen Huang",
+              "url": "https://www.cbsnews.com/news/nvidia-stock-dives-report-board-prepares-oust-jensen-huang/"
+            },
+            {
+              "name": "Forbes",
+              "title": "Nvidia Shares Plunge As Board Reportedly Prepares To Oust CEO Jensen Huang",
+              "url": "https://www.forbes.com/sites/siladityaray/2026/11/12/nvidia-shares-plunge-as-board-reportedly-prepares-to-oust-ceo-jensen-huang/"
+            },
+            {
+              "name": "TechCrunch",
+              "title": "Jensen Huang accused of having another affair, with a Nvidia exec",
+              "url": "https://techcrunch.com/2026/11/11/jensen-huang-accused-of-having-another-affair-with-a-nvidia-exec/"
+            },
+            {
+              "name": "CTech (Calcalist), citing Reuters",
+              "title": "Nvidia board weighs ousting Jensen Huang as shares plunge",
+              "url": "https://www.calcalistech.com/ctechnews/article/i20s48d84"
+            },
+            {
+              "name": "Yahoo Finance (Reuters)",
+              "title": "Nasdaq futures fall as Nvidia turmoil rattles AI stocks",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-fall-nvidia-turmoil-093910045.html"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Nvidia live updates: Stock tanks after new affair allegations, board reportedly preparing to oust Jensen Huang",
+              "url": "https://finance.yahoo.com/technology/live/nvidia-live-updates-nvidia-stock-tanks-in-after-hours-after-allegations-of-a-second-affair-surface-222438011.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "Commerce is finalizing a rule to stop Chinese firms renting top Nvidia chips abroad, and Chinese labs are rushing to lock in capacity first",
+          "summary": "The Information says the rule could come this month and extend controls to seven more countries, while Reuters reports Chinese AI companies are trying to reserve overseas Nvidia compute before the gap closes.",
+          "stats": [
+            [
+              "7",
+              "More countries the rule would cover"
+            ],
+            [
+              "369-22",
+              "House vote on remote-access bill, Jan"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The Information reported Wednesday, citing two people familiar with the matter, that the Commerce Department is finalizing a rule that would bar Chinese AI companies from remotely using advanced AI chips in data centers outside China. It would extend existing Bureau of Industry and Security controls to seven more countries, including Malaysia, Singapore, and Thailand, and could be announced in November. Commerce is still consulting other agencies.",
+                "The same day, Axios reported that President Trump had authorized a crackdown on chip diversion, and that Treasury Secretary Scott Bessent confronted Commerce Secretary Howard Lutnick in the Situation Room over why Megaspeed, the Singapore company at the center of the Huang scandal, had not been put on the Entity List. Lutnick reportedly warned new restrictions would 'start a trade war with China' and said he would 'develop some options and come back.' The administration denied to Axios and the Times that the confrontation happened.",
+                "Overnight, Reuters reported that Chinese AI companies are trying to rent Nvidia-powered capacity at overseas data centers before any new rule lands, citing three people. A major Chinese cloud provider discussed locking in overseas capacity, some firms have approached data center operators, and smaller labs are looking at Southeast Asian rental providers. Two people said grey-market demand for restricted chips inside China has risen and traders have begun stockpiling."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Countries added under the reported rule",
+                  "7 (incl. Malaysia, Singapore, Thailand)"
+                ],
+                [
+                  "Remote Access Security Act, House vote (Jan)",
+                  "369-22, awaiting the Senate"
+                ],
+                [
+                  "Megaspeed chip purchases in recent years",
+                  "About $4 billion (NYT)"
+                ],
+                [
+                  "Super Micro servers bought by the Southeast Asian firm in the March indictment",
+                  "About $2.5 billion, 2024 to 2025"
+                ]
+              ],
+              "note": "Rule details from The Information via Investing.com; vote and indictment figures from Reuters; Megaspeed figure from the NYT via Gizmodo."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Remote access:** using chips you don't own by renting time on them in someone else's data center. Current US rules control where chips are shipped, not who logs in to use them, which is the gap the rule targets.",
+                "**Entity List:** the Commerce Department blacklist that requires a license, usually denied, to sell US technology to a listed company.",
+                "**Rule vs. bill:** Commerce can write a rule under its existing powers, which is faster. The Remote Access Security Act would give it explicit legal authority over cloud access, but needs the Senate."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Remote rental has been the main legal way for Chinese labs to train on top Nvidia hardware, and the big ones (Tencent, Alibaba, ByteDance) have offshore deals that depend on it. A rush to reserve capacity is the predictable reaction to a rule being signaled, and could pull revenue forward for Southeast Asian data centers in the short term.",
+                "Treat the internal drama with care: the Bessent confrontation is denied, and Lutnick's resistance is sourced to unnamed officials. The more solid signal is that pressure is now bipartisan and the Huang scandal has removed Nvidia's most effective lobbyist against these controls. Enforcement is the open question, since rules on who logs in are much harder to police than rules on shipments."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether the rule is published before the Nov 18 to 19 Trump-Xi meeting at APEC, or held back as a bargaining chip, and whether Megaspeed is added to the Entity List."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The Information",
+              "title": "Commerce Department Finalizing Long-Awaited AI Remote Access Rule",
+              "url": "https://www.theinformation.com/articles/commerce-department-finalizing-long-awaited-ai-remote-access-rule"
+            },
+            {
+              "name": "Yahoo Finance (Investing.com)",
+              "title": "U.S. finalizing rule to block China's remote AI chip access: The Information",
+              "url": "https://finance.yahoo.com/technology/ai/articles/u-finalizing-rule-block-china-042215614.html"
+            },
+            {
+              "name": "Reuters via SRN News",
+              "title": "Exclusive: Chinese AI firms rush to secure Nvidia chip capacity as spy scandal stirs fear of US curbs",
+              "url": "https://srnnews.com/exclusive-chinese-ai-firms-rush-to-secure-nvidia-chip-capacity-as-spy-scandal-stirs-fear-of-us-curbs/"
+            },
+            {
+              "name": "Axios",
+              "title": "Bessent confronted Lutnick over Nvidia customer Megaspeed, sources say",
+              "url": "https://www.axios.com/2026/11/11/bessent-lutnick-megaspeed-nvidia-china-chips"
+            },
+            {
+              "name": "Gizmodo",
+              "title": "Howard Lutnick Doesn't Want to Stop the Flow of Nvidia Chips Overseas: Report",
+              "url": "https://gizmodo.com/howard-lutnick-doesnt-want-to-stop-the-flow-of-nvidia-chips-overseas-report-2000838506"
+            }
+          ]
+        },
+        {
+          "kicker": "Tools",
+          "headline": "Google launches a Decisions API that answers up to 1,000 yes/no or multiple-choice questions in a fraction of a second, for $0.10 per million tokens",
+          "summary": "Gemini Decision 1 scores fixed options with confidence numbers instead of writing text, aimed at routing, policy checks, and other quick calls inside agents.",
+          "stats": [
+            [
+              "$0.10",
+              "Per 1M input tokens, $0 output"
+            ],
+            [
+              "150-250 ms",
+              "End-to-end latency"
+            ],
+            [
+              "1,000",
+              "Questions per request"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Google released the Gemini Decisions API on Wednesday, Nov 11, powered by a new model, Gemini Decision 1. Instead of generating an answer word by word, it takes one shared input (text, images, audio, video, or PDFs, up to 256K tokens) plus up to 1,000 questions, and returns a pick and a 0-to-1 confidence score for each. Questions can be yes/no, multiple choice with 2 to 255 options, or a score on an ordered rubric.",
+                "Google is pitching it for the small decisions agents make constantly: which tool to call, which model tier should handle a query, whether content breaks a policy. It says Gemini Notebook uses it to route queries and cut latency for everyday questions by up to 40%, and Search uses it as a safety layer to detect adversarial use of MCP tools. It is available now in Google AI Studio with a free tier, with integrations rolling out on OpenRouter, LangChain, Vercel, LiteLLM, and others. OpenAI launched a similar Decisions API in October."
+              ]
+            },
+            {
+              "h": "Price and specs",
+              "table": [
+                [
+                  "Model",
+                  "gemini-decision-1"
+                ],
+                [
+                  "Price",
+                  "$0.10 per 1M input tokens, output free"
+                ],
+                [
+                  "Billing",
+                  "Shared input billed once per request"
+                ],
+                [
+                  "Latency",
+                  "150-250 ms end to end (50-100 ms model compute, median)"
+                ],
+                [
+                  "Context",
+                  "256K tokens"
+                ],
+                [
+                  "Questions per request",
+                  "Up to 1,000"
+                ],
+                [
+                  "Cost claim",
+                  "Nearly 5x cheaper than Gemini 3.5 Flash-Lite on Google's suite"
+                ]
+              ],
+              "note": "All figures from Google's announcement. Google says latency is near flat from 1 to 100 questions for inputs up to 16K tokens."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Scoring vs. generating:** a normal model writes its answer one token at a time. This one reads the input once and scores each allowed option, which is why it's fast and has no output cost.",
+                "**Calibration:** whether a model's confidence matches how often it's right. A calibrated 0.8 should be correct about 80% of the time. That makes the score usable as a threshold, for example 'send to a human below 0.6'.",
+                "**Routing:** sending each request to the cheapest model that can handle it, and only escalating hard ones to an expensive model."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is a useful, unglamorous primitive. Many agent pipelines today spend a full model call, with all its latency and output tokens, on what is really a classification. A fast, cheap, calibrated scorer makes it practical to check every step.",
+                "Be skeptical of the quality claims for now. Google says Decision 1 has the lowest calibration error on its benchmark suite, but published no calibration numbers, and calibration measured on Google's tasks may not hold on yours. Test it on your own labeled examples before trusting its thresholds."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Google",
+              "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+            },
+            {
+              "name": "Interesting Engineering",
+              "title": "Google unveils Gemini Decisions API to handle 1,000 questions at once",
+              "url": "https://interestingengineering.com/ai-robotics/google-gemini-decisions-api-fast-ai-agents"
+            }
+          ]
+        },
+        {
+          "kicker": "Research",
+          "headline": "Radical Numerics shows an offline AI tool for flagging dangerous DNA, with strong lab numbers and no field validation yet",
+          "summary": "The tool pairs the startup's Omnii-1 genome model with standard database matching and runs on a laptop next to a portable sequencer, aimed at catching engineered or unfamiliar pathogens.",
+          "stats": [
+            [
+              "95.8%",
+              "Recall on labeled proteins"
+            ],
+            [
+              "78.6%",
+              "Recall, database matching alone"
+            ],
+            [
+              "0.23%",
+              "Avg false positives, simulation"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Wired reported early Thursday on Omnii Defense, a pathogen-screening tool from AI biology startup Radical Numerics, built on its Omnii-1 genome language model. Standard screening compares DNA against databases of known threats, so it can miss sequences that have been altered or that come from something new. Radical Numerics adds a model layer that predicts biological function, designed to flag sequences that look dangerous even when they don't match a known reference.",
+                "It is built to run locally, for places with poor internet or where sequence data can't leave the site. The company tested it on an Oxford Nanopore MinION sequencer connected to a MacBook Pro (M3 Max, 128 GB). Access is restricted; there is no public pricing or release date."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Labeled protein set",
+                  "47,754 sequences"
+                ],
+                [
+                  "Recall, with Omnii-1 / DIAMOND alone",
+                  "95.8% / 78.6%"
+                ],
+                [
+                  "Precision, with Omnii-1 / without",
+                  "63.8% / 64.9%"
+                ],
+                [
+                  "Dengue reads recovered (genus hidden from training)",
+                  "44.6% vs under 0.1% conventional"
+                ],
+                [
+                  "Bundibugyo ebolavirus reads recovered",
+                  "22% vs under 0.1% conventional"
+                ],
+                [
+                  "False positives, simulated samples",
+                  "At most 0.5%, average 0.17% to 0.23%"
+                ]
+              ],
+              "note": "Company figures from its research preview, as reported by TokenPost. Protein and viral results are separate tests, not one accuracy score."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Genome language model:** a model trained on DNA sequences the way a chatbot is trained on text, so it learns patterns that relate sequence to biological function.",
+                "**Recall and precision:** recall is the share of real threats caught; precision is the share of flags that are real. Omnii-1 raised recall a lot while precision stayed about the same, meaning roughly a third of flags are still false alarms.",
+                "**DIAMOND:** a widely used tool for quickly matching protein sequences against reference databases."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is the defensive side of the worry that AI could help design pathogens: if engineered sequences slip past database matching, screening needs to judge function, not just similarity. The test where an entire virus genus was hidden from the model is the interesting one, since it mimics something genuinely unfamiliar.",
+                "The limits are large. These are company-run tests on curated and simulated data, not field samples, and they don't show the tool can tell whether a sequence was AI-designed. A Broad Institute researcher told reporters that 'detecting a signal is still a big leap.' Treat it as a promising research preview."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Wired",
+              "title": "A Startup Wants to Fight AI Bioweapons With AI",
+              "url": "https://www.wired.com/story/startup-fights-ai-bioweapons-with-ai/"
+            },
+            {
+              "name": "TokenPost",
+              "title": "Radical Numerics Tests Local Pathogen Screening With Omnii-1",
+              "url": "https://www.tokenpost.com/news/technology/55064"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Meta's longtime head of infrastructure, Santosh Janardhan, is stepping down as its AI data center buildout peaks",
+          "summary": "Former Amazon executive Dave Brown takes over; Janardhan moves to an advisory role on Meta Compute and leaves next year.",
+          "stats": [
+            [
+              "2009",
+              "Year Janardhan joined Meta"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Santosh Janardhan, Meta's head of infrastructure and co-head of engineering, is stepping down, Bloomberg first reported on Wednesday, citing an internal memo. Meta confirmed it to TechCrunch. He will stay through a transition, then move to an advisory role on Meta Compute, and is expected to leave the company next year. The memo gave no reason beyond the need to 'pass the baton'.",
+                "His replacement is Dave Brown, who joined Meta as vice president of infrastructure earlier this year after 19 years at Amazon working on compute, cloud, and AI."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Infrastructure is where Meta is spending most of its money on AI, so who runs it matters. Hiring a career AWS builder to take over suggests Meta wants cloud-scale operating discipline as its data center and custom-chip spending grows. There's no sign this changes Meta's plans; it's a leadership handoff to watch rather than a strategy shift."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "title": "Meta is losing its longtime head of infrastructure",
+              "url": "https://techcrunch.com/2026/11/11/meta-is-losing-its-longtime-head-of-infrastructure/"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; still no announcement as of Wednesday morning."
+        },
+        {
+          "when": "Any day",
+          "what": "Nvidia's board decision on Jensen Huang's future, and whether it names an interim CEO."
+        },
+        {
+          "when": "Week of Nov 9",
+          "what": "Thinking Machines plans to release Inkling 2 Small's weights under Apache 2.0, if outside safety testing is done."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's proposed cutoff of Cursor's access to its models, after SpaceX bought Cursor. The date could still move."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "OpenAI's 'Cyber at the Frontier' livestream, 10 a.m. PT, to introduce its latest cyber products."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Nebius reports third-quarter results before the market opens, call at 8 a.m. ET."
+        },
+        {
+          "when": "Thu Nov 12",
+          "what": "Anthropic's updated usage policy takes effect, including a ban on sustained, needless abuse of Claude."
+        },
+        {
+          "when": "Fri Nov 13",
+          "what": "Conductor Cloud goes read-only after Meta's acquisition; it shuts down Nov 20."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Anthropic's Australian retail offer closes at 5 p.m. AEDT, the day before the IPO is priced."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Nvidia reports third-quarter results, call at 5 p.m. ET. First read since last week's selloff and the board's investigation of Huang."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Anthropic is expected to price its IPO. The filed range is $70 to $78; the FT reports bankers may price above it."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Requested date for Jensen Huang's closed-door briefing to three House committee chairs; Rep. Brian Mast has threatened a subpoena if he doesn't appear."
+        },
+        {
+          "when": "Nov 18 to 19",
+          "what": "APEC summit in Shenzhen, where Trump meets Xi and the US-China 'superintelligence' dialogue is due to advance."
+        },
+        {
+          "when": "Thu Nov 19",
+          "what": "Anthropic shares (ANT) are expected to start trading on Nasdaq, per CNBC."
+        },
+        {
+          "when": "November",
+          "what": "Commerce's rule blocking Chinese firms from remotely using advanced chips abroad could be announced, per The Information."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Wed Nov 25",
+          "what": "Alibaba's Qwen4-Max preview ends."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Intro pricing ends for Gemini 4 Argon and Gemini 4 Carbon: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        }
+      ]
+    },
+    {
       "id": "2026-11-11-pm",
       "date": "2026-11-11",
       "edition": "Afternoon",
