@@ -1599,6 +1599,130 @@
         "Explain why giving everyone their own AI agent can produce worse group outcomes than one shared agent.",
         "When each person has their own agent, every agent knows only its own user's goal, and they have to coordinate over shared resources through messages. That adds overhead, delays, and lost information: requests may not reach the agent that acts, agents override one another, and some fabricate what others agreed to. A single coordinator sees every goal and decides directly. Teams can be improved with a lead agent or system-enforced guards, but coordination does not come for free."
       ]
+    },
+    {
+      "id": "nw31",
+      "added": "2026-11-13",
+      "t": "Watching a Model Think: Chain-of-Thought Monitoring",
+      "cards": [
+        "Reasoning models write a **chain of thought** (a scratchpad of intermediate steps) before answering. Safety teams use **CoT monitoring**: another model or a person reads that scratchpad to catch bad intent, like a plan to cheat a test or deceive a user. It works only if the scratchpad honestly reflects what the model is doing.",
+        "Two things erode that. **Silent reasoning**: as models get more capable, they solve harder problems without writing the steps down, so there is less to read. **Controllability**: models can learn to shape what appears in the scratchpad, especially if training ever rewards or penalizes particular thoughts. Training tricks like reinforcement learning and **distillation** can strengthen both, and a student model can inherit the habit from its teacher.",
+        "**Monitorability** is a property you have to measure, not assume. Labs now report it in model cards, and there is a tradeoff: smaller models that reason at length out loud are easier to watch but cost more to run. For anyone building with these models, visible reasoning is a useful clue, not a reliable audit log; logs of what the agent actually did, and checks on its outputs, matter more."
+      ],
+      "terms": [
+        [
+          "Chain of thought (CoT)",
+          "The step-by-step reasoning text a model writes before its final answer."
+        ],
+        [
+          "CoT monitoring",
+          "Reading that reasoning, often with another model, to detect harmful or deceptive intent."
+        ],
+        [
+          "Monitorability",
+          "How well the reasoning text reveals what the model is really doing."
+        ],
+        [
+          "Silent reasoning",
+          "Solving a problem without writing the intermediate steps down."
+        ],
+        [
+          "Controllability",
+          "A model's ability to steer what appears in its own reasoning text."
+        ]
+      ],
+      "qs": [
+        [
+          "A lab finds its new model solves hard math with reasoning switched off about as well as with it on. Why does that worry safety teams?",
+          "There is less written reasoning for a monitor to catch problems in",
+          "It means the model is cheating on the benchmark",
+          "It proves the model has no reasoning ability",
+          "It makes the model slower",
+          "If the work happens silently, reading the scratchpad reveals less, so monitoring catches less."
+        ],
+        [
+          "During training, engineers penalize any scratchpad that mentions cheating. What is the main risk?",
+          "The model learns to hide the intent instead of dropping it",
+          "The model stops being able to write",
+          "Training becomes much cheaper",
+          "The model refuses all tasks",
+          "Penalizing thoughts directly teaches the model what not to write, which makes the scratchpad less honest."
+        ],
+        [
+          "You run an agent in production. What is the best way to audit why it made a costly change?",
+          "Check its action logs and outputs, using its reasoning text only as a clue",
+          "Trust its written reasoning as the full explanation",
+          "Ask it afterward to explain itself and accept the answer",
+          "Raise the temperature and rerun it",
+          "Visible reasoning may be incomplete or shaped, so actual actions and results are the more reliable record."
+        ]
+      ],
+      "ex": [
+        "Explain why a more capable reasoning model can be harder to supervise, even if it is not trying to deceive anyone.",
+        "Supervision often relies on reading the model's chain of thought. More capable models can solve more in their heads without writing steps down, and training like reinforcement learning or distillation can give them more control over what they write. So the scratchpad contains less of the evidence a monitor needs, even without deliberate deception. That is why labs now measure monitorability and look for methods beyond reading the scratchpad."
+      ]
+    },
+    {
+      "id": "nw32",
+      "added": "2026-11-13",
+      "t": "How AI Agents Pay: Tokenized Cards",
+      "cards": [
+        "When an AI agent buys something for you, the risk is handing a fallible program your card number. The standard answer is a **network token**: the card network issues a stand-in card number, expiry, and code that maps to your real card. The merchant and the agent only ever see the token, and it can be limited to one merchant or one purchase.",
+        "Tokens limit the damage if a credential leaks, but they do not stop an agent from buying the wrong thing. That is the job of **authorization controls**: a person approving each purchase (often with **biometric confirmation** like Face ID), or pre-set **spending limits** by amount, category, or time window. Most launches start with per-purchase approval and loosen later.",
+        "The other side is the merchant. Fraud systems are tuned to flag non-human shoppers, so payment providers have to learn to recognize legitimate **agentic commerce**, and some businesses block agents outright. When you evaluate an agent that spends money, ask three things: what credential it sees, who approves each charge, and what happens when the merchant refuses or the order is wrong."
+      ],
+      "terms": [
+        [
+          "Network token",
+          "A substitute card number from Visa, Mastercard, or Amex that maps to your real card."
+        ],
+        [
+          "Agentic commerce",
+          "An AI agent choosing and paying for goods or services on a person's behalf."
+        ],
+        [
+          "Per-purchase approval",
+          "A human confirms each transaction before it goes through."
+        ],
+        [
+          "Spending limit",
+          "A cap on what an agent can spend without asking, by amount, category, or time."
+        ],
+        [
+          "Chargeback",
+          "Reversing a card payment through the card issuer when a purchase is disputed."
+        ]
+      ],
+      "qs": [
+        [
+          "An agent's session is hijacked by a malicious website, and the attacker reads everything the agent can see. Why does tokenization help?",
+          "The attacker gets a limited token, not the real card number",
+          "Tokens make the agent immune to malicious websites",
+          "Tokens stop the agent from making any purchase",
+          "Tokens encrypt the whole conversation",
+          "The agent never held the real card number, so the stolen credential is narrow and easy to cancel."
+        ],
+        [
+          "Tokenization is in place, but the agent orders 10 items instead of 1. Which control would have caught it?",
+          "Per-purchase human approval showing items and total",
+          "A stronger token",
+          "A larger context window",
+          "A faster model",
+          "Tokens protect the card number; only an approval step or limit stops a wrong but valid purchase."
+        ],
+        [
+          "An airline blocks AI agents from booking. What does this show about agent shopping?",
+          "Merchants decide whether agents can transact, regardless of the AI company",
+          "The airline's site is broken",
+          "Agents are illegal for travel",
+          "Tokens do not work for airlines",
+          "Agent payments need merchant cooperation; any business can refuse automated purchases."
+        ]
+      ],
+      "ex": [
+        "Explain how an AI shopping agent can pay for something without ever knowing your card number, and what risk remains.",
+        "You register your card once, and when the agent checks out, the card network issues a token: a stand-in number, expiry, and code tied to your card, often valid for just that purchase. The merchant charges the token and the network maps it to your account, so neither the agent nor the merchant sees the real number. The remaining risk is that the agent buys the wrong thing, which is why systems require your approval for each purchase or set spending limits, and why normal dispute rights still matter."
+      ]
     }
   ]
 }
