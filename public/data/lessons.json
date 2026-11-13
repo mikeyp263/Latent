@@ -1537,6 +1537,68 @@
         "Explain what the 'CUDA moat' is and how AI-written kernels could weaken it.",
         "Models run as kernels, tuned low-level programs specific to each chip. Nvidia's CUDA ecosystem has years of these already written, so moving to another vendor's chip means rewriting and tuning a lot of code, which takes teams months. That switching cost keeps customers on Nvidia. If AI models can write and tune kernels for new chips in days, the switching cost falls, buyers can choose chips on price and availability, and Nvidia's software advantage shrinks, though only once the ported code matches full production performance."
       ]
+    },
+    {
+      "id": "nw30",
+      "added": "2026-11-13",
+      "t": "One Coordinator or Many Agents",
+      "cards": [
+        "A **multi-agent system** splits work across several AI agents. There are two very different kinds. In one, a single person runs a lead agent that hands pieces to **subagents**, all pulling toward one goal. In the other, **multi-user, multi-agent**, each person has their own agent, each with its own goal, and the agents meet over something shared: a budget, a calendar, a code repository.",
+        "The second kind is much harder. Each agent sees only part of the picture, so the group needs **coordination**: messages, agreement, and someone deciding when goals conflict. More agents means more messages, more waiting, and more chances that a key request never reaches the agent that acts. Studies find these teams stall as they grow, override each other, and even invent claims about what others wanted.",
+        "The usual fix is structure, not smarter agents: a **coordinator** that sees every goal and decides, a designated **lead**, or **platform guards** such as blocking a purchase until the agent has read all pending messages. When you evaluate an agent product that acts for many people, ask who resolves conflicts and what stops one agent from quietly overriding another."
+      ],
+      "terms": [
+        [
+          "Subagent",
+          "A helper agent that a lead agent hands part of a task to, serving the same goal."
+        ],
+        [
+          "Multi-user, multi-agent",
+          "Several people each with their own agent, sharing a resource with different goals."
+        ],
+        [
+          "Coordinator",
+          "One agent that sees all users' goals and makes the shared decisions."
+        ],
+        [
+          "Coordination overhead",
+          "The time, messages, and errors that come from agents having to agree."
+        ],
+        [
+          "Platform guard",
+          "A rule enforced by the system, not the model, such as requiring messages be read before acting."
+        ]
+      ],
+      "qs": [
+        [
+          "Five coworkers each have a scheduling agent booking one shared meeting room. What is the biggest new risk compared with one shared assistant?",
+          "Agents with conflicting goals override each other or miss each other's requests",
+          "The model's context window is too small for a calendar",
+          "Agents cannot read calendars",
+          "Each agent will refuse to book anything",
+          "Separate agents only see their own user's goals, so conflicts and lost messages appear that a single coordinator avoids."
+        ],
+        [
+          "A study finds a peer team's results improve when the platform blocks checkout until the agent has read all pending messages. What kind of fix is this?",
+          "A platform guard enforced outside the model",
+          "A bigger model",
+          "Fine-tuning on chat logs",
+          "Raising the temperature",
+          "The rule is enforced by the system, which works even when the model forgets or skips a message."
+        ],
+        [
+          "Why might a team of agents score worse as it grows from 4 to 16 agents?",
+          "More agents add messages and waiting, so many never act or act on stale information",
+          "Larger teams always use cheaper models",
+          "Benchmarks cap at 4 agents",
+          "Agents get tired",
+          "Coordination overhead rises with group size, so teams stall."
+        ]
+      ],
+      "ex": [
+        "Explain why giving everyone their own AI agent can produce worse group outcomes than one shared agent.",
+        "When each person has their own agent, every agent knows only its own user's goal, and they have to coordinate over shared resources through messages. That adds overhead, delays, and lost information: requests may not reach the agent that acts, agents override one another, and some fabricate what others agreed to. A single coordinator sees every goal and decides directly. Teams can be improved with a lead agent or system-enforced guards, but coordination does not come for free."
+      ]
     }
   ]
 }
