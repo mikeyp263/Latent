@@ -1723,6 +1723,68 @@
         "Explain how an AI shopping agent can pay for something without ever knowing your card number, and what risk remains.",
         "You register your card once, and when the agent checks out, the card network issues a token: a stand-in number, expiry, and code tied to your card, often valid for just that purchase. The merchant charges the token and the network maps it to your account, so neither the agent nor the merchant sees the real number. The remaining risk is that the agent buys the wrong thing, which is why systems require your approval for each purchase or set spending limits, and why normal dispute rights still matter."
       ]
+    },
+    {
+      "id": "nw33",
+      "added": "2026-11-14",
+      "t": "General Models vs. Specialist Robot Models",
+      "cards": [
+        "Robots have usually been driven by **specialist models**: networks trained mostly on robot data that take camera images and output motor commands. Newer ones are **vision-language-action (VLA) models**, which add language understanding so you can say \"put the red cup in the sink.\" They are often small enough to run on the robot itself.",
+        "The alternative is using a **general frontier model** as the robot's brain. It sees images, reasons about the task, and calls a **control interface** (move arm to X, close gripper) like any other tool. General models bring broad world knowledge and planning, which is why they can beat specialists on new tasks in **simulation**.",
+        "The limits are physical. Big cloud models add **latency**, and a robot catching a falling object cannot wait a second for a reply. Real robots also face the **sim-to-real gap**: friction, lighting, and wear that simulators miss. The common design is layered: a general model plans, and a fast onboard model handles the moment-to-moment control. Judge robotics claims by whether results are on real hardware, how many trials, and how safety failures are handled."
+      ],
+      "terms": [
+        [
+          "VLA model",
+          "Vision-language-action model: takes images and instructions, outputs robot actions."
+        ],
+        [
+          "Control interface",
+          "The set of commands a model can call to move a robot, exposed like tools."
+        ],
+        [
+          "Sim-to-real gap",
+          "The drop in performance when a policy that works in simulation runs on a real robot."
+        ],
+        [
+          "Onboard inference",
+          "Running the model on the robot's own computer instead of in the cloud."
+        ],
+        [
+          "Manipulation",
+          "Robot tasks that involve handling objects: grasping, placing, assembling."
+        ]
+      ],
+      "qs": [
+        [
+          "A frontier model scores 75% on a simulated pick-and-place benchmark versus 51% for the best specialist. What should you ask before concluding it is the better robot brain?",
+          "How it performs on real hardware, with latency and safety failures counted",
+          "Whether the simulator uses a larger context window",
+          "How many parameters the specialist model has",
+          "Whether the benchmark was released this year",
+          "Simulation results often drop on real robots, and real-world latency and safety are where cloud-hosted models struggle."
+        ],
+        [
+          "A warehouse robot must stop instantly when a person steps in front of it. Where should that decision run?",
+          "On a fast onboard model or safety system on the robot",
+          "In a large cloud model that reasons step by step",
+          "In a nightly batch job",
+          "In the language model's system prompt",
+          "Safety-critical reactions need millisecond responses that a network round trip to a big model cannot guarantee."
+        ],
+        [
+          "Why might a company fold its robotics team into its main research group?",
+          "It believes general models, not robot-specific ones, will drive robot progress",
+          "Robotics no longer needs any hardware engineers",
+          "Simulators have eliminated the need for real robots",
+          "Specialist models are banned by regulators",
+          "Treating robotics as an application of general intelligence means the core model team owns the progress."
+        ]
+      ],
+      "ex": [
+        "Explain the difference between a specialist robot model and using a general frontier model to control a robot, and why many systems combine both.",
+        "A specialist model is trained on robot data to turn camera input into motor commands and is small and fast enough to run on the robot. A general frontier model knows far more about the world and can plan new tasks, controlling the robot through a set of commands like tools, but it is large, usually cloud-hosted, and slower. So many systems layer them: the general model decides what to do and breaks it into steps, and a fast onboard model or controller executes the motions and handles safety reactions in real time."
+      ]
     }
   ]
 }

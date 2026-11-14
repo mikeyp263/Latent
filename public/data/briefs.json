@@ -1,6 +1,674 @@
 {
   "editions": [
     {
+      "id": "2026-11-14-am",
+      "date": "2026-11-14",
+      "edition": "Morning",
+      "stories": [
+        {
+          "kicker": "Policy",
+          "headline": "Congress asks Jensen Huang and Howard Lutnick to testify, as Reuters reports Huang told Nvidia's top lawyer his Alice Huang ties were routine business",
+          "summary": "Senate Banking wants Huang on Dec 3 and Lutnick on Dec 10, three House chairs want Huang in a closed-door interview on Dec 1, and Lutnick has agreed to appear.",
+          "stats": [
+            [
+              "Dec 3",
+              "Requested Senate hearing with Huang"
+            ],
+            [
+              "Dec 10",
+              "Requested Senate hearing with Lutnick"
+            ],
+            [
+              "$166.19",
+              "Nvidia close Thursday, down 4.3%"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Thursday, Nov 12, Senate Banking Committee chairman Tim Scott (R-SC) sent letters asking former Nvidia CEO Jensen Huang and Commerce Secretary Howard Lutnick to testify about recent developments at the company, Reuters reported. \"Recent reports raise serious concerns about our national security and the protection of sensitive US technology,\" Scott wrote on X. Per Fortune and Decrypt, the committee asked Huang to appear at a public hearing on Dec 3 and Lutnick on Dec 10, and Scott's letter says the committee is \"prepared to use all tools at our disposal, including subpoenas\" if they do not come voluntarily. A Lutnick spokesperson told NBC News he \"proactively agreed to appear voluntarily,\" per Decrypt.",
+                "Separately, House Foreign Affairs chair Brian Mast, China Select Committee chair John Moolenaar, and Intelligence chair Rick Crawford asked Huang for a closed-door transcribed interview on Dec 1 and Nvidia general counsel Tim Teter for one on Dec 2, with an 8 p.m. Friday deadline to agree or face a subpoena. They also invited Jeffrey Kessler, Commerce's under secretary for industry and security, to a Dec 3 hearing. Mast has said Huang agreed to appear before Thanksgiving, but 24/7 Wall St. notes no statement from Huang, his lawyers, or Nvidia confirms that. There was no public word on the Friday deadline as of Saturday morning.",
+                "Late Friday, Reuters reported, citing two people and internal correspondence it reviewed, that Huang misled several Nvidia leaders about his relationship with Alice Huang, the former Megaspeed executive US officials reportedly concluded was a Chinese intelligence asset. In two October messages, he told leaders including Teter and chief marketing officer Alison Wagonfeld that his interactions reflected standard business with customers. Teter and Wagonfeld did not respond; Huang's representative and Nvidia declined to comment. China denies Alice Huang is a spy, and Attorney General Todd Blanche said Thursday the Justice Department has not reached a conclusion."
+              ]
+            },
+            {
+              "h": "Where each inquiry stands",
+              "table": [
+                [
+                  "House chairs: Huang transcribed interview",
+                  "Requested Dec 1 (closed door)"
+                ],
+                [
+                  "House chairs: Nvidia GC Tim Teter",
+                  "Requested Dec 2"
+                ],
+                [
+                  "Senate Banking: Huang public hearing",
+                  "Requested Dec 3, subpoena threatened"
+                ],
+                [
+                  "House: Commerce's Jeffrey Kessler",
+                  "Invited to Dec 3 hearing"
+                ],
+                [
+                  "Senate Banking: Lutnick",
+                  "Requested Dec 10; has agreed to appear"
+                ],
+                [
+                  "Wyden and Neal (tax committees)",
+                  "Investigating approvals of Nvidia exports to China-linked firms"
+                ],
+                [
+                  "Nvidia board",
+                  "Wachtell Lipton investigation, led by Joon H. Kim"
+                ]
+              ],
+              "note": "Dates per Fortune, Decrypt, and 24/7 Wall St.; Fortune notes Scott at one point cited Dec 3 for both, while the committee's post lists Dec 3 and Dec 10. Board investigation per Fortune."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Transcribed interview:** a closed-door session where committee staff question a witness on the record. It is less public than a hearing but still creates a sworn-style record that can be used later.",
+                "**Subpoena:** a legal order to appear or produce documents. Committees usually threaten one first to get voluntary cooperation."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The Nvidia story has moved from a corporate scandal to an export-control fight in Congress, with members of both parties involved. The Reuters report matters because it bears on what Nvidia's leadership knew and when: if Huang described the relationship as ordinary customer dealings to his own general counsel, the board can argue it was misled, but it also raises questions about how Nvidia vetted a customer whose sister company bought at least $4.8 billion of Nvidia-based equipment, per trade records cited by the New York Times.",
+                "Lutnick's appearance may matter more for policy than Huang's. Lawmakers are pressing Commerce on why it has not blacklisted dozens of Chinese firms and how it oversaw Nvidia's China sales, and Reuters reported that senior White House officials have discussed whether Lutnick should be pushed out (the White House says Trump has full confidence in him). Expect the hearings to be used to push the chip-security bills the House chairs want attached to the defense authorization bill."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether Huang accepted the House deadline or gets a subpoena, Nvidia's Q3 results on Tuesday under interim CEO Colette Kress, and whether the Dec 3 and Dec 10 hearings are formally scheduled."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Reuters via Yahoo Finance",
+              "title": "Exclusive: Ex-Nvidia CEO misled top lawyer on affair with Chinese businesswoman, sources say",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/exclusive-ex-nvidia-ceo-misled-002638424.html"
+            },
+            {
+              "name": "Reuters via Yahoo News",
+              "title": "US Senate Banking Committee chair calls on Jensen Huang, Lutnick to testify",
+              "url": "https://www.yahoo.com/news/politics/articles/us-senate-banking-committee-chair-001522643.html"
+            },
+            {
+              "name": "Fortune",
+              "title": "Senate Banking Committee asks Jensen Huang and Howard Lutnick to testify in December",
+              "url": "https://fortune.com/2026/11/13/senate-banking-committee-nvidia-jensen-huang-howard-lutnick/"
+            },
+            {
+              "name": "Decrypt",
+              "title": "Congress Summons Ex-Nvidia CEO Jensen Huang, Lutnick Over Chip Exports to China",
+              "url": "https://decrypt.co/383211/congress-summons-ex-nvidia-ceo-jensen-huang-lutnick-over-chip-exports-to-china"
+            },
+            {
+              "name": "24/7 Wall St. via Yahoo Finance",
+              "title": "Jensen Huang Is Now Headed to Congress Before Thanksgiving",
+              "url": "https://finance.yahoo.com/technology/articles/jensen-huang-now-headed-congress-134753281.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Research",
+          "headline": "Google says Antigravity's agent teams machine-checked the Weil conjectures in about 1.8 million lines of Lean and rewrote an AV1 decoder in faster Rust",
+          "summary": "A Google Research post lists math, chemistry, and software results from its multi-agent /teamwork system on Gemini 4, all self-reported, and opens the tools to outside researchers.",
+          "stats": [
+            [
+              "~1.8M",
+              "Lines of Lean for the Weil conjectures"
+            ],
+            [
+              "95%",
+              "Top-1 NMR structure match (benchmark)"
+            ],
+            [
+              "20% to 30%",
+              "Rust AV1 decoder speedup over C++"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Nov 13, Google Research VP Vahab Mirrokni published results from /teamwork, a mode in Google's Antigravity coding tool that runs many agents in parallel and checks their work with \"falsifiers\": tools that can reject a wrong answer, such as the Lean 4 proof checker, unmodified test suites, and simulators. Each agent sees only the files and tools it needs. The post names Gemini 4 Argon, Carbon, and Hydrogen, with Argon in most examples, and says the work was done with human experts.",
+                "The headline claim: a variant called /teamwork-LEAP autonomously produced an end-to-end, machine-checked formalization of the Weil conjectures (famous results in number theory and geometry, completed by Pierre Deligne in 1974) in about 1.8 million lines of Lean across 28,800 subagent calls. It also produced over 919,000 lines for Hilbert's tenth problem over general rings of integers. Google also reports new math results, including a full proof of the Courtade-Kumar conjecture (2013) in information theory with researchers from CUHK, USC, and CMU, a new bound on Tarjan's deque conjecture (1985) verified in Lean, and a deterministic algorithm answering STOC 2024's main open question on Boolean matrix multiplication.",
+                "Outside math: 30 agents working with a spectral simulator identified molecular structures from NMR data with 95% top-1 accuracy on benchmark molecules, nearly double a single agent. A rewrite of libgav1, Google's AV1 video decoder, into about 170,000 lines of Rust matched the original's output bit for bit and, after profiling, ran 20% to 30% faster than the C++ and hand-tuned assembly. A two-week campaign added about 800,000 lines of safe Rust to the Zircon microkernel that pass its unit tests and boot on arm64 hardware."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Weil conjectures formalization",
+                  "~1.8M lines of Lean, 28,800 subagent calls"
+                ],
+                [
+                  "Hilbert's tenth problem (rings of integers)",
+                  "919,000+ lines of Lean"
+                ],
+                [
+                  "NMR structure ID, top-1 / top-3",
+                  "95% / 100% on benchmark molecules"
+                ],
+                [
+                  "libgav1 in Rust",
+                  "~170K lines, 20% to 30% faster than C++"
+                ],
+                [
+                  "Zircon kernel additions",
+                  "~800K lines of safe Rust in two weeks"
+                ],
+                [
+                  "TPU workload preemption (some hardware)",
+                  "Down 24% after Borg scheduler changes"
+                ],
+                [
+                  "Deep Review survey (STOC 2027 authors)",
+                  "90% of 70 respondents found it mostly factual"
+                ]
+              ],
+              "note": "All figures are Google's own, from the Google Research blog post."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Lean:** a programming language and proof checker. If Lean accepts a proof, every logical step has been verified by a small, trusted kernel, so the proof cannot contain a hidden mistake. The catch is that humans still have to confirm the formal statement says what the original theorem says.",
+                "**Formalization:** translating a known human proof into a machine-checkable one. It is not discovering a new theorem, but for results as deep as the Weil conjectures it has been a multi-year human project.",
+                "**Falsifier:** any automatic check that can prove an answer wrong. Agents can generate many candidates cheaply; the falsifier decides which survive."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The pattern behind every result is the same: pair cheap, parallel generation with a strict automatic checker. That works wherever such a checker exists (proofs, test suites, bit-exact output, simulators) and is much weaker where it does not. It is why the Lean and Rust claims are more credible than they would be for open-ended tasks.",
+                "Be careful with scale. All results are self-reported in a promotional post, several are on benchmarks rather than new lab work, the Deep Review survey is small (70 people at one conference), and the post does not give total time or compute. Independent mathematicians have not yet weighed in on the new proofs. For builders, the practical takeaway is that Google is turning long-running agent swarms into a product: Gemini 4 with /teamwork, /boost, and Deep Review is available in Antigravity now, 10,000 academic researchers can apply for six months of free top-tier access, and the formal-proof and Rust-rewrite patterns are listed as coming soon."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether the Lean code is published and checked by the Lean community, and peer review of the Courtade-Kumar and matrix multiplication results."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Google Research",
+              "title": "Advancing science & engineering with Antigravity's /teamwork",
+              "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/"
+            },
+            {
+              "name": "Google",
+              "title": "Antigravity teamwork: multi-agent (August announcement)",
+              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/antigravity-teamwork-multi-agent/"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "OpenAI breaks up its stand-alone robotics team, betting that general models like GPT-6 Astra can run robots directly",
+          "summary": "Researchers move into the main research group under Mark Chen and hardware staff into Greg Brockman's Applied group, Fortune reports; OpenAI says it is still building its own humanoid.",
+          "stats": [
+            [
+              "74.8%",
+              "Astra agent, simulated manipulation (Nvidia study)"
+            ],
+            [
+              "51.0%",
+              "Best specialized robot model, same leaderboard"
+            ],
+            [
+              "2027",
+              "Target for first humanoid demo"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "OpenAI has disbanded its stand-alone robotics team, Fortune reported in an exclusive on Nov 13. Robotics researchers now sit in the main research organization under chief research officer Mark Chen, and the applied robotics and hardware teams moved to the Applied organization under president Greg Brockman. The change was recent enough that OpenAI's booth at CoRL, an academic robotics conference in Austin this week, stood empty.",
+                "A spokesperson said robotics \"remains a core part of OpenAI's long-term vision\" and framed the move as a way to speed progress. The reasoning: early this year, researchers expected to build robotics on world-modeling video systems like Sora, but OpenAI now says general frontier models such as GPT-6 Astra can be applied to robots directly. In an Nvidia study cited by Fortune, an Astra-powered agent, given camera images, robot information, and a control interface, reached 74.8% success on a simulated manipulation benchmark where the best specialized robot models scored 51.0%. OpenAI says it is developing its own humanoid robot, and Sam Altman is targeting a first public demo in 2027."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Specialized robot model:** a model trained mainly on robot data to map camera input to motor commands, often small enough to run on the robot.",
+                "**Simulated manipulation benchmark:** tasks like picking and placing objects in a physics simulator. Simulation is cheap and repeatable, but results often drop on real hardware (the sim-to-real gap)."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is a strategic bet, not just a reorg: OpenAI is treating robotics as an application of general intelligence rather than a separate research problem. The one number behind it is a simulation result from a third party's study, not real-world performance. Experts Fortune spoke to pushed back on the timeline: CMU's Guanya Shi said robots still need small onboard models because big cloud models are slow, and MIT's Russ Tedrake argued robotics companies keep an edge in real deployment data.",
+                "Cost is part of the story too. Fortune notes Altman told staff to drop \"side quests,\" OpenAI has cut efforts such as Sora to free compute, and the company reportedly lost $10.9 billion last quarter while seeking new funding. Folding robotics into the core lab saves money while keeping the humanoid ambition alive."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Any published real-robot results for Astra, and hiring or partnerships around OpenAI's humanoid hardware ahead of the 2027 demo target."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Fortune",
+              "title": "Exclusive: OpenAI disbands its stand-alone robotics team as its general-purpose AI models start running robots",
+              "url": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "A four-hour nationwide ground stop briefly put the FAA's new AI routing tool under suspicion; officials blame old telecom gear",
+          "summary": "The FAA halted all US departures for about 4 hours 20 minutes on Friday, three days after expanding its SMART AI advisory system to all 22 en-route centers.",
+          "stats": [
+            [
+              "~4h 20m",
+              "Ground stop, 3:54 to 8:15 p.m. ET"
+            ],
+            [
+              "827+",
+              "Flights diverted by 7:05 p.m. (Cirium)"
+            ],
+            [
+              "$875M",
+              "SMART contract over 12 years"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Shortly after 3:30 p.m. ET on Friday, Nov 13, FAA radar and communications became unstable at en-route and approach control facilities, and at 3:54 p.m. the FAA stopped all departures nationwide with about 3,500 planes in the air. The stop lifted at 8:15 p.m. It was the first nationwide ground stop since the January 2023 NOTAM outage. Cirium data cited by AP counted at least 827 diversions by 7:05 p.m., and airlines warned of continuing delays.",
+                "Because the FAA had expanded SMART (Strategic Management of Airspace, Routes and Trajectories) to all 22 air route traffic control centers on Nov 10, attention quickly turned to AI. Homeland Security Secretary Markwayne Mullin initially said DHS and CISA were looking at whether it played a role. SMART's maker, Air Space Intelligence, said the stop \"is not based on or a result of the SMART system, any product of ASI or our integration with FAA and ATC.\" Transportation Secretary Sean Duffy said SMART only gives recommendations to controllers and is not connected to the STARS or ERAM radar and flight-data systems: \"There's no possible way SMART would have impacted what happened.\" He blamed overloaded switches and routers in old analog telecom equipment and asked Congress for $50 billion for upgrades. By Friday evening, Mullin said investigators had found no evidence of a cyberattack or AI interference, though the investigation continues."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Advisory system:** software that suggests actions (here, reroutes around congestion and weather) that a human must approve. It does not control radar or talk to aircraft.",
+                "**STARS and ERAM:** the FAA's core systems that process radar data and flight plans for approach and en-route controllers. A failure there grounds flights; a failure in an advisory tool mostly means worse suggestions."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Based on what officials and the vendor said, AI was not the cause; this was a failure in decades-old communications infrastructure. But the episode is a preview of a new dynamic: when critical systems fail soon after AI is added, AI will be the first suspect, and agencies need to be able to show quickly what the AI can and cannot touch. Duffy's clear answer (advisory only, not wired into radar systems) is the kind of architectural separation that made that possible.",
+                "Note that the investigation is not finished and the officials clearing SMART are the ones who chose to deploy it. Congressional Democrats, including Sen. Tammy Duckworth and Sen. Maria Cantwell, have said they will press the FAA for answers."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "The FAA's formal findings, Senate Commerce's review, and whether recovery holds before Thanksgiving travel."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "ABC News",
+              "title": "Nationwide ground stop lifted after more than 4 hours as Trump administration blames old, overloaded tech",
+              "url": "https://abcnews.com/US/nationwide-ground-stop-ordered-airports-faa/story?id=138121848"
+            },
+            {
+              "name": "AVweb",
+              "title": "FAA Rules Out SMART AI System as Cause of Nationwide Ground Stop",
+              "url": "https://avweb.com/aviation-news/faa-nationwide-ground-stop-lifts-smart-ai/"
+            },
+            {
+              "name": "KCRA",
+              "title": "FAA ground stop raises questions after rollout of new AI air traffic system",
+              "url": "https://www.kcra.com/article/faa-ground-stop-raises-questions-after-rollout-of-new-ai-air-traffic-system/74428995"
+            },
+            {
+              "name": "KPRC Click2Houston",
+              "title": "FAA investigating whether new AI technology contributed to nationwide ground stop",
+              "url": "https://www.click2houston.com/news/local/2026/11/13/faa-investigating-whether-new-ai-technology-contributed-to-nationwide-ground-stop/"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Anthropic's IPO is valued off roughly $270 billion of projected 2028 revenue, Reuters reports, and some investors doubt the lead will last",
+          "summary": "Bank estimates put revenue at about $52 billion this year and $135 billion next year; investors asked whether Claude can hold premium prices as Google catches up.",
+          "stats": [
+            [
+              "$52B to $53B",
+              "Sell-side 2026 revenue estimate"
+            ],
+            [
+              "$135B to $137B",
+              "2027 estimate"
+            ],
+            [
+              "$270B to $280B",
+              "2028 estimate used for valuation"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Reuters reported on Nov 14, citing people familiar with the offering, that institutional demand for Anthropic's IPO is outpacing the early days of SpaceX's roadshow: about 2x oversubscribed after the first day (Tuesday) and about 6x by Thursday, versus 2x for SpaceX after its second day. Anthropic is expected to price a roughly $64 billion offering after the roadshow ends Wednesday. Anthropic declined to comment.",
+                "The new detail is how the deal is being valued. Banks apply revenue multiples to projected 2028 revenue, estimated at about $270 billion to $280 billion. Sell-side projections are about $52 billion to $53 billion for 2026 and $135 billion to $137 billion for 2027, with some buy-side models 10% to 15% higher. One investor who did diligence but is not participating models 2028 about 30% below the banks."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "2026 revenue (sell-side)",
+                  "$52B to $53B"
+                ],
+                [
+                  "2027 revenue (sell-side)",
+                  "$135B to $137B"
+                ],
+                [
+                  "2028 revenue (bank estimate)",
+                  "$270B to $280B"
+                ],
+                [
+                  "Buy-side vs. sell-side, 2026 and 2027",
+                  "10% to 15% higher"
+                ],
+                [
+                  "One skeptical investor, 2028",
+                  "~30% below sell-side"
+                ],
+                [
+                  "Offering size",
+                  "~$64B"
+                ]
+              ],
+              "note": "All figures per Reuters' sources; Anthropic has not published projections."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Sell-side vs. buy-side:** sell-side analysts work for the banks selling the shares; buy-side analysts work for the funds buying them. Sell-side numbers set the official story, buy-side numbers decide the orders.",
+                "**EV-to-revenue multiple:** enterprise value divided by revenue. Valuing off 2028 means investors are paying today for revenue about five times this year's estimate."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Demand is clearly strong, but the valuation depends on revenue more than doubling each year through 2028. The concerns investors raised are the right ones: whether Claude's lead in coding extends to general knowledge work, whether Anthropic can keep premium pricing as Google's Gemini 4 models close the gap, and whether the market supports several leaders or just one or two. One attendee said Anthropic did not give detailed answers to some questions, and at one group meeting the lead banks mostly read prepared remarks. Companies often guide conservatively before an IPO so they can beat estimates later, so the bank numbers may be designed to be beatable."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Pricing on Wednesday Nov 18 (range $70 to $78), any range increase before then, and first trading Thursday Nov 19."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Reuters via The Star",
+              "title": "Exclusive: Investors flock to Anthropic IPO but question durability of AI lead",
+              "url": "https://www.thestar.com.my/tech/tech-news/2026/11/14/exclusive-investors-flock-to-anthropic-ipo-but-question-durability-of-ai-lead"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "White House AI task force urges at least 12 months of regulatory leniency for companies that report cyber incidents in good faith",
+          "summary": "The group says AI has made older security standards outdated and wants agencies to stop punishing firms that disclose breaches voluntarily, Bloomberg and Cybersecurity Dive report.",
+          "stats": [
+            [
+              "12 months",
+              "Minimum leniency window, extendable"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "After its second meeting on Thursday, Nov 12, the White House AI task force said AI has changed cyber risk so much that organizations \"that only a short time ago had reasonable protections in place are now more vulnerable,\" and that \"prior standards for taking regulatory action against organizations in response to cyber incidents may be outdated.\" It urged federal agencies to limit regulatory liability for good-faith voluntary reporting for at least 12 months, with possible extensions, so companies do not fear punitive regulatory or civil action for disclosing incidents.",
+                "It also backed long-term reauthorization of the 2015 Cybersecurity Information Sharing Act, which protects companies that share threat data and is set to expire soon, and supported CISA's coming incident-reporting rule. Officials discussed a voluntary framework for reporting AI-related incidents, with the government analyzing reports and sharing defenses back, and said the NSA and NIST are testing new frontier models with major labs. Named participants include Commerce Secretary Howard Lutnick, National Cyber Director Sean Cairncross, Pentagon research chief Emil Michael, and OPM Director Scott Kupor."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Safe harbor / liability relief:** a promise that a regulator will not penalize a company for something it reports voluntarily, to encourage disclosure.",
+                "**Cybersecurity Information Sharing Act (2015):** the law that shields companies from liability when they share cyber threat indicators with the government and each other."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is a recommendation, not an order or a law, and agencies can ignore it. It is aimed at a real problem: AI tools make attacks cheaper and faster, and companies under-report breaches when disclosure invites fines. The trade-off is accountability: a blanket pause could also shield firms that were negligent. As Startup Fortune notes, the relief covers cybersecurity only and does not clearly extend to other AI failures. Cybersecurity Dive notes the readout did not say whether CISA, the agency that would run much of this, is taking part."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Cybersecurity Dive",
+              "title": "White House task force says companies deserve liability relief for AI-fueled cyberattacks",
+              "url": "https://www.cybersecuritydive.com/news/ai-white-house-task-force-cybersecurity-regulation/874679/"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "White House Urges Easing Liability to Encourage AI Disclosure",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-14/white-house-urges-easing-liability-to-encourage-ai-disclosure"
+            },
+            {
+              "name": "Startup Fortune",
+              "title": "White House AI task force urges 12 months of liability relief for firms that report cyber incidents",
+              "url": "https://startupfortune.com/white-house-ai-task-force-urges-12-months-of-liability-relief-for-firms-that-report-cyber-incidents/"
+            }
+          ]
+        },
+        {
+          "kicker": "Chips",
+          "headline": "Cerebras grows core revenue 70% to $231 million and says it has 700 megawatts of data center capacity contracted through 2027",
+          "summary": "The AI chipmaker still lost $161 million under standard accounting, guided to about $320 million next quarter, and says it expects to triple revenue in 2027.",
+          "stats": [
+            [
+              "$230.9M",
+              "Q3 core revenue, +70%"
+            ],
+            [
+              "-$161.2M",
+              "Q3 GAAP net loss"
+            ],
+            [
+              "700 MW",
+              "Capacity contracted by end-2027"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Cerebras reported third-quarter results on Nov 12. GAAP revenue was $210.8 million, up 55% from a year earlier; core (non-GAAP) revenue was $230.9 million, up 70%, with GAAP cloud and services revenue up 265%. It posted a GAAP net loss of $161.2 million but core net income of $29.8 million. It guided Q4 core revenue to about $310 million to $330 million and full-year 2026 to $940 million to $960 million.",
+                "The company said it has 700 gross megawatts of data center capacity under contract for delivery by the end of 2027, including new contracts in Norway and Finland, and expects manufacturing capacity to exceed 10 times its start-of-year level by year-end. It named Oracle (Cerebras in Oracle Cloud in 2027), two new hyperscaler wins, and Moonshot AI as a Kimi K3.1 launch partner. The CEO said he expects to \"triple revenue in 2027,\" which the company presents as an outlook, not guidance."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Q3 GAAP revenue",
+                  "$210.8M, +55%"
+                ],
+                [
+                  "Q3 core revenue",
+                  "$230.9M, +70%"
+                ],
+                [
+                  "Q3 GAAP net loss",
+                  "$161.2M"
+                ],
+                [
+                  "Q3 core net income",
+                  "$29.8M"
+                ],
+                [
+                  "Q4 core revenue guide",
+                  "$310M to $330M"
+                ],
+                [
+                  "FY2026 core revenue guide",
+                  "$940M to $960M"
+                ],
+                [
+                  "Nine-month GAAP net loss",
+                  "$625.8M"
+                ]
+              ],
+              "note": "From Cerebras' Q3 2026 results filed with the SEC (Form 8-K)."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Core (non-GAAP) results:** the company's own adjusted figures, which exclude items such as stock compensation. GAAP figures follow standard accounting rules and are usually worse.",
+                "**Gross megawatts:** total power capacity of the data centers, including cooling and overhead, not just what the chips use."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Cerebras sells speed: its wafer-sized chips run models very fast, which matters more as agents make long chains of calls. Growth is real, but the gap between a $161 million GAAP loss and a $30 million adjusted profit is wide, and the business depends on a few big customers. OpenAI, a major partner, appears in the results release only as a risk factor tied to its master agreement, and the release does not quantify customer concentration. Securing power, not chips, is the constraint, which is why the 700 MW figure matters."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Cerebras (SEC 8-K)",
+              "title": "Cerebras announces financial results for Q3 2026",
+              "url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026073366/cbrsannouncesfinancialresu.htm"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "Grok 4.8's limited rollout. Musk said Nov 10 it would start 'later this week'; xAI had published no model card or API listing as of Saturday morning."
+        },
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; no announcement as of Saturday morning."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Nvidia's search for a permanent CEO. Interim CEO Colette Kress also remains CFO; no timeline given."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Anthropic's Australian retail offer closes at 5 p.m. AEDT, the day before the IPO is priced."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Nvidia reports third-quarter results, call at 5 p.m. ET, its first under interim CEO Colette Kress."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Deadline Sens. Warren and Coons set for the administration to confirm it is preserving records on Nvidia's China exports and Huang's affair."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Anthropic is expected to price its IPO. The filed range is $70 to $78; the FT reports bankers may price above it."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Originally requested date for Huang's briefing to the House committee chairs. Rep. Mast says Huang agreed to appear before Thanksgiving; not confirmed by Huang or Nvidia."
+        },
+        {
+          "when": "Nov 18 to 19",
+          "what": "APEC summit in Shenzhen, where Trump meets Xi and the US-China 'superintelligence' dialogue is due to advance."
+        },
+        {
+          "when": "Thu Nov 19",
+          "what": "Anthropic shares (ANT) are expected to start trading on Nasdaq, per CNBC."
+        },
+        {
+          "when": "November",
+          "what": "Commerce's rule blocking Chinese firms from remotely using advanced chips abroad could be announced, per The Information."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO on Nov 4."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Wed Nov 25",
+          "what": "Alibaba's Qwen4-Max preview ends."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "Tue Dec 1",
+          "what": "House chairs' requested closed-door transcribed interview with Jensen Huang; Nvidia general counsel Tim Teter requested Dec 2."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Intro pricing ends for Gemini 4 Argon and Gemini 4 Carbon: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Thu Dec 3",
+          "what": "Senate Banking's requested public hearing with Jensen Huang; Commerce's Jeffrey Kessler invited to a House hearing the same day."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "December",
+          "what": "Cochise County, Arizona, holds a public hearing on SpaceX's planned $50 billion AI campus."
+        },
+        {
+          "when": "Wed Dec 9",
+          "what": "Starbase city commission considers a property tax abatement for SpaceX's $24 billion supercomputing site."
+        },
+        {
+          "when": "Thu Dec 10",
+          "what": "Commerce Secretary Howard Lutnick testifies before Senate Banking; he has agreed to appear."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        },
+        {
+          "when": "Jan 1, 2027",
+          "what": "Gemini 3.8 Flash's promotional price ends; it rises to Hydrogen's $1.50 / $7.50 per million tokens."
+        }
+      ]
+    },
+    {
       "id": "2026-11-13-pm",
       "date": "2026-11-13",
       "edition": "Afternoon",

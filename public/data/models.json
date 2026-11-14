@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "models": [
     { "name": "Gemini 4 Hydrogen", "lab": "Google", "released": "2026-11-12", "access": "Closed", "price": "$1.50 / $7.50", "context": "1M", "note": "Google's fast, cheaper model for coding and agents, replacing Gemini 3.8 Flash; default in Google Search. AA Intelligence Index 51 at high (54 at xhigh), just above Argon. Refuses safe requests more often than 3.8 Flash per Google's model card.", "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" },
     { "name": "Gemini Decision 1", "lab": "Google DeepMind", "released": "2026-11-11", "access": "Closed", "price": "$0.10 / $0", "context": "256K", "note": "Scoring model behind the Gemini Decisions API: returns calibrated picks for yes/no, multiple-choice, and rubric questions (up to 1,000 per request) instead of generating text. 150-250 ms latency. Free tier in AI Studio.", "link": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/" },
