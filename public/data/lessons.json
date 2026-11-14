@@ -1785,6 +1785,130 @@
         "Explain the difference between a specialist robot model and using a general frontier model to control a robot, and why many systems combine both.",
         "A specialist model is trained on robot data to turn camera input into motor commands and is small and fast enough to run on the robot. A general frontier model knows far more about the world and can plan new tasks, controlling the robot through a set of commands like tools, but it is large, usually cloud-hosted, and slower. So many systems layer them: the general model decides what to do and breaks it into steps, and a fast onboard model or controller executes the motions and handles safety reactions in real time."
       ]
+    },
+    {
+      "id": "nw34",
+      "added": "2026-11-14",
+      "t": "Supply Chain Attacks on AI Dev Tools",
+      "cards": [
+        "A **supply chain attack** hits something many people install, such as a package, an editor extension, or an update server, instead of attacking each victim. One poisoned release reaches every machine that pulls it. Developer machines are prized targets because they hold **source code, cloud keys, and tokens**.",
+        "AI coding tools widen the surface. Agents log **traces** of everything they see and run, and those logs often capture secrets from the environment. If traces are kept for training or shared with a **vendor**, a leak there can expose credentials that open the toolmaker's own systems. Each vendor in the chain (inference provider, storage, marketplace) is another place to break in.",
+        "Defenses are layered: **scrub secrets** before logs are stored, give vendors the narrowest access for the shortest time, **sign and verify** packages so a tampered cache copy is rejected, and pin extension versions. After a compromise, uninstalling is not enough: malware sets up **persistence** (startup tasks, added SSH keys), so you check the machine, rotate credentials from a clean device, and often rebuild."
+      ],
+      "terms": [
+        [
+          "Supply chain attack",
+          "Compromising software many people install so the attack spreads through normal updates."
+        ],
+        [
+          "Agent trace",
+          "The logged record of an AI agent's inputs, actions, and outputs during a session."
+        ],
+        [
+          "Persistence",
+          "Malware changes that survive reboots or uninstalls, like startup tasks or added keys."
+        ],
+        [
+          "Package signing",
+          "Cryptographically marking a release so installers can detect tampered copies."
+        ],
+        [
+          "Credential rotation",
+          "Replacing exposed keys and passwords so stolen copies stop working."
+        ]
+      ],
+      "qs": [
+        [
+          "You installed an editor extension later found to be trojanized. You uninstall it. What is still necessary?",
+          "Check for leftover persistence and rotate credentials from a clean machine",
+          "Nothing, since the extension is gone",
+          "Restart the editor twice",
+          "Change your editor's color theme to reset settings",
+          "Malware commonly adds startup tasks or SSH keys that outlive the extension, and anything it could read should be treated as stolen."
+        ],
+        [
+          "Why are coding-agent logs a security risk even when stored by a trusted vendor?",
+          "They often contain secrets from the developer's environment, so any leak exposes working credentials",
+          "They are too large to store safely",
+          "They reveal which model was used",
+          "Logs cannot be encrypted",
+          "Agents read env files, configs, and command output, so traces can hold live keys that open other systems."
+        ],
+        [
+          "Which control would have stopped a tampered package placed in a marketplace's cache from installing?",
+          "Verifying the publisher's signature before install",
+          "A longer context window",
+          "Rate limiting the marketplace website",
+          "Using a faster CDN",
+          "A signature check rejects any copy that does not match what the real publisher signed, even if it is served from a trusted cache."
+        ]
+      ],
+      "ex": [
+        "Explain how a leaked vendor key can end with malware on thousands of developer laptops, and two controls that break the chain.",
+        "A company gives a vendor a key to shared data. If that data includes agent logs with unscrubbed credentials, whoever steals the key can use those credentials to get into the company's own systems, including the servers that distribute extensions or updates. From there they swap in a tampered release, and every developer who installs it gets malware. Scrubbing secrets from logs and limiting vendor access stops the first hop; signing packages and verifying signatures at install stops the last one."
+      ]
+    },
+    {
+      "id": "nw35",
+      "added": "2026-11-14",
+      "t": "How the AI Buildout Is Financed",
+      "cards": [
+        "Data centers cost tens of billions, and most companies do not pay cash. They borrow through **corporate bonds**, **private credit** (loans from funds rather than banks or public markets), and **project finance**, where lenders are repaid from one project's revenue. Often the asset sits in a **special purpose vehicle (SPV)**, a separate company that owns the building and carries the debt off the sponsor's balance sheet.",
+        "Much of the risk lives in contracts, not loans. **Leases** commit a tenant to years of payments. **Take-or-pay** deals require paying for capacity whether it is used or not. **Residual value guarantees** promise an asset will be worth a set amount later. These make projects financeable but mean a slowdown hits whoever signed. **Circular financing**, where a chipmaker invests in a customer that then buys its chips, can make demand look stronger than it is.",
+        "Regulators watch three things: how much is borrowed versus paid from cash flow, how **concentrated** exposure is in a few banks and funds, and how hard it is to **see** (private deals are less transparent). When reading a lab's or cloud's mega-deal, ask who is on the hook if usage falls short, and whether the number is spending or a commitment."
+      ],
+      "terms": [
+        [
+          "Private credit",
+          "Loans made by investment funds rather than banks or public bond markets."
+        ],
+        [
+          "SPV",
+          "Special purpose vehicle: a separate company set up to own one asset and borrow against it."
+        ],
+        [
+          "Take-or-pay",
+          "A contract that requires payment for capacity whether or not it is used."
+        ],
+        [
+          "Residual value guarantee",
+          "A promise that an asset will be worth at least a set amount when a lease ends."
+        ],
+        [
+          "Circular financing",
+          "Investment that flows back to the investor as purchases, inflating apparent demand."
+        ]
+      ],
+      "qs": [
+        [
+          "A cloud company announces a $50 billion capacity deal with an AI lab. What is the most useful follow-up question?",
+          "Is it spending now or a multi-year commitment, and who pays if usage falls short?",
+          "How many GPUs fit in one rack?",
+          "Which programming language the lab uses",
+          "Whether the deal was announced on a weekday",
+          "Big headline numbers are often commitments that shift risk to a guarantor, not money already spent."
+        ],
+        [
+          "Why might a data center's debt not appear on the developer's balance sheet?",
+          "It was borrowed by a separate SPV that owns the facility",
+          "Data center debt is illegal to report",
+          "It was paid in stock",
+          "Banks do not lend to data centers",
+          "SPVs hold the asset and its debt separately, which is legal but makes total exposure harder to see."
+        ],
+        [
+          "A chipmaker invests in a startup cloud, which uses the money to buy the chipmaker's GPUs. What is the concern?",
+          "Sales partly reflect the chipmaker's own money, so real outside demand is overstated",
+          "The startup will run out of electricity",
+          "GPUs lose value only in winter",
+          "The chipmaker must pay higher taxes",
+          "Circular deals can inflate revenue and demand signals that investors rely on."
+        ]
+      ],
+      "ex": [
+        "Explain why regulators worry about how AI data centers are financed, even if the technology works.",
+        "Much of the buildout is borrowed: bonds, private credit, and project loans, often through SPVs, plus long leases and take-or-pay contracts that lock in payments. If AI revenue grows slower than expected, those fixed obligations remain, and the losses land on lenders, guarantors, and banks with concentrated exposure. Private and off-balance-sheet deals are harder to measure, and circular investments can make demand look stronger than it is, so problems may surface late and spread through the financial system."
+      ]
     }
   ]
 }

@@ -1,6 +1,646 @@
 {
   "editions": [
     {
+      "id": "2026-11-14-pm",
+      "date": "2026-11-14",
+      "edition": "Afternoon",
+      "stories": [
+        {
+          "kicker": "Business",
+          "headline": "The Fed names AI the most-cited risk to US financial stability and puts data center debt above $1.1 trillion",
+          "summary": "The Federal Reserve's twice-yearly stability report flags AI-driven stock valuations, AI-enabled cyberattacks, and the borrowing behind the data center buildout.",
+          "stats": [
+            [
+              "$680B+",
+              "AI computing debt issued in 2026 through Oct"
+            ],
+            [
+              "~$1T",
+              "Big-bank exposure to the buildout"
+            ],
+            [
+              "87%",
+              "Survey contacts citing AI, per CNBC"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Friday, Nov 13, the Federal Reserve Board released its November Financial Stability Report, which reflects data available as of Oct 28. It says asset valuation pressures \"continued to be elevated\" and that equity valuations \"have remained high, partly driven by market enthusiasm for super intelligence (SI),\" the administration's official term for AI. The risk it spells out: if AI earnings disappoint, valuations could fall, credit could tighten, and capital spending could drop, which matters because investment in new computing has been a significant driver of US growth this year.",
+                "A New York Fed staff survey of 23 broker-dealers, banks, investment funds, and advisory firms, run in September and October, found AI was the most-cited risk. CNBC reports 87% of contacts flagged it, up from 50% in the spring survey (which was itself up from 30% in fall 2025). Respondents grouped their worries into three areas: a valuation correction, cyberattacks including ones enabled by frontier models, and the complex financing behind AI infrastructure. The Fed notes the survey reflects respondents' views, not the Board's.",
+                "The report's boxed analysis, \"Leverage in the Data Center Buildout,\" is the most concrete part. It describes debt shifting from plain corporate bonds toward private credit, structured credit, and project finance, and \"circular financing,\" where hyperscalers and chipmakers take equity stakes in smaller firms alongside debt deals. Those links, the Fed writes, \"create vulnerabilities that necessitate close monitoring.\""
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "AI computing debt issued, 2026 through Oct",
+                  "Over $680 billion"
+                ],
+                [
+                  "Same, all of 2023",
+                  "About $130 billion"
+                ],
+                [
+                  "Share of investment-grade corporate debt issuance",
+                  "Under 6% (2023) to about 31% (2026)"
+                ],
+                [
+                  "Outstanding public debt tied to AI computing",
+                  "Over $1.1 trillion"
+                ],
+                [
+                  "Not-yet-started leases (undiscounted)",
+                  "Over $1 trillion"
+                ],
+                [
+                  "Take-or-pay contracts and residual value guarantees",
+                  "Over $2 trillion"
+                ],
+                [
+                  "Largest US banks' exposure to tech, data center developers, SPEs, private credit, utilities",
+                  "Close to $1 trillion"
+                ],
+                [
+                  "Survey contacts citing AI as a risk",
+                  "87% (spring 2026: 50%)"
+                ]
+              ],
+              "note": "Fed November 2026 Financial Stability Report as summarized by CASRAI and AI Weekly; survey percentages per CNBC. Private credit makes the true debt total harder to measure, the Fed says."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Special purpose entity (SPE or SPV):** a separate company set up to own one asset, like a data center, and borrow against it, so the debt sits off the sponsor's own balance sheet.",
+                "**Take-or-pay contract:** the buyer pays for capacity whether or not it uses it. It makes a data center financeable, but shifts the risk to whoever signed.",
+                "**Residual value guarantee:** a promise that an asset, like a building or a fleet of GPUs, will be worth at least a set amount when a lease ends. If it is worth less, the guarantor pays the difference.",
+                "**Circular financing:** money flowing in a loop, such as a chipmaker investing in a cloud company that then buys the chipmaker's chips. It can inflate apparent demand."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is not a prediction of a crash. Financial stability reports list vulnerabilities, and the Fed does that every six months. What changed is ranking and scale: AI moved from one concern among several in spring to the top of the list, and the Fed now puts real numbers on how much of the buildout is borrowed rather than paid from cash flow. Roughly a third of new investment-grade corporate debt this year is AI computing.",
+                "The off-balance-sheet pieces (leases, guarantees, take-or-pay deals over $3 trillion combined) are what to keep in mind when a lab or cloud company reports a big capacity deal. Those deals often arrive as commitments rather than spending, and the Fed is saying that much of the risk sits with whoever guaranteed them. For builders, the practical link is price: if financing tightens, compute gets scarcer and more expensive, not cheaper.",
+                "One caution on the 87%: it is about 20 of 23 respondents in a small, informal survey. It shows what market insiders are worried about, not a measured probability."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Nvidia's Q3 results on Tuesday and Anthropic's IPO pricing on Wednesday are the next tests of the valuations the Fed is flagging. The Fed says the bank exposures are covered in its annual stress test, so next year's scenarios may include an AI-specific shock."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Federal Reserve",
+              "title": "Financial Stability Report, November 2026",
+              "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"
+            },
+            {
+              "name": "CNBC",
+              "title": "Fed's Financial Stability Report names AI top risk as 87% of market contacts flag it",
+              "url": "https://www.cnbc.com/2026/11/13/ai-risks-financial-system-federal-reserve.html"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "AI Advances Raise Financial Market Vulnerabilities, Fed Report Finds",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-13/fed-sees-risks-tied-to-elevated-asset-prices-partly-driven-by-ai"
+            },
+            {
+              "name": "CASRAI",
+              "title": "Fed report: AI valuations and data center debt",
+              "url": "https://casrai.org/news/federal-reserve-financial-stability-report-ai-november-2026"
+            },
+            {
+              "name": "AI Weekly",
+              "title": "Fed Survey: 87% of Contacts Name AI Top Stability Risk",
+              "url": "https://aiweekly.co/alerts/fed-survey-87-of-contacts-name-ai-top-stability-risk"
+            },
+            {
+              "name": "Insurance Business",
+              "title": "The Fed just doubled its AI risk warning",
+              "url": "https://www.insurancebusinessmag.com/us/news/cyber/the-fed-just-doubled-its-ai-risk-warning--heres-what-it-means-for-us-cyber-insurers-587968.aspx"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "FBI warns hackers are running ARTEX, an open-source AI pen-testing tool, to reach privileged access in under three hours",
+          "summary": "A Friday FBI alert says the agent framework has been used since August against banks, government, energy, and semiconductor targets, mostly powered by cheap Chinese models.",
+          "stats": [
+            [
+              "<3 hrs",
+              "Some intrusions, target to privileged access"
+            ],
+            [
+              "1,600+",
+              "Exposed ARTEX consoles, early Nov"
+            ],
+            [
+              "2,250+",
+              "Downstream tenants in one campaign"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Friday, Nov 13, the FBI issued FLASH alert FLASH-20261113-001, \"Threat Overview of ARTEX Autonomous Penetration Testing Framework,\" through its IC3 portal, marked TLP:CLEAR (free to share). It says malicious actors have turned ARTEX, an open-source tool built for authorized security testing, into a way to automate intrusions from reconnaissance through data theft. Citing Microsoft, the FBI says some intrusions went from first targeting to privileged access in under three hours.",
+                "ARTEX is written in Go and takes a plain-language goal, then splits the work across several specialized AI agents that run commands with little human input. It has no model of its own: it plugs into outside providers including Anthropic's Claude, OpenAI's GPT, DeepSeek, GLM, Grok, and Kimi. In attacker-controlled copies, the FBI says Chinese-origin models are the most common, with DeepSeek's Flash models dominating, which it attributes to their capability, low cost, and lack of visible guardrails when a request is framed as pen testing.",
+                "A developer using the handle \"Autumn-27\" posted ARTEX on GitHub in July and deleted the repo on Oct 8 after reports of abuse. Forks, archived copies, and a paid \"ARTEX PRO\" still circulate. The alert ties it to attacks on South Korean financial institutions that exposed personal data on about 67,000 people, and, per Microsoft, to a supply chain compromise of ConnectWise Cloud Backup customers that reached more than 2,250 downstream tenants."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Fastest intrusions, target to privileged access",
+                  "Under 3 hours (Microsoft)"
+                ],
+                [
+                  "In use since",
+                  "At least August 2026"
+                ],
+                [
+                  "Publicly exposed ARTEX consoles",
+                  "1,600+ in early November"
+                ],
+                [
+                  "People whose data was taken, South Korean banks",
+                  "About 67,000"
+                ],
+                [
+                  "Downstream tenants reached via ConnectWise",
+                  "2,250+"
+                ],
+                [
+                  "GitHub stars before takedown",
+                  "Est. 1,500 to 2,000 in ~10 weeks"
+                ],
+                [
+                  "Industry and government sources cited",
+                  "11"
+                ]
+              ],
+              "note": "FBI FLASH-20261113-001 as summarized by OODA Loop and CASRAI; individual figures are attributed in the alert to Microsoft, CrowdStrike, Zscaler, and others."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Penetration testing:** hiring someone to break into your own systems so you find holes first. Tools built for it are dual-use by nature.",
+                "**FLASH alert:** an FBI technical bulletin for defenders, with indicators and recommended fixes.",
+                "**Privileged access:** admin-level control of a network, such as a domain administrator account. Getting it is usually the step before data theft or ransomware.",
+                "**Kerberoasting:** requesting Windows service tickets and cracking them offline to recover service account passwords. One of the techniques the alert lists."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The technique list is old: SQL injection, weak and reused passwords, secrets left in JavaScript, abused OAuth apps, Active Directory tricks. The alert cites no new software flaws. What AI changes is speed, scale, and who can do it: the FBI says operators with minimal skill can run complex attacks on many targets at once. That is the cyber risk the Fed report also flagged.",
+                "It also undercuts the idea that guardrails at a few big labs will contain this. ARTEX can call any model, and the FBI says attackers mostly picked cheap ones with weak refusals. For defenders, the recommended fixes are basic hygiene done thoroughly: inventory every internet-facing app (including partner portals and old services), lock down admin interfaces, rate-limit sensitive APIs, scan for and rotate embedded secrets, and watch for unexpected outbound calls to LLM APIs from servers that have no reason to make them."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether model providers named in the alert report blocking ARTEX traffic, and whether CISA or allies issue a joint advisory. Organizations hit by the ConnectWise campaign are told to review activity from at least Oct 1."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "FBI IC3",
+              "title": "FLASH-20261113-001: Threat Overview of ARTEX Autonomous Penetration Testing Framework (via OODA Loop)",
+              "url": "https://oodaloop.com/analysis/ooda-original/fbi-flash-on-artex-agentic-ai-hacking-frameworks-move-from-pen-testing-tool-to-mainstream-threat/"
+            },
+            {
+              "name": "CASRAI",
+              "title": "FBI Warns of ARTEX AI Attack Framework",
+              "url": "https://casrai.org/news/fbi-artex-ai-attack-framework-warning-2026"
+            },
+            {
+              "name": "Security Boulevard",
+              "title": "ARTEX AI Attack Framework: SafeBreach Coverage for FBI FLASH Alert FLASH-20261113-001",
+              "url": "https://securityboulevard.com/2026/11/artex-ai-attack-framework-safebreach-coverage-for-fbi-flash-alert-flash-20261113-001/"
+            },
+            {
+              "name": "GBHackers",
+              "title": "FBI Warns Hackers Are Weaponizing ARTEX AI Framework",
+              "url": "https://gbhackers.com/fbi-warns-artex-ai-framework/"
+            },
+            {
+              "name": "iTnews",
+              "title": "ARTEX AI hacking framework spreads to another China-linked group",
+              "url": "https://www.itnews.com.au/news/artex-ai-hacking-framework-spreads-to-another-china-linked-group-630045"
+            }
+          ]
+        },
+        {
+          "kicker": "Security",
+          "headline": "Cursor traces the trojanized Claude Code extension in its marketplace to a leaked key it gave Fireworks AI",
+          "summary": "Coding-agent logs that still contained credentials let an attacker work through Cursor's systems and plant malicious builds that up to 5,000 users could have downloaded.",
+          "stats": [
+            [
+              "5,000",
+              "Max users who could have received it"
+            ],
+            [
+              "~11 hrs",
+              "Malicious builds were live"
+            ],
+            [
+              "<0.05%",
+              "Users with agent traces exposed"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Friday, Nov 13, Cursor (the AI code editor SpaceX bought) published an investigation update on a security incident it first disclosed in October. It says the attack began with an access key Cursor had issued to Fireworks AI, its inference vendor. The key gave read-only access to a shared storage bucket holding a limited set of coding-agent traces, mostly from 2025, from sessions outside Privacy Mode that Cursor was allowed to use for training. Some of those traces contained credentials that should have been scrubbed.",
+                "The attacker used those credentials to reach several Cursor services, getting archived non-production code repositories, limited support records and emails, usage data, contact details, and conversation summaries. On Oct 29, another stolen credential let them put modified copies of Anthropic's Claude Code extension (versions 2.1.312 and 2.1.313, for macOS and Windows) into the cache behind Cursor's extension marketplace. The builds were live for about 11 hours. Cursor's last sighting of the attacker was Nov 1, when an attempt was blocked.",
+                "Cursor says Anthropic did not publish the tampered packages, Anthropic's product was not vulnerable, and the upstream Open VSX registry never hosted the malware. Per Cyber Security News' analysis, the payload ran as soon as the extension loaded, added an SSH key labeled svc-telemetry, tried to open a reverse tunnel, and set up persistence (a LaunchAgent on macOS, a scheduled task on Windows). Cursor says bugs and missing admin rights stopped remote login on most machines, but it has not ruled out other changes."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Users who could have received malicious builds",
+                  "Up to 5,000 (not confirmed infections)"
+                ],
+                [
+                  "Users with coding-agent traces exposed",
+                  "Under 0.05%"
+                ],
+                [
+                  "Customers with API credentials exposed",
+                  "Under 0.01%"
+                ],
+                [
+                  "Tampered versions",
+                  "Anthropic.claude-code 2.1.312 and 2.1.313"
+                ],
+                [
+                  "Window the builds were available",
+                  "About 11 hours, starting Oct 29"
+                ],
+                [
+                  "Last observed attacker activity",
+                  "Nov 1"
+                ]
+              ],
+              "note": "Cursor's Nov 13 update, as reported by Cyber Security News and Business Upturn. The percentages describe different parts of the incident."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Supply chain attack:** compromising something many people install (a package, an extension, an update server) instead of attacking each victim directly.",
+                "**Agent traces:** the logged record of what a coding agent saw and did: prompts, files read, commands run, tool outputs. They often capture secrets that were in the developer's environment.",
+                "**Persistence:** changes that let malware survive a reboot or an uninstall, like a startup task or an added SSH key."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This chains together three risks that apply to anyone using AI coding tools. First, agent logs are full of secrets, and once they are kept for training and shared with a vendor, they become a target. Second, an AI vendor's breach spreads: Fireworks was already linked to exposed Notion AI chat transcripts, and now to a malware push at Cursor. Third, extension marketplaces are a weak point, because one cached package reaches thousands of developer machines that hold source code and cloud keys.",
+                "Privacy Mode sessions, customer repos, and official Cursor updates were not affected, Cursor says. But its own guidance is the important part: uninstalling the extension may leave the SSH key and startup scripts behind, so anyone who installed those versions should check the machine, remove persistence, rotate any credentials it could reach from a clean machine, and consider a rebuild."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Cursor",
+              "title": "Security incident update",
+              "url": "https://cursor.com/blog/security-incident-update"
+            },
+            {
+              "name": "Cursor",
+              "title": "Claude Code extension security notice",
+              "url": "https://cursor.com/blog/claude-code-extension-security-notice"
+            },
+            {
+              "name": "Cyber Security News",
+              "title": "Cursor Reveals How a Leaked Fireworks AI Key Led to a Backdoored Claude Code Extension",
+              "url": "https://cybersecuritynews.com/cursor-data-breach/"
+            },
+            {
+              "name": "Business Upturn",
+              "title": "Cursor says exposed Fireworks access key led to Claude Code extension attack",
+              "url": "https://businessupturn.com/technology/cursor-says-exposed-fireworks-access-key-led-to-claude-code-extension-attack/"
+            }
+          ]
+        },
+        {
+          "kicker": "Standards",
+          "headline": "Sierra ships version 1.0 of Poppy, a standard for personal AI agents to sign in to businesses, and Shopify turns it on for every store",
+          "summary": "Meta's Muse agent now checks every site for Poppy first, giving the five-week-old protocol huge reach before its spec is locked.",
+          "stats": [
+            [
+              "100+",
+              "Design partners"
+            ],
+            [
+              "Every",
+              "Shopify store publishes a Poppy file"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Thursday, Nov 13, Sierra released version 1.0 of the Personal Agent Protocol, nicknamed Poppy. It defines how a customer's personal AI agent finds a company, identifies itself, signs in with the customer's permission, and gets tasks done through the company's website, APIs, or the company's own agent. The first draft came out Oct 9 with eight launch partners: Meta, Genesys, Instinct, NiCE, Rocket, Shopify, Stripe, and Walmart.",
+                "Shopify enabled Poppy for every merchant: each store now automatically publishes a Poppy file, with no setup by the merchant. Meta's Muse agent is now Poppy-enabled for all users and checks for a Poppy file first on every site it visits. Sierra says 60 more companies joined as design partners, bringing the total to over 100, including Cisco, Delta, Intuit, Salesforce, Twilio, and Zoom. Mercury, Synchrony, and Turkish Airlines are live: Mercury customers can check balances and start payments (still subject to account approval rules), and Turkish Airlines lets agents check fares and request upgrades the member approves before paying."
+              ]
+            },
+            {
+              "h": "How it works",
+              "list": [
+                "A company publishes a file at /.well-known/poppy.json listing its channels, capabilities, and sign-in options.",
+                "A signed Session header identifies the agent and a pseudonymous user. User IDs are stable within one company but differ across companies, so businesses cannot match users with each other.",
+                "Standard OAuth authorizes actions on a customer's account, so the customer decides and can later change what the agent may do.",
+                "It builds on MCP, OpenAPI, and Google's Universal Commerce Protocol (UCP). For shopping, UCP handles products, carts, and checkout; Poppy handles who the agent is and what it is allowed to do.",
+                "Company content is treated as data, not instructions, and tokens and private keys stay out of the model's context, both aimed at prompt injection."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**/.well-known/:** a standard web folder where sites publish machine-readable files (like security contacts) at a predictable address, so software can find them without asking.",
+                "**OAuth:** the \"Sign in with...\" permission system. You approve specific access for an app, and it gets a revocable token instead of your password.",
+                "**Pseudonymous ID:** an identifier that is consistent but not your real identity, so a company can recognize a returning agent without learning who you are across sites."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Agents that shop and book for people have mostly worked by driving browsers like a human, which is brittle and hard for businesses to trust. Poppy is a bid to replace that with a front door: the company says what an agent can do, the customer says what their agent may do, and both are enforced with familiar plumbing. Shopify's default-on move alone gives it more coverage than most standards get in years.",
+                "Two cautions. Sierra's announcement says 1.0, but the spec and kit are labeled draft 1.0 and still allow backward-incompatible changes, so early adopters may have to rework. And it sits alongside other agent commerce efforts, such as card networks' agent payment schemes, so \"standard\" here means a well-backed proposal from a vendor that sells customer service agents, not a neutral body's specification."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Sierra",
+              "title": "Releasing Personal Agent Protocol 1.0",
+              "url": "https://sierra.ai/blog/releasing-poppy"
+            },
+            {
+              "name": "Sierra",
+              "title": "Poppy (original draft announcement, Oct 9)",
+              "url": "https://sierra.ai/blog/poppy"
+            },
+            {
+              "name": "Unite.AI",
+              "title": "Sierra Releases Poppy 1.0 With Shopify and Meta Muse Support",
+              "url": "https://www.unite.ai/sierra-releases-poppy-1-0-with-shopify-and-meta-muse-support/"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "Washington Post: Rubio sharpened the CIA reporting behind the Huang spy memo, as Nvidia ends a sixth straight losing week",
+          "summary": "The Post says the CIA is not convinced Alice Huang knowingly passed information to Beijing, while Musk joins a 100,000-name petition to reinstate Jensen Huang.",
+          "stats": [
+            [
+              "~$1.7T",
+              "Nvidia market value lost in the slide, per CNBC"
+            ],
+            [
+              "100,000+",
+              "Petition names (self-reported)"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The Washington Post reported late Friday, Nov 13, that Secretary of State and National Security Adviser Marco Rubio personally oversaw the classified spring memo that warned officials about Jensen Huang's relationship with Alice Huang, and reworded an underlying CIA report in more forceful terms, according to a person familiar with the matter. The Post says CIA officials are still not persuaded that the intelligence, including intercepted communications, shows she knowingly passed information to Beijing, and some Office of the Director of National Intelligence officials called the memo's characterization \"over-torqued.\" Per the Post, officials who wanted to limit Huang's influence on China policy saw the memo as a win, and Rubio and others persuaded Trump not to allow Blackwell chip sales to China.",
+                "That matches CNN's Thursday report that US intelligence is unsure whether Alice Huang spied for China, though some officials argue her access was a risk either way. Attorney General Todd Blanche has said there are \"no conclusions\" yet. China denies she is a spy.",
+                "Meanwhile, Nvidia stock closed Friday on its longest weekly losing streak since 2012, with about $1.7 trillion in market value gone, CNBC reported. And a \"Stand with Jensen\" petition asking the board to reinstate Huang during the investigation passed 100,000 names; Elon Musk said on X on Nov 13 that he signed it. Moneywise, via Yahoo Finance, notes the signers are self-reported (it lists 5,248 claiming to be current Nvidia employees) and some entries look fake or duplicated."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The case that forced out the world's most valuable chipmaker's founder now rests on intelligence that the CIA itself reportedly views as unproven, framed by an official who already opposed Huang's push to sell chips to China. That does not clear Huang: Reuters reported Friday that he misled Nvidia's general counsel about the relationship, and the board's own investigation is separate. But it shifts the story from a straightforward espionage case toward a policy fight over chip exports, which is how Huang's defenders, including Musk (whose companies rely on Nvidia chips), are framing it.",
+                "All of the Post's key claims come from anonymous sources. Treat the memo's wording and the CIA's view as reported, not established."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Nvidia's Q3 earnings Tuesday under interim CEO Colette Kress; the Dec 1 to Dec 10 congressional sessions with Huang, Nvidia's top lawyer, and Lutnick; and whether intelligence committees seek the original CIA report to compare with Rubio's memo."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The Washington Post",
+              "title": "Behind Jensen Huang's spy scandal, a shadow war for Trump's ear on China",
+              "url": "https://www.washingtonpost.com/technology/2026/11/13/behind-jensen-huangs-spy-scandal-shadow-war-trumps-ear-china/"
+            },
+            {
+              "name": "AI Weekly",
+              "title": "WaPo: Rubio Recast CIA Report in Huang Spy Scandal Memo",
+              "url": "https://aiweekly.co/alerts/wapo-rubio-recast-cia-report-in-huang-spy-scandal-memo"
+            },
+            {
+              "name": "CNN (via Yahoo)",
+              "title": "US intel isn't sure if businesswoman spied on Nvidia for China, doesn't mean she wasn't a risk, sources say",
+              "url": "https://sg.news.yahoo.com/us-intel-isn-t-sure-223208045.html"
+            },
+            {
+              "name": "CNBC",
+              "title": "Nvidia stock suffers longest weekly losing streak since 2012 as market value sinks by $1.7 trillion",
+              "url": "https://www.cnbc.com/2026/11/13/nvidia-stock-jensen-affair-ai.html"
+            },
+            {
+              "name": "Yahoo Finance (Moneywise)",
+              "title": "Elon Musk joins 100,000+ signers on a petition to reinstate Jensen Huang",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-joins-100-000-172500045.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Tools",
+          "headline": "Cloudflare open-sources Kitesurf, its lightweight browser engine for AI agents, under Apache 2.0",
+          "summary": "Existing Puppeteer scripts work unchanged, but self-hosting it on Cloudflare requires a paid Workers plan.",
+          "stats": [],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Cloudflare has published the source code for Kitesurf (AI Weekly flagged the release Saturday, Nov 14), the agent-first browser it introduced in August, under the Apache 2.0 license. Kitesurf is \"stateless\": it loads and renders pages for an agent without keeping a long-running browser around. It uses the Blitz engine for HTML parsing, layout, and painting, Stylo (from Firefox) for CSS, and runs JavaScript in Cloudflare's Dynamic Workers, falling back to the Boa engine inside WebAssembly only when needed. Agents connect through the Chrome DevTools Protocol, so Puppeteer scripts work without rewrites. Cloudflare added WebMCP support in September.",
+                "Cloudflare's stated goal is a browser that uses less CPU and memory than Chromium and scales on demand. The announcement, per AI Weekly, gives no CPU or memory figures and points to a separate page for web compatibility test results. Self-hosting on Workers requires a Workers Paid plan, because Kitesurf uses Dynamic Workers to isolate pages."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Chrome DevTools Protocol (CDP):** the interface automation tools like Puppeteer use to control a browser. Supporting it means existing agent code can switch browsers easily.",
+                "**Headless browser:** a browser with no screen, run by software. Agents use them to read and click through websites, and running thousands of full Chromium instances is expensive."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Browsing is one of the costliest parts of running web agents at scale, and a lighter engine could cut that. Open-sourcing lets developers inspect and test it, but the easy deployment path still runs through Cloudflare's paid platform, and a new engine will render fewer sites correctly than Chromium. Check the compatibility results against the sites your agent actually needs before switching."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Cloudflare",
+              "title": "Kitesurf open-source release",
+              "url": "https://blog.cloudflare.com/kitesurf-open-source"
+            },
+            {
+              "name": "Cloudflare",
+              "title": "Introducing Kitesurf: The agent-first browser that runs in V8 isolates on Cloudflare Workers",
+              "url": "https://blog.cloudflare.com/kitesurf/"
+            },
+            {
+              "name": "AI Weekly",
+              "title": "Cloudflare open-sources Kitesurf browser engine for AI agents",
+              "url": "https://aiweekly.co/alerts/cloudflare-open-sources-kitesurf-browser-engine-for-ai-agents"
+            },
+            {
+              "name": "TechCrunch",
+              "title": "Cloudflare launches Kitesurf, a browser built for AI agents",
+              "url": "https://techcrunch.com/2026/08/07/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "Grok 4.8's limited rollout. Musk said Nov 10 it would start 'later this week'; xAI had published no model card or API listing as of Saturday afternoon."
+        },
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; no announcement as of Saturday afternoon."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Nvidia's search for a permanent CEO. Interim CEO Colette Kress also remains CFO; no timeline given."
+        },
+        {
+          "when": "Sun Nov 15",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Anthropic's Australian retail offer closes at 5 p.m. AEDT, the day before the IPO is priced."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Nvidia reports third-quarter results, call at 5 p.m. ET, its first under interim CEO Colette Kress."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Deadline Sens. Warren and Coons set for the administration to confirm it is preserving records on Nvidia's China exports and Huang's affair."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Anthropic is expected to price its IPO. The filed range is $70 to $78; the FT reports bankers may price above it."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Originally requested date for Huang's briefing to the House committee chairs. Rep. Mast says Huang agreed to appear before Thanksgiving; not confirmed by Huang or Nvidia."
+        },
+        {
+          "when": "Nov 18 to 19",
+          "what": "APEC summit in Shenzhen, where Trump meets Xi and the US-China 'superintelligence' dialogue is due to advance."
+        },
+        {
+          "when": "Thu Nov 19",
+          "what": "Anthropic shares (ANT) are expected to start trading on Nasdaq, per CNBC."
+        },
+        {
+          "when": "November",
+          "what": "Commerce's rule blocking Chinese firms from remotely using advanced chips abroad could be announced, per The Information."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO on Nov 4."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Wed Nov 25",
+          "what": "Alibaba's Qwen4-Max preview ends."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Sat Nov 28",
+          "what": "Deadline for the White House science adviser to propose legislative language for a federal 'super intelligence' definition, under the Sept 29 executive order."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "Tue Dec 1",
+          "what": "House chairs' requested closed-door transcribed interview with Jensen Huang; Nvidia general counsel Tim Teter requested Dec 2."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Intro pricing ends for Gemini 4 Argon and Gemini 4 Carbon: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Thu Dec 3",
+          "what": "Senate Banking's requested public hearing with Jensen Huang; Commerce's Jeffrey Kessler invited to a House hearing the same day."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "December",
+          "what": "Cochise County, Arizona, holds a public hearing on SpaceX's planned $50 billion AI campus."
+        },
+        {
+          "when": "Wed Dec 9",
+          "what": "Starbase city commission considers a property tax abatement for SpaceX's $24 billion supercomputing site."
+        },
+        {
+          "when": "Thu Dec 10",
+          "what": "Commerce Secretary Howard Lutnick testifies before Senate Banking; he has agreed to appear."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        },
+        {
+          "when": "Jan 1, 2027",
+          "what": "Gemini 3.8 Flash's promotional price ends; it rises to Hydrogen's $1.50 / $7.50 per million tokens."
+        },
+        {
+          "when": "Early 2027",
+          "what": "Cursor's and Fireworks AI's incident investigations continue; Sierra says Poppy's draft 1.0 spec may still get backward-incompatible fixes."
+        }
+      ]
+    },
+    {
       "id": "2026-11-14-am",
       "date": "2026-11-14",
       "edition": "Morning",
