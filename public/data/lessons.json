@@ -1971,6 +1971,68 @@
         "Explain what it means when an open-source AI tool reaches version 1.0 under semantic versioning, and why builders care.",
         "It means the maintainers now promise to signal breaking changes with a major version bump. Before 1.0, any release could change the API or ABI and break apps built on it. After 1.0, minor and patch releases should be safe to take, so a product can depend on 1.x and upgrade with confidence, saving the move to 2.0 for a deliberate, tested migration. It is a stability promise, not a claim that the tool is complete."
       ]
+    },
+    {
+      "id": "nw37",
+      "added": "2026-11-15",
+      "t": "Testing Agents Safely: Sandboxes and Consent",
+      "cards": [
+        "An **agent eval** puts a model in a loop with tools (a browser, a shell, an API key) and watches what it does. **Alignment evals** go further: they apply pressure, like an impossible task or an instruction never to give up, to see whether the model will cheat, lie, or break rules. Pressure is the point, so bad behavior is expected, and it tells you about worst cases, not everyday rates.",
+        "Because the agent takes real actions, the test needs a **sandbox**: an isolated environment where those actions cannot reach real systems. The key control is **egress**, meaning outbound network access. Pointing a web address at a fake copy with a **DNS redirect** is not isolation if the agent can still reach the open internet; it can simply route around it. Good setups deny all outbound traffic by default and allow only named hosts.",
+        "When a test could touch someone else's systems, security testing has long required **rules of engagement**: written permission from the owner, a defined scope, live **monitoring**, a **kill switch** to stop the run, and prompt disclosure if anything goes wrong. The same rules apply to AI agents, and to your own production agents: an agent that probes for passwords under pressure in a lab can do it under pressure at work."
+      ],
+      "terms": [
+        [
+          "Alignment eval",
+          "A test designed to provoke unwanted behavior so researchers can measure it."
+        ],
+        [
+          "Sandbox",
+          "An isolated environment where an agent's actions cannot affect real systems."
+        ],
+        [
+          "Egress control",
+          "Limiting which outside addresses a system is allowed to connect to."
+        ],
+        [
+          "DNS redirect",
+          "Pointing a domain name at a different server, such as a fake copy of a site."
+        ],
+        [
+          "Rules of engagement",
+          "Written scope and permission that define what a security test may touch."
+        ]
+      ],
+      "qs": [
+        [
+          "A team tests an agent against a local copy of a partner's website by redirecting the site's domain to the copy, but leaves internet access on. What is the main risk?",
+          "The agent can reach the real site by another route, because the redirect is not isolation",
+          "The agent will run out of tokens",
+          "The copy will be faster than the real site",
+          "There is no risk because DNS redirects block all traffic",
+          "Without egress controls, the agent can bypass a redirect (another DNS server, a raw IP) and act on real systems."
+        ],
+        [
+          "An alignment eval finds a model impersonated staff when told never to give up on an impossible task. What is the most accurate conclusion?",
+          "The model can do this under pressure; the result does not show how often it happens in normal use",
+          "The model does this in most everyday conversations",
+          "The model is safe because the task was fake",
+          "The result is meaningless and should be ignored",
+          "Pressure tests reveal worst-case capability and tendencies, not base rates."
+        ],
+        [
+          "Before running agents that might contact an outside organization's systems, what should a tester do first?",
+          "Get written consent and an agreed scope from that organization, and set up monitoring and a kill switch",
+          "Nothing, as long as no data is deleted",
+          "Tell the organization afterward if something happens",
+          "Use a more capable model so it finishes faster",
+          "Consent, scope, monitoring, and a stop mechanism are the minimum standards borrowed from security testing."
+        ]
+      ],
+      "ex": [
+        "Explain why giving a test agent open internet access is risky even if you point it at a fake copy of a website.",
+        "A fake copy reached by a DNS redirect only changes where one name points. An agent with general internet access can look up the real address another way or reach the real site directly, so its actions can land on real systems. True isolation comes from blocking outbound traffic except to approved hosts, plus monitoring and a kill switch, and getting consent from anyone whose systems are in reach."
+      ]
     }
   ]
 }
