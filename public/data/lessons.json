@@ -1909,6 +1909,68 @@
         "Explain why regulators worry about how AI data centers are financed, even if the technology works.",
         "Much of the buildout is borrowed: bonds, private credit, and project loans, often through SPVs, plus long leases and take-or-pay contracts that lock in payments. If AI revenue grows slower than expected, those fixed obligations remain, and the losses land on lenders, guarantors, and banks with concentrated exposure. Private and off-balance-sheet deals are harder to measure, and circular investments can make demand look stronger than it is, so problems may surface late and spread through the financial system."
       ]
+    },
+    {
+      "id": "nw36",
+      "added": "2026-11-15",
+      "t": "Version Numbers and Breaking Changes",
+      "cards": [
+        "Software you build on, like a model runtime or SDK, exposes an **API**: the functions your code calls. Compiled libraries also have an **ABI**, the low-level contract between compiled programs. If either changes incompatibly, it is a **breaking change**, and your app can fail to build or crash after an upgrade.",
+        "**Semantic versioning** (semver) encodes this in the number MAJOR.MINOR.PATCH. A new **major** means something may break; **minor** adds features without breaking; **patch** only fixes bugs. Before 1.0, anything can change at any time. Reaching **1.0** is a promise that breaks will be signaled, not that the software is finished.",
+        "In AI, this applies to runtimes like llama.cpp, model provider SDKs, and even models themselves: a provider swapping the model behind an alias can change outputs as surely as a code change. Builders **pin** versions (lock to a specific release or dated model ID), read changelogs before major upgrades, and rerun their evals after any change."
+      ],
+      "terms": [
+        [
+          "API",
+          "The functions and data formats a library or service exposes for your code to use."
+        ],
+        [
+          "ABI",
+          "The binary-level contract between compiled programs and a library."
+        ],
+        [
+          "Breaking change",
+          "An update that makes code written for the old version stop working or behave differently."
+        ],
+        [
+          "Semantic versioning",
+          "MAJOR.MINOR.PATCH numbering, where a major bump signals breaking changes."
+        ],
+        [
+          "Pinning",
+          "Locking a dependency or model to an exact version so upgrades happen only on purpose."
+        ]
+      ],
+      "qs": [
+        [
+          "Your app embeds an inference library at 1.4.2. Version 1.5.0 is released. Under semver, what should you expect?",
+          "New features, but code written for 1.4 should keep working",
+          "Your code will definitely break",
+          "Only security fixes",
+          "The library has been discontinued",
+          "A minor bump adds backward-compatible functionality; breaking changes require 2.0."
+        ],
+        [
+          "Why might an app crash after a library upgrade even though none of its source code changed?",
+          "The library's ABI changed, so the already-compiled app no longer matches it",
+          "Source code expires after a year",
+          "The model got smarter",
+          "The app ran out of tokens",
+          "ABI breaks affect compiled binaries even when the API looks the same."
+        ],
+        [
+          "A provider's 'latest' model alias quietly points to a new model and your agent's accuracy drops. What practice would have prevented the surprise?",
+          "Pinning a dated model ID and rerunning evals before switching",
+          "Using a longer system prompt",
+          "Raising the temperature",
+          "Switching to a pre-1.0 library",
+          "Pinning makes changes deliberate, and evals catch behavior shifts before users do."
+        ]
+      ],
+      "ex": [
+        "Explain what it means when an open-source AI tool reaches version 1.0 under semantic versioning, and why builders care.",
+        "It means the maintainers now promise to signal breaking changes with a major version bump. Before 1.0, any release could change the API or ABI and break apps built on it. After 1.0, minor and patch releases should be safe to take, so a product can depend on 1.x and upgrade with confidence, saving the move to 2.0 for a deliberate, tested migration. It is a stability promise, not a claim that the tool is complete."
+      ]
     }
   ]
 }

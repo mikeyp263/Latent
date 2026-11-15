@@ -1,6 +1,504 @@
 {
   "editions": [
     {
+      "id": "2026-11-15-am",
+      "date": "2026-11-15",
+      "edition": "Morning",
+      "stories": [
+        {
+          "kicker": "Chips",
+          "headline": "WSJ maps how Nvidia's Southeast Asian partners kept Chinese firms supplied, as Commerce drafts rules to close the route",
+          "summary": "The Journal says Megaspeed alone arranged nearly $12 billion in Nvidia chips for Chinese companies, and that Malaysia, Indonesia, and Singapore may soon need export licenses.",
+          "stats": [
+            [
+              "~$12B",
+              "Nvidia chips Megaspeed arranged for Chinese firms, Mar 2024 to Jun 2025"
+            ],
+            [
+              "$12.4B",
+              "Nvidia China revenue, six months to Jul 26"
+            ],
+            [
+              "$34B+",
+              "Data center investment in Malaysia"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The Wall Street Journal published an investigation late Saturday (Jon Emont, Stu Woo, Patricia Kowsmann, and Raffaele Huang) describing how Jensen Huang, before his resignation as Nvidia CEO, built a network of Asian cloud partners that gave Chinese companies access to Nvidia computing power the US bars from being shipped to China directly. The reporting centers on Malaysia, especially a planned data center in Senawang, about an hour from Kuala Lumpur, being built by BlackRock-backed Vena Group, where Alibaba reportedly planned to use Nvidia-powered servers.",
+                "According to records the Journal reviewed, Megaspeed, the Singapore company where Alice Huang was an executive, arranged nearly $12 billion in Nvidia chips for Chinese companies between March 2024 and June 2025, covering several hundred thousand chips. The records do not show how many were delivered or where they came from. The Journal reports Huang used his influence to get Megaspeed named an Nvidia cloud partner, a program it describes as a list of his favorites with preferred access to chips. Other named players: Singapore's Aolani Cloud, an Nvidia partner with about $2.5 billion of hardware in Malaysia whose anchor customer is ByteDance, and DayOne, a Singapore developer spun off from a Chinese company, which gets nearly 70% of its business from ByteDance per a filing.",
+                "The new policy detail: the Journal reports Commerce is drafting rules that would add Malaysia, Indonesia, and Singapore to restricted destinations, requiring licenses to export advanced chips such as Blackwell there and barring remote access by Chinese companies. Malaysia says it will not be used to evade export controls and is investigating Megaspeed and its Malaysian affiliate. Megaspeed says it takes compliance seriously and has hired a US law firm to count its GPUs. Nvidia says it works to prevent smuggling and that the US cannot win the AI race unless American infrastructure wins worldwide."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Megaspeed-arranged Nvidia chips to Chinese firms",
+                  "Nearly $12B (Mar 2024 to Jun 2025)"
+                ],
+                [
+                  "Nvidia China revenue, six months to Jul 26, 2026",
+                  "$12.4B (about 7% of total)"
+                ],
+                [
+                  "Aolani Cloud hardware in Malaysia",
+                  "About $2.5B"
+                ],
+                [
+                  "DayOne business from ByteDance",
+                  "Nearly 70%"
+                ],
+                [
+                  "Data center investment in Malaysia",
+                  "Over $34B"
+                ],
+                [
+                  "Nvidia's informal cap on Chinese customers at cloud partners",
+                  "30% to 49%, not written into contracts"
+                ]
+              ],
+              "note": "All figures as reported by The Wall Street Journal, from records, filings, and Nvidia's reported results. Short seller Culper Research separately estimates over 20% of Nvidia's revenue last fiscal year was China-driven; that is Culper's estimate, not Nvidia's."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Cloud partner:** a company Nvidia certifies to rent out its GPUs. Partners get better access to scarce chips, which made the designation valuable.",
+                "**Remote access:** renting computing in a data center abroad over the internet. Export rules control where chips are shipped, so a Chinese lab training on servers in Malaysia has, until now, been legal.",
+                "**Re-export:** moving controlled goods from the first destination country to a third one, such as from Malaysia into China. That is where smuggling cases arise."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Most of this was legal under current rules, which is the point: the Trump administration revoked the Biden-era cap on chip imports to Southeast Asia in May 2025 and, 18 months later, has not issued the promised replacement. The Journal's numbers show how large the remote-access channel became and how much of it ran through a handful of partners with Chinese anchor customers. If Commerce does require licenses for Malaysia, Indonesia, and Singapore, it would hit one of the fastest-growing data center regions and the Chinese labs that train there, and it would land just as Nvidia reports earnings without Huang.",
+                "Be careful with two things. The $12 billion figure is what Megaspeed arranged, not what was confirmed delivered, and nothing in the piece proves those specific chips were smuggled. And the drafted rule is reported, not published; earlier promised curbs on this route have slipped repeatedly."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether Nvidia's Nov 17 earnings call addresses Southeast Asian exposure, Malaysia's Megaspeed investigation, and whether Commerce publishes the rule before or after the Nov 18 to 19 Trump and Xi meeting in Shenzhen."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The Wall Street Journal",
+              "title": "How Jensen Huang Built the Backdoor Route That Keeps Beijing in the AI Race",
+              "url": "https://www.wsj.com/tech/jensen-huang-backdoor-ai-data-centers-a5e4499d"
+            },
+            {
+              "name": "To Vima (WSJ republication)",
+              "title": "How Jensen Huang Built the Backdoor Route That Keeps Beijing in the AI Race",
+              "url": "https://www.tovima.com/wsj/how-jensen-huang-built-the-backdoor-route-that-keeps-beijing-in-the-ai-race/"
+            }
+          ]
+        },
+        {
+          "kicker": "Research",
+          "headline": "Logician says Claude turned Gödel's 1,009 pages of shorthand notes into 663 theorems, about 50 of them false",
+          "summary": "Jan von Plato says a decade-scale reading job took days, and a formal checker confirmed most results, but no paper or outside review exists yet.",
+          "stats": [
+            [
+              "663",
+              "Theorem candidates found"
+            ],
+            [
+              "~400",
+              "Passed Coq as stated"
+            ],
+            [
+              "~50",
+              "Turned out false"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The Guardian reported Friday (Nov 13) that Jan von Plato, a University of Helsinki logician who has led an EU-funded project on Kurt Gödel's notebooks since 2017, used Anthropic's Claude to work through 16 notebooks Gödel wrote in the early 1940s, 1,009 pages mostly in Gabelsberger, an obsolete German shorthand. Working by hand, von Plato managed about a page a week. He supplied Claude with transcriptions plus six of his own books on Gödel, and in September got back a 650-page explanation of the notebooks and a catalogue of 663 theorem candidates in a couple of days. He says he checked the digest page by page.",
+                "The theorems were then run through Coq, a program that mechanically checks proofs. Von Plato's tally: about 400 passed as stated, about 200 needed a sharper statement or an extra assumption, and about 50 were false (some already marked 'falsch' by Gödel himself). The headline claim is a near-complete reconstruction of a proof that the axiom of choice is independent of the other standard axioms of set theory, a result Gödel said in 1966 he had found but never published, and which Paul Cohen proved in 1963 and won a Fields Medal for. Von Plato says the reconstruction passed Coq and that Gödel was 'one step away.'"
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Notebook pages",
+                  "1,009 in 16 notebooks"
+                ],
+                [
+                  "Human pace before Claude",
+                  "About 1 page per week"
+                ],
+                [
+                  "Claude's digest",
+                  "650 pages, in a couple of days"
+                ],
+                [
+                  "Theorems passing Coq as stated",
+                  "About 400"
+                ],
+                [
+                  "Needed repair",
+                  "About 200"
+                ],
+                [
+                  "False",
+                  "About 50"
+                ]
+              ],
+              "note": "Von Plato's figures as reported by The Guardian. The Claude model version was not named. The page did not say who ran every Coq check or how much of each repair came from Claude versus von Plato."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Coq:** a proof assistant. You write a theorem and proof in its formal language and it checks every step. It confirms the math is valid, not who first had the idea.",
+                "**Independence of the axiom of choice:** a proof that this axiom can be neither proved nor disproved from the other usual axioms of set theory. It is one of the landmark results of 20th century logic."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The impressive part is reading, not discovering: an AI turned a stalled archival project into something one expert could check, which is a realistic and valuable use. The theorem counts come with real verification, and the 50 false results are a useful reminder that the output needed checking.",
+                "The historical claim is the shaky part. Coq can confirm a reconstructed proof is valid, but not that Gödel had it; the reconstruction may include steps Claude or von Plato supplied. Notre Dame logician Joel David Hamkins, who had not seen it, called it remarkable if it holds up and said dividing credit between Claude and Gödel is 'a job for the historians.' No paper, data, or independent review has been released, so treat the priority claim as unreviewed."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "A paper or public release of the digest and Coq files, and responses from Gödel scholars and set theorists."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The Guardian",
+              "title": "'Ahead of his time': AI helps unlock discoveries hidden in notebooks of man who transformed maths",
+              "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths"
+            },
+            {
+              "name": "AI Weekly",
+              "title": "Von Plato uses Claude to extract 663 theorems from Gödel notes",
+              "url": "https://aiweekly.co/alerts/von-plato-uses-claude-to-extract-663-theorems-from-gdel-notes"
+            },
+            {
+              "name": "explainx.ai",
+              "title": "Claude and Gödel's Notebooks: 663 Theorems Checked",
+              "url": "https://explainx.ai/blog/claude-godel-notebooks-von-plato-663-theorems-coq-what-is-verified-2026"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "LangChain raises $300 million at a $3 billion valuation, more than doubling in a year",
+          "summary": "CapitalG led the round for the agent-tooling company, which says 7,000 customers use LangSmith but gives no revenue.",
+          "stats": [
+            [
+              "$300M",
+              "Series C"
+            ],
+            [
+              "$3B",
+              "Valuation"
+            ],
+            [
+              "7,000",
+              "LangSmith customers (company figure)"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "LangChain closed a $300 million Series C at a $3 billion valuation, TechCrunch reported Friday (Nov 13). Alphabet's growth fund CapitalG led, with Singapore's GIC, DFJ Growth, IVP, and Sapphire Ventures joining. The company was valued at $1.25 billion when it raised $125 million about a year ago.",
+                "LangChain began in 2022 as an open-source library for connecting early language models to search, APIs, and databases. Its business now is LangSmith, software for building, running, monitoring, and governing agents, pitched as model-neutral so customers are not tied to one lab or cloud. The company says it has 7,000 LangSmith customers, including Harvey, Rippling, Clay, Nvidia, Toyota, and Salesforce, and that Workday cut the time to deploy a new agent from five months to under a day."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Series C",
+                  "$300M"
+                ],
+                [
+                  "Valuation",
+                  "$3B (was $1.25B, Oct 2025)"
+                ],
+                [
+                  "LangSmith customers",
+                  "7,000 (paid versus free not disclosed)"
+                ],
+                [
+                  "Revenue",
+                  "Not disclosed"
+                ]
+              ],
+              "note": "Round terms from TechCrunch and LangChain's press release. Customer counts and the Workday example are LangChain's claims."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Observability:** recording what an agent did step by step (prompts, tool calls, outputs, costs) so you can debug and audit it. This is LangSmith's core.",
+                "**Model-neutral:** the tooling works with models from any provider, so you can switch from one lab's model to another without rebuilding."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Investors are paying for the layer around models: tracing, evaluation, and governance that companies need once agents touch real systems. The weak spot is competition from the labs themselves, which keep shipping their own agent platforms and monitoring, and from rivals that sell the same neutrality pitch. Without revenue or retention numbers, '7,000 customers' says little about how much of the business pays. For builders, a well-funded neutral option is useful leverage against lock-in."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "title": "AI agent startup LangChain hits $3B valuation",
+              "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/"
+            },
+            {
+              "name": "LangChain via Business Wire",
+              "title": "LangChain raises $300M",
+              "url": "https://finance.yahoo.com/technology/ai/articles/langchain-raises-300m-enable-every-155300515.html"
+            },
+            {
+              "name": "AI Weekly",
+              "title": "LangChain hits $3B valuation on $300M Series C led by CapitalG",
+              "url": "https://aiweekly.co/alerts/langchain-hits-3b-valuation-on-300m-series-c-led-by-capitalg"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Mirendil, a startup building AI to automate AI research, raises $1 billion five months after its seed",
+          "summary": "Former Anthropic researchers Behnam Neyshabur and Harsh Mehta lead the company; Kleiner Perkins and Clearlake led the round.",
+          "stats": [
+            [
+              "$1B",
+              "Series A"
+            ],
+            [
+              "~$5B",
+              "Reported valuation"
+            ],
+            [
+              "$200M",
+              "Seed, June 2026"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Mirendil announced a $1 billion Series A on Nov 12, led by Kleiner Perkins and Clearlake Capital, with Google, Battery Ventures, M13, Pear VC, and S32 participating. The valuation was not in the release; earlier reports of the talks put it at about $5 billion. The company raised a $200 million seed at a $1 billion valuation, led by Andreessen Horowitz, in late June.",
+                "CEO Behnam Neyshabur co-invented Sharpness-Aware Minimization (SAM), a widely used training technique, and CTO Harsh Mehta helped start Anthropic's work on automating its own internal research. Mirendil says it is building tools to automate model development tasks such as data preparation and debugging, and ultimately a system that improves itself. The company mentions a model with a 10 million token context window, something called Fern 0.1, and Lor, a platform that runs hundreds of autonomous coding and experiment agents. It has published no benchmarks."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Automated AI R&D:** using AI agents to run the experiments, write the code, and analyze the results that human researchers do today, so model progress speeds up. Labs and safety researchers watch it closely because it could compound quickly."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "A fivefold valuation jump in five months, with no public product results, is a bet on the team and the thesis that AI can accelerate AI research. That thesis is shared by every frontier lab, which have far more compute; Mirendil's challenge is doing it without owning frontier models. The '10 million token' model and Lor are claims until there are outside tests."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Mirendil via PR Newswire",
+              "title": "Mirendil raises $1B to democratize frontier AI R&D",
+              "url": "https://www.prnewswire.com/news-releases/mirendil-raises-1b-to-democratize-frontier-ai-rd-302937248.html"
+            },
+            {
+              "name": "SiliconANGLE",
+              "title": "Mirendil raises $200M to speed scientific research with AI",
+              "url": "https://siliconangle.com/2026/06/25/mirendil-raises-200m-speed-scientific-research-ai/"
+            },
+            {
+              "name": "AI Weekly",
+              "title": "Mirendil raises $1B Series A at $5B from Kleiner Perkins and Clearlake",
+              "url": "https://aiweekly.co/alerts/mirendil-raises-1b-series-a-at-5b-from-kleiner-perkins-and-clearlake-to"
+            }
+          ]
+        },
+        {
+          "kicker": "Tools",
+          "headline": "llama.cpp reaches version 1.0 and promises a major version bump for every breaking change",
+          "summary": "The most widely used engine for running open models on your own hardware now has a stable C API.",
+          "stats": [
+            [
+              "150+",
+              "Model architecture variants supported"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The ggml-org team at Hugging Face released llama.cpp 1.0.0 and ggml 1.0.0 on Nov 13, about three and a half years after the project started. Both now follow semantic versioning: a major release means the public C API or binary interface changed in a way that can break your code, a minor release adds features, backends, or model support without breaking anything, and a patch release only fixes bugs.",
+                "The team says llama.cpp supports more than 150 model architecture variants and the mainstream speculative decoding methods, ships builds for Linux, macOS, Windows, Android, and iOS, and is packaged for Docker, Debian, Homebrew, conda-forge, MacPorts, and Winget. Nvidia, AMD, Qualcomm, Arm, IBM, and Intel contribute machines to its test system."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**ABI (application binary interface):** the contract between already-compiled programs and a library. If it changes, apps built against the old version can crash even though their source code did not change.",
+                "**Speculative decoding:** a small fast model drafts several tokens and the big model checks them in one pass, speeding up output without changing it."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Nothing changes in capability today. What changes is trust: apps like local chat clients and on-device assistants that embed llama.cpp can pin a major version and upgrade without surprise breakage, which matters as local models move into shipping products. It does not promise that new model support arrives faster or that quantized files stay compatible forever; check release notes when you upgrade majors."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "title": "llama.cpp v1.0",
+              "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
+            },
+            {
+              "name": "AI Weekly",
+              "title": "llama.cpp ships v1.0.0 with semver for libllama and ggml",
+              "url": "https://aiweekly.co/alerts/llamacpp-ships-v100-with-semver-for-libllama-and-ggml"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "Grok 4.8's limited rollout. Musk said Nov 10 it would start 'later this week'; no release, model card, or API listing found as of Sunday morning."
+        },
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; no announcement as of Sunday morning."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Nvidia's search for a permanent CEO. Interim CEO Colette Kress also remains CFO; no timeline given."
+        },
+        {
+          "when": "Sun Nov 15 (today)",
+          "what": "Comment period closes on China's draft export-control catalogue for AI, which would require licenses to export frontier model weights."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Anthropic's Australian retail offer closes at 5 p.m. AEDT, the day before the IPO is priced."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Nvidia reports third-quarter results, call at 5 p.m. ET, its first under interim CEO Colette Kress."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Deadline Sens. Warren and Coons set for the administration to confirm it is preserving records on Nvidia's China exports and Huang's affair."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Anthropic is expected to price its IPO. The filed range is $70 to $78; the FT reports bankers may price above it."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Originally requested date for Huang's briefing to the House committee chairs. Rep. Mast says Huang agreed to appear before Thanksgiving; not confirmed by Huang or Nvidia."
+        },
+        {
+          "when": "Nov 18 to 19",
+          "what": "APEC summit in Shenzhen, where Trump meets Xi and the US-China 'superintelligence' dialogue is due to advance."
+        },
+        {
+          "when": "Thu Nov 19",
+          "what": "Anthropic shares (ANT) are expected to start trading on Nasdaq, per CNBC."
+        },
+        {
+          "when": "November",
+          "what": "Commerce's rule blocking Chinese firms from remotely using advanced chips abroad, per The Information. The WSJ reports a draft would also require licenses for Blackwell-class exports to Malaysia, Indonesia, and Singapore."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO on Nov 4."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Wed Nov 25",
+          "what": "Alibaba's Qwen4-Max preview ends."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Sat Nov 28",
+          "what": "Deadline for the White House science adviser to propose legislative language for a federal 'super intelligence' definition, under the Sept 29 executive order."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "Tue Dec 1",
+          "what": "House chairs' requested closed-door transcribed interview with Jensen Huang; Nvidia general counsel Tim Teter requested Dec 2."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Intro pricing ends for Gemini 4 Argon and Gemini 4 Carbon: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Thu Dec 3",
+          "what": "Senate Banking's requested public hearing with Jensen Huang; Commerce's Jeffrey Kessler invited to a House hearing the same day."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "December",
+          "what": "Cochise County, Arizona, holds a public hearing on SpaceX's planned $50 billion AI campus."
+        },
+        {
+          "when": "Wed Dec 9",
+          "what": "Starbase city commission considers a property tax abatement for SpaceX's $24 billion supercomputing site."
+        },
+        {
+          "when": "Thu Dec 10",
+          "what": "Commerce Secretary Howard Lutnick testifies before Senate Banking; he has agreed to appear."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        },
+        {
+          "when": "Jan 1, 2027",
+          "what": "Gemini 3.8 Flash's promotional price ends; it rises to Hydrogen's $1.50 / $7.50 per million tokens."
+        },
+        {
+          "when": "Early 2027",
+          "what": "Cursor's and Fireworks AI's incident investigations continue; Sierra says Poppy's draft 1.0 spec may still get backward-incompatible fixes."
+        }
+      ]
+    },
+    {
       "id": "2026-11-14-pm",
       "date": "2026-11-14",
       "edition": "Afternoon",
