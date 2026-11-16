@@ -2033,6 +2033,68 @@
         "Explain why giving a test agent open internet access is risky even if you point it at a fake copy of a website.",
         "A fake copy reached by a DNS redirect only changes where one name points. An agent with general internet access can look up the real address another way or reach the real site directly, so its actions can land on real systems. True isolation comes from blocking outbound traffic except to approved hosts, plus monitoring and a kill switch, and getting consent from anyone whose systems are in reach."
       ]
+    },
+    {
+      "id": "nw38",
+      "added": "2026-11-16",
+      "t": "Who Hires and Fires a CEO",
+      "cards": [
+        "In a public company, shareholders elect the **board of directors**, and the board hires and fires the **CEO**. The CEO runs the company day to day; the board's job is oversight, which includes **succession planning** (who takes over if the CEO leaves). When a CEO exits suddenly, boards usually name an **interim CEO**, often the CFO or another senior executive, and hire a search firm to look at internal and external candidates.",
+        "Directors owe **fiduciary duties** to the company and its shareholders: care (make informed decisions) and loyalty (put the company first). When misconduct or legal risk is involved, boards hire outside law firms to run an **independent investigation** so the findings are credible to regulators and courts. Bringing back a removed CEO before that investigation ends is legally risky, because the board would be acting before it knows the facts.",
+        "Outsiders can pressure a board but cannot decide for it. Large shareholders can write letters, vote against directors, or launch a proxy fight; employees and the public can sign petitions; governments can attach conditions through regulation, contracts, or export licenses. A founder CEO with a strong record has unusual leverage, which is why boards sometimes reverse themselves, but the formal decision always sits with the board."
+      ],
+      "terms": [
+        [
+          "Board of directors",
+          "The group shareholders elect to oversee management and pick the CEO."
+        ],
+        [
+          "Interim CEO",
+          "A temporary chief executive who runs the company during a search."
+        ],
+        [
+          "Fiduciary duty",
+          "A director's legal obligation to act carefully and in the company's interest."
+        ],
+        [
+          "Independent investigation",
+          "A review run by outside lawyers so the board can rely on its findings."
+        ],
+        [
+          "Proxy fight",
+          "A shareholder campaign to replace directors through a shareholder vote."
+        ]
+      ],
+      "qs": [
+        [
+          "A petition with 100,000 signatures asks a company to reinstate its ousted CEO. What can it do on its own?",
+          "Add pressure; only the board can actually rehire the CEO",
+          "Force the board to reinstate the CEO within 30 days",
+          "Trigger an automatic shareholder vote",
+          "Override the board's investigation",
+          "Petitions carry no formal power; the board alone appoints the CEO."
+        ],
+        [
+          "Why might a board hesitate to rehire a CEO while an outside law firm is still investigating him?",
+          "It would be acting before knowing the facts, which raises legal and regulatory risk",
+          "Interim CEOs cannot be replaced for a year",
+          "Investigations legally ban rehiring",
+          "Search firms must finish first",
+          "Fiduciary care means making informed decisions, and the investigation is how the board gets informed."
+        ],
+        [
+          "A government official publicly urges a company to hire an outside CEO. How does that affect the board?",
+          "It adds political and regulatory pressure, but the decision stays with the board",
+          "It legally requires an outside hire",
+          "It removes the board's authority",
+          "It has no possible effect on the company",
+          "Officials can influence through regulation, licenses, and contracts, not by appointing executives."
+        ]
+      ],
+      "ex": [
+        "Explain who actually decides whether a public company's former CEO can come back, and who else can influence it.",
+        "The board of directors decides, because it hires and fires the CEO on shareholders' behalf. Large shareholders can push through letters, votes against directors, or a proxy fight; employees and the public can petition; regulators and governments can apply pressure through rules, licenses, and contracts. The board weighs that pressure against its fiduciary duties, including waiting for any independent investigation before acting."
+      ]
     }
   ]
 }

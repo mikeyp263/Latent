@@ -1,6 +1,489 @@
 {
   "editions": [
     {
+      "id": "2026-11-16-am",
+      "date": "2026-11-16",
+      "edition": "Morning",
+      "stories": [
+        {
+          "kicker": "Business",
+          "headline": "Huang has discussed returning as Nvidia CEO, the FT reports, while Treasury's Bessent says the board should hire from outside",
+          "summary": "Four days after Huang resigned, investors and a 100,000-plus name petition are lobbying for his return, and the Treasury Secretary is publicly pushing the other way, a day before Nvidia reports earnings.",
+          "stats": [
+            [
+              "100,000+",
+              "Petition names, per WSJ (Sunday afternoon)"
+            ],
+            [
+              "10 days",
+              "Bessent's deadline for board answers"
+            ],
+            [
+              "Nov 17",
+              "Earnings, first under interim CEO Kress"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The Financial Times reported on Sunday, Nov 15, citing people familiar with the matter, that Jensen Huang has discussed a comeback as Nvidia's chief executive with confidants, and that Silicon Valley allies have begun lobbying the board. Huang resigned as president, CEO, and director on Thursday, Nov 12, after admitting an affair with Alice Huang, a former executive linked to the Singapore cloud firm Megaspeed whom US officials suspect of passing information to Chinese intelligence. China denies the spying claims and the Justice Department has reached no conclusion. CFO Colette Kress is interim CEO.",
+                "Two Nvidia investors, Brad Gerstner of Altimeter Capital and Gavin Baker of Atreides Management, published an open letter to the board on Friday urging a slow, deliberate succession process that includes \"the potential return of Jensen Huang.\" The Wall Street Journal reports that an Nvidia employee built a \"Stand With Jensen\" petition site with Replit; by Sunday afternoon it had about 106,000 names, including Replit CEO Amjad Masad, Travis Kalanick, Shopify's Tobi Lutke, and Epic's Tim Sweeney. Some Nvidia employees told the WSJ their names were added without consent. Nvidia's board said Friday it is hiring an executive search firm and had not approached any candidates.",
+                "On Fox's \"Sunday Morning Futures,\" Treasury Secretary Scott Bessent said the board should look \"outside the company\" and that \"they need a dramatic shake-up.\" He called Huang \"an incredible innovator\" but said that \"does not abrogate their duties to compliance,\" cited a \"culture of noncompliance,\" and asked for answers on export compliance from the board and its outside counsel within 10 days."
+              ]
+            },
+            {
+              "h": "Where each side stands",
+              "table": [
+                [
+                  "Huang",
+                  "Has discussed a return with confidants (FT, unnamed sources); no public statement"
+                ],
+                [
+                  "Gerstner and Baker",
+                  "Open letter: slow process, keep Huang's return on the table"
+                ],
+                [
+                  "Petition",
+                  "About 106,000 names by Sunday afternoon (WSJ); self-reported, some disputed"
+                ],
+                [
+                  "Nvidia board",
+                  "Hiring a search firm; no candidates approached (Friday statement)"
+                ],
+                [
+                  "Treasury (Bessent)",
+                  "Hire from outside; board answers within 10 days"
+                ]
+              ],
+              "note": "From the FT as relayed by Reuters and Bloomberg, the WSJ, and Bessent's Fox News interview. Decrypt cites a later count above 160,000 names; the site says affiliations are unverified."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "A comeback is not impossible, but the obstacles are real. The board pushed Huang out days ago, its own investigation into the Alice Huang relationship and Nvidia's dealings with Megaspeed is still running, and the Treasury Secretary is now publicly attaching a compliance deadline to the search. A board that reinstates a CEO it just removed, while the government is asking about export compliance, would be taking on legal and political risk. Petitions and investor letters put pressure on directors but have no formal power; the board alone picks the CEO.",
+                "For people building on Nvidia hardware nothing changes this week. The practical question is strategy: Huang argued for selling chips to China, and an outside CEO picked under government pressure would likely be more cautious there. Treat the FT report as a sign of what Huang's camp wants, not of what the board will do."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Tuesday's earnings call, where Kress will almost certainly be asked about the search and the investigation. Then whether the board answers Bessent within his 10-day window (around Nov 25), and Huang's expected appearances before Congress."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Reuters via Investing.com",
+              "title": "Jensen Huang discusses comeback as Nvidia CEO with allies, FT reports",
+              "url": "https://www.investing.com/news/stock-market-news/jensen-huang-discusses-comeback-as-nvidia-ceo-with-allies-ft-reports-5028065"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "Nvidia's Jensen Huang in Talks With Allies Over CEO Comeback, Report Says",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-15/huang-discusses-comeback-as-nvidia-chief-with-allies-ft-says"
+            },
+            {
+              "name": "The Wall Street Journal via To Vima",
+              "title": "The Campaign to Bring Back Jensen Huang as Nvidia CEO",
+              "url": "https://www.tovima.com/wsj/the-campaign-to-bring-back-jensen-huang-as-nvidia-ceo/"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Scott Bessent says Nvidia should look outside the company for a new CEO",
+              "url": "https://uk.finance.yahoo.com/news/scott-bessent-says-nvidia-look-183110730.html"
+            },
+            {
+              "name": "The Next Web",
+              "title": "Jensen Huang is discussing a return to Nvidia, FT reports",
+              "url": "https://thenextweb.com/news/jensen-huang-is-discussing-a-return-to-nvidia-ft-reports"
+            },
+            {
+              "name": "Decrypt",
+              "title": "Elon Musk Joins 160,000 Backing Petition to Bring Jensen Huang Back to Nvidia",
+              "url": "https://decrypt.co/383286/elon-musk-joins-160000-backing-petition-to-bring-jensen-huang-back-to-nvidia"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "The administration plans to name more than two dozen AI 'national champions,' including Nvidia, OpenAI, and Anthropic, the WSJ reports",
+          "summary": "The designation would bundle US chips and models into export packages backed by government advocacy and financing, with Commerce Secretary Lutnick expected to announce the list within a week.",
+          "stats": [
+            [
+              "24+",
+              "Companies to be named, per WSJ"
+            ],
+            [
+              "78",
+              "Export program applications (Commerce, July)"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The Wall Street Journal reported on Sunday, Nov 15, citing people familiar with the plans, that the Trump administration will designate more than two dozen US companies as AI \"national champions\" to help them win business abroad against Chinese rivals. Names reported so far are Nvidia, Amazon, Microsoft, OpenAI, and Anthropic. Commerce Secretary Howard Lutnick is expected to unveil the list, possibly within a week, though timing could change. Reuters said it could not immediately verify the report.",
+                "The plan builds on the American AI Exports Program created by a July 2025 executive order, which packages American chips, models, and cloud services for foreign governments and companies. Commerce has said designated packages can get government advocacy, federal financing, and faster export license reviews; in July 2026 it said it had received 78 applications from groups of companies."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**National champion:** a company a government singles out for support so it can win in global markets, a long-standing tool of industrial policy in France, Japan, South Korea, and China.",
+                "**Full-stack export package:** chips, data center gear, models, and services sold together, so a buyer gets a complete US alternative instead of mixing in Chinese parts."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is the administration's answer to China clearing DeepSeek and MiniMax to sell abroad: compete on bundled offers and financing rather than only on export bans. The timing is awkward. Nvidia is on the list while its former CEO is under scrutiny over chips reaching China through a partner, and Lutnick's department is the one critics say left the Megaspeed gap open. Naming Nvidia a champion while Treasury demands a compliance shake-up there sends two signals at once.",
+                "For the labs, a designation mostly matters in government and sovereign-AI deals overseas, where state backing and financing can decide a contract. It does not change product access or pricing for ordinary customers. The details that matter (who qualifies, and what obligations come with it, such as security or China-exposure rules) have not been reported."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Lutnick's announcement and the full list, and whether it comes before or after Trump meets Xi in Shenzhen on Nov 18 to 19."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The Wall Street Journal",
+              "title": "Trump Administration to Name Nvidia Among AI 'National Champions'",
+              "url": "https://www.wsj.com/tech/ai/trump-administration-to-name-nvidia-among-ai-national-champions-c9284344"
+            },
+            {
+              "name": "Reuters via The Star",
+              "title": "Trump administration to name Nvidia, other AI firms as US 'national champions', WSJ reports",
+              "url": "https://www.thestar.com.my/tech/tech-news/2026/11/16/trump-administration-to-name-nvidia-other-ai-firms-as-us-039national-champions039-wsj-reports"
+            },
+            {
+              "name": "The Next Web",
+              "title": "Nvidia, OpenAI and Anthropic to be named AI national champions, WSJ reports",
+              "url": "https://thenextweb.com/news/ai-national-champions-nvidia-openai-anthropic-trump"
+            }
+          ]
+        },
+        {
+          "kicker": "Models",
+          "headline": "Alibaba makes Qwen4-Max generally available at $1.50 / $4.50, with no open weights for the flagship",
+          "summary": "The 2.4-trillion-parameter model leaves preview with mixed self-reported coding results: ahead of Opus 5.5 on DeepSWE, well behind it on Terminal-Bench 4.0.",
+          "stats": [
+            [
+              "$1.50 / $4.50",
+              "Per million tokens in / out"
+            ],
+            [
+              "2.4T",
+              "Total parameters (MoE)"
+            ],
+            [
+              "1M",
+              "Token context"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Alibaba's Qwen team announced general availability of Qwen4-Max on Monday, Nov 16 (Beijing time), ending the limited preview that opened Nov 11. It is a mixture-of-experts model with 2.4 trillion total parameters (the active count was not disclosed), takes text, images, and video, and accepts up to 1 million tokens. It is available through Alibaba's cloud API, which supports both OpenAI-style and Anthropic-style request formats, and in Alibaba's Qwen apps and the Qoder coding tool.",
+                "Unlike earlier Qwen flagships, Qwen4-Max has no downloadable weights. Alibaba says smaller Qwen4 models will be released openly, with no date. It also says it removed training data aimed at offensive hacking while keeping defensive security data, and added safety training on chemical, biological, radiological, and nuclear risks."
+              ]
+            },
+            {
+              "h": "Benchmarks",
+              "table": [
+                [
+                  "DeepSWE v1.1: Qwen4-Max",
+                  "75.7"
+                ],
+                [
+                  "DeepSWE v1.1: GPT-6.1 Sol",
+                  "75.2"
+                ],
+                [
+                  "DeepSWE v1.1: Claude Opus 5.5",
+                  "74.2"
+                ],
+                [
+                  "Terminal-Bench 4.0: Qwen4-Max",
+                  "48.5"
+                ],
+                [
+                  "Terminal-Bench 4.0: Claude Opus 5.5",
+                  "59.6"
+                ],
+                [
+                  "Terminal-Bench 4.0: Kimi K3.1",
+                  "67.2"
+                ],
+                [
+                  "Avg cost per task, Alibaba Work360",
+                  "$1.67 (Qwen3.8-Max: $4.43)"
+                ]
+              ],
+              "note": "All Alibaba-reported, not independently verified. Cached input is $0.075 per million tokens."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Mixture of experts (MoE):** a model split into many sub-networks where only a few run for each token, so a huge total parameter count costs far less to run than it sounds.",
+                "**DeepSWE vs. Terminal-Bench:** DeepSWE grades fixes to real code repositories; Terminal-Bench grades multi-step work in a command-line shell, closer to how autonomous agents operate."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "The price is the story. At $4.50 per million output tokens it undercuts GPT-6.1 Sol ($10) and Opus 5.5 ($20) by a wide margin, and Alibaba claims it also uses about half the tokens of its predecessor. But the benchmark picture is uneven: a narrow lead on a repo-fixing test, an 11-point deficit to Opus 5.5 and nearly 19 points to Kimi on agentic shell work. For agent builders, that gap matters more than the DeepSWE win.",
+                "Closing the flagship's weights is a notable shift for the family that has been the world's most downloaded open-weight models. It follows Tencent's Hy4 full release going closed, and suggests the top Chinese labs now keep their best model as a paid API while open-sourcing smaller ones. US enterprises with China-exposure rules will also have to weigh routing data through Alibaba Cloud."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Independent scores from Artificial Analysis and others, and the release date and license for the open Qwen4 models, starting with the promised Qwen4-27B."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Qwen",
+              "title": "Qwen4-Max",
+              "url": "https://qwen.ai/blog?id=qwen4-max"
+            },
+            {
+              "name": "The Next Web",
+              "title": "Alibaba launches Qwen4-Max flagship AI model without open weights",
+              "url": "https://thenextweb.com/news/alibaba-launches-qwen4-max-flagship-ai-model-without-open-weights"
+            },
+            {
+              "name": "byteiota",
+              "title": "Qwen4-Max Goes GA: Pricing, Benchmarks, and Dual API Support",
+              "url": "https://byteiota.com/qwen4-max-ga-launch/"
+            }
+          ]
+        },
+        {
+          "kicker": "Research",
+          "headline": "Physicist says GPT-6 Astra led the proof in his candidate lattice definition of the Standard Model, with caveats",
+          "summary": "OpenAI launched a science blog with UCSB's Nathaniel Craig describing how Astra helped build a gauge-invariant setup for chiral fermions on a lattice; Craig calls it an answer in principle, not in practice.",
+          "stats": [],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Nov 15 OpenAI published a post on a new science blog in which Nathaniel Craig, a theoretical physicist at UC Santa Barbara, describes using GPT-6 Astra on his preprint \"A gauge-invariant measure for lattice chiral fermions,\" submitted to arXiv on Oct 6. The goal is a long-standing gap: there is no complete mathematical definition of the Standard Model, partly because particles like neutrinos and electrons that treat left- and right-handedness differently (chiral fermions) are notoriously hard to put on a grid of spacetime points.",
+                "Craig says he supplied the initial strategy but had not proved it worked in all required cases. By his account, Astra proposed how to carry force fields onto finer grids, showed that comparisons across grids converge to a definite answer, and took the lead in writing the detailed proof. Physicists Maarten Golterman, Andreas Kronfeld, and Yigal Shamir reviewed it and asked probing questions, which Craig says raised his confidence."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Lattice definition:** replacing continuous spacetime with a fine grid so a theory can be defined precisely and simulated on computers, then checking it behaves correctly as the grid spacing shrinks.",
+                "**Chiral fermion:** a matter particle whose left-handed and right-handed versions interact differently. A classic result (the Nielsen-Ninomiya theorem) makes these hard to put on a lattice without unwanted extra particles."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is a real contribution to a hard problem if it holds up, but the account comes from the researcher and is published by OpenAI, not from an independent audit. Craig lists open issues himself: the construction only works with a bound on field strengths at the grid scale, he is still checking a key consistency property (reflection positivity), and whether it yields a theory in continuous spacetime needs expert debate. He calls it \"far more an answer in principle than an answer in practice.\"",
+                "The pattern matches recent math results from Astra and Google's Antigravity: a human sets direction and the model does long, careful technical work. Unlike the Lean-checked math proofs, this physics proof is not machine-verified, so peer review is the test."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Responses from lattice field theory specialists, and whether the preprint passes journal review."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "OpenAI",
+              "title": "A step toward defining the Standard Model",
+              "url": "https://openai.com/index/step-toward-defining-the-standard-model/"
+            },
+            {
+              "name": "Digg (summary of Craig's account)",
+              "title": "GPT-6 Astra helped build a Standard Model lattice proposal, Craig says, not a finished solution",
+              "url": "https://digg.com/ai/pr72emnn"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "The US and nine partners sign a Pax Silica declaration on protecting AI supply chains, without naming China",
+          "summary": "The San Francisco Declaration sets up working groups on supply chains, regulation, 'Super Intelligence' adoption, and infrastructure security, days before the Trump-Xi meeting.",
+          "stats": [
+            [
+              "10",
+              "Signatories"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The State Department announced on Sunday, Nov 15, that the US and nine Pax Silica partners (Australia, India, Israel, Japan, South Korea, Qatar, Singapore, the UAE, and the UK) signed the San Francisco Declaration on the Secure Foundations of Enduring Prosperity at a retreat hosted by Under Secretary of State Jacob Helberg. Pax Silica is the US-led partnership on AI and semiconductor supply chains launched in December 2025.",
+                "The declaration says economic security is fundamental to national security and creates working groups on protecting supply chains, regulatory frameworks, promoting adoption of \"Super Intelligence (SI),\" and the security of underlying infrastructure. It defines \"sensitive technologies\" broadly (products, software, materials, know-how, and the means of making them) and commits signatories to cooperate against undue access or control by \"hostile actors,\" economic coercion, and non-market practices. It does not name China."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Declarations like this are frameworks, not binding rules, so the substance will come from the working groups. The notable part is scope: by covering know-how and software, not just chips, it lays groundwork for coordinated controls on model weights and AI services among allies. Singapore and the UAE signing matters given that both are hubs where US chips have been diverted or resold, the exact gap the Megaspeed case exposed. The 'Super Intelligence' language echoes the September executive order asking for a federal definition by Nov 28."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "The Quad leaders' meeting in Manila on Tuesday, Nov 17, and the APEC summit in Shenzhen on Nov 18 to 19."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The Wire",
+              "title": "India Signs New Pax Silica Declaration on Jointly Protecting AI Supply Chains, Critical Infrastructure",
+              "url": "https://m.thewire.in/article/trade/india-signs-new-pax-silica-declaration-on-jointly-protecting-ai-supply-chains-critical-infrastructure"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "Grok 4.8's limited rollout. Musk said Nov 10 it would start 'later this week'; no release, model card, or API listing found as of Monday morning."
+        },
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; no announcement as of Monday morning."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Nvidia's search for a permanent CEO. Interim CEO Colette Kress also remains CFO; no timeline given."
+        },
+        {
+          "when": "Mon Nov 16",
+          "what": "Apple's new App Store content descriptors become mandatory, including 18+ ratings for romantic AI companions."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Anthropic's Australian retail offer closes at 5 p.m. AEDT, the day before the IPO is priced."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Nvidia reports third-quarter results, call at 5 p.m. ET, its first under interim CEO Colette Kress."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Deadline Sens. Warren and Coons set for the administration to confirm it is preserving records on Nvidia's China exports and Huang's affair."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Quad leaders (US, Japan, India, Australia) meet in Manila, the first such meeting in two years."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Anthropic is expected to price its IPO. The filed range is $70 to $78; the FT reports bankers may price above it."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Originally requested date for Huang's briefing to the House committee chairs. Rep. Mast says Huang agreed to appear before Thanksgiving; not confirmed by Huang or Nvidia."
+        },
+        {
+          "when": "Nov 18 to 19",
+          "what": "APEC summit in Shenzhen, where Trump meets Xi and the US-China 'superintelligence' dialogue is due to advance."
+        },
+        {
+          "when": "Thu Nov 19",
+          "what": "Anthropic shares (ANT) are expected to start trading on Nasdaq, per CNBC."
+        },
+        {
+          "when": "Within a week",
+          "what": "Commerce Secretary Lutnick is expected to announce the list of AI 'national champions,' per the WSJ."
+        },
+        {
+          "when": "November",
+          "what": "Commerce's rule blocking Chinese firms from remotely using advanced chips abroad, per The Information. The WSJ reports a draft would also require licenses for Blackwell-class exports to Malaysia, Indonesia, and Singapore."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO on Nov 4."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Around Nov 25",
+          "what": "End of Treasury Secretary Bessent's 10-day window for Nvidia's board and outside counsel to answer export-compliance questions."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Sat Nov 28",
+          "what": "Deadline for the White House science adviser to propose legislative language for a federal 'super intelligence' definition, under the Sept 29 executive order."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "Tue Dec 1",
+          "what": "House chairs' requested closed-door transcribed interview with Jensen Huang; Nvidia general counsel Tim Teter requested Dec 2."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Intro pricing ends for Gemini 4 Argon and Gemini 4 Carbon: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Thu Dec 3",
+          "what": "Senate Banking's requested public hearing with Jensen Huang; Commerce's Jeffrey Kessler invited to a House hearing the same day."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "December",
+          "what": "Cochise County, Arizona, holds a public hearing on SpaceX's planned $50 billion AI campus."
+        },
+        {
+          "when": "Wed Dec 9",
+          "what": "Starbase city commission considers a property tax abatement for SpaceX's $24 billion supercomputing site."
+        },
+        {
+          "when": "Thu Dec 10",
+          "what": "Commerce Secretary Howard Lutnick testifies before Senate Banking; he has agreed to appear."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        },
+        {
+          "when": "Jan 1, 2027",
+          "what": "Gemini 3.8 Flash's promotional price ends; it rises to Hydrogen's $1.50 / $7.50 per million tokens."
+        },
+        {
+          "when": "Early 2027",
+          "what": "Cursor's and Fireworks AI's incident investigations continue; Sierra says Poppy's draft 1.0 spec may still get backward-incompatible fixes."
+        },
+        {
+          "when": "Open",
+          "what": "Trajectory Labs' misalignment testing stays paused (since Nov 2) until it completes risk assessments and leadership sign-off; no restart date given."
+        }
+      ]
+    },
+    {
       "id": "2026-11-15-pm",
       "date": "2026-11-15",
       "edition": "Afternoon",
@@ -272,11 +755,11 @@
       "ahead": [
         {
           "when": "Any day",
-          "what": "Grok 4.8's limited rollout. Musk said Nov 10 it would start 'later this week'; no release, model card, or API listing found as of Sunday afternoon."
+          "what": "Grok 4.8's limited rollout. Musk said Nov 10 it would start 'later this week'; no release, model card, or API listing found as of Monday morning."
         },
         {
           "when": "Any day",
-          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; no announcement as of Sunday afternoon."
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; no announcement as of Monday morning."
         },
         {
           "when": "Ongoing",
