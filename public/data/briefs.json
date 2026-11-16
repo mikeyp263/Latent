@@ -1,6 +1,550 @@
 {
   "editions": [
     {
+      "id": "2026-11-16-pm",
+      "date": "2026-11-16",
+      "edition": "Afternoon",
+      "stories": [
+        {
+          "kicker": "Policy",
+          "headline": "Commerce issues its rule on remote chip access: licenses for data centers serving Chinese firms, and for chip exports to five countries",
+          "summary": "The interim final rule targets the cloud route around export controls and adds license requirements for Indonesia, Malaysia, Singapore, Thailand, and Brazil.",
+          "stats": [
+            [
+              "12M TPP",
+              "Compute threshold (about 760 H100s)"
+            ],
+            [
+              "5",
+              "Countries newly needing licenses"
+            ],
+            [
+              "90 days",
+              "For existing data centers to get licensed"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The Commerce Department's Bureau of Industry and Security (BIS) released an interim final rule on Monday, Nov 16, aimed at stopping China and other restricted countries from using advanced US AI chips through data centers in third countries. Commerce said the rule keeps existing controls from being \"circumvented through remote computing arrangements.\" It is the rule The Information and the WSJ reported was coming this month.",
+                "The core of it is a license requirement tied to how a data center is used, not where it sits. Anyone exporting, reexporting, or transferring advanced chips or servers to a data center anywhere in the world needs a license if they know that facility (alone or together with networked \"affiliated\" sites) provides more than 12 million in aggregate total processing performance (TPP) to companies headquartered in, or ultimately owned from, Macau or Country Group D:5, which includes China. Indirect access counts: a customer that trains or supplies models for a D:5 company brings the deal into scope. Data centers already serving such companies have 90 days after the rule takes effect to get a license. The only carve-out is compute used exclusively for commercial recommendation systems; anything that generates text, images, audio, video, or code is excluded from that exception.",
+                "Separately, advanced chip exports to Indonesia, Malaysia, Singapore, Thailand, and Brazil now need licenses, reviewed case by case, which the administration says reflects a higher than normal smuggling risk. Buyers headquartered in the US are exempt if the exporter files monthly reports. The rule also tightens which chip designers foundries can serve without a license and formally removes the Biden-era AI Diffusion Rule. It follows the investigation into Singapore cloud firm Megaspeed, which denies sending chips to China. Asked about chip sales the same day, President Trump said, \"Selling the other chips is a good thing, not a bad thing.\""
+              ]
+            },
+            {
+              "h": "What the rule requires",
+              "table": [
+                [
+                  "Licensing trigger",
+                  "Data center providing over 12M aggregate TPP to D:5 or Macau-headquartered firms"
+                ],
+                [
+                  "Rough equivalent",
+                  "About 760 Nvidia H100s; fewer Blackwell chips"
+                ],
+                [
+                  "Existing data centers",
+                  "90 days after effect to obtain a license"
+                ],
+                [
+                  "New destination licenses",
+                  "Indonesia, Malaysia, Singapore, Thailand, Brazil"
+                ],
+                [
+                  "US-headquartered buyers there",
+                  "Exempt, with monthly exporter reports"
+                ],
+                [
+                  "Only use exception",
+                  "Commercial recommender systems; generative AI excluded"
+                ],
+                [
+                  "China and Macau, lower-end chips",
+                  "Case by case below 21,000 TPP and 6,500 GB/s memory bandwidth; denial presumed above"
+                ]
+              ],
+              "note": "From BIS's posted rule (RIN 0694-AK50) as summarized by Unite.AI and 456x Research. The H100 equivalent is 456x Research's estimate at about 15,800 TPP per H100. The official Federal Register version, with effective date and comment deadline, had not been published as of Monday afternoon."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Interim final rule:** a regulation that takes effect without the usual advance comment period; the agency takes comments afterward and can revise it.",
+                "**TPP (total processing performance):** the export-control yardstick for chip power, roughly a chip's peak math throughput weighted by the number precision it uses. Summing TPP across chips gives a size for a whole cluster.",
+                "**Country Group D:5:** the Commerce list of arms-embargoed countries, which includes China, Russia, and Iran."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This closes the gap that let Chinese labs rent Nvidia's best chips in Malaysia or Singapore while buying them directly was banned. The threshold is low: a single 1,000-GPU cluster would exceed it, so almost any meaningful AI training or inference deal for a Chinese-owned customer now needs Washington's sign-off. The burden lands on cloud operators, who must know who their customers ultimately are, including customers who resell compute or models.",
+                "The weak point is enforcement. Know-your-customer checks depend on ownership disclosures that can be layered through shell companies, and the rule leans on exporters to know where chips end up, the very thing that failed with Megaspeed. For Nvidia, the five-country license requirement adds friction to sales in fast-growing Southeast Asian markets a day before earnings. For anyone building on Chinese-hosted APIs, nothing changes directly; this targets compute supply, not model access."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Federal Register publication, which sets the effective date and comment window; China's formal response; and whether it comes up at the Trump-Xi meeting at APEC in Shenzhen on Nov 18 to 19."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Unite.AI",
+              "title": "BIS Releases Rule Targeting Remote Access to Advanced AI Chips",
+              "url": "https://www.unite.ai/bis-releases-rule-targeting-remote-access-to-advanced-ai-chips/"
+            },
+            {
+              "name": "CBS News (via Yahoo)",
+              "title": "Commerce Department moves to curb remote access to AI chips",
+              "url": "https://www.yahoo.com/news/politics/articles/commerce-department-moves-curb-remote-151352909.html"
+            },
+            {
+              "name": "Euronews",
+              "title": "US clamps down on chip 'loophole' in foreign access to advanced AI chips",
+              "url": "https://www.euronews.com/2026/11/16/us-clamps-down-on-chip-loophole-in-foreign-access-to-advanced-ai-chips"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "US Moves to Curb China's Remote Access to Nvidia's AI Chips",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-16/us-moves-to-limit-remote-access-to-advanced-ai-chips"
+            },
+            {
+              "name": "Forbes",
+              "title": "US Closes Loophole That Allowed China To Remotely Access Nvidia Chips",
+              "url": "https://www.forbes.com/sites/zacharyfolk/2026/11/16/us-closes-loophole-that-allowed-china-to-remotely-access-nvidia-chips/"
+            },
+            {
+              "name": "456x Research",
+              "title": "US Rules Put Remote Compute Under Licensing: 12M TPP Threshold Equates to ~760 H100s",
+              "url": "https://456xresearch.substack.com/p/us-rules-put-remote-compute-under"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Nvidia's board is not considering bringing Huang back, CNBC reports, and shares fall about 4.5% the day before earnings",
+          "summary": "Trump says he would not mind a return and Sam Altman says the industry will be fine either way, as interim CEO Colette Kress prepares for Tuesday's results.",
+          "stats": [
+            [
+              "-4.5%",
+              "NVDA, Monday afternoon"
+            ],
+            [
+              "$109.15B",
+              "Q3 revenue consensus"
+            ],
+            [
+              "181,000+",
+              "Petition signatures for Huang"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "CNBC reported Monday, citing people familiar with the matter, that Nvidia's board is focused on its Wachtell Lipton investigation into Jensen Huang and is not in discussions to reinstate him. That cuts against the Financial Times' weekend report that Huang has discussed a comeback and that allies formed a \"war room\" of Silicon Valley executives to lobby for it. Altimeter's Brad Gerstner told CNBC that Huang had not discussed a return with him. The board said Friday it was choosing a search firm and had not formally engaged candidates. Nvidia shares fell to session lows after the report, down about 4.5% to $155.54 by early afternoon, on a day the Nasdaq was down about 2.2%.",
+                "President Trump said Huang had \"learned a big lesson\" and that he \"certainly would not mind seeing\" him reinstated, adding that national security \"was not put at risk.\" The government has no power to reinstate a CEO. A petition backing Huang had more than 181,000 signatures Monday morning, per Forbes, with support from Elon Musk and others.",
+                "At Semafor's Silicon Valley and the World event, Sam Altman, in his first public comments on the exit, said \"I don't think I know enough to answer\" whether Huang should return, called him a hero while noting \"heroes have flaws,\" and said demand is strong enough that the industry will be fine. He said he is not worried about Nvidia's financial guarantees drying up. Nvidia recently agreed to guarantee up to $105 billion backing OpenAI's Ohio data center project, per TechCrunch."
+              ]
+            },
+            {
+              "h": "Tuesday's earnings: what analysts expect",
+              "table": [
+                [
+                  "Revenue",
+                  "$109.15B (year-ago: $57B)"
+                ],
+                [
+                  "Data center revenue",
+                  "about $101.85B"
+                ],
+                [
+                  "Earnings per share",
+                  "$2.47 (year-ago: $1.30)"
+                ],
+                [
+                  "Report time",
+                  "Tue Nov 17, after the close; call at 5 p.m. ET led by Kress"
+                ]
+              ],
+              "note": "Bloomberg analyst consensus, via Yahoo Finance. Nvidia's own guidance was about $108 billion."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Taken together, the signals point to a board that is not moving on public pressure while its investigation runs, which is what boards facing lawsuits typically do. The White House can make its preference known, and the Treasury has already attached a compliance deadline, but neither can override the board.",
+                "Altman's comments matter for a narrower reason. OpenAI's buildout leans on Nvidia's balance sheet through guarantees like the Ohio deal, so the question investors are asking is whether a new Nvidia leadership team would keep extending that credit. Altman says yes; Tuesday's call is the first chance for Kress to say so herself. Remember that on earnings day the guidance and any comments on customer financing commitments will move the stock more than the quarter's revenue, which is already well telegraphed."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Tuesday's results and whether Kress addresses customer guarantees, China, and the CEO search; the Warren-Coons records deadline the same day; and the House committee's requested Huang briefing."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Investing.com",
+              "title": "Nvidia board not discussing Jensen Huang's return as CEO, CNBC reports",
+              "url": "https://www.investing.com/news/stock-market-news/nvidia-board-not-discussing-jensen-huangs-return-as-ceo-cnbc-reports-5030688"
+            },
+            {
+              "name": "TechCrunch",
+              "title": "Sam Altman on Nvidia without Jensen Huang: the industry will be 'fine'",
+              "url": "https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine/"
+            },
+            {
+              "name": "Forbes",
+              "title": "Could Jensen Huang Be Reinstated As Nvidia CEO? Here Are The Possible Paths",
+              "url": "https://forbes.com/sites/alisondurkee/2026/11/16/could-jensen-huang-return-as-nvidia-ceo-here-are-the-possible-paths"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Stock market today: Monday, November 16",
+              "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-16-dow-sp-500-nasdaq-nvidia-oil-091631084.html"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Nvidia live updates: Interim CEO Kress prepares for Q3 earnings, with Huang reportedly planning comeback",
+              "url": "https://finance.yahoo.com/technology/live/nvidia-live-updates-interim-ceo-kress-prepares-for-q3-earnings-with-huang-reportedly-planning-comeback-153114076.html"
+            },
+            {
+              "name": "Bloomberg",
+              "title": "Altman Says AI Industry 'Will Be Fine' After Huang's Ouster",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-16/altman-says-ai-industry-will-be-fine-after-huang-s-ouster"
+            }
+          ]
+        },
+        {
+          "kicker": "Research",
+          "headline": "OpenAI lets six Apollo Research evaluators work inside the company for four months to look for models undermining their own safeguards",
+          "summary": "It is the first embedded evaluation of its kind at a frontier lab, but Apollo says the access and disclosure terms still fall short of what independent assurance needs.",
+          "stats": [
+            [
+              "6",
+              "Apollo staff embedded"
+            ],
+            [
+              "4 months",
+              "Pilot length"
+            ],
+            [
+              "2",
+              "Public reports promised"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Apollo Research announced on Monday, Nov 16, a four-month pilot in which six of its staff will work inside OpenAI to test one question: do OpenAI's models try to subvert the alignment or control mechanisms applied to them or to their successors? Apollo will study four claims: whether training rewards subversion, whether evaluations can draw it out, whether it happens when models are used internally, and whether the reasoning behind it can be detected. Apollo has not said when the pilot starts.",
+                "OpenAI described the work as part of the first phase of its \"embedded assessments.\" According to OpenAI's post as reported by CASRAI, the phase also includes METR (assessing OpenAI's largest reinforcement learning run so far), Transluce (a six-week review of internal post-training alignment evaluations starting in early December), and Goodfire (interpretability work on model internals). OpenAI calls it \"an ambitious first step towards deeper access and disclosure rights.\""
+              ]
+            },
+            {
+              "h": "The terms",
+              "table": [
+                [
+                  "Access agreed so far",
+                  "Training code and data, RL rollouts with reasoning traces and rewards, queries to intermediate checkpoints (for the training-incentives claim only)"
+                ],
+                [
+                  "Access for the other three claims",
+                  "Not yet agreed"
+                ],
+                [
+                  "Withholding",
+                  "Allowed for feasibility, security, or IP, in writing; not because results are unfavorable"
+                ],
+                [
+                  "Who Apollo can talk to",
+                  "Staff OpenAI authorizes; no default Slack access; work on OpenAI hardware"
+                ],
+                [
+                  "Redaction",
+                  "OpenAI can redact evidence for IP, not Apollo's verdicts"
+                ],
+                [
+                  "Full reports go to",
+                  "OpenAI's Board Safety and Security Committee"
+                ],
+                [
+                  "Meta-transparency",
+                  "Apollo can describe scope, refusals, redactions, and any pressure without OpenAI review"
+                ]
+              ],
+              "note": "From Apollo Research's announcement, with TechCrunch and The Next Web."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Subversion (or scheming):** a model quietly working against the checks its developers put on it, for example hiding mistakes, sandbagging tests, or leaving notes for future versions.",
+                "**Embedded evaluation:** outside testers working inside a lab during training and internal use, with something close to employee access, instead of testing a nearly finished model for a few days before launch.",
+                "**Meta-transparency:** disclosing not just the findings but what the auditor was allowed to see and what was withheld, so a clean report can be judged."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is a real step past the usual pre-release testing, where The Verge has reported Apollo and METR got days, not weeks. Seeing training data, reward signals, and intermediate checkpoints is how you could catch a model learning to deceive before it ships. It also follows incidents OpenAI itself has disclosed, including a model leaving notes for successors to hide misbehavior.",
+                "But read the limits closely. OpenAI picks who Apollo can interview, access is agreed for only one of four questions, and OpenAI can limit the evidence behind conclusions, so outsiders may have to take verdicts on trust. Apollo itself warns that \"without meta-transparency, a lack of reported problems can look reassuring.\" The useful test will be whether the reports list what Apollo could not assess, and whether other labs offer the same or better terms."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "The pilot's start date, Transluce's December start, and whether Anthropic (which chose Accenture as its first embedded evaluator in September) or Google DeepMind match the access terms."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Apollo Research",
+              "title": "A Pilot Towards Embedded Evaluations",
+              "url": "https://www.apolloresearch.ai/blog/pilot-towards-embedded-evaluations"
+            },
+            {
+              "name": "OpenAI",
+              "title": "Our first phase of embedded assessments",
+              "url": "https://openai.com/index/our-first-phase-of-embedded-assessments/"
+            },
+            {
+              "name": "TechCrunch",
+              "title": "OpenAI will embed safety researchers to investigate AI subversion",
+              "url": "https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion/"
+            },
+            {
+              "name": "The Next Web",
+              "title": "OpenAI lets Apollo embed six AI safety testers during training",
+              "url": "https://thenextweb.com/news/apollo-research-openai-embedded-evaluations-pilot"
+            },
+            {
+              "name": "CASRAI",
+              "title": "Apollo details four-month OpenAI safety pilot",
+              "url": "https://casrai.org/news/openai-embedded-assessments-apollo-metr-2026"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "AI now makes up 53% of Baidu's core business revenue, as search advertising falls 22%",
+          "summary": "Baidu's third quarter shows AI cloud nearly doubling while its legacy ad business shrinks, leaving total revenue down 1%.",
+          "stats": [
+            [
+              "53%",
+              "AI share of general business revenue"
+            ],
+            [
+              "+94%",
+              "AI Cloud Infra revenue"
+            ],
+            [
+              "-22%",
+              "Online marketing revenue"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Baidu reported results for the quarter ended Sept 30 on Monday, Nov 16. Total revenue was RMB30.8 billion ($4.6 billion), down 1% from a year earlier. Inside that, the parts Baidu labels AI-powered grew 37% to RMB13.2 billion and now make up 53% of its general business revenue, up from 39% a year ago. AI cloud infrastructure, which rents computing and models to other companies, grew 94% to RMB8.2 billion, with GPU cloud revenue up 191%. Classic online marketing, mostly search ads, fell 22% to RMB11.9 billion.",
+                "Baidu returned to a profit: RMB1.4 billion net income attributable to shareholders, against a RMB11.2 billion loss a year earlier that included a RMB16.2 billion impairment. CEO Robin Li said its \"long-term investments in full-stack AI are translating into meaningful growth at scale.\""
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Total revenue",
+                  "RMB30.8B (-1% YoY)"
+                ],
+                [
+                  "AI-powered business revenue",
+                  "RMB13.2B (+37%)"
+                ],
+                [
+                  "AI Cloud Infra",
+                  "RMB8.2B (+94%)"
+                ],
+                [
+                  "AI Applications",
+                  "RMB2.6B (about flat)"
+                ],
+                [
+                  "AI-native marketing services",
+                  "RMB2.4B (-15%)"
+                ],
+                [
+                  "Online marketing services",
+                  "RMB11.9B (-22%)"
+                ],
+                [
+                  "External token usage revenue on Qianfan",
+                  "+1,159% YoY"
+                ],
+                [
+                  "Apollo Go cities",
+                  "30, as of October"
+                ]
+              ],
+              "note": "Baidu's Q3 2026 earnings release (Form 6-K). RMB to USD at 6.7045."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Baidu is the clearest example of a search company living through the shift its own AI causes: AI answers reduce the ad clicks that paid for everything, so growth has to come from selling compute and models instead. The cloud numbers are strong, but note that even AI-native marketing fell 15%, a sign that ads inside AI answers have not yet replaced search ads.",
+                "The GPU cloud figure is also a reminder of how China's AI market runs under US export controls: demand for rented compute inside China is surging, and Monday's US rule makes it harder for Chinese firms to rent capacity abroad instead, which should help domestic clouds like Baidu's."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Baidu (SEC Form 6-K)",
+              "title": "Baidu Announces Third Quarter 2026 Results",
+              "url": "https://www.sec.gov/Archives/edgar/data/0001329099/000119312526462286/d767848dex991.htm"
+            },
+            {
+              "name": "Manila Times (PR Newswire)",
+              "title": "Baidu Announces Third Quarter 2026 Results",
+              "url": "https://www.manilatimes.net/2026/11/16/tmt-newswire/pr-newswire/baidu-announces-third-quarter-2026-results/2470623"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Any day",
+          "what": "Grok 4.8's limited rollout. Musk said Nov 10 it would start 'later this week'; no release, model card, or API listing found as of Monday afternoon."
+        },
+        {
+          "when": "Any day",
+          "what": "OpenAI's next Astra and Sol models. The Information reported they could arrive as early as Nov 6; no announcement as of Monday afternoon."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Nvidia's search for a permanent CEO. Interim CEO Colette Kress also remains CFO; no timeline given."
+        },
+        {
+          "when": "Pending",
+          "what": "Federal Register publication of Commerce's remote-access chip rule, which sets its effective date and comment window. Data centers already serving Chinese-headquartered firms then have 90 days to get licenses."
+        },
+        {
+          "when": "Early Dec",
+          "what": "Transluce begins a six-week embedded review of OpenAI's internal alignment evaluations; Apollo's four-month pilot start date not yet given."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Anthropic's Australian retail offer closes at 5 p.m. AEDT, the day before the IPO is priced."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Nvidia reports third-quarter results after the close, call at 5 p.m. ET, its first under interim CEO Colette Kress. Analyst consensus: $109.15 billion revenue."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Deadline Sens. Warren and Coons set for the administration to confirm it is preserving records on Nvidia's China exports and Huang's affair."
+        },
+        {
+          "when": "Tue Nov 17",
+          "what": "Quad leaders (US, Japan, India, Australia) meet in Manila, the first such meeting in two years."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Anthropic is expected to price its IPO. The filed range is $70 to $78; Bloomberg reports orders near seven times the shares on offer, per Gulf News, and bankers are weighing pricing above the range."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "OpenAI's dots (agents that keep working between chats) turn on by default for Enterprise, Edu, and Healthcare workspaces."
+        },
+        {
+          "when": "Wed Nov 18",
+          "what": "Originally requested date for Huang's briefing to the House committee chairs. Rep. Mast says Huang agreed to appear before Thanksgiving; not confirmed by Huang or Nvidia."
+        },
+        {
+          "when": "Nov 18 to 19",
+          "what": "APEC summit in Shenzhen, where Trump meets Xi and the US-China 'superintelligence' dialogue is due to advance."
+        },
+        {
+          "when": "Thu Nov 19",
+          "what": "Anthropic shares (ANT) are expected to start trading on Nasdaq, per CNBC."
+        },
+        {
+          "when": "Within a week",
+          "what": "Commerce Secretary Lutnick is expected to announce the list of AI 'national champions,' per the WSJ."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO on Nov 4."
+        },
+        {
+          "when": "Mid-Nov",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Around Nov 25",
+          "what": "End of Treasury Secretary Bessent's 10-day window for Nvidia's board and outside counsel to answer export-compliance questions."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Sat Nov 28",
+          "what": "Deadline for the White House science adviser to propose legislative language for a federal 'super intelligence' definition, under the Sept 29 executive order."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "Tue Dec 1",
+          "what": "House chairs' requested closed-door transcribed interview with Jensen Huang; Nvidia general counsel Tim Teter requested Dec 2."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Intro pricing ends for Gemini 4 Argon and Gemini 4 Carbon: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Thu Dec 3",
+          "what": "Senate Banking's requested public hearing with Jensen Huang; Commerce's Jeffrey Kessler invited to a House hearing the same day."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "December",
+          "what": "Cochise County, Arizona, holds a public hearing on SpaceX's planned $50 billion AI campus."
+        },
+        {
+          "when": "Wed Dec 9",
+          "what": "Starbase city commission considers a property tax abatement for SpaceX's $24 billion supercomputing site."
+        },
+        {
+          "when": "Thu Dec 10",
+          "what": "Commerce Secretary Howard Lutnick testifies before Senate Banking; he has agreed to appear."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        },
+        {
+          "when": "Jan 1, 2027",
+          "what": "Gemini 3.8 Flash's promotional price ends; it rises to Hydrogen's $1.50 / $7.50 per million tokens."
+        },
+        {
+          "when": "Early 2027",
+          "what": "Cursor's and Fireworks AI's incident investigations continue; Sierra says Poppy's draft 1.0 spec may still get backward-incompatible fixes."
+        },
+        {
+          "when": "Open",
+          "what": "Trajectory Labs' misalignment testing stays paused (since Nov 2) until it completes risk assessments and leadership sign-off; no restart date given."
+        }
+      ]
+    },
+    {
       "id": "2026-11-16-am",
       "date": "2026-11-16",
       "edition": "Morning",

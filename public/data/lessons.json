@@ -2095,6 +2095,68 @@
         "Explain who actually decides whether a public company's former CEO can come back, and who else can influence it.",
         "The board of directors decides, because it hires and fires the CEO on shareholders' behalf. Large shareholders can push through letters, votes against directors, or a proxy fight; employees and the public can petition; regulators and governments can apply pressure through rules, licenses, and contracts. The board weighs that pressure against its fiduciary duties, including waiting for any independent investigation before acting."
       ]
+    },
+    {
+      "id": "nw39",
+      "added": "2026-11-16",
+      "t": "Who Audits the AI Labs: Access and Disclosure",
+      "cards": [
+        "Most outside safety testing of AI models is **black-box**: an evaluator gets a near-final model through an API for days or weeks before launch and probes its behavior. That can miss problems that only show up during training, or that a model hides when it suspects it is being tested. **White-box** access means seeing the inside: training data, reward signals, reasoning traces, and earlier **checkpoints** (saved snapshots of the model mid-training).",
+        "An **embedded evaluation** puts outside auditors inside the lab during development with something close to employee access. The hard part is not technical; it is the contract. Two terms decide whether an audit means anything: **access** (what the auditor can see and who they can talk to) and **disclosure** (what they can publish, and whether the lab can redact or veto findings). Labs have real reasons to limit both, such as security and trade secrets, but every limit is also a place a problem could hide.",
+        "That is why auditors push for **meta-transparency**: publishing not just the verdict but what they were denied, what was redacted, and any pressure they felt. A clean report from an auditor who saw everything is strong evidence. A clean report from one who saw a narrow slice is weak evidence, and without meta-transparency readers cannot tell the two apart. The same logic applies to financial audits, where the auditor's scope letter matters as much as the opinion."
+      ],
+      "terms": [
+        [
+          "Black-box evaluation",
+          "Testing a model only through its inputs and outputs, without seeing its internals or training."
+        ],
+        [
+          "White-box access",
+          "Access to a model's training data, rewards, internals, and intermediate checkpoints."
+        ],
+        [
+          "Checkpoint",
+          "A saved snapshot of a model partway through training."
+        ],
+        [
+          "Embedded evaluation",
+          "Outside auditors working inside a lab during development, with near-employee access."
+        ],
+        [
+          "Meta-transparency",
+          "Disclosing what an auditor could and could not see, so readers can judge a clean result."
+        ]
+      ],
+      "qs": [
+        [
+          "An auditor reports finding no deceptive behavior, but only had API access for five days before launch. How should you read that?",
+          "As weak evidence, since black-box testing late in development can miss problems that appear in training",
+          "As proof the model is safe",
+          "As proof the model is deceptive",
+          "As irrelevant, because audits never find anything",
+          "Absence of findings is only as strong as the auditor's access; short, late, black-box testing has limited reach."
+        ],
+        [
+          "A lab may redact evidence for trade-secret reasons but not the auditor's verdict. What does that protect?",
+          "The auditor's conclusion reaches the public even if some supporting detail does not",
+          "The lab's ability to change the conclusion",
+          "The auditor's right to publish model weights",
+          "Nothing, since redaction removes everything",
+          "Separating evidence from verdict lets labs protect IP without being able to soften the bottom line."
+        ],
+        [
+          "Why does meta-transparency matter most when an audit finds no problems?",
+          "Because readers need to know whether 'no problems' came from looking everywhere or from being shown little",
+          "Because it lets the lab skip future audits",
+          "Because it replaces the need for a verdict",
+          "Because it guarantees the model is aligned",
+          "A clean result is only informative if you know the scope; meta-transparency reveals that scope."
+        ]
+      ],
+      "ex": [
+        "Explain why the terms of an AI safety audit matter as much as its findings.",
+        "An audit can only find what the auditor is allowed to see. If access is limited to a finished model through an API, or the lab chooses who the auditor interviews, problems in training or internal use can stay hidden. Disclosure terms decide whether findings reach the public intact. So a credible audit needs broad access, protection for the auditor's verdict from redaction, and meta-transparency about what was withheld, otherwise a clean report can't be distinguished from a narrow one."
+      ]
     }
   ]
 }
