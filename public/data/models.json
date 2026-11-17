@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "models": [
     { "name": "Qwen4-Max", "lab": "Alibaba", "released": "2026-11-16", "access": "Closed", "price": "$1.50 / $4.50", "context": "1M", "note": "Alibaba's flagship, generally available since Nov 16 after a preview from Nov 11. 2.4T-parameter MoE; text, image, and video in. No open weights (smaller Qwen4 models promised open). Alibaba-reported: 75.7 on DeepSWE v1.1 (Opus 5.5: 74.2) but 48.5 on Terminal-Bench 4.0 (Opus 5.5: 59.6).", "link": "https://qwen.ai/blog?id=qwen4-max" },
     { "name": "Gemini 4 Hydrogen", "lab": "Google", "released": "2026-11-12", "access": "Closed", "price": "$1.50 / $7.50", "context": "1M", "note": "Google's fast, cheaper model for coding and agents, replacing Gemini 3.8 Flash; default in Google Search. AA Intelligence Index 51 at high (54 at xhigh), just above Argon. Refuses safe requests more often than 3.8 Flash per Google's model card.", "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" },

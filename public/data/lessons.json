@@ -2157,6 +2157,130 @@
         "Explain why the terms of an AI safety audit matter as much as its findings.",
         "An audit can only find what the auditor is allowed to see. If access is limited to a finished model through an API, or the lab chooses who the auditor interviews, problems in training or internal use can stay hidden. Disclosure terms decide whether findings reach the public intact. So a credible audit needs broad access, protection for the auditor's verdict from redaction, and meta-transparency about what was withheld, otherwise a clean report can't be distinguished from a narrow one."
       ]
+    },
+    {
+      "id": "nw40",
+      "added": "2026-11-17",
+      "t": "Patch Diffing and the Patch Gap",
+      "cards": [
+        "When a vendor ships a security fix, the **patch** itself is a clue. Comparing the code before and after, called **patch diffing**, shows exactly which function changed and often what the bug was. Attackers have done this by hand for decades to build **n-day exploits**: attacks on known, already-fixed flaws aimed at systems that have not installed the update.",
+        "The danger lives in the **patch gap**, the time between a fix being published and a given organization applying it. Historically that gap was protected by effort: diffing and exploit writing took skilled people days or weeks. AI agents can now read a diff, infer the bug, write an exploit, and test it in hours, so the gap shrinks from the attacker's side while many companies still take weeks or months to roll out updates.",
+        "This is also why **disclosure deadlines** are getting shorter. Coordinated disclosure keeps a bug private while the maintainer fixes it, traditionally for up to 90 days. If AI makes independent rediscovery likely, a long secret window protects attackers who found it too. The trade-off: shorter deadlines push fixes out faster but can strain small maintainers. For defenders, the durable lesson is that **time to patch** is now a core security metric, not an IT chore."
+      ],
+      "terms": [
+        [
+          "Patch diffing",
+          "Comparing code before and after a security fix to locate the underlying bug."
+        ],
+        [
+          "N-day",
+          "A known, patched vulnerability exploited on systems that have not applied the fix."
+        ],
+        [
+          "Zero-day",
+          "A vulnerability exploited before any fix exists."
+        ],
+        [
+          "Patch gap",
+          "The time between a fix being released and a system actually installing it."
+        ],
+        [
+          "Coordinated disclosure",
+          "Privately reporting a bug and giving the maintainer a set time to fix it before going public."
+        ]
+      ],
+      "qs": [
+        [
+          "A vendor releases a fix for a web app flaw on Monday. Your company plans to deploy it at the end of the month. What is the main risk?",
+          "Attackers can diff the patch, build an exploit, and hit unpatched systems during those weeks",
+          "The fix will introduce a new zero-day",
+          "Nothing, since the flaw is now patched",
+          "The vendor will revoke the fix",
+          "A published patch reveals the bug; every day it is not applied is exposure to n-day attacks, which AI is making faster to build."
+        ],
+        [
+          "Why might an attacker prefer a recently patched bug over hunting for a zero-day?",
+          "The patch points to the flaw, so building a working exploit is far cheaper",
+          "Patched bugs are always more severe",
+          "Zero-days are illegal to exploit but n-days are not",
+          "Patched systems cannot be detected",
+          "The fix hands the attacker the location of the bug, and many targets stay unpatched for weeks."
+        ],
+        [
+          "A lab shortens its disclosure deadline from 90 days to 30. Who bears most of the new pressure?",
+          "Maintainers, especially small or volunteer-run projects, who must ship fixes faster",
+          "Attackers, who lose access to all bugs",
+          "End users, who must write their own patches",
+          "Nobody, since deadlines are not enforced",
+          "Shorter clocks push maintainers to fix quickly; well-funded projects can, but small ones may struggle."
+        ]
+      ],
+      "ex": [
+        "Explain why AI makes the time between a patch and its installation more dangerous.",
+        "A patch reveals where the bug was. Turning that into a working exploit used to take skilled people days or weeks, which gave slow-patching organizations some cover. AI agents can now diff the patch, infer the flaw, and write and test an exploit in hours, so any system left unpatched is exposed almost immediately. That makes fast patching, not just finding bugs, the deciding factor in defense."
+      ]
+    },
+    {
+      "id": "nw41",
+      "added": "2026-11-17",
+      "t": "Suing AI Companies Without an AI Law",
+      "cards": [
+        "Most AI lawsuits by governments do not rely on new AI statutes. They use old, broad laws. In California, the main tool is the **Unfair Competition Law (UCL)**, which bans any \"unlawful, unfair or fraudulent\" business practice. It does not require proving the company **intended** harm, only that its conduct fits one of those categories, and it lets the state seek an **injunction** (a court order to change behavior), restitution, and **civil penalties** per violation.",
+        "A second tool is **public nuisance**, a centuries-old claim for conduct that endangers the public at large; states used it against opioid and lead-paint makers. Unlike the UCL, it usually requires showing the company **knew** of the hazard. So complaints build a timeline of **warning signs**: earlier incidents, internal reports, public promises that did not match practice.",
+        "This framing matters for AI because it focuses on the **company's conduct**, not the model's intent. A court does not have to decide whether an agent \"meant\" to attack anything; it asks whether the company's testing, monitoring, and disclosure were reasonable. Per-violation penalties make the stakes depend on how a court counts violations, and settlements often end in injunctions that impose specific safety or reporting duties."
+      ],
+      "terms": [
+        [
+          "Unfair Competition Law",
+          "California's broad statute against unlawful, unfair, or fraudulent business practices; no intent required."
+        ],
+        [
+          "Public nuisance",
+          "A legal claim against conduct that endangers the general public."
+        ],
+        [
+          "Injunction",
+          "A court order requiring a party to do or stop doing something."
+        ],
+        [
+          "Civil penalty",
+          "A fine paid to the government, often assessed per violation."
+        ],
+        [
+          "Restitution",
+          "Returning money gained through the unlawful conduct."
+        ]
+      ],
+      "qs": [
+        [
+          "A state sues an AI lab after its agent damages a third party, but there is no AI-specific law. What is the most likely basis?",
+          "Broad consumer-protection and nuisance laws that target the company's conduct",
+          "A federal law requiring AIs to have intent",
+          "Copyright law",
+          "The lab's terms of service",
+          "States typically use general laws like the UCL and public nuisance, which do not depend on new AI statutes."
+        ],
+        [
+          "Why would a complaint list earlier incidents before the main one?",
+          "To show the company knew of the hazard, which public nuisance usually requires",
+          "To increase the per-violation fine automatically",
+          "Because courts only hear cases with ten or more incidents",
+          "To prove the model had intent",
+          "Knowledge is a key element of public nuisance, so prior warning signs carry the claim."
+        ],
+        [
+          "A law allows penalties of up to $2,500 per violation. Why is the total so uncertain?",
+          "It depends on how the court counts violations, such as per incident, per action, or per day",
+          "Because the cap is always waived",
+          "Because penalties go to the defendant",
+          "Because the amount is set by the company",
+          "Per-violation penalties scale with the counting method, which is often the main fight in such cases."
+        ]
+      ],
+      "ex": [
+        "Explain how a state can hold an AI company liable for an agent's actions without proving the AI intended harm.",
+        "The state sues the company, not the model, under broad laws like California's Unfair Competition Law and public nuisance. The UCL needs no intent, only an unfair or unlawful practice, such as inadequate testing controls or misleading safety claims. Public nuisance needs the company to have known about the danger, so the state points to earlier warning signs. The question becomes whether the company acted reasonably, not what the agent wanted."
+      ]
     }
   ]
 }
