@@ -2281,6 +2281,68 @@
         "Explain how a state can hold an AI company liable for an agent's actions without proving the AI intended harm.",
         "The state sues the company, not the model, under broad laws like California's Unfair Competition Law and public nuisance. The UCL needs no intent, only an unfair or unlawful practice, such as inadequate testing controls or misleading safety claims. Public nuisance needs the company to have known about the danger, so the state points to earlier warning signs. The question becomes whether the company acted reasonably, not what the agent wanted."
       ]
+    },
+    {
+      "id": "nw42",
+      "added": "2026-11-17",
+      "t": "Risk Ratings: How Labs Grade a Model Before Release",
+      "cards": [
+        "Before releasing a model, the big labs test it for a few dangerous abilities, usually **cybersecurity**, **biological and chemical** weapons help, and **AI self-improvement** (speeding up AI research). Each lab publishes a framework, like OpenAI's **Preparedness Framework** or Anthropic's **Responsible Scaling Policy**, with **capability thresholds** such as High and Critical.",
+        "Crossing a threshold does not block release by itself. It obliges the lab to have certain **safeguards** in place first: tighter refusals, monitoring of what users and agents do, hardened research sandboxes, and **tiered access**, where vetted customers (say, approved security teams) get fewer restrictions than everyone else. The results go in a **system card**, the report published alongside the model.",
+        "Read ratings carefully. The lab grades itself, tests come with **indicative cutoffs** that are guides rather than hard lines, and outside testers often see only some checkpoints. Useful questions: which external groups tested it, did they retest the final version, what got worse compared with the last model, and do the safeguards apply in the product you use (an API call may lack protections a chat app has)."
+      ],
+      "terms": [
+        [
+          "Capability threshold",
+          "A defined level of dangerous ability, such as High or Critical, that triggers required safeguards."
+        ],
+        [
+          "Preparedness Framework",
+          "OpenAI's published rules for testing models for severe risks and the safeguards each level requires."
+        ],
+        [
+          "System card",
+          "The report a lab publishes with a model describing its tests, risk ratings, and safeguards."
+        ],
+        [
+          "Tiered access",
+          "Giving vetted users looser limits than the general public, for example security teams that need exploit help."
+        ],
+        [
+          "Indicative cutoff",
+          "A score on a test that suggests a threshold may be crossed, used as a guide in a broader judgment."
+        ]
+      ],
+      "qs": [
+        [
+          "A lab rates its new model High for cybersecurity and still releases it. What does the rating most likely mean?",
+          "The lab had to put specific safeguards in place before release",
+          "The model was banned from release",
+          "The model is safe for any use",
+          "An independent regulator approved it",
+          "In these frameworks a threshold triggers required safeguards, not an automatic ban, and no regulator signs off."
+        ],
+        [
+          "A system card says a model hides known problems less often when used through the vendor's coding app, because of the app's system prompt. You call it directly through the API. What should you do?",
+          "Add your own instructions and checks for reporting problems",
+          "Assume the app's protections apply to the API",
+          "Nothing, system cards only describe chat apps",
+          "Switch off all logging",
+          "Protections built into one product's prompt don't travel with the raw model, so you rebuild them yourself."
+        ],
+        [
+          "An outside safety institute found a jailbreak in a pre-release version, and the lab says it fixed it. What is the key open question?",
+          "Whether the outside group retested the final version",
+          "Whether the model has a larger context window",
+          "Whether the price went down",
+          "Whether the jailbreak was in English",
+          "A fix is only verified when someone other than the lab confirms it on the shipped model."
+        ]
+      ],
+      "ex": [
+        "Explain what it means when a lab rates a model 'High' in a risk category, and how you would judge that claim.",
+        "Labs test new models for dangerous abilities like cyberattacks, bioweapons help, and speeding up AI research, and rate them against thresholds like High and Critical. Crossing one means the lab must have certain safeguards ready, such as tighter refusals, monitoring, sandboxes, and vetted access tiers; it is not a ban. To judge it, remember the lab grades itself, so look at which outside testers were involved, whether they checked the final version, what regressed versus the previous model, and whether the safeguards apply in the product you actually use."
+      ]
     }
   ]
 }
