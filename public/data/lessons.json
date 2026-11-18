@@ -2467,6 +2467,130 @@
         "Explain how a hijacked Python package can steal credentials and how a team should defend against it.",
         "An attacker who gains publishing rights uploads a new version, and systems that accept the latest release install it automatically. Code in a .pth file can then run on every Python start, even without an import, and collect tokens and keys from the environment. Teams should pin exact versions with hashes, delay adoption of brand-new releases, publish with short-lived trusted credentials, and limit the secrets each build can reach. If hit, they should rebuild affected machines and rotate everything those machines could access."
       ]
+    },
+    {
+      "id": "nw45",
+      "added": "2026-11-18",
+      "t": "Uplift: What AI Actually Adds to a Dangerous Task",
+      "cards": [
+        "When a chatbot produces something harmful, the first question is not only whether it answered. It is **uplift**: how much more capable the tool made someone compared with what they could already do. If the same material takes five minutes on a search engine, the added danger is small. If the model fills a gap the person could not fill alone, it is large.",
+        "Measuring uplift requires a **control group**. In a good study, similar people attempt the same task with and without the model, and experts grade the results. A **capability test** is different: it shows only that a model can produce an output. It cannot say whether that output beat other available sources or whether a real person could act on it.",
+        "Uplift can come from more than new facts. A model might **compress time**, organize scattered information, troubleshoot mistakes, or keep an unskilled person moving. That makes it hard to dismiss a result just because each fact is public. It also means strong claims need evidence, in both directions: neither \"it's all on Google\" nor \"AI makes this easy\" is established without a comparison."
+      ],
+      "terms": [
+        [
+          "Uplift",
+          "The added capability a tool gives someone beyond what they could achieve with existing resources."
+        ],
+        [
+          "Control group",
+          "Comparable participants who attempt the task without the tool, giving a baseline."
+        ],
+        [
+          "Capability test",
+          "A check of whether a model can produce an output, without measuring its added value."
+        ],
+        [
+          "Safeguard",
+          "A protection such as a refusal, classifier, or account monitor meant to stop misuse."
+        ],
+        [
+          "Jailbreak",
+          "A prompt or series of prompts that gets a model to bypass its safety rules."
+        ]
+      ],
+      "qs": [
+        [
+          "Auditors get a chatbot to write a harmful plan, but never compare it with web search. What can they conclude?",
+          "The safeguards failed, but the model's added danger was not measured",
+          "The model is proven to be more dangerous than search",
+          "The model provided no uplift at all",
+          "The plan would certainly succeed",
+          "A capability test shows what the model produced. Uplift requires a comparison with a baseline."
+        ],
+        [
+          "A lab says a dangerous answer is harmless because every fact in it is public. What is the best response?",
+          "Assembling and speeding up public facts can still add capability, so it needs measuring",
+          "Public facts can never contribute to harm",
+          "The lab's statement proves there is no risk",
+          "Only classified facts count as uplift",
+          "Synthesis, speed, and troubleshooting can matter even when each individual fact is available elsewhere."
+        ],
+        [
+          "Which study design gives the strongest evidence of uplift?",
+          "Similar people try the task with and without the model, and experts blindly grade the results",
+          "A company reruns the prompts on its newest model",
+          "Researchers count how many prompts were refused",
+          "A single tester reports that the model seemed helpful",
+          "Randomized comparison with blind expert grading isolates what the model added."
+        ]
+      ],
+      "ex": [
+        "Explain the difference between showing a model can produce harmful content and showing it provides uplift.",
+        "Showing a model can produce harmful content is a capability result: the safeguards failed and the output exists. Uplift asks how much that output improves what a person could do with existing resources such as search, books, or expertise. Measuring it requires a baseline, usually comparable people working with and without the model, with experts grading the results. A model can add uplift through speed, synthesis, or troubleshooting even if each fact is public, so neither alarm nor dismissal is justified without that comparison."
+      ]
+    },
+    {
+      "id": "nw46",
+      "added": "2026-11-18",
+      "t": "Reading a Severity Score: CVSS and Real-World Risk",
+      "cards": [
+        "Security flaws usually come with a **CVSS score** from 0 to 10. It summarizes factors such as whether an attacker needs a login, how complex the attack is, and what damage could follow. Different groups can score the same bug differently, because they judge those factors differently and may use different versions of the system.",
+        "A score describes **technical severity**, not your actual risk. To judge risk, ask whether the flaw is **reachable** in your setup, whether your hardware and configuration are affected, and whether attackers are using it. Public catalogs of **known exploited vulnerabilities**, such as CISA's KEV list, are strong signals that a bug has moved from theory to practice.",
+        "Good triage combines those signals. Patch internet-facing systems first, especially where no login is needed. Look for hidden copies in **containers and bundled software**, because updating the host may not update them. If a fix is not ready, use a temporary **mitigation**, and remember that a crash bug can cause real outages even when full takeover is difficult."
+      ],
+      "terms": [
+        [
+          "CVSS",
+          "A standard 0 to 10 scoring system for the technical severity of a security flaw."
+        ],
+        [
+          "Reachability",
+          "Whether attacker-controlled input can actually get to the vulnerable code in your system."
+        ],
+        [
+          "KEV catalog",
+          "CISA's list of vulnerabilities with evidence of real-world exploitation."
+        ],
+        [
+          "Mitigation",
+          "A temporary change that reduces risk until a full fix can be installed."
+        ],
+        [
+          "Denial of service",
+          "An attack that crashes or overloads a system so people cannot use it."
+        ]
+      ],
+      "qs": [
+        [
+          "One vendor rates a bug 8.1 and another rates it 9.8. What is the most likely explanation?",
+          "They weighed factors such as attack complexity differently",
+          "One of the vendors must have fabricated the bug",
+          "The higher score means attacks have already started",
+          "Scores change automatically with the number of users",
+          "CVSS involves judgment, so scores for the same flaw can differ between organizations."
+        ],
+        [
+          "A critical flaw only affects certain CPUs, and your servers do not have them. What should you do first?",
+          "Verify your hardware and configuration, then schedule the patch normally",
+          "Ignore the flaw permanently without checking",
+          "Shut down every server immediately",
+          "Assume the score means you were breached",
+          "Reachability and configuration determine your real exposure, but you should confirm them and still patch."
+        ],
+        [
+          "You patched the Java on your hosts, but your apps run in containers. What remains at risk?",
+          "Container images that bundle their own vulnerable Java version",
+          "Nothing, because host patches update all containers",
+          "Only the database passwords",
+          "Only systems running on ARM chips",
+          "Containers often carry their own runtime, so images must be rebuilt and redeployed."
+        ]
+      ],
+      "ex": [
+        "Explain why a high CVSS score does not by itself tell you how urgently to patch.",
+        "CVSS measures a flaw's technical severity in general, not the risk in a specific environment. Urgency depends on whether the vulnerable code is reachable, whether your hardware and configuration are affected, whether the system faces the internet, and whether attackers are actively exploiting the flaw, as shown by sources like CISA's KEV catalog. Teams should combine those signals, check hidden copies in containers and bundled software, and use mitigations when a fix is not yet available."
+      ]
     }
   ]
 }
