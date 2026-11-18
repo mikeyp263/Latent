@@ -2343,6 +2343,130 @@
         "Explain what it means when a lab rates a model 'High' in a risk category, and how you would judge that claim.",
         "Labs test new models for dangerous abilities like cyberattacks, bioweapons help, and speeding up AI research, and rate them against thresholds like High and Critical. Crossing one means the lab must have certain safeguards ready, such as tighter refusals, monitoring, sandboxes, and vetted access tiers; it is not a ban. To judge it, remember the lab grades itself, so look at which outside testers were involved, whether they checked the final version, what regressed versus the previous model, and whether the safeguards apply in the product you actually use."
       ]
+    },
+    {
+      "id": "nw43",
+      "added": "2026-11-18",
+      "t": "Guarantees: When a Supplier Backs Its Customer",
+      "cards": [
+        "A **guarantee** is a promise to pay if someone else does not. In AI infrastructure, a strong company such as a chipmaker can offer **credit support** for a weaker customer's lease or loan. Lenders then treat the deal as safer, so the project gets built and financed on better terms.",
+        "The guarantor usually pays nothing on day one. That makes a guarantee a **contingent liability**: a real obligation that only becomes a cost if a trigger occurs, such as a tenant missing rent. Details matter: the **cap** on the amount, when the obligation starts, what ends it, and whether the customer must repay the guarantor through an **indemnity**.",
+        "Guarantees help sales, because the customer can now afford the supplier's product. They also concentrate risk: if the customer struggles, the supplier loses a buyer and owes money at the same moment. An indemnity from a customer that has already failed may be worth little. When you read one, ask **who pays first, how much, and what the asset would be worth if the tenant left**."
+      ],
+      "terms": [
+        [
+          "Guarantee",
+          "A promise to cover another party's payment if that party fails to pay."
+        ],
+        [
+          "Credit support",
+          "Backing from a stronger company that makes a borrower or tenant less risky to lenders."
+        ],
+        [
+          "Contingent liability",
+          "An obligation that becomes a real cost only if a specific event happens."
+        ],
+        [
+          "Indemnity",
+          "A promise to reimburse someone for losses they take on your behalf."
+        ],
+        [
+          "Counterparty risk",
+          "The risk that the other side of a deal cannot meet its obligations."
+        ]
+      ],
+      "qs": [
+        [
+          "A chipmaker guarantees $100 billion of a customer's data center lease but has paid nothing so far. How should you think about that $100 billion?",
+          "As a contingent liability that becomes a cost only if the customer fails to pay",
+          "As money the chipmaker has already spent",
+          "As revenue the chipmaker has earned",
+          "As irrelevant, because guarantees are never used",
+          "No cash has moved yet, but the obligation is real and depends on the customer's ability to pay."
+        ],
+        [
+          "The customer has promised to reimburse the guarantor for any payments. Why doesn't that remove the risk?",
+          "The guarantee is most likely to be called when the customer is least able to repay",
+          "Reimbursement promises are illegal",
+          "The guarantor can never ask for repayment",
+          "It only applies to small companies",
+          "An indemnity is only as strong as the company behind it, and guarantees are triggered when that company is in trouble."
+        ],
+        [
+          "Which detail would best help you size a supplier's real exposure on a lease guarantee?",
+          "The cap, the start date, and what the site could earn from a replacement tenant",
+          "The supplier's logo on the building",
+          "The number of press releases about the deal",
+          "The customer's brand awareness",
+          "Exposure depends on the maximum owed, when it applies, and how much could be recovered by re-leasing or selling the asset."
+        ]
+      ],
+      "ex": [
+        "Explain why a chipmaker might guarantee a customer's data center lease, and what risk it takes on.",
+        "The guarantee makes lenders comfortable financing a site for a customer that could not get those terms alone, and that site then fills up with the chipmaker's products. It costs nothing up front, so it is a contingent liability. The risk is concentration: if the customer fails, the chipmaker loses sales and owes payments at the same time, and any promise from the customer to repay may be worthless. To size it, look at the cap, when it starts, what ends it, and what the site could earn from another tenant."
+      ]
+    },
+    {
+      "id": "nw44",
+      "added": "2026-11-18",
+      "t": "How Python Packages Get Hijacked",
+      "cards": [
+        "When you run pip install, you trust a **package registry** such as PyPI to deliver the code the maintainers intended. Attackers who steal a maintainer's publishing rights can upload a new version that looks routine. Tools set to accept the **latest version** pull it automatically, often within minutes.",
+        "Malware does not need you to use the package. Python runs certain lines in **.pth files** every time the interpreter starts, so a poisoned install can execute on any Python launch. **Install-time scripts** are another route. Build systems are prime targets because they hold **cloud tokens and signing keys**, and a stealer can also request fresh short-lived tokens from the platform.",
+        "Good defenses are unexciting. **Pin exact versions with hashes** in a lockfile so a new upload cannot slip in. Add a **cooldown** before adopting brand-new releases. Publishers can use **trusted publishing**, which replaces long-lived upload passwords with short-lived credentials tied to a specific build pipeline. Limit what secrets each build job can see, so one bad package cannot reach everything."
+      ],
+      "terms": [
+        [
+          "Package registry",
+          "A public service, such as PyPI or npm, that hosts software libraries for download."
+        ],
+        [
+          ".pth file",
+          "A Python path file whose import lines run automatically when the interpreter starts."
+        ],
+        [
+          "Lockfile",
+          "A file recording the exact versions, and often hashes, of every dependency."
+        ],
+        [
+          "Hash pinning",
+          "Accepting a package only if its cryptographic fingerprint matches the one you recorded."
+        ],
+        [
+          "Trusted publishing",
+          "Uploading packages using short-lived credentials tied to a verified build pipeline instead of stored passwords."
+        ]
+      ],
+      "qs": [
+        [
+          "A malicious package is installed in your environment, but your code never imports it. Are you safe?",
+          "No, a .pth file can run its code whenever Python starts",
+          "Yes, Python only runs imported packages",
+          "Yes, as long as you don't restart your laptop",
+          "Yes, because pip scans all packages for malware",
+          "Python's startup process can execute code from .pth files without any import in your program."
+        ],
+        [
+          "Your CI installs dependencies with a loose version range. Which change most directly blocks a newly uploaded malicious release?",
+          "Install from a lockfile with exact versions and hashes",
+          "Use a faster build server",
+          "Print the package list after installing",
+          "Rename the virtual environment",
+          "A hash-pinned lockfile refuses any file that does not match what you already reviewed."
+        ],
+        [
+          "You learn a package that stole credentials ran on a build machine for ten minutes. What is the right response?",
+          "Rebuild the machine and rotate every secret it could reach",
+          "Uninstall the package and carry on",
+          "Delete the build logs",
+          "Wait to see whether anyone misuses the credentials",
+          "Removing the package does not undo the theft, so assume anything reachable was taken."
+        ]
+      ],
+      "ex": [
+        "Explain how a hijacked Python package can steal credentials and how a team should defend against it.",
+        "An attacker who gains publishing rights uploads a new version, and systems that accept the latest release install it automatically. Code in a .pth file can then run on every Python start, even without an import, and collect tokens and keys from the environment. Teams should pin exact versions with hashes, delay adoption of brand-new releases, publish with short-lived trusted credentials, and limit the secrets each build can reach. If hit, they should rebuild affected machines and rotate everything those machines could access."
+      ]
     }
   ]
 }
