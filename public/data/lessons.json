@@ -2591,6 +2591,68 @@
         "Explain why a high CVSS score does not by itself tell you how urgently to patch.",
         "CVSS measures a flaw's technical severity in general, not the risk in a specific environment. Urgency depends on whether the vulnerable code is reachable, whether your hardware and configuration are affected, whether the system faces the internet, and whether attackers are actively exploiting the flaw, as shown by sources like CISA's KEV catalog. Teams should combine those signals, check hidden copies in containers and bundled software, and use mitigations when a fix is not yet available."
       ]
+    },
+    {
+      "id": "nw47",
+      "added": "2026-11-19",
+      "t": "Chat Privacy Settings: Training vs. Retention",
+      "cards": [
+        "AI chat apps make two separate promises that people often confuse. **Training use** is whether your conversations can be used to improve future models. **Retention** is how long the company keeps your conversations at all. Turning off one does not turn off the other: a chat can be excluded from training yet still be stored for weeks.",
+        "Even when you delete history, companies usually keep some data for **safety and abuse review**, legal holds, and system recovery. Some chats are read by **human reviewers**, and copies they review can live on separately, sometimes for years. 'Temporary' or 'incognito' modes shorten storage but rarely mean zero storage.",
+        "To judge a setting, ask four questions: Is my content used for training? How long is it kept if I turn history off? Can people read it? Does sending feedback attach extra chats? The answers live in the privacy page, not the toggle label, and they change. For sensitive work, assume anything you type may be stored, and use enterprise plans with contractual **zero data retention** where it matters."
+      ],
+      "terms": [
+        [
+          "Training use",
+          "Using your conversations to improve future versions of a model."
+        ],
+        [
+          "Retention period",
+          "How long a company stores your data before deleting it."
+        ],
+        [
+          "Temporary chat",
+          "A mode that hides chats from your history and keeps them for a shorter, but not zero, period."
+        ],
+        [
+          "Human review",
+          "Staff or contractors reading samples of chats for quality and safety."
+        ],
+        [
+          "Zero data retention",
+          "A contract term, usually for business customers, under which the provider does not store prompts and outputs after processing."
+        ]
+      ],
+      "qs": [
+        [
+          "You turn off AI training in a chat app. What can you safely conclude?",
+          "Your chats should not train models, but they may still be stored",
+          "Your chats are deleted immediately",
+          "No human can ever read your chats",
+          "The app stops keeping any logs",
+          "Training and retention are separate controls, so storage can continue."
+        ],
+        [
+          "A company extends 'history off' retention from 3 days to 2 months. Who should care most?",
+          "People who used that mode for sensitive material",
+          "Only people who already keep full history",
+          "No one, because training is unaffected",
+          "Only users outside the US",
+          "The change lengthens how long data meant to be short-lived is kept."
+        ],
+        [
+          "Your law firm needs prompts not to be stored by the AI vendor. What should it look for?",
+          "A contractual zero data retention agreement",
+          "A consumer temporary chat toggle",
+          "A setting that hides chats from history",
+          "A promise not to train on public data",
+          "Only contract terms bind the vendor; consumer toggles can change and still allow some retention."
+        ]
+      ],
+      "ex": [
+        "Explain to a colleague why turning off AI training in a chatbot does not mean their conversations are deleted.",
+        "Training and retention are separate. Opting out of training stops your chats from being used to improve models, but the company may still store them for a set period for safety review, abuse detection, system recovery, or legal reasons, and some may be read by human reviewers. To limit storage you need to check the retention rules, use history-off or temporary modes knowing their actual time limits, and for sensitive work rely on a contract such as zero data retention."
+      ]
     }
   ]
 }
