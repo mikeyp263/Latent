@@ -2653,6 +2653,68 @@
         "Explain to a colleague why turning off AI training in a chatbot does not mean their conversations are deleted.",
         "Training and retention are separate. Opting out of training stops your chats from being used to improve models, but the company may still store them for a set period for safety review, abuse detection, system recovery, or legal reasons, and some may be read by human reviewers. To limit storage you need to check the retention rules, use history-off or temporary modes knowing their actual time limits, and for sensitive work rely on a contract such as zero data retention."
       ]
+    },
+    {
+      "id": "nw48",
+      "added": "2026-11-19",
+      "t": "How a Chip Design Gets Made: RTL, Synthesis, and PPA",
+      "cards": [
+        "A chip starts as code. Engineers describe what each circuit does on every clock tick in **RTL (register-transfer level)** languages like Verilog. **Synthesis** tools then turn that description into millions of standard logic cells, and **place-and-route** arranges and wires them on silicon. Each step can change how fast, hungry, and big the result is.",
+        "Designers grade a block on **PPA: power, performance, and area**. They trade off against each other: a faster multiplier often needs more transistors, and less area usually means lower cost per chip because more fit on a wafer. A claimed 'PPA gain' bundles all three, so ask which one improved and by how much.",
+        "Every change must be **verified**: tools check that the new design does exactly what the old one did, in every case. Results also differ by stage: a gain measured after synthesis can shrink after place-and-route, and only finished **silicon** settles it. When an AI tool claims a design win, ask what stage it was measured at, who checked it, and whether it is a best case or an average."
+      ],
+      "terms": [
+        [
+          "RTL",
+          "Code that describes a chip's behavior cycle by cycle, written in hardware languages like Verilog."
+        ],
+        [
+          "Synthesis",
+          "Turning RTL into a netlist of standard logic cells."
+        ],
+        [
+          "Place-and-route",
+          "Laying out those cells on the chip and wiring them together."
+        ],
+        [
+          "PPA",
+          "Power, performance, and area: the three main measures of a chip design."
+        ],
+        [
+          "Formal equivalence check",
+          "An automated proof that a changed design behaves exactly like the original."
+        ]
+      ],
+      "qs": [
+        [
+          "A vendor says AI improved a chip block's PPA by 14%. What is the most useful follow-up?",
+          "Which of power, performance, or area improved, at what design stage, and is it a best case?",
+          "Which programming language the AI used",
+          "Whether the chip runs AI models",
+          "How many engineers were replaced",
+          "PPA bundles three trade-offs, and gains can shrink between synthesis and silicon."
+        ],
+        [
+          "Why does cutting a block's area matter commercially?",
+          "Smaller chips mean more per wafer and lower cost per chip",
+          "Smaller chips always run faster",
+          "Area only affects how the chip looks",
+          "It reduces the need for software updates",
+          "Wafer cost is roughly fixed, so fitting more chips on each one lowers unit cost."
+        ],
+        [
+          "An AI rewrites a multiplier to finish in one clock cycle instead of two. What must happen before it ships?",
+          "Verification that it gives identical results in every case, then checks through layout and silicon",
+          "Nothing, if the AI is confident",
+          "Only a speed benchmark",
+          "A new programming language",
+          "Hardware bugs are costly to fix after manufacturing, so equivalence and timing must be proven first."
+        ]
+      ],
+      "ex": [
+        "Explain why 'AI improved chip PPA by up to 14%' is not the same as 'AI designed a better chip.'",
+        "PPA combines power, performance, and area, so 14% does not mean each improved by 14%. 'Up to' signals a best case on selected blocks, not the whole chip. The AI typically rewrote RTL for specific blocks, while conventional tools verified the change and measured its effect, often after synthesis, before layout and real silicon confirm it. It is a meaningful result, but you need the stage, the averages, and independent or customer verification to judge it."
+      ]
     }
   ]
 }
