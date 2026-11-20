@@ -2715,6 +2715,64 @@
         "Explain why 'AI improved chip PPA by up to 14%' is not the same as 'AI designed a better chip.'",
         "PPA combines power, performance, and area, so 14% does not mean each improved by 14%. 'Up to' signals a best case on selected blocks, not the whole chip. The AI typically rewrote RTL for specific blocks, while conventional tools verified the change and measured its effect, often after synthesis, before layout and real silicon confirm it. It is a meaningful result, but you need the stage, the averages, and independent or customer verification to judge it."
       ]
+    },
+    {
+      "id": "nw49",
+      "added": "2026-11-20",
+      "t": "Diffusion Language Models: Writing in Parallel",
+      "cards": [
+        "Most chatbots are **autoregressive**: they predict one token, append it, and predict the next. That is reliable but sequential, so a 1,000-token answer needs about 1,000 steps, and speed is capped by how fast each step runs.",
+        "A **diffusion language model** works differently. It starts with a masked or noisy draft of the whole answer and **denoises** it over a set number of passes, filling in many tokens at once. Fewer passes than tokens means lower latency, and it can revise earlier words instead of being locked into them.",
+        "The trade-offs: quality on long, multi-step reasoning has trailed the best autoregressive models, and speed claims depend on what you compare against. When a lab says '5 to 10 times faster,' ask: faster than which model, at what quality, on what hardware, and measured as time to first token or total time?"
+      ],
+      "terms": [
+        [
+          "Autoregressive",
+          "Generating text one token at a time, each conditioned on all the tokens before it."
+        ],
+        [
+          "Diffusion model",
+          "A model that creates output by refining a noisy or masked draft over several passes."
+        ],
+        [
+          "Denoising step",
+          "One pass that updates many positions of the draft at once."
+        ],
+        [
+          "Latency",
+          "How long you wait for a response; for text, often split into time to first token and total time."
+        ]
+      ],
+      "qs": [
+        [
+          "Why can a diffusion language model answer faster than a standard chatbot?",
+          "It updates many tokens per pass, so it needs fewer steps than one per token",
+          "It uses a smaller vocabulary",
+          "It skips reading the prompt",
+          "It only works on short answers",
+          "Parallel refinement replaces one-step-per-token generation."
+        ],
+        [
+          "A startup says its diffusion model is 10x faster than rivals. What is the key follow-up?",
+          "Faster than which models, and at what quality on the same tasks?",
+          "Whether it uses GPUs",
+          "How many employees it has",
+          "Whether it is open source",
+          "Speed only matters at matched quality, and comparisons to speed-tuned small models differ from comparisons to frontier models."
+        ],
+        [
+          "Where have diffusion language models tended to lag?",
+          "Long, multi-step reasoning quality",
+          "Short code completions",
+          "Running on GPUs",
+          "Supporting English",
+          "Their main weakness so far has been complex reasoning, while they shine on fast, short generations like code edits."
+        ]
+      ],
+      "ex": [
+        "Explain why Nvidia might want a diffusion language model company.",
+        "Nvidia sells the chips that run inference. Diffusion models produce text in fewer, more parallel steps, which suits GPUs well and lowers latency, so they could make AI products feel faster and drive more inference on Nvidia hardware. Owning the technique also strengthens its own Nemotron models. The risk is that diffusion models still trail top autoregressive models on hard reasoning, so it is a bet on speed for many everyday tasks, not a replacement for frontier models."
+      ]
     }
   ]
 }
