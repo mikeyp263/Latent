@@ -2,6 +2,16 @@
   "updated": "2026-11-20",
   "models": [
     {
+      "name": "Genie 4",
+      "lab": "Google",
+      "released": "2026-11-18",
+      "access": "Limited",
+      "price": "Not stated",
+      "context": "N/A",
+      "note": "Interactive world model with native audio and mid-session prompt steering. Rolling out to Google AI Ultra subscribers in Project Genie; Pro waitlist; Google also lists Gemini API availability. No resolution, frame rate, or session length published.",
+      "link": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/"
+    },
+    {
       "name": "Gemini 4 Neon",
       "lab": "Google",
       "released": "2026-11-18",

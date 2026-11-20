@@ -2773,6 +2773,72 @@
         "Explain why Nvidia might want a diffusion language model company.",
         "Nvidia sells the chips that run inference. Diffusion models produce text in fewer, more parallel steps, which suits GPUs well and lowers latency, so they could make AI products feel faster and drive more inference on Nvidia hardware. Owning the technique also strengthens its own Nemotron models. The risk is that diffusion models still trail top autoregressive models on hard reasoning, so it is a bet on speed for many everyday tasks, not a replacement for frontier models."
       ]
+    },
+    {
+      "id": "nw50",
+      "added": "2026-11-20",
+      "t": "Corrections, Bear Markets, and Concentration",
+      "cards": [
+        "A **correction** is a fall of 10% or more from a recent peak; a **bear market** is 20% or more. A **drawdown** is the general term for any peak-to-trough fall. These are conventions traders use to describe moves, not triggers that cause anything on their own.",
+        "Major indexes like the S&P 500 are **market-cap weighted**: bigger companies count more. When a few very large companies share one theme, like AI, the index becomes **concentrated**, and a selloff in that theme can drag the whole index down even if most companies are fine. Compare an equal-weight index or the Dow (which weights by share price, not size) to see whether a drop is broad or narrow.",
+        "For AI specifically, falling stock prices matter beyond investors' portfolios because the buildout is financed partly by **equity** (selling stock) and **debt**, and by suppliers investing in customers. When prices fall, raising money costs more, and deals with financing deadlines can slip. Watch funding and credit conditions, not just daily price moves."
+      ],
+      "terms": [
+        [
+          "Correction",
+          "A drop of at least 10% from a recent high."
+        ],
+        [
+          "Bear market",
+          "A drop of at least 20% from a recent high."
+        ],
+        [
+          "Drawdown",
+          "Any peak-to-trough decline, usually stated as a percent."
+        ],
+        [
+          "Market-cap weighted",
+          "An index where each company counts in proportion to its total stock market value."
+        ],
+        [
+          "Concentration",
+          "When a few companies make up a large share of an index, so their moves dominate it."
+        ],
+        [
+          "VIX",
+          "A measure of how much S&P 500 volatility options traders expect over the next 30 days."
+        ]
+      ],
+      "qs": [
+        [
+          "The Nasdaq falls 3.4% in a day while the Dow falls 0.6%. What is the most likely explanation?",
+          "The selloff is concentrated in large tech stocks, which weigh more in the Nasdaq",
+          "The Dow is a larger index, so it moves less",
+          "The Dow only trades in the morning",
+          "The Nasdaq counts every company equally",
+          "The Nasdaq is heavy in large tech companies, so a tech-led selloff hits it harder than the Dow, which has less tech weight."
+        ],
+        [
+          "An index peaked at 7,800 and now sits at 7,000. Is it in a correction?",
+          "Yes, it is down about 10.3%",
+          "No, a correction needs a 20% fall",
+          "Only if it closes there for a month",
+          "No, corrections are measured from the start of the year",
+          "800 / 7,800 is about 10.3%, which meets the 10% correction convention."
+        ],
+        [
+          "Why might an AI stock selloff slow data center construction even if AI demand is unchanged?",
+          "Builders rely on stock and debt financing that gets costlier and harder when prices fall",
+          "Falling stock prices make GPUs physically slower",
+          "Exchanges ban AI companies from borrowing during corrections",
+          "Data centers are priced in shares",
+          "Much of the buildout is funded by raising money, and weaker markets raise its cost and make lenders and partners more cautious."
+        ]
+      ],
+      "ex": [
+        "Explain why the S&P 500 can fall into a correction even when most of its companies' stocks are only slightly down.",
+        "The S&P 500 weights companies by market value, so a handful of very large companies, many tied to AI, make up a big share of it. If those few fall sharply, the index drops a lot even if the typical company barely moves. Checking an equal-weight version of the index shows whether the decline is broad or concentrated."
+      ]
     }
   ]
 }
