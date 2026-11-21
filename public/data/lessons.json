@@ -2839,6 +2839,68 @@
         "Explain why the S&P 500 can fall into a correction even when most of its companies' stocks are only slightly down.",
         "The S&P 500 weights companies by market value, so a handful of very large companies, many tied to AI, make up a big share of it. If those few fall sharply, the index drops a lot even if the typical company barely moves. Checking an equal-weight version of the index shows whether the decline is broad or concentrated."
       ]
+    },
+    {
+      "id": "nw51",
+      "added": "2026-11-21",
+      "t": "Looped Layers: Depth Without More Weights",
+      "cards": [
+        "A normal transformer passes each token through its layers once, each layer with its own weights. A **looped** (or **weight-shared**) model runs some layers more than once, feeding a block's output back into the same block. Inkling 2 Mini, for example, stores 24 layers but runs its middle 12 three times, so each token gets 48 **layer applications**.",
+        "The trade: looping saves **memory and storage**, because the weights are stored once, but it does **not** save compute. Every pass costs the same as a separate layer would. That is why a looped model can fit on a laptop yet run slower than its parameter count suggests, and why labs quote **effective active parameters**, an estimate of how big a non-looped model would need to be to do the same work per token.",
+        "Why it matters: looping gives a model more internal computation per token, a kind of thinking that happens inside the network instead of in written reasoning tokens. That can improve quality, but it also means less of the model's work shows up in a readable **chain of thought**, which matters for anyone relying on reading that chain to monitor behavior."
+      ],
+      "terms": [
+        [
+          "Looped layers",
+          "Layers that run more than once per token, reusing the same weights each time."
+        ],
+        [
+          "Weight sharing",
+          "Using one set of parameters in several places in a network to save memory."
+        ],
+        [
+          "Layer applications",
+          "The number of times a token passes through any layer, counting repeats."
+        ],
+        [
+          "Effective active parameters",
+          "An estimate of the per-token work of a looped or sparse model, stated as an equivalent ordinary model size."
+        ],
+        [
+          "Recurrent depth",
+          "The general idea of adding depth by repeating computation rather than adding new layers."
+        ]
+      ],
+      "qs": [
+        [
+          "A looped model stores 24 layers and runs 12 of them three times. What does looping mainly save, compared with a normal 48-layer model?",
+          "Memory and download size",
+          "Compute per token",
+          "Electricity per token",
+          "Context window length",
+          "The weights are stored once, so the file is smaller, but the hardware still does all 48 passes, so compute is about the same."
+        ],
+        [
+          "Two models have the same 20GB file. One is looped, one is not. Which is likely slower per token on the same Mac?",
+          "The looped one, because it does more passes per token",
+          "The non-looped one, because it has more weights",
+          "Both are always identical in speed",
+          "Whichever has the larger context window",
+          "Same file size means similar stored weights, but the looped model reruns layers, so it does more computation for each token."
+        ],
+        [
+          "Why might a safety team care that a model uses looped layers?",
+          "More reasoning can happen internally, out of view of the written chain of thought",
+          "Looped models cannot be fine-tuned",
+          "Looping makes models refuse more requests",
+          "Looped models cannot use tools",
+          "Extra internal passes let the model compute more without producing reasoning tokens, so monitoring by reading its reasoning sees less of its work."
+        ]
+      ],
+      "ex": [
+        "Explain to a friend how a 26-billion-parameter model can act like a larger one but still fit on a 32GB laptop.",
+        "It reuses part of itself. The file stores the weights once, which keeps it small enough to fit, but when it processes each word it runs its middle layers three times in a row, getting more computation out of the same weights. You pay for that in speed, not memory: it does nearly twice the work of a single pass, so it runs slower than its size suggests."
+      ]
     }
   ]
 }

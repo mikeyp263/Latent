@@ -1,6 +1,16 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "models": [
+    {
+      "name": "Inkling 2 Mini",
+      "lab": "Thinking Machines Lab",
+      "released": "2026-11-20",
+      "access": "Open weights",
+      "price": "$0.15 / $0.50 (Tinker, per Kingy)",
+      "context": "1M",
+      "note": "26.4B MoE, 3.4B active; middle 12 layers run three times (about 5.4B effective active). Text and image input, Apache 2.0, ~20GB checkpoint runs on 32GB Macs. Lab reports 79.2% SWE-bench Verified; AA index 20.1, tied with Qwen3.8-27B.",
+      "link": "https://thinkingmachines.ai/model-card/inkling-2-mini/"
+    },
     {
       "name": "Genie 4",
       "lab": "Google",
