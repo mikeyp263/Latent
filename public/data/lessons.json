@@ -2901,6 +2901,68 @@
         "Explain to a friend how a 26-billion-parameter model can act like a larger one but still fit on a 32GB laptop.",
         "It reuses part of itself. The file stores the weights once, which keeps it small enough to fit, but when it processes each word it runs its middle layers three times in a row, getting more computation out of the same weights. You pay for that in speed, not memory: it does nearly twice the work of a single pass, so it runs slower than its size suggests."
       ]
+    },
+    {
+      "id": "nw52",
+      "added": "2026-11-21",
+      "t": "When Is a Math Proof Accepted?",
+      "cards": [
+        "A proof is not accepted when it is announced. It is accepted when the community has checked it. The usual path: a **preprint** (posted publicly, often on arXiv), then **refereeing** by experts for a journal, then years of other mathematicians reading, using, and building on it. Big claims often take longer, because few people can follow them.",
+        "Computer **formal verification** adds a different kind of check. A proof assistant like Lean confirms each logical step, but people still have to confirm the **statement** proved is the real one and that no extra **axioms** slipped in. A formal proof can be correct and still unreadable, which leaves mathematicians without the understanding a proof is supposed to give.",
+        "Fine print matters. The Clay Millennium Prize rules require publication in a qualifying outlet, a waiting period (two years), and general acceptance. And the exact version of a problem matters: a **forced** Navier-Stokes result, where the mathematician may add an outside push, is easier than the **unforced** one most experts consider the real question. Always ask which version was solved and who has checked it."
+      ],
+      "terms": [
+        [
+          "Preprint",
+          "A paper posted publicly before peer review."
+        ],
+        [
+          "Refereeing",
+          "Expert review of a paper for a journal, checking correctness and importance."
+        ],
+        [
+          "Formal verification",
+          "Checking every step of a proof with software such as Lean."
+        ],
+        [
+          "Statement check",
+          "Confirming the theorem a computer proved is exactly the intended one."
+        ],
+        [
+          "Forced vs unforced",
+          "Whether a problem lets you add an outside push to the equations; unforced is harder."
+        ]
+      ],
+      "qs": [
+        [
+          "A famous problem is announced as solved in a 900-page draft that one expert has reviewed for months. What is the right status?",
+          "Claimed, not yet accepted",
+          "Solved, since an expert reviewed it",
+          "False, since it is unfinished",
+          "Accepted once it is posted online",
+          "One reviewer and an unfinished draft is promising at best; acceptance needs wide checking and usually a refereed, final version."
+        ],
+        [
+          "A Lean proof compiles with only standard axioms. What is still worth checking?",
+          "That the proved statement really is the famous problem",
+          "Nothing, the result is certain",
+          "Whether the author used a laptop or a cluster",
+          "How many lines the proof has",
+          "Compilation shows the logic holds for whatever statement was written; experts still need to confirm the statement matches the real theorem."
+        ],
+        [
+          "A lab claims a Navier-Stokes blowup result that needs a specially chosen outside force. Why are experts unimpressed?",
+          "The forced version is easier than the unforced one most consider the real question",
+          "Blowup results are never interesting",
+          "Forces are banned in mathematics",
+          "Only human proofs count",
+          "Allowing a hand-picked force gives the prover extra freedom, so it can meet the prize wording without settling the physically meaningful question."
+        ]
+      ],
+      "ex": [
+        "Explain why a computer-checked proof of a famous conjecture might still not be accepted right away.",
+        "The computer confirms each step follows from the last, but people still need to confirm the thing proved is exactly the famous statement and that nothing extra was assumed. Mathematicians also want to understand why it is true, and a huge machine proof can be impossible to read. Acceptance comes after independent checks, a readable paper, and time for the community to agree."
+      ]
     }
   ]
 }
