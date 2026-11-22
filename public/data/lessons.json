@@ -2963,6 +2963,68 @@
         "Explain why a computer-checked proof of a famous conjecture might still not be accepted right away.",
         "The computer confirms each step follows from the last, but people still need to confirm the thing proved is exactly the famous statement and that nothing extra was assumed. Mathematicians also want to understand why it is true, and a huge machine proof can be impossible to read. Acceptance comes after independent checks, a readable paper, and time for the community to agree."
       ]
+    },
+    {
+      "id": "nw53",
+      "added": "2026-11-22",
+      "t": "How Arms Control Talks Work: Consensus, Mandates, and Binding Rules",
+      "cards": [
+        "Most AI weapons diplomacy happens under the UN's **Convention on Certain Conventional Weapons (CCW)** in Geneva. The CCW works by **consensus**: every member must accept a decision, so one country can block it. That makes outcomes slow and pulls them toward the lowest common denominator.",
+        "Watch the verbs in the **mandate**, the instruction states give themselves. \"Discuss\" means talk. \"Elaborate\" means develop something whose form is still open. \"Negotiate\" usually means drafting a treaty. A **legally binding** instrument creates obligations under international law; a **non-binding** one (guidelines, a political declaration) relies on goodwill.",
+        "The central idea in the debate is **meaningful human control**: whether a person must approve each use of lethal force. Countries that build these weapons tend to prefer national rules and flexible wording; when consensus forums stall, frustrated states sometimes move the issue to the UN General Assembly or a standalone treaty process, where majority voting or opt-in membership applies."
+      ],
+      "terms": [
+        [
+          "CCW",
+          "UN Convention on Certain Conventional Weapons; the main forum for autonomous weapons talks."
+        ],
+        [
+          "Consensus",
+          "Decision rule where every state must agree, so any one can block."
+        ],
+        [
+          "Mandate",
+          "The agreed instruction for what talks should produce and by when."
+        ],
+        [
+          "Legally binding",
+          "Creates obligations under international law, unlike a political declaration."
+        ],
+        [
+          "Meaningful human control",
+          "The principle that a human must make or approve life-and-death targeting decisions."
+        ]
+      ],
+      "qs": [
+        [
+          "A UN forum agrees to 'elaborate' an instrument on autonomous weapons by 2028. What has been decided?",
+          "To keep developing a text whose form, binding or not, is still open",
+          "To sign a binding ban in 2028",
+          "To ban autonomous weapons immediately",
+          "Nothing at all; the talks ended",
+          "'Elaborate' is deliberately softer than 'negotiate' and does not commit states to a treaty."
+        ],
+        [
+          "Nearly 100 countries want binding rules but three major arms producers object. Why does nothing binding pass at the CCW?",
+          "The CCW requires consensus, so any state can block",
+          "Binding rules need 150 votes",
+          "The Secretary-General has a veto",
+          "Only the Security Council can make rules",
+          "Under consensus, the most reluctant state sets the ceiling."
+        ],
+        [
+          "A defense AI startup asks what international rules its targeting software must meet next year. What is the best answer?",
+          "No binding international AI weapons treaty exists; national law, contracts, and existing laws of war apply",
+          "The CCW's 2028 treaty already applies",
+          "None at all, anything goes",
+          "Only the EU AI Act",
+          "Existing international humanitarian law still applies, but specific autonomous weapons rules are not yet agreed."
+        ]
+      ],
+      "ex": [
+        "Explain why UN talks on autonomous weapons have produced so little in over a decade.",
+        "They happen in a forum that decides by consensus, so any single state can block progress, and the countries best able to build these weapons prefer flexible national rules. That pushes outcomes toward vague mandates like 'elaborate' instead of 'negotiate', and repeated deadline extensions rather than a binding treaty."
+      ]
     }
   ]
 }
