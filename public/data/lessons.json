@@ -3025,6 +3025,68 @@
         "Explain why UN talks on autonomous weapons have produced so little in over a decade.",
         "They happen in a forum that decides by consensus, so any single state can block progress, and the countries best able to build these weapons prefer flexible national rules. That pushes outcomes toward vague mandates like 'elaborate' instead of 'negotiate', and repeated deadline extensions rather than a binding treaty."
       ]
+    },
+    {
+      "id": "nw54",
+      "added": "2026-11-23",
+      "t": "Loss Thresholds: Using a Model's Test Score as a Tripwire",
+      "cards": [
+        "Rules for frontier AI usually key off **training compute** (for example, 10^26 operations), because it is easy to count before a model exists. But compute is a poor proxy: better data and methods get more capability from the same compute. A **loss threshold** instead keys off how well the model predicts held-out text, which tracks what the model has actually learned.",
+        "The catch is **comparability**. Loss depends on the **test set** (code is easier to predict than poetry) and the **tokenizer** (how text is chopped into tokens). Two labs' numbers only line up if they use the same test data and normalize, for example with **bits per byte**, which divides by raw text length instead of tokens.",
+        "Loss also measures only **pretraining**. Reasoning training, tool use, and agent scaffolding can add large capability without moving pretraining loss at all. So a loss tripwire is best seen as one early-warning signal alongside **capability evaluations** (tests of what the model can do), not a replacement for them."
+      ],
+      "terms": [
+        [
+          "Loss threshold",
+          "A pre-agreed loss level that triggers extra safety steps or a halt in training."
+        ],
+        [
+          "Held-out test set",
+          "Text kept out of training and used only to measure how well a model predicts unseen data."
+        ],
+        [
+          "Bits per byte",
+          "Loss normalized by raw text length so models with different tokenizers can be compared."
+        ],
+        [
+          "Compute threshold",
+          "A rule trigger based on the total operations used to train a model."
+        ],
+        [
+          "Capability evaluation",
+          "A test of what a model can actually do, such as hacking or biology tasks."
+        ]
+      ],
+      "qs": [
+        [
+          "Lab A reports log-perplexity 0.80 and Lab B reports 0.75, each on its own internal test set. What can you conclude?",
+          "Very little; different test sets and tokenizers make the numbers incomparable",
+          "Lab B's model is clearly stronger",
+          "Lab A's model is clearly stronger",
+          "Both models are equally capable",
+          "Loss only compares cleanly on the same data with the same normalization."
+        ],
+        [
+          "A lab adds heavy reasoning training to an existing base model and capability jumps. What happens to its pretraining loss?",
+          "It does not change, because the base model's pretraining is unchanged",
+          "It falls sharply",
+          "It rises",
+          "It becomes a bits-per-byte score",
+          "Post-training gains are invisible to a pretraining loss metric, a key weakness of loss tripwires."
+        ],
+        [
+          "Why might regulators prefer a loss threshold over a compute threshold?",
+          "Loss tracks what the model learned, while efficiency gains let more capability come from the same compute",
+          "Loss is easier to count before training starts",
+          "Compute cannot be measured",
+          "Loss thresholds cover post-training too",
+          "Compute is easy to count but drifts as methods improve; loss measures the outcome."
+        ]
+      ],
+      "ex": [
+        "Why is a shared loss threshold harder to implement than it sounds?",
+        "Loss depends on the test data and tokenizer, so labs need a shared test set or a normalized measure like bits per byte to compare. It also only covers pretraining, so capability added by reasoning or agent training slips past it. It works best as one early-warning signal alongside capability evaluations."
+      ]
     }
   ]
 }

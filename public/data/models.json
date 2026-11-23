@@ -2,6 +2,16 @@
   "updated": "2026-11-23",
   "models": [
     {
+      "name": "GLM-5.4",
+      "lab": "Zhipu AI (Z.ai)",
+      "released": "2026-11-23",
+      "access": "Limited",
+      "price": "GLM Coding Plan only; no API price",
+      "context": "1M",
+      "note": "First Loop Transformer flagship: reportedly ~750B parameters with 28 layers run twice per pass; adds vision. Z.ai claims 2T-3T-class intelligence but published no benchmarks. API after safety evaluation; open weights planned, no date.",
+      "link": "https://technode.com/2026/11/23/zhipu-rolls-out-glm-5-4-with-vision-and-million-token-context/"
+    },
+    {
       "name": "Inkling 2 Mini",
       "lab": "Thinking Machines Lab",
       "released": "2026-11-20",
