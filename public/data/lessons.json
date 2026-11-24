@@ -3149,6 +3149,126 @@
         "Explain to a colleague why a company would run an AI-written kernel shield instead of just patching.",
         "Patching is the real fix but takes time to build, test, and deploy everywhere, and AI is shortening how fast attackers can exploit a newly disclosed bug. A virtual patch blocks the specific attack path on running systems right away, without a reboot, so the company is protected during that gap. Because a kernel-level block can break legitimate traffic, you run it in monitor mode first, only load signed shields, and remove it once the patch is in place."
       ]
+    },
+    {
+      "id": "nw56",
+      "added": "2026-11-24",
+      "t": "VP vs VNP: The Algebra Version of P vs NP",
+      "cards": [
+        "Many hard questions in computer science ask whether some problem needs exponentially more work than another. **P vs NP** asks this for yes/no problems. In 1979 Leslie Valiant posed an algebraic version: instead of programs, use **arithmetic circuits**, recipes built only from additions and multiplications, and ask how big a circuit a polynomial needs.",
+        "**VP** is the polynomials with small (polynomial-size) circuits; the **determinant** of a matrix is one. **VNP** is a larger class whose hardest member is the **permanent**, which looks just like the determinant but with every minus sign turned into a plus. The determinant is easy to compute; nobody knew a fast way to compute the permanent. **VP ≠ VNP** says none exists: the permanent needs circuits that grow faster than any polynomial.",
+        "Proving VP ≠ VNP would not settle P vs NP, but it is widely seen as a necessary step, because the algebraic world has more structure to work with. A **lower bound** proof shows every possible circuit must be at least some size, which is why such results are rare: you must rule out every clever trick, not just the ones you know."
+      ],
+      "terms": [
+        [
+          "Arithmetic circuit",
+          "A step-by-step recipe that computes a polynomial using only addition and multiplication."
+        ],
+        [
+          "Permanent",
+          "A matrix function like the determinant but with all signs positive; the standard hard problem for VNP."
+        ],
+        [
+          "VP",
+          "Polynomial families computable by polynomial-size arithmetic circuits."
+        ],
+        [
+          "VNP",
+          "A broader class of polynomials, the algebraic analogue of NP, containing the permanent."
+        ],
+        [
+          "Lower bound",
+          "A proof that any method for a problem must use at least a certain amount of resources."
+        ]
+      ],
+      "qs": [
+        [
+          "A headline says an AI 'proved VP ≠ VNP, solving P vs NP.' What is wrong?",
+          "VP ≠ VNP is a separate, algebraic problem; P vs NP stays open",
+          "VP ≠ VNP is a weaker version that was already known",
+          "VP and VNP are just new names for P and NP",
+          "Nothing; the two problems are the same",
+          "Both labs' papers say the result does not settle P vs NP."
+        ],
+        [
+          "Why is the permanent central to VP vs VNP?",
+          "It is complete for VNP, so showing it needs huge circuits separates the classes",
+          "It is the easiest polynomial in VP",
+          "It can be computed quickly with Gaussian elimination",
+          "It is the only polynomial in VNP",
+          "If the hardest VNP polynomial needs superpolynomial circuits, VNP is not inside VP."
+        ],
+        [
+          "Why are circuit lower bounds so hard to prove?",
+          "They must rule out every possible circuit, including tricks no one has thought of",
+          "Computers are too slow to run the circuits",
+          "Circuits can't be described mathematically",
+          "They require experimental data",
+          "An upper bound needs one good algorithm; a lower bound has to beat all of them."
+        ]
+      ],
+      "ex": [
+        "Explain to a friend why VP ≠ VNP matters even though it isn't P vs NP.",
+        "VP ≠ VNP says the permanent, a close cousin of the easy-to-compute determinant, can't be computed by any small arithmetic circuit. It's the algebraic version of P vs NP: the same question about whether some problems need exponentially more work, but in a setting with more mathematical structure. Experts have long seen it as a stepping stone, so a proof would be a major advance in understanding why some problems are hard, even though P vs NP itself would remain open."
+      ]
+    },
+    {
+      "id": "nw57",
+      "added": "2026-11-24",
+      "t": "Your Data in a Bankruptcy Sale",
+      "cards": [
+        "When a company goes bankrupt, a court oversees selling its **assets** to pay creditors. User data, including accounts, logs, and chat histories, is often one of the most valuable assets left. The court's default goal is to **maximize value** for creditors, which pulls toward selling the data to the highest bidder.",
+        "The main brake is the company's own **privacy policy**. In the US, a sale that would break promises made to users can draw objections from regulators and state **attorneys general**, and courts can appoint a **consumer privacy ombudsman** to review it. Common outcomes: the buyer must honor the old policy, users get notice and a chance to delete, or sensitive data (such as children's) is excluded.",
+        "For AI apps the stakes are higher because chats can contain health, relationship, and work details people would never put in a profile. Practical rule: the safest data is data that was never kept. Check whether an app lets you delete history, and assume anything stored by a small or struggling company could change hands."
+      ],
+      "terms": [
+        [
+          "Section 363 sale",
+          "A US bankruptcy court-approved sale of a debtor's assets, often by auction."
+        ],
+        [
+          "Stalking-horse bidder",
+          "The first bidder in a bankruptcy auction, whose offer sets the floor."
+        ],
+        [
+          "Break-up fee",
+          "A payment to the stalking horse if the company sells to someone else."
+        ],
+        [
+          "Consumer privacy ombudsman",
+          "A court-appointed reviewer who assesses whether selling personal data fits users' privacy rights."
+        ]
+      ],
+      "qs": [
+        [
+          "A bankrupt chat app wants to sell all user logs. What most often limits the sale?",
+          "The privacy promises it made to users, enforced by objections from regulators and the court",
+          "Nothing; data can always be sold freely",
+          "Users automatically get paid for their data",
+          "The data must be deleted by law in all bankruptcies",
+          "Privacy policies and regulator objections shape what can be sold and on what terms."
+        ],
+        [
+          "Why might states object to an unknown shell company as the lead bidder?",
+          "No one can judge how the buyer will use or protect the data",
+          "Shell companies can't legally bid",
+          "Bankruptcy courts require public companies as buyers",
+          "Shell companies always pay less",
+          "Without knowing the owners, regulators can't assess privacy or security risks."
+        ],
+        [
+          "What protects your AI chats best if a company fails?",
+          "Having deleted them, or never letting the app store them",
+          "Using a strong password",
+          "Reading the terms of service",
+          "Paying for a premium plan",
+          "A buyer can't get data that no longer exists."
+        ]
+      ],
+      "ex": [
+        "Explain why a bankruptcy is a risky moment for an AI app's users.",
+        "In bankruptcy the company's data becomes an asset the court is trying to sell for as much as possible to pay creditors, and the people who made privacy promises may no longer be around to keep them. Regulators can object and courts can require the buyer to honor the old policy or exclude sensitive data, but none of that is automatic. Chat logs are especially sensitive, so the best protection is deleting history you don't need."
+      ]
     }
   ]
 }

@@ -1,6 +1,630 @@
 {
   "editions": [
     {
+      "id": "2026-11-24-pm",
+      "date": "2026-11-24",
+      "edition": "Afternoon",
+      "stories": [
+        {
+          "kicker": "Research",
+          "headline": "Anthropic and OpenAI post rival AI-written proofs that VP is not VNP, hours apart, and no human has checked either",
+          "summary": "Both labs say their models settled Valiant's 1979 conjecture, the algebraic cousin of P vs NP, with Lean code a computer has checked but no mathematician has reviewed.",
+          "stats": [
+            [
+              "~73,000",
+              "Lines of Lean, Anthropic"
+            ],
+            [
+              "~440,000",
+              "Lines of Lean, OpenAI"
+            ],
+            [
+              "1979",
+              "Year Valiant posed it"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "On Monday, Nov 23, Anthropic added a project called vp-vnp to its public formal-math repository on GitHub: a paper titled 'VP ≠ VNP over every field', about 70 pages long and credited to Claude, plus a Lean 4 formalization of roughly 73,000 lines across 324 files. The README says an internal research version of Claude found the result and that AI wrote both the paper and the Lean code. It also says plainly that no human mathematician has checked the proof, and that whether the Lean statements say what the paper means was judged only by AI readers.",
+                "About five hours later, OpenAI quietly posted its own paper, 'VP and VNP are different', to its openai/math repository, with no announcement. It is 30 pages, with a Lean development reported at more than 3,100 files and roughly 440,000 lines. The repository's changelog says OpenAI's model obtained the result on Nov 6, more than two weeks before either lab went public. Neither lab named the model.",
+                "OfficeChai, which compared the two papers, called the strategies 'strikingly similar': both turn the problem into a geometry question about tensor networks and split the argument into a case settled by geometry and a case settled by a diagonal argument. OpenAI's paper cites an earlier Anthropic paper for one technique. Both papers state that this does not settle P vs NP."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Anthropic paper",
+                  "~70 pages, posted Nov 23"
+                ],
+                [
+                  "Anthropic Lean",
+                  "324 files, ~73,000 lines; checked by the Lean kernel and the independent nanoda checker"
+                ],
+                [
+                  "Not formalized (Anthropic)",
+                  "Remark N.6 only"
+                ],
+                [
+                  "Anthropic lower bound",
+                  "m^(c·(log m)^(1/3)) gates for the m×m permanent"
+                ],
+                [
+                  "OpenAI paper",
+                  "30 pages, posted hours later"
+                ],
+                [
+                  "OpenAI Lean",
+                  "3,100+ files, ~440,000 lines"
+                ],
+                [
+                  "OpenAI lower bound",
+                  "exp(Ω((log m)^(5/4)))"
+                ],
+                [
+                  "OpenAI model found it",
+                  "Nov 6, per its changelog"
+                ]
+              ],
+              "note": "From the two GitHub repositories as described by XenoSpectrum, DataCamp, and OfficeChai. Latent did not read the repositories directly this run. Both bounds grow faster than any polynomial, which is what the separation requires."
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**VP and VNP:** algebraic versions of P and NP, defined in 1979 by Leslie Valiant. VP is the families of polynomials you can compute with a small arithmetic circuit (a recipe of additions and multiplications). VNP is a larger class that includes the **permanent**, a cousin of the matrix determinant. VP ≠ VNP means the permanent needs circuits that grow faster than any polynomial.",
+                "**Lean 4:** a programming language in which proofs are written so a small program, the kernel, can check every step. 'The Lean code checks' means the formal statement follows from the axioms; it does not prove the formal statement matches the English one.",
+                "**Formalization gap:** the risk that the Lean definitions quietly encode a weaker or different claim than the paper. That is the main thing human experts now have to check."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "If either proof holds up, it is the biggest result yet produced mainly by AI: a 47-year-old open problem in complexity theory, widely seen as a necessary step toward P vs NP. Lance Fortnow, a complexity theorist, posted that if the result holds the permanent has no polynomial-size arithmetic circuits, while stressing it does not settle P vs NP. He said he had Claude and Gemini check the formal statement, not a human review.",
+                "The skepticism is warranted. A Lean check is strong evidence that the proof is internally valid, much stronger than a paper alone, but the formalization gap is real, and 73,000 to 440,000 lines of machine-written code is far more than any person will read line by line. OpenAI withdrew three manuscripts from the same repository in October after a sign error, according to OfficeChai. Two independent proofs with similar strategies is mildly reassuring, but they may share a blind spot.",
+                "The timing also matters. OpenAI says it had the result for two weeks and posted only after Anthropic did, which reads as a priority claim. Both companies are now publishing math as a showcase of model capability, which gives them a reason to post fast and let others verify later."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Whether complexity theorists confirm that the Lean statements of VP and VNP match the standard definitions, and whether either paper is submitted for peer review. Also watch whether either lab names the model and says if it will be released."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Anthropic (GitHub)",
+              "title": "anthropics/formal-math: vp-vnp",
+              "url": "https://github.com/anthropics/formal-math/tree/main/vp-vnp"
+            },
+            {
+              "name": "OpenAI (GitHub)",
+              "title": "openai/math: VP and VNP are different (November 23 2026)",
+              "url": "https://github.com/openai/math/tree/main/preprints/VP-and-VNP-are-different-November-23-2026"
+            },
+            {
+              "name": "OfficeChai",
+              "title": "Hours After Claude, OpenAI Posts Its Own Proof That VP ≠ VNP, Says It Had The Proof Two Weeks Ago",
+              "url": "https://officechai.com/ai/openai-vp-vnp-proof-hours-after-anthropic-claude/"
+            },
+            {
+              "name": "XenoSpectrum",
+              "title": "Anthropic Releases Claude's Claimed Proof That VP ≠ VNP, With a Lean Formalization",
+              "url": "https://xenospectrum.com/en/anthropic-claude-vp-vnp-proof/"
+            },
+            {
+              "name": "DataCamp",
+              "title": "Anthropic's Claude Claims Proof of Valiant's Conjecture (VP vs. VNP)",
+              "url": "https://www.datacamp.com/blog/claude-claims-proof-of-valiants-conjecture-vp-vs-vnp"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "Nvidia gives back part of its record rally as the WSJ reports Huang disclosed more affairs to the board before it rehired him",
+          "summary": "The attorney general told Trump the Justice Department had no evidence against Huang, while its probe of the Megaspeed chip pipeline continues.",
+          "stats": [
+            [
+              "$952B",
+              "Market value added Monday"
+            ],
+            [
+              "+31.5%",
+              "Monday's gain"
+            ],
+            [
+              "Dec 3",
+              "Huang's Senate Banking hearing"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Nvidia closed Monday at $165.05, up 31.5%, adding about $952 billion in market value, which Inc. reports is more than double the previous one-day record ($450 billion, Microsoft, in July). On Tuesday the stock fell back, down roughly 4% before the open and between about 5% and 7% in morning trading, according to Yahoo Finance, the New York Post, and CNBC. A closing figure was not available when this edition was written.",
+                "The Wall Street Journal reported Tuesday that during a long board meeting on Sunday, before the vote to reinstate him, Huang admitted to affairs beyond the two that had been reported, according to TechCrunch's summary. It is not clear who was involved. The WSJ also reported that Attorney General Todd Blanche told Trump and Vice President Vance the Justice Department was not investigating Huang and had no evidence he was a national security risk. At a Tuesday briefing Blanche called Nvidia 'a good corporate citizen'.",
+                "Separately, the Justice and Commerce departments' investigation of Megaspeed, the Singapore firm accused of diverting Nvidia chips to China, continues, and Nvidia's own board inquiry into the foreign-intelligence allegations is not finished. Huang told employees on his return that he would be a better CEO the second time around, per Yahoo Finance. The Senate Banking Committee confirmed his Dec 3 testimony will go ahead."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "Monday close",
+                  "$165.05 (+31.5%)"
+                ],
+                [
+                  "Value added Monday",
+                  "~$952 billion"
+                ],
+                [
+                  "Prior one-day record",
+                  "$450 billion (Microsoft, July)"
+                ],
+                [
+                  "Tuesday morning",
+                  "Down ~5% to 7% (intraday, varies by report)"
+                ],
+                [
+                  "S&P 500 Monday",
+                  "+4.7%"
+                ]
+              ],
+              "note": "Monday figures from Inc. and Yahoo Finance; Tuesday's moves are intraday figures from Yahoo Finance, the New York Post, and CNBC."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Monday's jump priced in relief that Nvidia's founder is back. Tuesday's pullback reflects what has not changed: the export-compliance investigations, the unfinished internal probe, and congressional hearings next week. The new affair disclosures matter less for the stock than for governance: the board rehired Huang knowing more than the public did, and has not explained what it learned.",
+                "Blanche's statements cut both ways. 'No evidence against Huang' is not the same as 'no problem at Nvidia', and Treasury Secretary Bessent has said the question is whether the company had a culture of noncompliance. For people building on Nvidia hardware, nothing changes near term; the risk is to Nvidia's China business and to how tightly Washington polices chip resellers."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "Treasury's 10-day window for Nvidia's export-compliance answers ends around Wednesday. Huang faces House interviews and the Senate Banking hearing on Dec 3."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "title": "Huang reportedly admitted to more than two affairs to Nvidia's board",
+              "url": "https://techcrunch.com/2026/11/24/huang-reportedly-admitted-to-more-than-two-affairs-to-nvidias-board/"
+            },
+            {
+              "name": "Inc.",
+              "title": "Jensen Huang's First Day Back at Nvidia Catalyzed the Best Day Ever for Any Stock in History",
+              "url": "https://www.inc.com/phil-rosen/jensen-huang-nvidia-best-stock-market-day-history/91441838"
+            },
+            {
+              "name": "Yahoo Finance",
+              "title": "Nvidia live updates: Nvidia stock falls as exuberance fades after Jensen Huang's return as CEO",
+              "url": "https://finance.yahoo.com/markets/stocks/live/nvidia-live-updates-nvidia-stock-falls-as-exuberance-fades-after-jensen-huangs-return-as-ceo-142100906.html"
+            },
+            {
+              "name": "CNBC",
+              "title": "Nvidia shares fall 7% as Huang comeback rally cools",
+              "url": "https://www.cnbc.com/2026/11/24/nvidia-stock-jensen-huang-return.html"
+            },
+            {
+              "name": "New York Post",
+              "title": "Nvidia shares tumble as Jensen Huang comeback rally fizzles, legal troubles mount",
+              "url": "https://nypost.com/2026/11/24/business/nvidia-shares-tumble-as-jensen-huang-comeback-rally-fizzles-legal-troubles-mount/"
+            },
+            {
+              "name": "NBC News",
+              "title": "Todd Blanche calls Nvidia a 'good corporate citizen' while dodging questions on investigation",
+              "url": "https://www.nbcnews.com/politics/trump-administration/todd-blanche-nvidia-investigation-ceo-jensen-huang-trump-rcna611132"
+            },
+            {
+              "name": "Newsweek",
+              "title": "Four biggest contradictions in Trump's handling of Nvidia scandal",
+              "url": "https://www.newsweek.com/four-biggest-contradictions-in-trumps-handling-of-nvidia-scandal-12764061"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "SpaceX's AI unit now earns more than half the company's revenue, mostly by renting chips to Anthropic and Google",
+          "summary": "The New York Times reports Musk told staff renting out compute can pay better than using it, and asked engineers to justify their GPU use.",
+          "stats": [
+            [
+              "$7.6B",
+              "SpaceX AI revenue, Q3"
+            ],
+            [
+              "~$3.1B",
+              "Anthropic's monthly SpaceX bill, at full capacity"
+            ],
+            [
+              "$920M",
+              "Google's scheduled monthly payment"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "The New York Times reported on Nov 23 that SpaceX has been renting computing capacity to Anthropic and Google, and that Elon Musk told employees renting could pay better than using the chips in-house. He also asked engineers to justify their use of expensive GPUs and put more weight on revenue per chip than on model benchmark scores, per WinBuzzer's account of the Times story. Seoul Economic Daily reported that a group chat of AI engineers was renamed 'Sell compute because we can't compete'; Latent could not confirm that detail with a second source.",
+                "Filings show the scale. SpaceX's AI division took in $7.6 billion from July through September, more than half of company revenue and up from $2.6 billion the prior quarter, and one unnamed customer accounted for 34.5% of SpaceX's quarterly revenue. Anthropic's IPO prospectus says it expects to pay about $3.1 billion a month across its SpaceX agreements once all capacity is delivered, expected in December, with possible total costs up to $120.5 billion into 2029. Google's June deal covers roughly 110,000 Nvidia GPUs with scheduled payments of $920 million a month from October 2026 through June 2029, per a SpaceX filing."
+              ]
+            },
+            {
+              "h": "By the numbers",
+              "table": [
+                [
+                  "SpaceX AI revenue, Jul to Sep",
+                  "$7.6 billion (prior quarter $2.6 billion)"
+                ],
+                [
+                  "Largest single customer",
+                  "34.5% of SpaceX quarterly revenue (unnamed)"
+                ],
+                [
+                  "Anthropic, all SpaceX deals",
+                  "~$3.1 billion a month at full delivery; up to $120.5 billion into 2029"
+                ],
+                [
+                  "Anthropic exit terms",
+                  "Fixed terms end Jan or Mar 2027, then 90 days' notice"
+                ],
+                [
+                  "Google deal",
+                  "~110,000 Nvidia GPUs; $920 million a month scheduled, Oct 2026 to Jun 2029"
+                ]
+              ],
+              "note": "From SpaceX's quarterly filing and Anthropic's prospectus, as cited by WinBuzzer. Google's actual payments may differ from the schedule."
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "SpaceX, which absorbed xAI, is turning into a landlord for its rivals: the business that pays is selling GPU time, not Grok. That is a quiet admission that building the hardware was easier than winning on models. It also means two leading labs depend heavily on a company controlled by a competitor, which is a concentration risk for them and their customers.",
+                "Anthropic's exposure is large: at about $3.1 billion a month, SpaceX would be one of its biggest costs. The 90-day exit terms after early 2027 give both sides room to walk, so these contracts are less locked in than the headline totals suggest."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "The New York Times",
+              "title": "Elon Musk, AI, Anthropic and Google",
+              "url": "https://www.nytimes.com/2026/11/23/business/elon-musk-ai-anthropic-google.html"
+            },
+            {
+              "name": "WinBuzzer",
+              "title": "Musk: SpaceX Can Earn More Renting Out AI Computing Power Than Using It",
+              "url": "https://winbuzzer.com/2026/11/24/musk-told-staff-spacex-could-earn-more-renting-out-ai-computing-power-than-using-it-xcxwbn/"
+            },
+            {
+              "name": "Seoul Economic Daily",
+              "title": "Musk Renames Group Chat \"Sell Compute Because We Can't Compete\"",
+              "url": "https://en.sedaily.com/world/2026/11/24/musk-renames-group-chat-sell-compute-because-we-cant-compete"
+            }
+          ]
+        },
+        {
+          "kicker": "Policy",
+          "headline": "Forty-two states and DC ask a bankruptcy court to stop the auction of Character.AI chats, including 2.1 million minors' accounts",
+          "summary": "The only disclosed bidder is a Delaware shell formed one day before it was picked, and its contract allows undisclosed foreign investors.",
+          "stats": [
+            [
+              "21M+",
+              "US accounts"
+            ],
+            [
+              "2.1M+",
+              "Registered to minors"
+            ],
+            [
+              "Dec 1",
+              "Auction date"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "Character.AI, the companion-chatbot company, is in bankruptcy and plans to auction nearly everything it owns on Dec 1, including users' chat logs and personal data such as IP addresses. On Nov 23 Oregon Attorney General Dan Rayfield, with a bipartisan coalition of 41 other attorneys general and the District of Columbia, filed an objection; Minnesota's Keith Ellison announced the same filing.",
+                "The states say the data covers more than 21 million US accounts, more than 2.1 million of them registered to minors. The only disclosed bidder, Smirks and Pangs Acquisition LLC, is a Delaware company formed on Nov 13, one day before Character.AI chose it as the opening bidder. Its contract names no parent or investors and allows foreign investors whose identities would be shared only with Character.AI. The states ask the court to reject that bidder and a proposed $350,000 break-up fee, and at minimum to exclude children's chats and other sensitive data. They had already objected earlier in the week to a separate license sale to Disney."
+              ]
+            },
+            {
+              "h": "What the jargon means",
+              "p": [
+                "**Stalking-horse bidder:** the first bidder in a bankruptcy auction, whose offer sets the floor other bids must beat.",
+                "**Break-up fee:** a payment to that first bidder if the company sells to someone else, compensating it for setting the price."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "Chat logs with a companion app are among the most intimate data people create, and bankruptcy is the moment privacy promises are most likely to break: the data is an asset, and the court's job is to maximize what creditors get. This case will test whether a privacy policy written when users signed up binds whoever buys the data. Anyone using AI chat apps from small or struggling companies should assume their history could change hands.",
+                "These are the states' characterizations in an advocacy filing, not court findings. Chatbot safety laws in California, Colorado, New York, and Connecticut take effect Jan 1, 2027, which adds to the pressure on any buyer."
+              ]
+            },
+            {
+              "h": "What to watch",
+              "p": [
+                "The court's ruling on the sale terms before the Dec 1 auction, and whether any bidder agrees to drop minors' data."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "Oregon Department of Justice",
+              "title": "AG Rayfield Challenges Plan to Auction Off Character AI Users' Private Chats, Including Kids' Data, to the Highest Bidder",
+              "url": "https://www.doj.state.or.us/media-home/news-media-releases/ag-rayfield-asks-court-to-block-sale-of-private-character-ai-chats-including-kids-data/"
+            },
+            {
+              "name": "Red Lake Nation News",
+              "title": "Attorney General Ellison challenges plan to auction off Character.AI users' private chats",
+              "url": "https://www.redlakenationnews.com/story/2026/11/24/news/attorney-general-ellison-challenges-plan-to-auction-off-characterai-users-private-chats-including-kids-data-to-the-highest-bidder/144330.html"
+            }
+          ]
+        },
+        {
+          "kicker": "Business",
+          "headline": "OpenAI will pay local AI helpers up to $8,000 a month to bring ChatGPT to small businesses in 20 US cities",
+          "summary": "The OpenWorks pilot targets restaurants, shops, and factories, mostly in the Midwest and South, and excludes software and investor-backed firms.",
+          "stats": [
+            [
+              "20",
+              "US cities"
+            ],
+            [
+              "$8,000",
+              "Max monthly stipend"
+            ]
+          ],
+          "sections": [
+            {
+              "h": "What happened",
+              "p": [
+                "OpenAI launched OpenWorks, a pilot that pays local people with AI skills to work with small business owners for free. Fifteen of the 20 cities are in the Midwest or South; Austin, Seattle, and New York are also on the list. Partners can receive stipends of up to $8,000 a month and commit to four full days a month plus one community workshop. Businesses get three free months of ChatGPT Business.",
+                "Eligible businesses are independent restaurants, shops, factories, and service companies. Software companies and venture-backed or private-equity-owned firms are excluded. Applicants must describe an AI problem they have solved. OpenAI has not said how stipends are calculated or how long the pilot runs."
+              ]
+            },
+            {
+              "h": "What it means",
+              "p": [
+                "This is part go-to-market and part politics. Small businesses are where AI adoption lags, and paying locals is a cheap way to get ChatGPT Business into thousands of firms that would never meet a sales rep. Concentrating on the Midwest and South also answers the criticism that AI's gains flow to coastal tech companies, at a time when OpenAI faces state lawsuits and investigations.",
+                "The three free months are the tell: success will be measured by how many businesses keep paying. Watch for whether OpenAI publishes results, and whether the helpers are steered toward OpenAI products or toward whatever fits the business."
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "name": "OpenAI",
+              "title": "OpenWorks",
+              "url": "https://openai.com/openworks/"
+            },
+            {
+              "name": "The Rundown AI",
+              "title": "OpenAI's OpenWorks pays locals to bring AI to small businesses",
+              "url": "https://www.therundown.ai/news/openai-openworks-small-business-ai-pilot"
+            },
+            {
+              "name": "Decrypt",
+              "title": "OpenAI will pay $8K to preach AI gospel to small businesses",
+              "url": "https://decrypt.co/383848/openai-will-pay-8k-preach-ai-gospel-small-businesses"
+            }
+          ]
+        }
+      ],
+      "ahead": [
+        {
+          "when": "Wed Nov 25",
+          "what": "October PCE inflation data at 8:30 a.m. ET, ahead of the Dec 9 Fed decision."
+        },
+        {
+          "when": "Pending",
+          "what": "Human review of the Anthropic and OpenAI VP ≠ VNP proofs, especially whether the Lean statements match the standard definitions."
+        },
+        {
+          "when": "Pending",
+          "what": "Whether South Korea deploys its 10.76 trillion won stabilization fund; China's margin cut takes effect Nov 30."
+        },
+        {
+          "when": "Pending",
+          "what": "Federal Register publication of Megaspeed's Entity List addition, and any charges from the Justice Department's criminal probe."
+        },
+        {
+          "when": "Pending",
+          "what": "Regulatory clearance and closing of Amazon's purchase of Decart's optimization technology; no date given."
+        },
+        {
+          "when": "Pending",
+          "what": "Results of Nvidia's independent board investigation into reports that Huang was targeted by a foreign intelligence effort, and the hiring of a new chief compliance officer."
+        },
+        {
+          "when": "Pending",
+          "what": "Whether other labs publish pretraining log-perplexity numbers or answer OpenAI's call for shared limits."
+        },
+        {
+          "when": "Pending",
+          "what": "GLM-5.4 benchmarks, API access, and open weights; Z.ai gave no dates."
+        },
+        {
+          "when": "Coming weeks",
+          "what": "Levent Alpöge's promised write-up and talks on his Riemann proof, and MIT's remaining reproducibility checks. The Lean and Mathlib communities certified the statement and proof on Nov 21."
+        },
+        {
+          "when": "Coming days",
+          "what": "Ravi Vakil's updates on problems readers found in Alessandro Masullo's 940-page GRH draft, and the certificate for Buckmaster and Alpöge's claimed unforced Navier-Stokes blowup."
+        },
+        {
+          "when": "Coming weeks",
+          "what": "Nvidia's delayed quarterly 10-Q filing, the findings of its independent board committee, and any detail on what the SEC's accounting inquiry covers."
+        },
+        {
+          "when": "Wed Dec 9",
+          "what": "Federal Reserve decision; futures price roughly 95% odds of a rate hike, per CME FedWatch as cited by HNGN."
+        },
+        {
+          "when": "Coming weeks",
+          "what": "Whether more large US banks follow Citi, PNC, Citizens, JPMorgan, and Bank of America in making customers liable for what third-party AI agents do in their accounts."
+        },
+        {
+          "when": "Pending",
+          "what": "Commerce's response to the House release of China chip license data, and what California's subpoena to Nvidia demands."
+        },
+        {
+          "when": "Pending",
+          "what": "Whether Nvidia and Inception confirm the reported $500 million-plus acquisition."
+        },
+        {
+          "when": "Any day",
+          "what": "Grok 4.8's rollout. Musk said this week it has not rolled out for general use yet, only trials behind the scenes; no model card or API listing found as of Wednesday morning."
+        },
+        {
+          "when": "Pending",
+          "what": "Federal Register publication of Commerce's remote-access chip rule, which sets its effective date and comment window. Data centers already serving Chinese-headquartered firms then have 90 days to get licenses."
+        },
+        {
+          "when": "Early Dec",
+          "what": "Transluce begins a six-week embedded review of OpenAI's internal alignment evaluations; Apollo's four-month pilot start date not yet given."
+        },
+        {
+          "when": "Within a week",
+          "what": "Commerce Secretary Lutnick is expected to announce the list of AI 'national champions,' per the WSJ."
+        },
+        {
+          "when": "Overdue",
+          "what": "The administration's promised inventory of federal rules that apply to AI labs, due 'in the next week or two' per the Pentagon CTO on Nov 4."
+        },
+        {
+          "when": "Overdue",
+          "what": "Nvidia's $1 billion pre-IPO financing tranche for Nscale is expected to close."
+        },
+        {
+          "when": "Around Nov 25",
+          "what": "End of Treasury Secretary Bessent's 10-day window for Nvidia's board and outside counsel to answer export-compliance questions."
+        },
+        {
+          "when": "Before Dec 1",
+          "what": "Bankruptcy court ruling on Character.AI's sale terms; 42 states and DC want minors' chats excluded."
+        },
+        {
+          "when": "Tue Dec 1",
+          "what": "Character.AI's auction of its assets, including chat logs from more than 21 million US accounts."
+        },
+        {
+          "when": "Late Nov",
+          "what": "Mistral Studio's managed agents and workflows get private cloud and on-premises deployment options."
+        },
+        {
+          "when": "Sat Nov 28",
+          "what": "Deadline for the White House science adviser to propose legislative language for a federal 'super intelligence' definition, under the Sept 29 executive order."
+        },
+        {
+          "when": "Mon Nov 30",
+          "what": "Free access to Cognition's SWE-2 Flash in Devin ends."
+        },
+        {
+          "when": "Tue Dec 1",
+          "what": "House chairs' requested closed-door transcribed interview with Jensen Huang; Nvidia general counsel Tim Teter requested Dec 2."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Intro pricing ends for Gemini 4 Argon and Gemini 4 Carbon: $2/$10 rises to $4/$20 per million tokens."
+        },
+        {
+          "when": "Dec 1",
+          "what": "Earliest date MSCI could add Anthropic to its global indexes; Bloomberg reports possible Nasdaq-100 inclusion on Dec 21."
+        },
+        {
+          "when": "Thu Dec 3",
+          "what": "Senate Banking's requested public hearing with Jensen Huang; Commerce's Jeffrey Kessler invited to a House hearing the same day."
+        },
+        {
+          "when": "Mid-Dec",
+          "what": "Trump and Xi are due to meet again at the G20 in Miami; watch for a written version of the military AI understanding Bessent described."
+        },
+        {
+          "when": "December",
+          "what": "Apple Intelligence's public release in China, with Alibaba's Qwen, is planned."
+        },
+        {
+          "when": "December",
+          "what": "Cochise County, Arizona, holds a public hearing on SpaceX's planned $50 billion AI campus."
+        },
+        {
+          "when": "Wed Dec 9",
+          "what": "Starbase city commission considers a property tax abatement for SpaceX's $24 billion supercomputing site."
+        },
+        {
+          "when": "Thu Dec 10",
+          "what": "Commerce Secretary Howard Lutnick testifies before Senate Banking; he has agreed to appear."
+        },
+        {
+          "when": "Mon Dec 14",
+          "what": "Oracle reports fiscal Q2 results, its first since the $20 billion raise."
+        },
+        {
+          "when": "Tue Dec 15",
+          "what": "Isovalent and Cisco's technical deep-dive webinar on Shirudo."
+        },
+        {
+          "when": "Mid-Dec",
+          "what": "Microsoft's MAI Cyber 2 Flash starts rolling out automatically to eligible Microsoft security customers."
+        },
+        {
+          "when": "Jan 1, 2027",
+          "what": "Anthropic's shorter disclosure timelines take effect: 30 days for high and critical flaws its AI finds, 45 for others."
+        },
+        {
+          "when": "Jan 1, 2027",
+          "what": "Gemini 3.8 Flash's promotional price ends; it rises to Hydrogen's $1.50 / $7.50 per million tokens."
+        },
+        {
+          "when": "Feb 2, 2027",
+          "what": "Google Project Zero moves from 90-day to 60-day disclosure (30 days from Jan 3, 2028)."
+        },
+        {
+          "when": "Early 2027",
+          "what": "Cursor's and Fireworks AI's incident investigations continue; Sierra says Poppy's draft 1.0 spec may still get backward-incompatible fixes."
+        },
+        {
+          "when": "Open",
+          "what": "California v. OpenAI in San Francisco Superior Court; OpenAI's response and first hearing date not yet set."
+        },
+        {
+          "when": "Open",
+          "what": "Trajectory Labs' misalignment testing stays paused (since Nov 2) until it completes risk assessments and leadership sign-off; no restart date given."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Microsoft's investigation of the agent-framework compromise. The GitHub repository and ONNX Runtime remained offline in Wednesday's reports, with no public explanation; SafeDep flagged a PyPI maintainer account created the day of the attack, though its role is unconfirmed."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Fixed Java4Shell builds from Red Hat, Eclipse Temurin, and Microsoft, and any addition of the flaw to CISA's known-exploited list."
+        },
+        {
+          "when": "January 2027",
+          "what": "Sen. Hassan's Homeland Security Committee plans an early hearing on AI risks after the GAO's chatbot report. The US-China trade truce also runs to January."
+        },
+        {
+          "when": "Coming weeks",
+          "what": "Gemini's split History and AI training controls roll out globally, with about two months' retention for history-off chats."
+        },
+        {
+          "when": "Feb to Apr 2027",
+          "what": "Palo Alto Networks expects to close its $4.5 billion Applied Compute deal in its fiscal third quarter, pending regulatory clearance."
+        },
+        {
+          "when": "By 2028",
+          "what": "CCW states' deadline to 'elaborate' an instrument on lethal autonomous weapons; UN disarmament chief Nakamitsu urged work to start this week."
+        },
+        {
+          "when": "H2 CrowdStrike FY2028",
+          "what": "Expected close of CrowdStrike's $43.9 billion Zscaler deal, pending Zscaler shareholder and regulatory approval."
+        }
+      ]
+    },
+    {
       "id": "2026-11-24-am",
       "date": "2026-11-24",
       "edition": "Morning",
