@@ -3087,6 +3087,68 @@
         "Why is a shared loss threshold harder to implement than it sounds?",
         "Loss depends on the test data and tokenizer, so labs need a shared test set or a normalized measure like bits per byte to compare. It also only covers pretraining, so capability added by reasoning or agent training slips past it. It works best as one early-warning signal alongside capability evaluations."
       ]
+    },
+    {
+      "id": "nw55",
+      "added": "2026-11-24",
+      "t": "Virtual Patching: Shielding a System Before the Fix",
+      "cards": [
+        "When a flaw is disclosed, the real fix is a **patch**: new code that removes the bug. But patches must be built, tested, and rolled out across every machine, which can take days or weeks. Attackers, increasingly helped by AI, can turn a disclosure into a working exploit much faster. The time in between is the **exposure window**.",
+        "**Virtual patching** blocks the exploit without changing the vulnerable code. A web application firewall that drops a malicious request is one form. A newer form uses **eBPF**, a Linux feature that runs small, verified programs inside the kernel, to intercept the exact function or input the exploit needs, on a live system and without a reboot.",
+        "The risk is collateral damage: a shield that is too broad blocks legitimate traffic, and code in the kernel has wide reach. Good designs **monitor first** (log what the shield would block before enforcing), **sign** shields so only approved ones load, and **retire** them once the real patch lands. A virtual patch buys time; it is not the fix."
+      ],
+      "terms": [
+        [
+          "Virtual patch",
+          "A runtime block on an exploit that leaves the vulnerable code in place until a real patch ships."
+        ],
+        [
+          "Exposure window",
+          "The time between a flaw becoming known and the fix being deployed everywhere."
+        ],
+        [
+          "eBPF",
+          "A Linux mechanism for running small, safety-checked programs inside the kernel without rebooting."
+        ],
+        [
+          "Monitor mode",
+          "Running a protection so it only logs what it would block, to check for false positives."
+        ],
+        [
+          "Code signing",
+          "Cryptographically marking software so a system loads only versions from a trusted source."
+        ]
+      ],
+      "qs": [
+        [
+          "A critical bug is disclosed Monday; the vendor patch needs two weeks of testing. What does a virtual patch do?",
+          "Blocks the exploit at runtime during those two weeks while the vulnerable code stays",
+          "Removes the bug from the source code",
+          "Makes the official patch install faster",
+          "Replaces the need for the official patch",
+          "A virtual patch stops the attack path; the real fix still has to ship."
+        ],
+        [
+          "Why run a new shield in monitor mode before enforcing it?",
+          "To see whether it would block legitimate traffic before it can break anything",
+          "To make the exploit run slower",
+          "Because eBPF programs can't enforce",
+          "To avoid needing a signature",
+          "Monitor first catches false positives, the main risk of runtime blocking."
+        ],
+        [
+          "An attacker gets a machine to load a forged shield. Which control is meant to stop this?",
+          "Code signing, verified before the shield loads",
+          "Monitor mode",
+          "Retiring the shield after patching",
+          "Running the shield in user space",
+          "Signing ensures only shields from a trusted source are loaded."
+        ]
+      ],
+      "ex": [
+        "Explain to a colleague why a company would run an AI-written kernel shield instead of just patching.",
+        "Patching is the real fix but takes time to build, test, and deploy everywhere, and AI is shortening how fast attackers can exploit a newly disclosed bug. A virtual patch blocks the specific attack path on running systems right away, without a reboot, so the company is protected during that gap. Because a kernel-level block can break legitimate traffic, you run it in monitor mode first, only load signed shields, and remove it once the patch is in place."
+      ]
     }
   ]
 }
