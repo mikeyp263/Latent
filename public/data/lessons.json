@@ -3269,6 +3269,68 @@
         "Explain why a bankruptcy is a risky moment for an AI app's users.",
         "In bankruptcy the company's data becomes an asset the court is trying to sell for as much as possible to pay creditors, and the people who made privacy promises may no longer be around to keep them. Regulators can object and courts can require the buyer to honor the old policy or exclude sensitive data, but none of that is automatic. Chat logs are especially sensitive, so the best protection is deleting history you don't need."
       ]
+    },
+    {
+      "id": "nw58",
+      "added": "2026-11-25",
+      "t": "The Matrix Multiplication Exponent",
+      "cards": [
+        "Multiplying two n-by-n matrices the schoolbook way takes about n³ multiplications. In 1969 Volker Strassen found a trick that does it in about n^2.807, and since then researchers have chased the **matrix multiplication exponent**, written **ω**: the smallest power such that n^ω steps is enough as n grows. It must be at least 2, because you have to read all n² entries, and at most 3.",
+        "An **upper bound** on ω is an algorithm: it proves you can do at least that well. A **lower bound** is an impossibility proof: it shows no algorithm in a given model can do better. Upper bounds have crept down for decades. Lower bounds are much harder, because they must rule out every possible method, and the **model of computation** (which operations count, whether division is allowed) changes what is actually proven.",
+        "Almost all record-setting methods are **galactic algorithms**: faster only for matrices far larger than any real computer uses, because their hidden constants are enormous. GPUs still run the schoolbook method, heavily tuned, or Strassen-style variants. So a new value of ω is a big deal for theory and says little about how fast AI training runs."
+      ],
+      "terms": [
+        [
+          "ω (omega)",
+          "The exponent such that n-by-n matrix multiplication takes about n^ω steps; known to be between 2 and 3."
+        ],
+        [
+          "Strassen's algorithm",
+          "A 1969 method that multiplies 2-by-2 blocks with 7 multiplications instead of 8, giving about n^2.807."
+        ],
+        [
+          "Upper bound",
+          "A proof, usually an algorithm, that a task can be done within some cost."
+        ],
+        [
+          "Lower bound",
+          "A proof that no method in a given model can do a task below some cost."
+        ],
+        [
+          "Galactic algorithm",
+          "An algorithm that is asymptotically faster but only beats simpler methods on impossibly large inputs."
+        ]
+      ],
+      "qs": [
+        [
+          "A paper shows an algorithm that multiplies matrices in about n^2.3 steps. What did it prove about ω?",
+          "ω is at most 2.3",
+          "ω is exactly 2.3",
+          "ω is at least 2.3",
+          "Nothing, since it isn't practical",
+          "An algorithm is an upper bound: it shows you can do at least this well, not that nobody can do better."
+        ],
+        [
+          "Why are lower bounds on ω so much harder than upper bounds?",
+          "They must rule out every possible algorithm, not just exhibit one",
+          "Computers can't check them",
+          "They require faster hardware",
+          "They only apply to small matrices",
+          "Showing one method works is a construction; showing none can do better is a statement about all methods."
+        ],
+        [
+          "A new record for ω is announced. What changes for GPU training speed next year?",
+          "Almost nothing, because record methods are galactic",
+          "Training gets about 30% faster",
+          "GPUs must be redesigned",
+          "Models need fewer parameters",
+          "The constants hidden in record algorithms make them useless at real matrix sizes."
+        ]
+      ],
+      "ex": [
+        "Explain what ω is and why a new value of it may not speed up AI.",
+        "ω is the exponent in how the cost of multiplying n-by-n matrices grows: n^ω steps. Schoolbook multiplication gives 3 and Strassen got about 2.807; it can't go below 2. An algorithm lowers the upper bound, while a lower bound proves no method can beat a value. Record algorithms win only for gigantic matrices because of huge constants, so real hardware keeps using simple, tuned methods, and a new ω is mainly a theory result."
+      ]
     }
   ]
 }
