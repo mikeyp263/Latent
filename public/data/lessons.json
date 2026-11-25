@@ -3331,6 +3331,68 @@
         "Explain what ω is and why a new value of it may not speed up AI.",
         "ω is the exponent in how the cost of multiplying n-by-n matrices grows: n^ω steps. Schoolbook multiplication gives 3 and Strassen got about 2.807; it can't go below 2. An algorithm lowers the upper bound, while a lower bound proves no method can beat a value. Record algorithms win only for gigantic matrices because of huge constants, so real hardware keeps using simple, tuned methods, and a new ω is mainly a theory result."
       ]
+    },
+    {
+      "id": "nw59",
+      "added": "2026-11-25",
+      "t": "Proven vs. Heuristic Speed: How Fast Can We Factor?",
+      "cards": [
+        "RSA encryption is safe only because nobody knows how to quickly split a huge number into its two prime factors. Researchers describe factoring speed with **L-notation**, written L[α, c]. When α is 1 the cost is exponential (hopeless); when it is 0 the cost is polynomial (easy). Values in between are **subexponential**: much better than brute force, still far too slow to break properly sized keys.",
+        "The **number field sieve**, the method behind every record factorization, runs at about L[1/3, 1.923]. But that speed is **heuristic**: it relies on assumptions about how often certain numbers break into small primes, assumptions that work in practice but have never been proven. The best fully **rigorous** bound was slower, L[1/2].",
+        "So a proof that factoring takes L[1/3] time is a theory milestone: it closes the gap between what works and what is proven. It doesn't make attacks faster, especially if the constant c is unspecified or large. What actually threatens RSA is a large enough **quantum computer** running Shor's algorithm, which would factor in polynomial time."
+      ],
+      "terms": [
+        [
+          "L-notation",
+          "L[α, c] describes running time between polynomial (α = 0) and exponential (α = 1); smaller α is faster."
+        ],
+        [
+          "Subexponential",
+          "Faster than any exponential growth but slower than any polynomial; where the best classical factoring methods sit."
+        ],
+        [
+          "Number field sieve",
+          "The fastest known practical factoring algorithm, about L[1/3, 1.923], used in record factorizations."
+        ],
+        [
+          "Heuristic bound",
+          "A running time that holds in practice but rests on unproven assumptions."
+        ],
+        [
+          "Rigorous bound",
+          "A running time proven mathematically with no unproven assumptions."
+        ]
+      ],
+      "qs": [
+        [
+          "A paper proves factoring can be done in L[1/3, O(1)] time. What changes for RSA-2048 security tomorrow?",
+          "Essentially nothing; attackers already run at L[1/3] heuristically",
+          "RSA-2048 is broken",
+          "Keys must double in size immediately",
+          "Factoring becomes polynomial",
+          "The number field sieve already works at this rate in practice; the proof makes it rigorous without speeding it up."
+        ],
+        [
+          "Why is the number field sieve's speed called heuristic?",
+          "It depends on assumptions about numbers that have not been proven",
+          "It uses AI to guess factors",
+          "It only works on small numbers",
+          "It sometimes gives wrong answers",
+          "Its running-time analysis assumes certain values break into small primes often enough, which is believed but unproven."
+        ],
+        [
+          "Which development would most directly threaten RSA?",
+          "A large error-corrected quantum computer running Shor's algorithm",
+          "A proof that factoring is L[1/3]",
+          "A faster GPU",
+          "A new record for the matrix multiplication exponent",
+          "Shor's algorithm factors in polynomial time, which no classical method is known to do."
+        ]
+      ],
+      "ex": [
+        "Explain why a proven L[1/3] factoring algorithm is a big deal for theory but not for RSA.",
+        "Factoring speed is measured in L-notation, between polynomial and exponential. The number field sieve already factors at about L[1/3] in practice, but that analysis rests on unproven assumptions; the best proven bound was L[1/2]. A rigorous L[1/3] proof closes that gap, but it doesn't beat what attackers already do, so RSA key sizes stay safe. The real threat is a quantum computer running Shor's algorithm."
+      ]
     }
   ]
 }
