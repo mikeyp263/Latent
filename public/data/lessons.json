@@ -3459,6 +3459,68 @@
         "Explain what it means when an agency puts a company's AA rating on CreditWatch Negative over governance, and what it does not mean.",
         "It means the agency thinks a downgrade is likely within about 90 days and is gathering information, which is more urgent than a negative outlook. Agencies grade management and governance (board independence, succession planning, internal controls) separately from the finances, so a profitable company with lots of cash can be put on watch purely over oversight. It does not mean default is near, and it is not a view on the stock. A one-notch cut inside investment grade mostly means somewhat costlier future borrowing."
       ]
+    },
+    {
+      "id": "nw61",
+      "added": "2026-11-26",
+      "t": "Rewriting a Live System: Shadow Traffic and Differential Testing",
+      "cards": [
+        "When a team rewrites a service that is already in use, the goal is usually **behavioral equivalence**: the new version should answer every request exactly as the old one did, only faster or cheaper. A test suite checks the cases someone thought to write down. Real users send everything else, so passing tests is necessary but nowhere near sufficient.",
+        "**Shadow traffic** closes that gap. Each live request is copied to the new system while the old one still serves the real answer. The two outputs are compared automatically, which is called **differential testing**: the old system acts as the definition of correct. Every mismatch is either a bug in the new code or an old quirk the team must decide to keep or drop. Users never see the new system's mistakes during this phase.",
+        "Once mismatches fall to an acceptable level, traffic moves over gradually in a **canary** rollout: 1% of users, then 10%, then everyone, with a fast way back. AI coding agents change the economics, because they can draft a rewrite quickly and investigate thousands of mismatches, but the comparison against real traffic and human review of each fix are what make the result trustworthy."
+      ],
+      "terms": [
+        [
+          "Behavioral equivalence",
+          "The new system produces the same outputs as the old one for the same inputs."
+        ],
+        [
+          "Shadow traffic",
+          "Copies of real requests sent to a new system whose answers are compared but not shown to users."
+        ],
+        [
+          "Differential testing",
+          "Finding bugs by comparing two implementations' outputs on the same inputs."
+        ],
+        [
+          "Canary rollout",
+          "Moving a small share of real users to the new system first, then expanding if it holds up."
+        ],
+        [
+          "Rollback",
+          "Switching traffic back to the old system when the new one misbehaves."
+        ]
+      ],
+      "qs": [
+        [
+          "An AI-written rewrite passes 98% of the existing tests, but only 25% of real requests produce output identical to the old system. What does this tell you?",
+          "The test suite misses most of what real traffic does, so the rewrite is not yet equivalent",
+          "The rewrite is 98% done and ready to ship",
+          "The old system must be wrong in 75% of cases",
+          "Tests and real traffic always disagree, so the gap is meaningless",
+          "Tests cover cases someone thought of; real traffic reveals the rest, so equivalence has to be measured against live inputs."
+        ],
+        [
+          "Why do teams compare outputs on shadow traffic instead of just switching users to the new system?",
+          "Users never see the new system's mistakes while mismatches are found and fixed",
+          "It makes the new system faster",
+          "It removes the need for any code review",
+          "It lets the team skip writing tests",
+          "Shadow traffic exercises the new code on real inputs while the old system still answers users."
+        ],
+        [
+          "During differential testing, the new system returns a different but arguably better answer than the old one for some requests. What should happen?",
+          "A person decides whether to keep the old behavior or deliberately change it",
+          "Always keep the new answer because it is better",
+          "Ignore it, since only crashes matter",
+          "Delete the old system immediately",
+          "Every mismatch is a decision: either a bug to fix or an intentional behavior change that should be chosen, not slipped in."
+        ]
+      ],
+      "ex": [
+        "Explain how a company can safely rewrite a live API in a new language, and why passing the test suite is not enough.",
+        "Tests only cover the cases someone wrote down, while real users send far more variety, so a rewrite can pass nearly every test and still behave differently on most real requests. The safe method is to mirror live traffic to the new system as shadow traffic and automatically compare its outputs with the old system's (differential testing), fixing or deliberately accepting each mismatch while users are still served by the old version. When mismatches are rare, shift users over gradually in a canary rollout with a quick rollback. AI agents can speed up writing code and chasing mismatches, but the comparison against real traffic and human review are what earn trust."
+      ]
     }
   ]
 }
