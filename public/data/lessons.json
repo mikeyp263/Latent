@@ -3393,6 +3393,72 @@
         "Explain why a proven L[1/3] factoring algorithm is a big deal for theory but not for RSA.",
         "Factoring speed is measured in L-notation, between polynomial and exponential. The number field sieve already factors at about L[1/3] in practice, but that analysis rests on unproven assumptions; the best proven bound was L[1/2]. A rigorous L[1/3] proof closes that gap, but it doesn't beat what attackers already do, so RSA key sizes stay safe. The real threat is a quantum computer running Shor's algorithm."
       ]
+    },
+    {
+      "id": "nw60",
+      "added": "2026-11-26",
+      "t": "Credit Ratings and Downgrade Watches",
+      "cards": [
+        "When a company borrows by issuing bonds, agencies like S&P Global Ratings, Moody's, and Fitch grade how likely it is to repay. The top grades, **AAA** down through **BBB-** at S&P, are **investment grade**; below that is **speculative grade**, or junk. A grade is not a stock opinion: it is a judgment about debt repayment, so a company with a falling share price can still be rated AA.",
+        "Agencies signal direction two ways. An **outlook** (positive, stable, negative) is a slow lean, pointing six months to two years out. **CreditWatch**, or a review for downgrade, is the urgent one: the agency says a change is likely within about 90 days and is actively gathering information. Moving a rating up or down one step, say AA to AA-, is a **notch**.",
+        "Ratings rest on more than numbers. Agencies score **management and governance** separately: board independence, succession planning, internal controls, and whether leadership follows its own rules. A company with plenty of cash can be put on watch purely over governance, because an agency's worry is that weak oversight eventually shows up in the finances. The practical effect of a cut is usually higher borrowing costs, and sometimes contract terms that reference a minimum rating."
+      ],
+      "terms": [
+        [
+          "Credit rating",
+          "An agency's graded opinion of how likely a borrower is to repay its debt, from AAA down to D at S&P."
+        ],
+        [
+          "Investment grade",
+          "BBB- and above at S&P; many funds are limited to holding bonds at this level or better."
+        ],
+        [
+          "Notch",
+          "One step on the rating scale, such as AA to AA-."
+        ],
+        [
+          "Outlook",
+          "A slow signal of likely direction over six months to two years."
+        ],
+        [
+          "CreditWatch",
+          "An urgent review flagging a likely change within roughly 90 days."
+        ],
+        [
+          "Management and governance assessment",
+          "An agency's separate score for board oversight, succession planning, and internal controls."
+        ]
+      ],
+      "qs": [
+        [
+          "An agency puts a cash-rich, highly profitable chipmaker's AA rating on CreditWatch Negative over board oversight. What is it actually saying?",
+          "A downgrade is likely within about 90 days, on governance rather than finances",
+          "The company is close to defaulting on its debt",
+          "The stock is overvalued and should be sold",
+          "The rating has already been cut to AA-",
+          "CreditWatch signals a likely change within roughly 90 days, and agencies score governance separately from the balance sheet."
+        ],
+        [
+          "What is the difference between a negative outlook and CreditWatch Negative?",
+          "The outlook is a slower lean over six months to two years; CreditWatch means a decision in about 90 days",
+          "The outlook is public and CreditWatch is private",
+          "CreditWatch applies to stocks, the outlook to bonds",
+          "They mean the same thing at different agencies",
+          "They differ in urgency: an outlook points out years, CreditWatch signals an imminent decision."
+        ],
+        [
+          "A company's rating falls one notch but stays investment grade. What is the most likely practical effect?",
+          "Slightly higher borrowing costs on future debt",
+          "Its existing bonds become worthless",
+          "It must repay all debt immediately",
+          "Index funds are forced to sell its stock",
+          "A one-notch cut inside investment grade mainly raises the cost of borrowing; forced selling is a risk at the investment-grade boundary, not above it."
+        ]
+      ],
+      "ex": [
+        "Explain what it means when an agency puts a company's AA rating on CreditWatch Negative over governance, and what it does not mean.",
+        "It means the agency thinks a downgrade is likely within about 90 days and is gathering information, which is more urgent than a negative outlook. Agencies grade management and governance (board independence, succession planning, internal controls) separately from the finances, so a profitable company with lots of cash can be put on watch purely over oversight. It does not mean default is near, and it is not a view on the stock. A one-notch cut inside investment grade mostly means somewhat costlier future borrowing."
+      ]
     }
   ]
 }
