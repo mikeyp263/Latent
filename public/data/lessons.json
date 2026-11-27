@@ -3583,6 +3583,68 @@
         "Explain why an 18+ rating on an AI companion app may not keep children out, and what stronger options exist.",
         "A rating only describes the intended audience. If the app enforces it by asking for a birth date, any child can lie and get in, and the model will then generate romantic or sexual content for them like any other user. Stronger age assurance includes age verification against an ID or financial record and age estimation from a face scan or behavior. These catch more minors but add cost and friction and create sensitive data, so platforms trade off safety, privacy, and growth. For generative AI, the check needs to be paired with content controls on the model itself."
       ]
+    },
+    {
+      "id": "nw63",
+      "added": "2026-11-27",
+      "t": "AI Attack Agents: Why Speed Changes Defense",
+      "cards": [
+        "An **agentic attack framework** chains an AI planner to ordinary hacking tools. A planner model splits a goal (\"get into this company\") into small tasks, worker agents run scanners and password guessers, and the planner reads the results and picks the next step. It rarely invents new techniques; it runs old ones tirelessly and fast.",
+        "That shifts the math of defense. **Dwell time** (how long an attacker is inside before being caught) and the **patch window** (time between a fix's release and its installation) used to be measured in days or weeks. When an agent can go from first scan to privileged access in hours, a flaw left open over a weekend is effectively open forever.",
+        "Defenders respond in three ways. Remove the easy wins (multi-factor sign-in, no leaked secrets, fast patching). Detect **behavior** rather than addresses, since agents rotate IPs but still produce bursts of machine-speed activity. And use **deception**: honeypots, tarpits that slow responses, and fake success signals that convince an agent its task is done."
+      ],
+      "terms": [
+        [
+          "Agentic attack framework",
+          "Software that uses an AI model to plan and run multi-step intrusions with real hacking tools."
+        ],
+        [
+          "Dwell time",
+          "How long an attacker stays inside a network before being detected."
+        ],
+        [
+          "Patch window",
+          "The gap between a security fix's release and its installation."
+        ],
+        [
+          "Honeypot",
+          "A decoy system meant to attract and observe attackers."
+        ],
+        [
+          "Tarpit",
+          "A defense that deliberately slows responses to waste an attacker's time."
+        ]
+      ],
+      "qs": [
+        [
+          "An agency says AI agents breached systems using only known flaws and weak passwords. What is the most effective first step?",
+          "Close the basics: patch fast, require multi-factor sign-in, remove exposed secrets",
+          "Buy a model that can out-think the attacking model",
+          "Block all traffic from the country the attack came from",
+          "Wait for a signature of the new AI exploit",
+          "Agents mostly speed up old techniques, so removing easy openings blocks most of them."
+        ],
+        [
+          "Why do vendors advise against relying on IP blocklists for AI attack agents?",
+          "Agents can rotate addresses cheaply, but their burst-like behavior is harder to hide",
+          "IP addresses cannot be logged",
+          "AI agents do not use IP addresses",
+          "Blocklists only work on weekends",
+          "Behavioral signals like machine-speed request bursts persist even when addresses change."
+        ],
+        [
+          "What does a fake success signal do against an attack agent?",
+          "It can make the agent believe its goal is met so it stops or reports wrongly",
+          "It deletes the agent's model weights",
+          "It patches the vulnerability automatically",
+          "It traces the agent back to its operator",
+          "Agents act on what tools report back; feeding false completion can end the run early."
+        ]
+      ],
+      "ex": [
+        "Explain why AI attack agents can be dangerous even if they use no new hacking techniques.",
+        "Because they compress time. They run known techniques (password guessing, scanning for unpatched flaws, hunting leaked secrets) at machine speed and without fatigue, so an organization that would have had days to notice and patch now has hours. The defense is the same hygiene as before, applied faster, plus detection based on behavior and decoys that waste an agent's effort."
+      ]
     }
   ]
 }
