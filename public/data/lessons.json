@@ -3521,6 +3521,68 @@
         "Explain how a company can safely rewrite a live API in a new language, and why passing the test suite is not enough.",
         "Tests only cover the cases someone wrote down, while real users send far more variety, so a rewrite can pass nearly every test and still behave differently on most real requests. The safe method is to mirror live traffic to the new system as shadow traffic and automatically compare its outputs with the old system's (differential testing), fixing or deliberately accepting each mismatch while users are still served by the old version. When mismatches are rare, shift users over gradually in a canary rollout with a quick rollback. AI agents can speed up writing code and chasing mismatches, but the comparison against real traffic and human review are what earn trust."
       ]
+    },
+    {
+      "id": "nw62",
+      "added": "2026-11-27",
+      "t": "Age Assurance: How Apps Check Who Is a Minor",
+      "cards": [
+        "An app's age rating only matters if something enforces it. The weakest method is **self-declaration**: the app asks for a birth date and trusts the answer. It is cheap and private, but any child willing to type a different year gets through, which is why an 18+ label on its own protects almost no one.",
+        "Stronger methods are grouped under **age assurance**. **Age verification** checks a hard credential, such as a photo ID matched to a selfie or a bank or carrier record. **Age estimation** guesses age from a face scan or from behavior. Each step up catches more minors but costs money, adds friction that drives users away, and creates sensitive data that can leak.",
+        "For AI chatbots the stakes are higher than for a static website, because the model generates new content in response to whoever is typing. A companion bot tuned for romance will produce that content for a 13-year-old as readily as for an adult. That is why app stores and regulators increasingly look at the age check and the model's content controls together, not the rating label."
+      ],
+      "terms": [
+        [
+          "Age assurance",
+          "The umbrella term for any method of determining whether a user is over or under an age threshold."
+        ],
+        [
+          "Self-declaration",
+          "Asking users to state their age and trusting the answer."
+        ],
+        [
+          "Age verification",
+          "Confirming age against a credential such as a government ID or financial record."
+        ],
+        [
+          "Age estimation",
+          "Inferring likely age from a face scan, voice, or behavior, with a margin of error."
+        ],
+        [
+          "Content rating",
+          "A label like 12+ or 18+ that describes intended audience but does not enforce it by itself."
+        ]
+      ],
+      "qs": [
+        [
+          "A companion chatbot is rated 18+ and asks new users for their birth date. Reports show minors using it heavily. What is the core problem?",
+          "Self-declared age is easy to fake, so the rating is not enforced",
+          "The rating should have been 17+",
+          "Minors cannot download apps rated 18+",
+          "The birth date field is required, so it must work",
+          "A typed birth date filters out only people who tell the truth; it is a label, not a control."
+        ],
+        [
+          "Why don't all apps simply require a photo ID?",
+          "It adds cost and friction and creates sensitive data that can be breached",
+          "IDs cannot be checked by software",
+          "It is illegal everywhere",
+          "It only works for adults over 30",
+          "Stronger checks catch more minors but drive users away and create a store of identity data to protect."
+        ],
+        [
+          "Why is age assurance a bigger issue for AI chatbots than for a site with fixed content?",
+          "The model generates new, possibly harmful content in response to whoever is using it",
+          "Chatbots are always free",
+          "Chatbots cannot be rated",
+          "Fixed websites never have age ratings",
+          "A generative model adapts to the user, so an underage user can steer it into content that was never pre-reviewed."
+        ]
+      ],
+      "ex": [
+        "Explain why an 18+ rating on an AI companion app may not keep children out, and what stronger options exist.",
+        "A rating only describes the intended audience. If the app enforces it by asking for a birth date, any child can lie and get in, and the model will then generate romantic or sexual content for them like any other user. Stronger age assurance includes age verification against an ID or financial record and age estimation from a face scan or behavior. These catch more minors but add cost and friction and create sensitive data, so platforms trade off safety, privacy, and growth. For generative AI, the check needs to be paired with content controls on the model itself."
+      ]
     }
   ]
 }
