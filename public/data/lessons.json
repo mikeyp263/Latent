@@ -3645,6 +3645,68 @@
         "Explain why AI attack agents can be dangerous even if they use no new hacking techniques.",
         "Because they compress time. They run known techniques (password guessing, scanning for unpatched flaws, hunting leaked secrets) at machine speed and without fatigue, so an organization that would have had days to notice and patch now has hours. The defense is the same hygiene as before, applied faster, plus detection based on behavior and decoys that waste an agent's effort."
       ]
+    },
+    {
+      "id": "nw64",
+      "added": "2026-11-28",
+      "t": "Trade Secrets and the AI Talent War",
+      "cards": [
+        "A **trade secret** is information that is valuable because competitors don't know it, such as a device design, supplier pricing or test results, and that the owner takes reasonable steps to keep secret. In the US it is protected by the federal **Defend Trade Secrets Act** (2016) and state laws. Unlike a patent it is never published, and it lasts only as long as it stays secret.",
+        "AI labs fight over people, and people carry knowledge. California, where most labs sit, voids most **non-compete** agreements, so a company usually can't stop an engineer from joining a rival. What it can do is sue for **misappropriation**: taking or using specific confidential files or information. That is why these cases focus on downloads, personal cloud accounts and what was copied in an employee's last weeks.",
+        "Cases move in stages. The plaintiff often seeks a **preliminary injunction** early, which can freeze a product or a person's work before trial. The defendant answers and often files **counterclaims**, its own accusations against the plaintiff, decided in the same case. Most cases settle; the injunction ruling usually matters more than the trial date."
+      ],
+      "terms": [
+        [
+          "Trade secret",
+          "Confidential business information with value from being secret, protected if the owner guards it reasonably."
+        ],
+        [
+          "Misappropriation",
+          "Acquiring, using or disclosing a trade secret by improper means, such as copying files before leaving a job."
+        ],
+        [
+          "Non-compete",
+          "A contract barring a worker from joining a competitor; largely unenforceable in California."
+        ],
+        [
+          "Preliminary injunction",
+          "A court order before trial that stops an action while the case proceeds."
+        ],
+        [
+          "Counterclaim",
+          "A defendant's own claim against the plaintiff, filed in the same lawsuit."
+        ]
+      ],
+      "qs": [
+        [
+          "An engineer leaves one California AI lab for another. What can the first lab most realistically sue over?",
+          "Specific confidential files or information the engineer took or used",
+          "The mere fact that the engineer joined a competitor",
+          "Skills and general know-how the engineer learned on the job",
+          "The new lab's decision to make a similar product",
+          "California voids most non-competes, so cases rest on misappropriation of specific secret information."
+        ],
+        [
+          "Why does an early preliminary injunction ruling often matter more than the trial?",
+          "It can halt a product or someone's work for months or years before any verdict",
+          "It decides the final damages",
+          "It is the only ruling that can be appealed",
+          "Trials in trade secret cases are banned",
+          "An injunction changes facts on the ground immediately, and most cases settle before trial."
+        ],
+        [
+          "A defendant files counterclaims. What does that tell you about the merits?",
+          "Little by itself; counterclaims are a common tactic and both sides' claims are unproven",
+          "The defendant has admitted the original claims",
+          "The court has found the plaintiff liable",
+          "The case is now settled",
+          "Filing a claim is an allegation, not a finding."
+        ]
+      ],
+      "ex": [
+        "Explain why AI trade secret lawsuits focus on what employees downloaded rather than where they went to work.",
+        "Because in California most non-competes are void, so a company can't stop people from changing jobs. Trade secret law protects specific confidential information, so the case has to show the person took or used something secret, like files moved to a personal account. Evidence of copying is what lets a company seek an injunction against the new employer."
+      ]
     }
   ]
 }

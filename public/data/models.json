@@ -1,6 +1,16 @@
 {
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "models": [
+    {
+      "name": "GigaChat 4 708B",
+      "lab": "Sber",
+      "released": "2026-11-26",
+      "access": "Open weights",
+      "price": "Free weights (MIT); no API price found",
+      "context": "1M",
+      "note": "708B MoE with ~41B active; hybrid Gated DeltaNet and sparse attention (3:1). Instant and reasoning modes in one checkpoint. Sber's own benchmarks: strong on tool calling, behind DeepSeek V4.1 Flash and GLM 5.3 on Terminal-Bench and GPQA. A 37B sibling ships with a non-commercial license.",
+      "link": "https://huggingface.co/ai-sage/GigaChat4-708B-A41B"
+    },
     {
       "name": "GLM-5.4",
       "lab": "Zhipu AI (Z.ai)",
